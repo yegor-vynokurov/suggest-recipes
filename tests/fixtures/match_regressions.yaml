@@ -1,0 +1,127 @@
+metadata:
+  version: 0.1
+  source: READMY.md
+  purpose: >
+    Regression scenarios for ingredient substitution, category fallback,
+    and status classification in RecipeEngine.
+
+cases:
+  - case_id: mayonnaise_oil_vs_fat
+    recipe_id: french_mayonnaise_maison
+    title: Plant oil in mayonnaise must not fall back to animal fat or ready sauce
+    inventory:
+      eggs: normal
+      smalec: normal
+      mayonnaise: little
+      vinegar: little
+    expected:
+      status: far
+      contains_explanations:
+        - "missing: plant oil"
+        - "missing: mustard"
+      not_contains_explanations:
+        - "plant oil substituted by category: smalec"
+        - "mustard substituted by category: mayonnaise"
+
+  - case_id: deruny_sour_cream_is_addition
+    recipe_id: ukrainian_deruny
+    title: Sour cream for deruny should not demote the dish to missing_one
+    inventory:
+      potato: many
+      onion: little
+      eggs: little
+      flour: little
+      butter: normal
+    expected:
+      status: can_cook
+      not_contains_explanations:
+        - "missing: sour cream"
+
+  - case_id: aebleskiver_duplicate_milk_warning
+    recipe_id: scandinavian_aebleskiver
+    title: One inventory milk entry should not produce duplicate milk warnings
+    inventory:
+      flour: normal
+      milk: little
+      eggs: normal
+      sugar: little
+      butter: normal
+    expected:
+      status: can_cook
+      explanation_counts:
+        "have milk, but too little": 1
+      not_contains_explanations:
+        - "buttermilk substituted by category: milk"
+
+  - case_id: pepparkakor_spices_should_not_make_far
+    recipe_id: scandinavian_pepparkakor
+    title: Missing warm spices should not push pepparkakor into far
+    inventory:
+      flour: many
+      butter: normal
+      sugar: normal
+    expected:
+      status: missing_one
+      contains_explanations:
+        - "missing: ginger"
+
+  - case_id: salo_main_must_not_be_smalec
+    recipe_id: ukrainian_salo_on_rye_bread
+    title: Salo as a main ingredient must not be replaced by smalec
+    inventory:
+      smalec: normal
+      rye_bread: normal
+      dry_garlic: spice
+      onion: little
+      black_pepper: spice
+    expected:
+      status: missing_main
+      contains_explanations:
+        - "missing: salo"
+      not_contains_explanations:
+        - "salo substituted by category: smalec"
+
+  - case_id: sausage_mustard_is_not_mayonnaise
+    recipe_id: czech_klobasa_s_chlebem
+    title: Mustard beside sausage must not be replaced by mayonnaise
+    inventory:
+      smoked_sausage: normal
+      bread: normal
+      mayonnaise: little
+      horseradish: little
+    expected:
+      status: missing_one
+      contains_explanations:
+        - "missing: mustard"
+      not_contains_explanations:
+        - "mustard substituted by category: mayonnaise"
+
+  - case_id: sausage_salo_is_not_butter
+    recipe_id: ukrainian_homemade_sausage
+    title: Salo in homemade sausage must not be replaced by butter
+    inventory:
+      pork_chunks: many
+      butter: normal
+      dry_garlic: spice
+      sausage_casing: normal
+      black_pepper: spice
+    expected:
+      status: missing_one
+      contains_explanations:
+        - "missing: salo"
+      not_contains_explanations:
+        - "salo substituted by category: butter"
+
+  - case_id: kelle_paca_subcategory_fallback
+    recipe_id: turkish_kelle_paca_corbasi
+    title: Narrow subcategory fallback through meat_bones should keep working
+    inventory:
+      beef_bones: many
+      flour: little
+      butter: little
+      vinegar: little
+      dry_garlic: spice
+    expected:
+      status: can_cook
+      contains_explanations:
+        - "lamb head trotters substituted by category: beef bones"

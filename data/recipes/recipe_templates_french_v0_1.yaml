@@ -1,0 +1,6467 @@
+metadata:
+  version: 0.1-french-large
+  purpose: Large French cuisine recipe templates for pantry-based suggestion engine
+  design_rules:
+  - If a title names a key ingredient, that ingredient appears as main or required.
+  - Broad categories are used mainly in accepts, not as a replacement for named title ingredients.
+  - Water is included as a technological ingredient, but should be treated as always available by inventory logic.
+  - Cream, milk and cheese are kept explicit; broad dairy is avoided as a direct substitute for liquid dairy.
+  - French mother sauces and components are included as reusable component recipes.
+  - These are ingredient templates, not exact step-by-step recipes.
+  - 'Time buckets: under_10, under_30, under_60, over_60.'
+  cuisines:
+    french: французская
+  quantity_scale:
+  - spice
+  - little
+  - normal
+  - many
+  source_notes:
+  - Soup block emphasizes onion soup, potages, bouillabaisse, bisques, garbure and cream soups.
+  - Main block emphasizes wine stews, duck, rabbit, lamb, seafood, quiche, galettes and Provençal vegetables.
+  - Components include mother sauces, emulsified sauces, mirepoix, bouquet garni, potato sides, pâtés and rillettes.
+  - Dessert block includes custards, choux pastry, tarts, crêpes, cakes and regional pastry.
+recipes:
+- id: french_soupe_oignon
+  name: French onion soup
+  kind: dish
+  tags:
+  - cheese
+  - french
+  - onion
+  missing_allowed: 3
+  source_family: french:soupe_oignon
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - stew
+    - boil
+    - bake
+  comment: ''
+  ingredients:
+  - item: onion
+    role: main
+    amount: many
+  - item: beef_broth
+    role: required
+    amount: many
+    accepts:
+    - meat_broth
+    - broth_meat
+  - item: white_wine
+    role: addition
+    amount: normal
+  - item: baguette
+    role: required
+    amount: normal
+    accepts:
+    - bread
+  - item: gruyere
+    role: required
+    amount: normal
+    accepts:
+    - melting_cheese
+    - hard_cheese
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: thyme
+    role: spice
+    amount: spice
+  name_uk: Французький цибульний суп
+- id: french_potage_parmentier
+  name: Potato and onion soup
+  kind: dish
+  tags:
+  - french
+  - leek
+  - potato
+  missing_allowed: 2
+  source_family: french:potage_parmentier
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: leek
+    role: required
+    amount: normal
+    accepts:
+    - onion
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - cream_like
+    - sour_cream
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  name_uk: Картопляно-цибулевий суп
+- id: french_vichyssoise
+  name: Cold leek and potato soup
+  kind: dish
+  tags:
+  - cold_soup
+  - french
+  - leek
+  missing_allowed: 2
+  source_family: french:vichyssoise
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: leek
+    role: main
+    amount: many
+    accepts:
+    - onion
+  - item: potato
+    role: required
+    amount: many
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  name_uk: Холодний суп з порею та картоплі
+- id: french_bouillabaisse
+  name: Marseille bouillabaisse
+  kind: dish
+  tags:
+  - fish
+  - french
+  - provence
+  missing_allowed: 4
+  source_family: french:bouillabaisse
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: mixed_sea_fish
+    role: main
+    amount: many
+    accepts:
+    - fish
+  - item: shellfish
+    role: required
+    amount: normal
+    accepts:
+    - mussels
+    - shrimp
+    - seafood
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: normal
+  - item: fennel_bulb
+    role: required
+    amount: normal
+  - item: saffron
+    role: required
+    amount: spice
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: water
+    role: required
+    amount: many
+  name_uk: Марсельська буйабес
+- id: french_soupe_poisson
+  name: Provençal fish soup
+  kind: dish
+  tags:
+  - fish
+  - french
+  missing_allowed: 3
+  source_family: french:soupe_poisson
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: fish
+    role: main
+    amount: many
+    accepts:
+    - mixed_sea_fish
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: normal
+  - item: fennel_bulb
+    role: addition
+    amount: normal
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: saffron
+    role: addition
+    amount: spice
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: water
+    role: required
+    amount: many
+  name_uk: Рибний суп по-провансальськи
+- id: french_bisque_homard
+  name: Lobster bisque
+  kind: dish
+  tags:
+  - bisque
+  - french
+  - seafood
+  missing_allowed: 4
+  source_family: french:bisque_homard
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: lobster_shells
+    role: main
+    amount: many
+    accepts:
+    - shellfish
+    - seafood
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: tomato_paste
+    role: required
+    amount: little
+    accepts:
+    - tomato_base
+  - item: cognac
+    role: addition
+    amount: little
+  - item: onion
+    role: required
+    amount: normal
+  - item: carrot
+    role: addition
+    amount: little
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  name_uk: Бісок з омара
+- id: french_bisque_crevettes
+  name: Shrimp bisque
+  kind: dish
+  tags:
+  - french
+  - seafood
+  missing_allowed: 3
+  source_family: french:bisque_crevettes
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: shrimp_shells
+    role: main
+    amount: many
+    accepts:
+    - shrimp
+    - shellfish
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: tomato_paste
+    role: required
+    amount: little
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: normal
+  - item: carrot
+    role: addition
+    amount: little
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  name_uk: Креветковий бісок
+- id: french_garbure
+  name: Thick soup with cabbage, beans and duck
+  kind: dish
+  tags:
+  - beans
+  - cabbage
+  - duck
+  - french
+  missing_allowed: 4
+  source_family: french:garbure
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    - main
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: cabbage
+    role: main
+    amount: many
+  - item: beans
+    role: required
+    amount: many
+    accepts:
+    - legume
+  - item: duck_confit
+    role: required
+    amount: normal
+    accepts:
+    - duck_leg
+  - item: pork_chunks
+    role: addition
+    amount: normal
+    accepts:
+    - meat_piece
+  - item: carrot
+    role: required
+    amount: normal
+  - item: potato
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Густий суп з капустою, квасолею та качкою
+- id: french_tourin_ail
+  name: Garlic soup
+  kind: dish
+  tags:
+  - egg
+  - french
+  - garlic
+  missing_allowed: 2
+  source_family: french:tourin_ail
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: dry_garlic
+    role: main
+    amount: spice
+  - item: eggs
+    role: required
+    amount: normal
+  - item: bread
+    role: addition
+    amount: normal
+  - item: vinegar
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  - item: fat
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Часниковий суп
+- id: french_soupe_pistou
+  name: Vegetable soup with basil dressing
+  kind: dish
+  tags:
+  - french
+  - pistou
+  - vegetable
+  missing_allowed: 3
+  source_family: french:soupe_pistou
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: vegetable_mix
+    role: main
+    amount: many
+    accepts:
+    - zucchini
+    - green_beans
+  - item: beans
+    role: required
+    amount: normal
+    accepts:
+    - legume
+  - item: pasta
+    role: addition
+    amount: normal
+    accepts:
+    - pasta_noodle
+  - item: basil
+    role: required
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: parmesan
+    role: addition
+    amount: normal
+    accepts:
+    - hard_cheese
+  - item: water
+    role: required
+    amount: many
+  name_uk: Овочевий суп з базиліковою заправкою
+- id: french_potage_st_germain
+  name: Green pea soup
+  kind: dish
+  tags:
+  - french
+  - peas
+  missing_allowed: 2
+  source_family: french:potage_st_germain
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: peas
+    role: main
+    amount: many
+    accepts:
+    - canned_peas
+  - item: leek
+    role: addition
+    amount: normal
+    accepts:
+    - onion
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - cream_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  name_uk: Суп із зеленого горошку
+- id: french_veloute_champignons
+  name: Cream of mushroom soup
+  kind: dish
+  tags:
+  - french
+  - mushroom
+  missing_allowed: 2
+  source_family: french:veloute_champignons
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - stew
+    - blend
+  comment: ''
+  ingredients:
+  - item: mushroom
+    role: main
+    amount: many
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: onion
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: flour
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Грибний крем-суп
+- id: french_veloute_potiron
+  name: Pumpkin cream soup
+  kind: dish
+  tags:
+  - french
+  - pumpkin
+  missing_allowed: 2
+  source_family: french:veloute_potiron
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: pumpkin
+    role: main
+    amount: many
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: onion
+    role: required
+    amount: little
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  name_uk: Гарбузовий крем-суп
+- id: french_creme_asperges
+  name: Cream of asparagus soup
+  kind: dish
+  tags:
+  - asparagus
+  - french
+  missing_allowed: 3
+  source_family: french:creme_asperges
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: asparagus
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: flour
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Крем-суп із спаржі
+- id: french_soupe_lentilles
+  name: Lentil soup
+  kind: dish
+  tags:
+  - french
+  - lentil
+  missing_allowed: 3
+  source_family: french:soupe_lentilles
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: lentil
+    role: main
+    amount: many
+    accepts:
+    - red_lentils
+    - legume
+  - item: carrot
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: celery_stalk
+    role: addition
+    amount: normal
+  - item: smoked_sausage
+    role: addition
+    amount: normal
+    accepts:
+    - sausage_product
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Чечевичний суп
+- id: french_soupe_chataignes
+  name: Chestnut soup
+  kind: dish
+  tags:
+  - chestnut
+  - french
+  missing_allowed: 3
+  source_family: french:soupe_chataignes
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: chestnuts
+    role: main
+    amount: many
+    accepts:
+    - nuts
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: onion
+    role: required
+    amount: little
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  name_uk: Каштановий суп
+- id: french_consomme
+  name: Clear meat broth
+  kind: dish
+  tags:
+  - broth
+  - french
+  missing_allowed: 3
+  source_family: french:consomme
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: broth_meat
+    role: main
+    amount: many
+    accepts:
+    - beef_bones
+    - chicken_parts
+  - item: carrot
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: celery_stalk
+    role: addition
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Прозорий м'ясний бульйон
+- id: french_petite_marmite
+  name: Meat and vegetable stew
+  kind: dish
+  tags:
+  - broth
+  - french
+  - meat
+  missing_allowed: 4
+  source_family: french:petite_marmite
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    - main
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: beef_chunks
+    role: main
+    amount: many
+    accepts:
+    - broth_meat
+  - item: chicken_parts
+    role: addition
+    amount: normal
+  - item: carrot
+    role: required
+    amount: normal
+  - item: leek
+    role: required
+    amount: normal
+    accepts:
+    - onion
+  - item: turnip
+    role: addition
+    amount: normal
+    accepts:
+    - root_vegetable
+  - item: cabbage
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: М'ясо-овочева юшка
+- id: french_soupe_concombre
+  name: Cold cucumber soup
+  kind: dish
+  tags:
+  - cold_soup
+  - french
+  missing_allowed: 2
+  source_family: french:soupe_concombre
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: under_10
+    method:
+    - blend
+  comment: ''
+  ingredients:
+  - item: cucumber
+    role: main
+    amount: many
+  - item: yogurt
+    role: required
+    amount: normal
+    accepts:
+    - sour_cream_like
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - cream_like
+  - item: dill
+    role: addition
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: lemon
+    role: addition
+    amount: little
+  name_uk: Холодний огірковий суп
+- id: french_soupe_poivrons
+  name: Sweet pepper soup
+  kind: dish
+  tags:
+  - french
+  - pepper
+  missing_allowed: 2
+  source_family: french:soupe_poivrons
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - roast
+    - blend
+  comment: ''
+  ingredients:
+  - item: bell_pepper
+    role: main
+    amount: many
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: normal
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - cream_like
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Суп із солодкого перцю
+- id: french_soupe_carottes_cumin
+  name: Carrot soup with cumin
+  kind: dish
+  tags:
+  - carrot
+  - french
+  missing_allowed: 2
+  source_family: french:soupe_carottes_cumin
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: carrot
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: little
+  - item: cumin
+    role: required
+    amount: spice
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - cream_like
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  name_uk: Морквяний суп з куміном
+- id: french_potage_dubarry
+  name: Creamy cauliflower soup
+  kind: dish
+  tags:
+  - cauliflower
+  - french
+  missing_allowed: 2
+  source_family: french:potage_dubarry
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: cauliflower
+    role: main
+    amount: many
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: flour
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Крем-суп із цвітної капусти
+- id: french_soupe_crecy
+  name: Carrot soup
+  kind: dish
+  tags:
+  - carrot
+  - french
+  missing_allowed: 2
+  source_family: french:soupe_crecy
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: carrot
+    role: main
+    amount: many
+  - item: rice
+    role: addition
+    amount: little
+  - item: onion
+    role: required
+    amount: little
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - cream_like
+  - item: water
+    role: required
+    amount: many
+  name_uk: Морквяний суп
+- id: french_soupe_moules
+  name: Mussel soup
+  kind: dish
+  tags:
+  - french
+  - mussels
+  missing_allowed: 3
+  source_family: french:soupe_moules
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: mussels
+    role: main
+    amount: many
+    accepts:
+    - seafood
+  - item: white_wine
+    role: required
+    amount: normal
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: shallot
+    role: required
+    amount: little
+    accepts:
+    - onion
+  - item: parsley
+    role: addition
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: water
+    role: addition
+    amount: normal
+  name_uk: Суп з мідій
+- id: french_veloute_poireaux
+  name: Leek cream soup
+  kind: dish
+  tags:
+  - french
+  - leek
+  missing_allowed: 2
+  source_family: french:veloute_poireaux
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: leek
+    role: main
+    amount: many
+    accepts:
+    - onion
+  - item: potato
+    role: addition
+    amount: normal
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  name_uk: Крем-суп із цибулі-порею
+- id: french_boeuf_bourguignon
+  name: Beef bourguignon
+  kind: dish
+  tags:
+  - beef
+  - french
+  - wine
+  missing_allowed: 4
+  source_family: french:boeuf_bourguignon
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: beef_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: red_wine
+    role: required
+    amount: many
+  - item: mushroom
+    role: required
+    amount: normal
+  - item: carrot
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: bacon
+    role: required
+    amount: normal
+    accepts:
+    - pork_lardons
+  - item: bouquet_garni
+    role: spice
+    amount: spice
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Яловичина по-бургундськи
+- id: french_coq_au_vin
+  name: Chicken in red wine
+  kind: dish
+  tags:
+  - chicken
+  - french
+  - wine
+  missing_allowed: 4
+  source_family: french:coq_au_vin
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: chicken_parts
+    role: main
+    amount: many
+  - item: red_wine
+    role: required
+    amount: many
+  - item: mushroom
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: carrot
+    role: addition
+    amount: normal
+  - item: bacon
+    role: required
+    amount: normal
+    accepts:
+    - pork_lardons
+  - item: bouquet_garni
+    role: spice
+    amount: spice
+  name_uk: Курка в червоному вині
+- id: french_coq_au_riesling
+  name: Chicken in white wine and cream
+  kind: dish
+  tags:
+  - alsace
+  - chicken
+  - french
+  missing_allowed: 4
+  source_family: french:coq_au_riesling
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: chicken_parts
+    role: main
+    amount: many
+  - item: white_wine
+    role: required
+    amount: many
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: mushroom
+    role: required
+    amount: normal
+  - item: shallot
+    role: required
+    amount: normal
+    accepts:
+    - onion
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: thyme
+    role: spice
+    amount: spice
+  name_uk: Курка в білому вині та вершках
+- id: french_blanquette_veau
+  name: Veal in white cream sauce
+  kind: dish
+  tags:
+  - cream
+  - french
+  - veal
+  missing_allowed: 4
+  source_family: french:blanquette_veau
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: veal_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: mushroom
+    role: required
+    amount: normal
+  - item: carrot
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  - item: lemon
+    role: addition
+    amount: little
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Телятина у білому вершковому соусі
+- id: french_pot_au_feu
+  name: Beef with vegetables in broth
+  kind: dish
+  tags:
+  - beef
+  - broth
+  - french
+  missing_allowed: 4
+  source_family: french:pot_au_feu
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - soup
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: broth_meat
+    role: main
+    amount: many
+    accepts:
+    - beef_chunks
+    - beef_bones
+  - item: carrot
+    role: required
+    amount: many
+  - item: leek
+    role: required
+    amount: normal
+    accepts:
+    - onion
+  - item: turnip
+    role: addition
+    amount: normal
+    accepts:
+    - root_vegetable
+  - item: cabbage
+    role: addition
+    amount: normal
+  - item: potato
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Яловичина з овочами в бульйоні
+- id: french_cassoulet
+  name: Cassoulet with beans, duck and sausage
+  kind: dish
+  tags:
+  - beans
+  - duck
+  - french
+  missing_allowed: 4
+  source_family: french:cassoulet
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+    - bake
+  comment: ''
+  ingredients:
+  - item: beans
+    role: main
+    amount: many
+    accepts:
+    - white_beans
+    - legume
+  - item: duck_confit
+    role: required
+    amount: normal
+    accepts:
+    - duck_leg
+  - item: pork_chunks
+    role: required
+    amount: normal
+    accepts:
+    - meat_piece
+  - item: sausages
+    role: required
+    amount: normal
+    accepts:
+    - sausage_product
+  - item: tomato_paste
+    role: addition
+    amount: little
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: normal
+  - item: breadcrumbs
+    role: addition
+    amount: normal
+  name_uk: Касулі з квасолею, качкою та ковбасою
+- id: french_confit_canard
+  name: Utinoe confi
+  kind: dish
+  tags:
+  - duck
+  - french
+  missing_allowed: 3
+  source_family: french:confit_canard
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roast
+    - stew
+  comment: ''
+  ingredients:
+  - item: duck_leg
+    role: main
+    amount: many
+    accepts:
+    - poultry
+  - item: duck_fat
+    role: required
+    amount: many
+    accepts:
+    - animal_fat
+    - goose_fat
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: thyme
+    role: spice
+    amount: spice
+  - item: potato
+    role: addition
+    amount: many
+  name_uk: Utinoe confi
+- id: french_magret_canard
+  name: Duck breast
+  kind: dish
+  tags:
+  - duck
+  - french
+  missing_allowed: 3
+  source_family: french:magret_canard
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: duck_breast
+    role: main
+    amount: many
+    accepts:
+    - poultry
+  - item: honey
+    role: addition
+    amount: normal
+    accepts:
+    - sweetener
+  - item: vinegar
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Качина грудка
+- id: french_canard_orange
+  name: Duck in orange sauce
+  kind: dish
+  tags:
+  - duck
+  - french
+  - orange
+  missing_allowed: 4
+  source_family: french:canard_orange
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roast
+    - stew
+  comment: ''
+  ingredients:
+  - item: duck
+    role: main
+    amount: many
+    accepts:
+    - duck_leg
+    - poultry
+  - item: orange
+    role: required
+    amount: many
+    accepts:
+    - fruit
+  - item: sugar
+    role: addition
+    amount: little
+  - item: vinegar
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Качка в апельсиновому соусі
+- id: french_steak_frites
+  name: Steak with fries
+  kind: dish
+  tags:
+  - beef
+  - french
+  - potato
+  missing_allowed: 2
+  source_family: french:steak_frites
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: beef_steak
+    role: main
+    amount: many
+    accepts:
+    - cutlet_meat
+  - item: potato
+    role: required
+    amount: many
+  - item: fat
+    role: required
+    amount: many
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Стейк з картоплею фрі
+- id: french_entrecote_bearnaise
+  name: Entrecote with béarnaise
+  kind: dish
+  tags:
+  - beef
+  - french
+  - sauce
+  missing_allowed: 3
+  source_family: french:entrecote_bearnaise
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - emulsify
+  comment: ''
+  ingredients:
+  - item: beef_steak
+    role: main
+    amount: many
+    accepts:
+    - cutlet_meat
+  - item: eggs
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: many
+    accepts:
+    - ghee
+  - item: tarragon
+    role: required
+    amount: spice
+    accepts:
+    - herb
+  - item: vinegar
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  - item: shallot
+    role: addition
+    amount: little
+    accepts:
+    - onion
+  name_uk: Антрекот із беарнезом
+- id: french_steak_poivre
+  name: Steak with pepper sauce
+  kind: dish
+  tags:
+  - beef
+  - cream
+  - french
+  missing_allowed: 3
+  source_family: french:steak_poivre
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: beef_steak
+    role: main
+    amount: many
+    accepts:
+    - cutlet_meat
+  - item: black_pepper
+    role: required
+    amount: spice
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: cognac
+    role: addition
+    amount: little
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Стейк із перцевим соусом
+- id: french_hachis_parmentier
+  name: Potato casserole with meat
+  kind: dish
+  tags:
+  - casserole
+  - french
+  missing_allowed: 2
+  source_family: french:hachis_parmentier
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - bake
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: minced_meat
+    role: required
+    amount: many
+    accepts:
+    - ground_meat
+  - item: onion
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: hard_cheese
+    role: addition
+    amount: normal
+    accepts:
+    - melting_cheese
+  name_uk: Картопляна запіканка з м'ясом
+- id: french_parmentier_canard
+  name: Potato casserole with duck
+  kind: dish
+  tags:
+  - casserole
+  - duck
+  - french
+  missing_allowed: 3
+  source_family: french:parmentier_canard
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: duck_confit
+    role: required
+    amount: many
+    accepts:
+    - duck_leg
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: hard_cheese
+    role: addition
+    amount: normal
+    accepts:
+    - melting_cheese
+  name_uk: Картопляна запіканка з качкою
+- id: french_ratatouille
+  name: Ratatouille
+  kind: dish
+  tags:
+  - french
+  - vegetable
+  missing_allowed: 3
+  source_family: french:ratatouille
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+    - bake
+  comment: ''
+  ingredients:
+  - item: eggplant
+    role: main
+    amount: many
+  - item: zucchini
+    role: required
+    amount: many
+  - item: bell_pepper
+    role: required
+    amount: many
+  - item: tomato
+    role: required
+    amount: many
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: normal
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: thyme
+    role: spice
+    amount: spice
+  name_uk: Рататуй
+- id: french_tian_provencal
+  name: Vegetable tian
+  kind: dish
+  tags:
+  - french
+  - vegetable
+  missing_allowed: 2
+  source_family: french:tian_provencal
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: zucchini
+    role: main
+    amount: many
+  - item: eggplant
+    role: required
+    amount: many
+  - item: tomato
+    role: required
+    amount: many
+  - item: onion
+    role: addition
+    amount: normal
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: thyme
+    role: spice
+    amount: spice
+  name_uk: Овочевий тіян
+- id: french_gratin_dauphinois
+  name: Potato gratin with cream
+  kind: dish
+  tags:
+  - cream
+  - french
+  - potato
+  missing_allowed: 2
+  source_family: french:gratin_dauphinois
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: cream
+    role: required
+    amount: many
+    accepts:
+    - cream_like
+  - item: milk
+    role: addition
+    amount: normal
+    accepts:
+    - milk_like
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Картопляний гратен з вершками
+- id: french_tartiflette
+  name: Potato casserole with reblochon
+  kind: dish
+  tags:
+  - cheese
+  - french
+  - potato
+  missing_allowed: 3
+  source_family: french:tartiflette
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: reblochon
+    role: required
+    amount: normal
+    accepts:
+    - melting_cheese
+    - cheese
+  - item: bacon
+    role: required
+    amount: normal
+    accepts:
+    - pork_lardons
+  - item: onion
+    role: required
+    amount: normal
+  - item: white_wine
+    role: addition
+    amount: normal
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - cream_like
+  name_uk: Картопляна запіканка з реблошоном
+- id: french_raclette_plate
+  name: Raclette with potatoes
+  kind: dish
+  tags:
+  - cheese
+  - french
+  missing_allowed: 3
+  source_family: french:raclette_plate
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - melt
+    - assemble
+  comment: ''
+  ingredients:
+  - item: raclette_cheese
+    role: main
+    amount: many
+    accepts:
+    - melting_cheese
+    - cheese
+  - item: potato
+    role: required
+    amount: many
+  - item: pickled_cucumber
+    role: addition
+    amount: normal
+  - item: ham
+    role: addition
+    amount: normal
+    accepts:
+    - meat_product
+  name_uk: Раклет з картоплею
+- id: french_aligot
+  name: Mashed potatoes with cheese
+  kind: dish
+  tags:
+  - cheese
+  - french
+  - potato
+  missing_allowed: 3
+  source_family: french:aligot
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: tomme_cheese
+    role: required
+    amount: many
+    accepts:
+    - melting_cheese
+    - cheese
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  name_uk: Картопляне пюре з сиром
+- id: french_truffade
+  name: Fried potatoes with tom
+  kind: dish
+  tags:
+  - cheese
+  - french
+  - potato
+  missing_allowed: 3
+  source_family: french:truffade
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - melt
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: tomme_cheese
+    role: required
+    amount: normal
+    accepts:
+    - melting_cheese
+    - cheese
+  - item: bacon
+    role: addition
+    amount: normal
+    accepts:
+    - pork_lardons
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Смажена картопля з томмом
+- id: french_quenelles_brochet
+  name: Fish dumplings
+  kind: dish
+  tags:
+  - fish
+  - french
+  missing_allowed: 4
+  source_family: french:quenelles_brochet
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - poach
+    - bake
+  comment: ''
+  ingredients:
+  - item: pike
+    role: main
+    amount: many
+    accepts:
+    - fish
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: fish_sauce_base
+    role: addition
+    amount: normal
+  name_uk: Рибні кнелі
+- id: french_sole_meuniere
+  name: Miller's fish
+  kind: dish
+  tags:
+  - fish
+  - french
+  missing_allowed: 2
+  source_family: french:sole_meuniere
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: sole_fish
+    role: main
+    amount: many
+    accepts:
+    - fish
+  - item: flour
+    role: required
+    amount: little
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: lemon
+    role: required
+    amount: little
+  - item: parsley
+    role: addition
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Риба мельничихи
+- id: french_salmon_papillote
+  name: Salmon in parchment
+  kind: dish
+  tags:
+  - fish
+  - french
+  missing_allowed: 3
+  source_family: french:salmon_papillote
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: salmon
+    role: main
+    amount: many
+    accepts:
+    - fish
+  - item: lemon
+    role: required
+    amount: little
+  - item: zucchini
+    role: addition
+    amount: normal
+  - item: carrot
+    role: addition
+    amount: little
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: dill
+    role: addition
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Лосось у пергаменті
+- id: french_moules_marinieres
+  name: Mussels in white wine
+  kind: dish
+  tags:
+  - french
+  - mussels
+  missing_allowed: 2
+  source_family: french:moules_marinieres
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: mussels
+    role: main
+    amount: many
+    accepts:
+    - seafood
+  - item: white_wine
+    role: required
+    amount: normal
+  - item: shallot
+    role: required
+    amount: normal
+    accepts:
+    - onion
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: parsley
+    role: addition
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Мідії у білому вині
+- id: french_moules_frites
+  name: Mussels with fries
+  kind: dish
+  tags:
+  - french
+  - mussels
+  missing_allowed: 3
+  source_family: french:moules_frites
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - fry
+  comment: ''
+  ingredients:
+  - item: mussels
+    role: main
+    amount: many
+    accepts:
+    - seafood
+  - item: white_wine
+    role: required
+    amount: normal
+  - item: potato
+    role: required
+    amount: many
+  - item: fat
+    role: required
+    amount: many
+  - item: shallot
+    role: required
+    amount: normal
+    accepts:
+    - onion
+  name_uk: Мідії з картоплею фрі
+- id: french_brandade_morue
+  name: Salted cod puree
+  kind: dish
+  tags:
+  - cod
+  - french
+  missing_allowed: 3
+  source_family: french:brandade_morue
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: salt_cod
+    role: main
+    amount: many
+    accepts:
+    - baccala
+    - cod
+    - fish
+  - item: potato
+    role: required
+    amount: normal
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: milk
+    role: addition
+    amount: normal
+    accepts:
+    - milk_like
+  - item: dry_garlic
+    role: required
+    amount: spice
+  name_uk: Пюре із солоної тріски
+- id: french_cod_provencale
+  name: Provençal cod
+  kind: dish
+  tags:
+  - cod
+  - french
+  missing_allowed: 3
+  source_family: french:cod_provencale
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+    - bake
+  comment: ''
+  ingredients:
+  - item: cod
+    role: main
+    amount: many
+    accepts:
+    - fish
+  - item: tomato
+    role: required
+    amount: many
+    accepts:
+    - tomato_base
+  - item: olive
+    role: required
+    amount: normal
+  - item: capers
+    role: addition
+    amount: little
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  name_uk: Тріска по-провансальськи
+- id: french_scallops_beurre_blanc
+  name: Scallops with white butter sauce
+  kind: dish
+  tags:
+  - french
+  - scallops
+  missing_allowed: 4
+  source_family: french:scallops_beurre_blanc
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+    - emulsify
+  comment: ''
+  ingredients:
+  - item: scallops
+    role: main
+    amount: many
+    accepts:
+    - seafood
+  - item: butter
+    role: required
+    amount: many
+    accepts:
+    - ghee
+  - item: white_wine
+    role: required
+    amount: normal
+  - item: shallot
+    role: required
+    amount: little
+    accepts:
+    - onion
+  - item: vinegar
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  name_uk: Гребінці з білим олійним соусом
+- id: french_escargots_bourgogne
+  name: Snails with garlic butter
+  kind: dish
+  tags:
+  - french
+  - snails
+  missing_allowed: 4
+  source_family: french:escargots_bourgogne
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - snack
+    time: under_30
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: snails
+    role: main
+    amount: many
+    accepts:
+    - seafood
+  - item: butter
+    role: required
+    amount: many
+    accepts:
+    - ghee
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: parsley
+    role: required
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Равлики з часниковою олією
+- id: french_lapin_moutarde
+  name: Rabbit in mustard sauce
+  kind: dish
+  tags:
+  - french
+  - rabbit
+  missing_allowed: 4
+  source_family: french:lapin_moutarde
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: rabbit
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: mustard
+    role: required
+    amount: normal
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: white_wine
+    role: addition
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: thyme
+    role: spice
+    amount: spice
+  name_uk: Кролик у гірчичному соусі
+- id: french_navarin_agneau
+  name: Lamb stew with vegetables
+  kind: dish
+  tags:
+  - french
+  - lamb
+  missing_allowed: 4
+  source_family: french:navarin_agneau
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: lamb_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: carrot
+    role: required
+    amount: normal
+  - item: turnip
+    role: addition
+    amount: normal
+    accepts:
+    - root_vegetable
+  - item: potato
+    role: addition
+    amount: normal
+  - item: peas
+    role: addition
+    amount: normal
+  - item: tomato_paste
+    role: addition
+    amount: little
+    accepts:
+    - tomato_base
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Рагу з баранини з овочами
+- id: french_gigot_agneau
+  name: Baked leg of lamb
+  kind: dish
+  tags:
+  - french
+  - lamb
+  missing_allowed: 4
+  source_family: french:gigot_agneau
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roast
+  comment: ''
+  ingredients:
+  - item: lamb_leg
+    role: main
+    amount: many
+    accepts:
+    - lamb_chunks
+    - meat_piece
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: rosemary
+    role: required
+    amount: spice
+    accepts:
+    - herb
+  - item: potato
+    role: addition
+    amount: many
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  name_uk: Запечена бараняча нога
+- id: french_lamb_shank_wine
+  name: Lamb shank in red wine
+  kind: dish
+  tags:
+  - french
+  - lamb
+  - wine
+  missing_allowed: 4
+  source_family: french:lamb_shank_wine
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: lamb_shank
+    role: main
+    amount: many
+    accepts:
+    - lamb_chunks
+    - meat_piece
+  - item: red_wine
+    role: required
+    amount: normal
+  - item: carrot
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: thyme
+    role: spice
+    amount: spice
+  - item: water
+    role: addition
+    amount: normal
+  name_uk: Бараняча гомілка у червоному вині
+- id: french_andouillette_moutarde
+  name: Andouillet with mustard
+  kind: dish
+  tags:
+  - french
+  - sausage
+  missing_allowed: 4
+  source_family: french:andouillette_moutarde
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: andouillette
+    role: main
+    amount: many
+    accepts:
+    - sausage_product
+  - item: mustard
+    role: required
+    amount: normal
+  - item: white_wine
+    role: addition
+    amount: normal
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - cream_like
+  - item: potato
+    role: addition
+    amount: many
+  name_uk: Андуєт із гірчицею
+- id: french_boudin_noir_pommes
+  name: Blood sausage with apples
+  kind: dish
+  tags:
+  - blood_sausage
+  - french
+  missing_allowed: 3
+  source_family: french:boudin_noir_pommes
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: blood_sausage_base
+    role: main
+    amount: many
+    accepts:
+    - sausage_product
+  - item: apple
+    role: required
+    amount: many
+  - item: onion
+    role: addition
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Кров'яна ковбаса з яблуками
+- id: french_choucroute_garnie
+  name: Choucroute with sausages and pork
+  kind: dish
+  tags:
+  - french
+  - sauerkraut
+  missing_allowed: 4
+  source_family: french:choucroute_garnie
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: sauerkraut
+    role: main
+    amount: many
+  - item: smoked_sausage
+    role: required
+    amount: normal
+    accepts:
+    - sausage_product
+  - item: pork_hock
+    role: required
+    amount: normal
+    accepts:
+    - broth_meat
+  - item: pork_belly
+    role: addition
+    amount: normal
+  - item: potato
+    role: required
+    amount: many
+  - item: white_wine
+    role: required
+    amount: normal
+  - item: juniper
+    role: spice
+    amount: spice
+  name_uk: Шукрут з ковбасами та свининою
+- id: french_quiche_lorraine
+  name: Quiche lorraine
+  kind: dish
+  tags:
+  - french
+  - quiche
+  missing_allowed: 3
+  source_family: french:quiche_lorraine
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - snack
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: shortcrust_pastry
+    role: main
+    amount: many
+    accepts:
+    - flour
+    - bread_base
+  - item: eggs
+    role: required
+    amount: many
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: bacon
+    role: required
+    amount: normal
+    accepts:
+    - pork_lardons
+  - item: gruyere
+    role: addition
+    amount: normal
+    accepts:
+    - melting_cheese
+    - hard_cheese
+  name_uk: Киш Лотарингія
+- id: french_quiche_epinards_chevre
+  name: Quiche with spinach and goat cheese
+  kind: dish
+  tags:
+  - french
+  - quiche
+  missing_allowed: 3
+  source_family: french:quiche_epinards_chevre
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - snack
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: shortcrust_pastry
+    role: main
+    amount: many
+    accepts:
+    - flour
+    - bread_base
+  - item: eggs
+    role: required
+    amount: many
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: spinach
+    role: required
+    amount: many
+  - item: goat_cheese
+    role: required
+    amount: normal
+    accepts:
+    - cheese
+  name_uk: Киш зі шпинатом та козячим сиром
+- id: french_galette_bretonne_complete
+  name: Buckwheat galette with egg, ham and cheese
+  kind: dish
+  tags:
+  - french
+  - galette
+  missing_allowed: 3
+  source_family: french:galette_bretonne_complete
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - breakfast
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: buckwheat_flour
+    role: main
+    amount: normal
+    accepts:
+    - buckwheat
+    - flour_group
+  - item: eggs
+    role: required
+    amount: normal
+  - item: ham
+    role: required
+    amount: normal
+    accepts:
+    - meat_product
+  - item: hard_cheese
+    role: required
+    amount: normal
+    accepts:
+    - melting_cheese
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Гречана галета з яйцем, шинкою та сиром
+- id: french_galette_mushroom_cheese
+  name: Buckwheat galette with mushrooms
+  kind: dish
+  tags:
+  - french
+  - galette
+  missing_allowed: 2
+  source_family: french:galette_mushroom_cheese
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: buckwheat_flour
+    role: main
+    amount: normal
+    accepts:
+    - buckwheat
+    - flour_group
+  - item: mushroom
+    role: required
+    amount: normal
+  - item: hard_cheese
+    role: required
+    amount: normal
+    accepts:
+    - melting_cheese
+  - item: eggs
+    role: addition
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Гречана галета з грибами
+- id: french_croque_monsieur
+  name: Hot ham and cheese sandwich
+  kind: dish
+  tags:
+  - french
+  - sandwich
+  missing_allowed: 2
+  source_family: french:croque_monsieur
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - snack
+    time: under_30
+    method:
+    - bake
+    - fry
+  comment: ''
+  ingredients:
+  - item: bread
+    role: main
+    amount: normal
+  - item: ham
+    role: required
+    amount: normal
+    accepts:
+    - meat_product
+  - item: gruyere
+    role: required
+    amount: normal
+    accepts:
+    - melting_cheese
+    - hard_cheese
+  - item: bechamel
+    role: addition
+    amount: normal
+    accepts:
+    - white_sauce
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Гарячий сендвіч з шинкою та сиром
+- id: french_croque_madame
+  name: Hot egg sandwich
+  kind: dish
+  tags:
+  - french
+  - sandwich
+  missing_allowed: 2
+  source_family: french:croque_madame
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - breakfast
+    time: under_30
+    method:
+    - bake
+    - fry
+  comment: ''
+  ingredients:
+  - item: bread
+    role: main
+    amount: normal
+  - item: ham
+    role: required
+    amount: normal
+    accepts:
+    - meat_product
+  - item: gruyere
+    role: required
+    amount: normal
+    accepts:
+    - melting_cheese
+  - item: eggs
+    role: required
+    amount: normal
+  - item: bechamel
+    role: addition
+    amount: normal
+    accepts:
+    - white_sauce
+  name_uk: Гарячий бутерброд з яйцем
+- id: french_omelette_fines_herbes
+  name: Omelette with herbs
+  kind: dish
+  tags:
+  - french
+  - omelette
+  missing_allowed: 1
+  source_family: french:omelette_fines_herbes
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - breakfast
+    time: under_10
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: many
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: fine_herbs
+    role: required
+    amount: spice
+    accepts:
+    - fresh_herb
+    - herb
+  name_uk: Омлет із травами
+- id: french_omelette_fromage
+  name: Cheese omelette
+  kind: dish
+  tags:
+  - french
+  - omelette
+  missing_allowed: 1
+  source_family: french:omelette_fromage
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - breakfast
+    time: under_10
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: many
+  - item: hard_cheese
+    role: required
+    amount: normal
+    accepts:
+    - melting_cheese
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Сирний омлет
+- id: french_piperade
+  name: Peppers, tomatoes and Basque eggs
+  kind: dish
+  tags:
+  - basque
+  - french
+  missing_allowed: 2
+  source_family: french:piperade
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - breakfast
+    time: under_30
+    method:
+    - stew
+    - fry
+  comment: ''
+  ingredients:
+  - item: bell_pepper
+    role: main
+    amount: many
+  - item: tomato
+    role: required
+    amount: many
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: normal
+  - item: piment_espelette
+    role: required
+    amount: spice
+    accepts:
+    - paprika
+    - chili_spice
+  name_uk: Перець, томати та яйця по-баскски
+- id: french_poulet_basquaise
+  name: Basque chicken
+  kind: dish
+  tags:
+  - basque
+  - chicken
+  - french
+  missing_allowed: 3
+  source_family: french:poulet_basquaise
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: chicken_parts
+    role: main
+    amount: many
+  - item: bell_pepper
+    role: required
+    amount: many
+  - item: tomato
+    role: required
+    amount: many
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: normal
+  - item: piment_espelette
+    role: required
+    amount: spice
+    accepts:
+    - paprika
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  name_uk: Курка по-баскськи
+- id: french_poulet_roti
+  name: Fried chicken
+  kind: dish
+  tags:
+  - chicken
+  - french
+  missing_allowed: 2
+  source_family: french:poulet_roti
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roast
+    - bake
+  comment: ''
+  ingredients:
+  - item: whole_chicken
+    role: main
+    amount: many
+    accepts:
+    - chicken_parts
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: thyme
+    role: spice
+    amount: spice
+  - item: potato
+    role: addition
+    amount: many
+  name_uk: Смажена курка
+- id: french_poulet_creme
+  name: Chicken in cream sauce
+  kind: dish
+  tags:
+  - chicken
+  - cream
+  - french
+  missing_allowed: 2
+  source_family: french:poulet_creme
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: chicken_parts
+    role: main
+    amount: many
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: mushroom
+    role: addition
+    amount: normal
+  - item: shallot
+    role: required
+    amount: normal
+    accepts:
+    - onion
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Курка у вершковому соусі
+- id: french_vol_au_vent_chicken
+  name: Vol-au-vent with chicken and mushrooms
+  kind: dish
+  tags:
+  - french
+  - puff_pastry
+  missing_allowed: 3
+  source_family: french:vol_au_vent_chicken
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - snack
+    time: under_60
+    method:
+    - bake
+    - stew
+  comment: ''
+  ingredients:
+  - item: puff_pastry
+    role: main
+    amount: many
+    accepts:
+    - bread_base
+  - item: chicken_fillet
+    role: required
+    amount: normal
+  - item: mushroom
+    role: required
+    amount: normal
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Волован з куркою та грибами
+- id: french_crepes_salees
+  name: Savory pancakes with ham and cheese
+  kind: dish
+  tags:
+  - crepe
+  - french
+  missing_allowed: 2
+  source_family: french:crepes_salees
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - snack
+    time: under_60
+    method:
+    - fry
+    - assemble
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: normal
+  - item: ham
+    role: required
+    amount: normal
+    accepts:
+    - meat_product
+  - item: hard_cheese
+    role: required
+    amount: normal
+    accepts:
+    - melting_cheese
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Солоні млинці з шинкою та сиром
+- id: french_crepes_champignons
+  name: Pancakes with mushrooms
+  kind: dish
+  tags:
+  - crepe
+  - french
+  missing_allowed: 2
+  source_family: french:crepes_champignons
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - snack
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: normal
+  - item: mushroom
+    role: required
+    amount: many
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Млинці з грибами
+- id: french_pissaladiere
+  name: Onion pie with anchovies and olives
+  kind: dish
+  tags:
+  - french
+  - provence
+  missing_allowed: 3
+  source_family: french:pissaladiere
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - snack
+    - bread
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: bread_dough
+    role: main
+    amount: many
+    accepts:
+    - flour
+    - bread_base
+  - item: onion
+    role: required
+    amount: many
+  - item: anchovy
+    role: required
+    amount: normal
+    accepts:
+    - fish
+  - item: olive
+    role: required
+    amount: normal
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  name_uk: Цибульний пиріг з анчоусами та оливками
+- id: french_socca
+  name: Chickpea flatbread from Nice
+  kind: dish
+  tags:
+  - chickpea
+  - french
+  missing_allowed: 1
+  source_family: french:socca
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - snack
+    - bread
+    time: under_30
+    method:
+    - fry
+    - bake
+  comment: ''
+  ingredients:
+  - item: chickpea_flour
+    role: main
+    amount: many
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: water
+    role: required
+    amount: normal
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Нутовий коржик з Ніцци
+- id: french_flamiche_poireaux
+  name: Leek pie
+  kind: dish
+  tags:
+  - french
+  - leek
+  - pie
+  missing_allowed: 3
+  source_family: french:flamiche_poireaux
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - snack
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: shortcrust_pastry
+    role: main
+    amount: many
+    accepts:
+    - flour
+    - bread_base
+  - item: leek
+    role: required
+    amount: many
+    accepts:
+    - onion
+  - item: eggs
+    role: required
+    amount: normal
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Пиріг з цибулею-пореєм
+- id: french_flamiche_maroilles
+  name: Marual cheese pie
+  kind: dish
+  tags:
+  - cheese
+  - french
+  missing_allowed: 3
+  source_family: french:flamiche_maroilles
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - snack
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: bread_dough
+    role: main
+    amount: many
+    accepts:
+    - flour
+    - bread_base
+  - item: maroilles
+    role: required
+    amount: normal
+    accepts:
+    - melting_cheese
+    - cheese
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - cream_like
+  - item: eggs
+    role: addition
+    amount: normal
+  name_uk: Пиріг з сиром маруаль
+- id: french_tarte_tomate_moutarde
+  name: Tomato tart with mustard
+  kind: dish
+  tags:
+  - french
+  - tomato
+  missing_allowed: 2
+  source_family: french:tarte_tomate_moutarde
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - snack
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: shortcrust_pastry
+    role: main
+    amount: many
+    accepts:
+    - flour
+    - bread_base
+  - item: tomato
+    role: required
+    amount: many
+    accepts:
+    - tomato_base
+  - item: mustard
+    role: required
+    amount: normal
+  - item: hard_cheese
+    role: addition
+    amount: normal
+    accepts:
+    - melting_cheese
+  - item: olive_oil
+    role: addition
+    amount: normal
+    accepts:
+    - plant_oil
+  name_uk: Томатний тарт із гірчицею
+- id: french_salade_nicoise
+  name: It's not
+  kind: dish
+  tags:
+  - french
+  - salad
+  missing_allowed: 3
+  source_family: french:salade_nicoise
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - salad
+    time: under_30
+    method:
+    - boil
+    - assemble
+  comment: ''
+  ingredients:
+  - item: canned_tuna
+    role: main
+    amount: normal
+    accepts:
+    - fish
+  - item: eggs
+    role: required
+    amount: normal
+  - item: tomato
+    role: required
+    amount: normal
+  - item: green_beans
+    role: required
+    amount: normal
+  - item: olive
+    role: required
+    amount: normal
+  - item: potato
+    role: addition
+    amount: normal
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  name_uk: Це не так
+- id: french_salade_lyonnaise
+  name: Lyonnaise salad with egg and bacon
+  kind: dish
+  tags:
+  - french
+  - salad
+  missing_allowed: 2
+  source_family: french:salade_lyonnaise
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - salad
+    time: under_30
+    method:
+    - fry
+    - assemble
+  comment: ''
+  ingredients:
+  - item: leafy_green
+    role: main
+    amount: many
+    accepts:
+    - greens
+  - item: eggs
+    role: required
+    amount: normal
+  - item: bacon
+    role: required
+    amount: normal
+    accepts:
+    - pork_lardons
+  - item: bread
+    role: addition
+    amount: normal
+    accepts:
+    - bread_base
+  - item: vinegar
+    role: required
+    amount: little
+    accepts:
+    - acid_souring
+  name_uk: Ліонський салат з яйцем і беконом
+- id: french_salade_chevre_chaud
+  name: Salad with warm goat cheese
+  kind: dish
+  tags:
+  - french
+  - salad
+  missing_allowed: 2
+  source_family: french:salade_chevre_chaud
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - salad
+    time: under_30
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: goat_cheese
+    role: main
+    amount: normal
+    accepts:
+    - cheese
+  - item: leafy_green
+    role: required
+    amount: many
+    accepts:
+    - greens
+  - item: baguette
+    role: required
+    amount: normal
+    accepts:
+    - bread
+  - item: honey
+    role: addition
+    amount: little
+    accepts:
+    - sweetener
+  - item: walnuts
+    role: addition
+    amount: normal
+    accepts:
+    - nuts
+  name_uk: Салат із теплим козячим сиром
+- id: french_bechamel
+  name: Bechamel
+  kind: dish
+  tags:
+  - french
+  - sauce
+  missing_allowed: 1
+  source_family: french:bechamel
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - sauce
+    - component
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+    accepts:
+    - milk_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: flour
+    role: required
+    amount: normal
+  name_uk: Бешамель
+- id: french_veloute_sauce
+  name: Veloute
+  kind: dish
+  tags:
+  - french
+  - sauce
+  missing_allowed: 1
+  source_family: french:veloute_sauce
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - sauce
+    - component
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: chicken_broth
+    role: main
+    amount: many
+    accepts:
+    - meat_broth
+    - broth_meat
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: flour
+    role: required
+    amount: normal
+  name_uk: Велюте
+- id: french_espagnole_sauce
+  name: Hispaniol
+  kind: dish
+  tags:
+  - french
+  - sauce
+  missing_allowed: 3
+  source_family: french:espagnole_sauce
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - sauce
+    - component
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: meat_broth
+    role: main
+    amount: many
+    accepts:
+    - beef_broth
+  - item: tomato_paste
+    role: required
+    amount: little
+    accepts:
+    - tomato_base
+  - item: carrot
+    role: addition
+    amount: little
+  - item: onion
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Іспаньйоль
+- id: french_hollandaise
+  name: Hollandaise
+  kind: dish
+  tags:
+  - french
+  - sauce
+  missing_allowed: 1
+  source_family: french:hollandaise
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - sauce
+    - component
+    time: under_30
+    method:
+    - emulsify
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: normal
+  - item: butter
+    role: required
+    amount: many
+    accepts:
+    - ghee
+  - item: lemon
+    role: required
+    amount: little
+    accepts:
+    - acid_souring
+  name_uk: Голландез
+- id: french_bearnaise
+  name: Béarnaise
+  kind: dish
+  tags:
+  - french
+  - sauce
+  missing_allowed: 2
+  source_family: french:bearnaise
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - sauce
+    - component
+    time: under_30
+    method:
+    - emulsify
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: normal
+  - item: butter
+    role: required
+    amount: many
+    accepts:
+    - ghee
+  - item: tarragon
+    role: required
+    amount: spice
+    accepts:
+    - herb
+  - item: shallot
+    role: addition
+    amount: little
+    accepts:
+    - onion
+  - item: vinegar
+    role: required
+    amount: little
+    accepts:
+    - acid_souring
+  name_uk: Беарнез
+- id: french_beurre_blanc
+  name: White butter sauce
+  kind: dish
+  tags:
+  - french
+  - sauce
+  missing_allowed: 2
+  source_family: french:beurre_blanc
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - sauce
+    - component
+    time: under_30
+    method:
+    - emulsify
+  comment: ''
+  ingredients:
+  - item: butter
+    role: main
+    amount: many
+    accepts:
+    - ghee
+  - item: white_wine
+    role: required
+    amount: normal
+  - item: shallot
+    role: required
+    amount: little
+    accepts:
+    - onion
+  - item: vinegar
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  name_uk: Білий масляний соус
+- id: french_mayonnaise_maison
+  name: Homemade mayonnaise
+  kind: dish
+  tags:
+  - french
+  - sauce
+  missing_allowed: 1
+  source_family: french:mayonnaise_maison
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - sauce
+    - component
+    time: under_10
+    method:
+    - emulsify
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: normal
+  - item: plant_oil
+    role: required
+    amount: many
+  - item: mustard
+    role: required
+    amount: little
+  - item: vinegar
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  name_uk: Домашній майонез
+- id: french_aioli
+  name: Garlic sauce
+  kind: dish
+  tags:
+  - french
+  - sauce
+  missing_allowed: 1
+  source_family: french:aioli
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - sauce
+    - component
+    time: under_10
+    method:
+    - emulsify
+  comment: ''
+  ingredients:
+  - item: dry_garlic
+    role: main
+    amount: spice
+  - item: eggs
+    role: required
+    amount: normal
+  - item: olive_oil
+    role: required
+    amount: many
+    accepts:
+    - plant_oil
+  - item: lemon
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  name_uk: Часниковий соус
+- id: french_rouille
+  name: Rui for fish soup
+  kind: dish
+  tags:
+  - french
+  - sauce
+  missing_allowed: 2
+  source_family: french:rouille
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - sauce
+    - component
+    time: under_30
+    method:
+    - blend
+  comment: ''
+  ingredients:
+  - item: bread
+    role: main
+    amount: normal
+    accepts:
+    - bread_base
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: saffron
+    role: addition
+    amount: spice
+  - item: chili_spice
+    role: addition
+    amount: spice
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  name_uk: Руй для рибного супу
+- id: french_pistou
+  name: Basil dressing
+  kind: dish
+  tags:
+  - french
+  - sauce
+  missing_allowed: 2
+  source_family: french:pistou
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - sauce
+    - component
+    time: under_10
+    method:
+    - blend
+  comment: ''
+  ingredients:
+  - item: basil
+    role: main
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: parmesan
+    role: addition
+    amount: normal
+    accepts:
+    - hard_cheese
+  name_uk: Базилікова заправка
+- id: french_duxelles
+  name: Mushroom filling
+  kind: dish
+  tags:
+  - component
+  - french
+  missing_allowed: 1
+  source_family: french:duxelles
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - component
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: mushroom
+    role: main
+    amount: many
+  - item: shallot
+    role: required
+    amount: normal
+    accepts:
+    - onion
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: parsley
+    role: addition
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Грибна начинка
+- id: french_mirepoix
+  name: Fruit base
+  kind: dish
+  tags:
+  - component
+  - french
+  missing_allowed: 1
+  source_family: french:mirepoix
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - component
+    time: under_30
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: onion
+    role: main
+    amount: normal
+  - item: carrot
+    role: required
+    amount: normal
+  - item: celery_stalk
+    role: required
+    amount: normal
+    accepts:
+    - vegetable
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Фруктова основа
+- id: french_bouquet_garni_component
+  name: Bouquet garni
+  kind: dish
+  tags:
+  - component
+  - french
+  missing_allowed: 1
+  source_family: french:bouquet_garni_component
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - component
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: thyme
+    role: main
+    amount: spice
+    accepts:
+    - herb
+  - item: bay_leaf
+    role: required
+    amount: spice
+  - item: parsley
+    role: addition
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Букет гарні
+- id: french_pommes_puree
+  name: Mashed potatoes
+  kind: dish
+  tags:
+  - french
+  - side
+  missing_allowed: 1
+  source_family: french:pommes_puree
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - side
+    time: under_30
+    method:
+    - boil
+    - mash
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - cream_like
+  name_uk: Картопляне пюре
+- id: french_pommes_duchesse
+  name: Potato rosettes
+  kind: dish
+  tags:
+  - french
+  - side
+  missing_allowed: 1
+  source_family: french:pommes_duchesse
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - side
+    time: under_60
+    method:
+    - boil
+    - bake
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Картопляні розетки
+- id: french_pommes_anna
+  name: Layered potatoes with butter
+  kind: dish
+  tags:
+  - french
+  - side
+  missing_allowed: 1
+  source_family: french:pommes_anna
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - side
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: butter
+    role: required
+    amount: many
+    accepts:
+    - ghee
+  name_uk: Листкова картопля з олією
+- id: french_pommes_sarladaises
+  name: Duck fat potatoes
+  kind: dish
+  tags:
+  - french
+  - side
+  missing_allowed: 2
+  source_family: french:pommes_sarladaises
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - side
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: duck_fat
+    role: required
+    amount: normal
+    accepts:
+    - animal_fat
+    - goose_fat
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: parsley
+    role: addition
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Картопля на качиному жирі
+- id: french_haricots_amandine
+  name: Green beans with almonds
+  kind: dish
+  tags:
+  - french
+  - side
+  missing_allowed: 2
+  source_family: french:haricots_amandine
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - side
+    time: under_30
+    method:
+    - boil
+    - fry
+  comment: ''
+  ingredients:
+  - item: green_beans
+    role: main
+    amount: many
+  - item: almonds
+    role: required
+    amount: normal
+    accepts:
+    - nuts
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: lemon
+    role: addition
+    amount: little
+  name_uk: Стручкова квасоля з мигдалем
+- id: french_carottes_vichy
+  name: Vichy carrots
+  kind: dish
+  tags:
+  - french
+  - side
+  missing_allowed: 1
+  source_family: french:carottes_vichy
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - side
+    time: under_30
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: carrot
+    role: main
+    amount: many
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Морква Віші
+- id: french_endives_braisees
+  name: Stewed chicory
+  kind: dish
+  tags:
+  - french
+  - side
+  missing_allowed: 2
+  source_family: french:endives_braisees
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - side
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: endive
+    role: main
+    amount: many
+    accepts:
+    - leafy_green
+    - vegetable
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: lemon
+    role: addition
+    amount: little
+  - item: water
+    role: addition
+    amount: normal
+  name_uk: Тушкований цикорій
+- id: french_champignons_grecque
+  name: Marinated mushrooms in tomato
+  kind: dish
+  tags:
+  - french
+  - mushroom
+  missing_allowed: 2
+  source_family: french:champignons_grecque
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - side
+    - snack
+    time: under_30
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: mushroom
+    role: main
+    amount: many
+  - item: tomato_paste
+    role: required
+    amount: little
+    accepts:
+    - tomato_base
+  - item: white_wine
+    role: addition
+    amount: normal
+  - item: lemon
+    role: required
+    amount: little
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  name_uk: Мариновані гриби в томаті
+- id: french_oeufs_mayo
+  name: Eggs with mayonnaise
+  kind: dish
+  tags:
+  - egg
+  - french
+  missing_allowed: 1
+  source_family: french:oeufs_mayo
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - snack
+    - breakfast
+    time: under_30
+    method:
+    - boil
+    - assemble
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: many
+  - item: mayonnaise
+    role: required
+    amount: normal
+    accepts:
+    - remoulade
+    - tartar_sauce
+  name_uk: Яйця з майонезом
+- id: french_oeufs_meurette
+  name: Eggs in red wine sauce
+  kind: dish
+  tags:
+  - egg
+  - french
+  - wine
+  missing_allowed: 3
+  source_family: french:oeufs_meurette
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - breakfast
+    time: under_60
+    method:
+    - poach
+    - stew
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: many
+  - item: red_wine
+    role: required
+    amount: normal
+  - item: bacon
+    role: required
+    amount: normal
+    accepts:
+    - pork_lardons
+  - item: mushroom
+    role: addition
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: bread
+    role: addition
+    amount: normal
+  name_uk: Яйця в червоний винний соус
+- id: french_pate_campagne
+  name: Rustic pate
+  kind: dish
+  tags:
+  - french
+  - pate
+  missing_allowed: 4
+  source_family: french:pate_campagne
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - snack
+    - main
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: ground_pork
+    role: main
+    amount: many
+    accepts:
+    - minced_meat
+  - item: pork_liver
+    role: required
+    amount: normal
+    accepts:
+    - liver_offal
+  - item: bacon
+    role: required
+    amount: normal
+    accepts:
+    - pork_lardons
+  - item: eggs
+    role: addition
+    amount: normal
+  - item: cognac
+    role: addition
+    amount: little
+  - item: bread
+    role: addition
+    amount: normal
+  name_uk: Сільський паштет
+- id: french_rillettes_porc
+  name: Pork rillettes
+  kind: dish
+  tags:
+  - french
+  - spread
+  missing_allowed: 3
+  source_family: french:rillettes_porc
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - snack
+    - main
+    time: over_60
+    method:
+    - stew
+    - mix
+  comment: ''
+  ingredients:
+  - item: pork_belly
+    role: main
+    amount: many
+    accepts:
+    - pork_chunks
+  - item: pork_shoulder
+    role: required
+    amount: many
+    accepts:
+    - pork_chunks
+  - item: fat
+    role: required
+    amount: normal
+  - item: thyme
+    role: spice
+    amount: spice
+  - item: bread
+    role: addition
+    amount: normal
+  name_uk: Свинячі рієти
+- id: french_rillettes_canard
+  name: Duck rillettes
+  kind: dish
+  tags:
+  - duck
+  - french
+  - spread
+  missing_allowed: 3
+  source_family: french:rillettes_canard
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - snack
+    - main
+    time: over_60
+    method:
+    - stew
+    - mix
+  comment: ''
+  ingredients:
+  - item: duck_leg
+    role: main
+    amount: many
+    accepts:
+    - poultry
+  - item: duck_fat
+    role: required
+    amount: normal
+    accepts:
+    - goose_fat
+  - item: thyme
+    role: spice
+    amount: spice
+  - item: bread
+    role: addition
+    amount: normal
+  name_uk: Качині рієти
+- id: french_terrine_legumes
+  name: Fruit terrine
+  kind: dish
+  tags:
+  - french
+  - terrine
+  missing_allowed: 3
+  source_family: french:terrine_legumes
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - snack
+    - main
+    time: over_60
+    method:
+    - bake
+    - set
+  comment: ''
+  ingredients:
+  - item: vegetable_mix
+    role: main
+    amount: many
+    accepts:
+    - zucchini
+    - carrot
+    - vegetable
+  - item: eggs
+    role: required
+    amount: normal
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: herb
+    role: addition
+    amount: spice
+  name_uk: Фруктовий террін
+- id: french_gougeres
+  name: Cheese custard buns
+  kind: dish
+  tags:
+  - cheese
+  - french
+  missing_allowed: 2
+  source_family: french:gougeres
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - snack
+    - bread
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: eggs
+    role: required
+    amount: many
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: gruyere
+    role: required
+    amount: normal
+    accepts:
+    - hard_cheese
+    - melting_cheese
+  name_uk: Сирні заварні булочки
+- id: french_baguette
+  name: Baguette
+  kind: dish
+  tags:
+  - bread
+  - french
+  missing_allowed: 1
+  source_family: french:baguette
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - bread
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Багет
+- id: french_pain_campagne
+  name: Rustic bread
+  kind: dish
+  tags:
+  - bread
+  - french
+  missing_allowed: 2
+  source_family: french:pain_campagne
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - bread
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: rye_flour
+    role: addition
+    amount: normal
+    accepts:
+    - flour_group
+  - item: sourdough_starter
+    role: addition
+    amount: normal
+  - item: yeast
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Сільський хліб
+- id: french_brioche
+  name: Brioche
+  kind: dish
+  tags:
+  - bread
+  - french
+  missing_allowed: 3
+  source_family: french:brioche
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - bread
+    - dessert
+    - breakfast
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: many
+  - item: butter
+    role: required
+    amount: many
+    accepts:
+    - ghee
+  - item: milk
+    role: addition
+    amount: normal
+    accepts:
+    - milk_like
+  - item: yeast
+    role: required
+    amount: little
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Бріош
+- id: french_croissant
+  name: Croissant
+  kind: dish
+  tags:
+  - french
+  - viennoiserie
+  missing_allowed: 3
+  source_family: french:croissant
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - bread
+    - breakfast
+    time: over_60
+    method:
+    - bake
+    - roll
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: butter
+    role: required
+    amount: many
+    accepts:
+    - ghee
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: addition
+    amount: normal
+    accepts:
+    - milk_like
+  - item: sugar
+    role: addition
+    amount: little
+  name_uk: Круасан
+- id: french_pain_chocolat
+  name: Chocolate bun
+  kind: dish
+  tags:
+  - french
+  - viennoiserie
+  missing_allowed: 3
+  source_family: french:pain_chocolat
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - bread
+    - dessert
+    - breakfast
+    time: over_60
+    method:
+    - bake
+    - roll
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: butter
+    role: required
+    amount: many
+    accepts:
+    - ghee
+  - item: yeast
+    role: required
+    amount: little
+  - item: chocolate
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: milk
+    role: addition
+    amount: normal
+    accepts:
+    - milk_like
+  name_uk: Шоколадна булочка
+- id: french_pain_raisins
+  name: Snail with raisins
+  kind: dish
+  tags:
+  - french
+  - viennoiserie
+  missing_allowed: 3
+  source_family: french:pain_raisins
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - bread
+    - dessert
+    - breakfast
+    time: over_60
+    method:
+    - bake
+    - roll
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: butter
+    role: required
+    amount: many
+    accepts:
+    - ghee
+  - item: yeast
+    role: required
+    amount: little
+  - item: raisins
+    role: required
+    amount: normal
+  - item: pastry_cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  name_uk: Равлик з родзинками
+- id: french_fougasse
+  name: Provençal flatbread
+  kind: dish
+  tags:
+  - bread
+  - french
+  missing_allowed: 3
+  source_family: french:fougasse
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - bread
+    - snack
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: olive
+    role: addition
+    amount: normal
+  - item: rosemary
+    role: addition
+    amount: spice
+    accepts:
+    - herb
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Провансальський коржик
+- id: french_pain_perdu
+  name: French toast
+  kind: dish
+  tags:
+  - breakfast
+  - french
+  missing_allowed: 1
+  source_family: french:pain_perdu
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - breakfast
+    - dessert
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: bread
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: sugar
+    role: required
+    amount: little
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Французькі тости
+- id: french_crepes_sucre
+  name: Sweet pancakes with sugar
+  kind: dish
+  tags:
+  - crepe
+  - french
+  missing_allowed: 1
+  source_family: french:crepes_sucre
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - breakfast
+    - dessert
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: little
+  name_uk: Солодкі млинці з цукром
+- id: french_crepes_chocolat_noisette
+  name: Pancakes with chocolate and nut filling
+  kind: dish
+  tags:
+  - crepe
+  - french
+  missing_allowed: 2
+  source_family: french:crepes_chocolat_noisette
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - breakfast
+    - dessert
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: normal
+  - item: chocolate
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: hazelnuts
+    role: addition
+    amount: normal
+    accepts:
+    - nuts
+  name_uk: Млинці з шоколадно-горіховою начинкою
+- id: french_tartine_beurre_confiture
+  name: Bread with butter and jam
+  kind: dish
+  tags:
+  - breakfast
+  - french
+  missing_allowed: 1
+  source_family: french:tartine_beurre_confiture
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - breakfast
+    - snack
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: bread
+    role: main
+    amount: normal
+    accepts:
+    - baguette
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: jam
+    role: required
+    amount: normal
+    accepts:
+    - fruit_preserve
+  name_uk: Хліб з олією та джемом
+- id: french_creme_brulee
+  name: Creme brulee
+  kind: dish
+  tags:
+  - custard
+  - french
+  missing_allowed: 2
+  source_family: french:creme_brulee
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - set
+  comment: ''
+  ingredients:
+  - item: cream
+    role: main
+    amount: many
+    accepts:
+    - cream_like
+  - item: eggs
+    role: required
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  - item: vanilla
+    role: required
+    amount: spice
+    accepts:
+    - aromatic_spice
+  name_uk: Крем-брюле
+- id: french_creme_caramel
+  name: Caramel cream
+  kind: dish
+  tags:
+  - custard
+  - french
+  missing_allowed: 2
+  source_family: french:creme_caramel
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - set
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  - item: caramel
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  name_uk: Карамельний крем
+- id: french_ile_flottante
+  name: Floating island
+  kind: dish
+  tags:
+  - custard
+  - french
+  missing_allowed: 2
+  source_family: french:ile_flottante
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  - item: vanilla
+    role: required
+    amount: spice
+  name_uk: Плавучий острів
+- id: french_mousse_chocolat
+  name: Chocolate mousse
+  kind: dish
+  tags:
+  - chocolate
+  - french
+  missing_allowed: 2
+  source_family: french:mousse_chocolat
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: under_30
+    method:
+    - mix
+    - set
+  comment: ''
+  ingredients:
+  - item: chocolate
+    role: main
+    amount: many
+    accepts:
+    - sweetener
+  - item: eggs
+    role: required
+    amount: many
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - cream_like
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Шоколадний мус
+- id: french_profiteroles
+  name: Profiteroles
+  kind: dish
+  tags:
+  - choux
+  - french
+  missing_allowed: 3
+  source_family: french:profiteroles
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: eggs
+    role: required
+    amount: many
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: ice_cream
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: chocolate
+    role: required
+    amount: normal
+  name_uk: Профітролі
+- id: french_eclairs_chocolat
+  name: Chocolate eclairs
+  kind: dish
+  tags:
+  - choux
+  - french
+  missing_allowed: 3
+  source_family: french:eclairs_chocolat
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: eggs
+    role: required
+    amount: many
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: pastry_cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: chocolate
+    role: required
+    amount: normal
+  name_uk: Шоколадні еклери
+- id: french_paris_brest
+  name: Praline custard ring
+  kind: dish
+  tags:
+  - choux
+  - french
+  missing_allowed: 3
+  source_family: french:paris_brest
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: eggs
+    role: required
+    amount: many
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: hazelnuts
+    role: required
+    amount: normal
+    accepts:
+    - nuts
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  name_uk: Заварне кільце з праліне
+- id: french_tarte_tatin
+  name: Upside down apple tart
+  kind: dish
+  tags:
+  - apple
+  - french
+  - tart
+  missing_allowed: 2
+  source_family: french:tarte_tatin
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: apple
+    role: main
+    amount: many
+  - item: puff_pastry
+    role: required
+    amount: many
+    accepts:
+    - shortcrust_pastry
+    - flour
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Перевернутий яблучний тарт
+- id: french_tarte_pommes
+  name: Apple tart
+  kind: dish
+  tags:
+  - apple
+  - french
+  missing_allowed: 2
+  source_family: french:tarte_pommes
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: apple
+    role: main
+    amount: many
+  - item: shortcrust_pastry
+    role: required
+    amount: many
+    accepts:
+    - flour
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Яблучний тарт
+- id: french_tarte_fraises
+  name: Strawberry tart
+  kind: dish
+  tags:
+  - french
+  - strawberry
+  missing_allowed: 3
+  source_family: french:tarte_fraises
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: strawberry
+    role: main
+    amount: many
+    accepts:
+    - berries
+    - fruit
+  - item: shortcrust_pastry
+    role: required
+    amount: many
+    accepts:
+    - flour
+  - item: pastry_cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Полуничний тарт
+- id: french_tarte_citron
+  name: Lemon tart
+  kind: dish
+  tags:
+  - french
+  - lemon
+  missing_allowed: 2
+  source_family: french:tarte_citron
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - set
+  comment: ''
+  ingredients:
+  - item: lemon
+    role: main
+    amount: many
+    accepts:
+    - acid_souring
+    - fruit
+  - item: shortcrust_pastry
+    role: required
+    amount: many
+    accepts:
+    - flour
+  - item: eggs
+    role: required
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Лимонний тарт
+- id: french_clafoutis_cerises
+  name: Clafoutis with cherries
+  kind: dish
+  tags:
+  - cherry
+  - french
+  missing_allowed: 2
+  source_family: french:clafoutis_cerises
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: cherry
+    role: main
+    amount: many
+    accepts:
+    - fruit
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Клафуті з вишнею
+- id: french_flognarde_pommes
+  name: Flonyard with apples
+  kind: dish
+  tags:
+  - apple
+  - french
+  missing_allowed: 2
+  source_family: french:flognarde_pommes
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: apple
+    role: main
+    amount: many
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Флоньярд із яблуками
+- id: french_far_breton
+  name: Breton dessert with prunes
+  kind: dish
+  tags:
+  - french
+  - prunes
+  missing_allowed: 2
+  source_family: french:far_breton
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: prunes
+    role: main
+    amount: normal
+    accepts:
+    - dried_fruit
+  - item: milk
+    role: required
+    amount: many
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Бретонський десерт із чорносливом
+- id: french_kouign_amann
+  name: Breton butter cake
+  kind: dish
+  tags:
+  - butter
+  - french
+  missing_allowed: 3
+  source_family: french:kouign_amann
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - roll
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: butter
+    role: required
+    amount: many
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Бретонський масляний пиріг
+- id: french_caneles
+  name: Cinnamon
+  kind: dish
+  tags:
+  - bordeaux
+  - french
+  missing_allowed: 3
+  source_family: french:caneles
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  - item: rum
+    role: addition
+    amount: little
+  - item: vanilla
+    role: required
+    amount: spice
+  name_uk: Кориця
+- id: french_madeleines
+  name: Madeleine
+  kind: dish
+  tags:
+  - cake
+  - french
+  missing_allowed: 1
+  source_family: french:madeleines
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+  - item: lemon
+    role: addition
+    amount: little
+  name_uk: Мадлен
+- id: french_financiers
+  name: Finance
+  kind: dish
+  tags:
+  - almond
+  - french
+  missing_allowed: 2
+  source_family: french:financiers
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: almonds
+    role: main
+    amount: normal
+    accepts:
+    - nuts
+  - item: eggs
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: flour
+    role: required
+    amount: little
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Фінанси
+- id: french_macarons
+  name: Pasta
+  kind: dish
+  tags:
+  - almond
+  - french
+  missing_allowed: 3
+  source_family: french:macarons
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: almonds
+    role: main
+    amount: many
+    accepts:
+    - nuts
+  - item: eggs
+    role: required
+    amount: many
+  - item: sugar
+    role: required
+    amount: many
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - cream_like
+  - item: chocolate
+    role: addition
+    amount: normal
+  name_uk: Паста
+- id: french_galette_rois
+  name: Pie of the magi with almonds
+  kind: dish
+  tags:
+  - almond
+  - french
+  missing_allowed: 3
+  source_family: french:galette_rois
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: puff_pastry
+    role: main
+    amount: many
+    accepts:
+    - bread_base
+  - item: almonds
+    role: required
+    amount: many
+    accepts:
+    - nuts
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Пиріг волхвів з мигдалем
+- id: french_charlotte_fraises
+  name: Charlotte with strawberries
+  kind: dish
+  tags:
+  - french
+  - strawberry
+  missing_allowed: 3
+  source_family: french:charlotte_fraises
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - assemble
+    - set
+  comment: ''
+  ingredients:
+  - item: ladyfingers
+    role: main
+    amount: many
+    accepts:
+    - biscuit_crumbs
+    - bread_base
+  - item: strawberry
+    role: required
+    amount: many
+    accepts:
+    - berries
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Шарлотка з полуницею
+- id: french_baba_rhum
+  name: Baba
+  kind: dish
+  tags:
+  - french
+  - rum
+  missing_allowed: 3
+  source_family: french:baba_rhum
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: eggs
+    role: required
+    amount: many
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+  - item: rum
+    role: required
+    amount: normal
+  name_uk: Ромова баба
+- id: french_mille_feuille
+  name: Mille-feuille
+  kind: dish
+  tags:
+  - french
+  - puff_pastry
+  missing_allowed: 3
+  source_family: french:mille_feuille
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: puff_pastry
+    role: main
+    amount: many
+    accepts:
+    - bread_base
+  - item: pastry_cream
+    role: required
+    amount: many
+    accepts:
+    - cream_like
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Мильфей
+- id: french_opera_cake
+  name: Opera cake
+  kind: dish
+  tags:
+  - cake
+  - french
+  missing_allowed: 4
+  source_family: french:opera_cake
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: almonds
+    role: main
+    amount: normal
+    accepts:
+    - nuts
+  - item: eggs
+    role: required
+    amount: many
+  - item: chocolate
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: coffee
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Торт Опера
+- id: french_fraisier
+  name: Strawberry cake
+  kind: dish
+  tags:
+  - french
+  - strawberry
+  missing_allowed: 4
+  source_family: french:fraisier
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: strawberry
+    role: main
+    amount: many
+    accepts:
+    - berries
+  - item: eggs
+    role: required
+    amount: many
+  - item: flour
+    role: required
+    amount: normal
+  - item: pastry_cream
+    role: required
+    amount: many
+    accepts:
+    - cream_like
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Полуничний торт
+- id: french_religieuse
+  name: Custard cake
+  kind: dish
+  tags:
+  - choux
+  - french
+  missing_allowed: 3
+  source_family: french:religieuse
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: eggs
+    role: required
+    amount: many
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: pastry_cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: chocolate
+    role: addition
+    amount: normal
+  name_uk: Заварне тістечко
+- id: french_tarte_normande
+  name: Norman apple tart
+  kind: dish
+  tags:
+  - apple
+  - french
+  missing_allowed: 3
+  source_family: french:tarte_normande
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: apple
+    role: main
+    amount: many
+  - item: shortcrust_pastry
+    role: required
+    amount: many
+    accepts:
+    - flour
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: calvados
+    role: addition
+    amount: little
+  name_uk: Нормандський яблучний тарт
+- id: french_riz_au_lait
+  name: Rice pudding
+  kind: dish
+  tags:
+  - french
+  - rice
+  missing_allowed: 1
+  source_family: french:riz_au_lait
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: milk
+    role: required
+    amount: many
+    accepts:
+    - milk_like
+  - item: sugar
+    role: required
+    amount: normal
+  - item: vanilla
+    role: addition
+    amount: spice
+  name_uk: Рисовий пудинг
+- id: french_poires_belle_helene
+  name: Pears with chocolate
+  kind: dish
+  tags:
+  - french
+  - pear
+  missing_allowed: 3
+  source_family: french:poires_belle_helene
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - poach
+    - assemble
+  comment: ''
+  ingredients:
+  - item: pear
+    role: main
+    amount: many
+    accepts:
+    - fruit
+  - item: chocolate
+    role: required
+    amount: normal
+  - item: ice_cream
+    role: addition
+    amount: normal
+    accepts:
+    - milk_like
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Груші з шоколадом
+- id: french_souffle_chocolat
+  name: Chocolate soufflé
+  kind: dish
+  tags:
+  - french
+  - souffle
+  missing_allowed: 2
+  source_family: french:souffle_chocolat
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: chocolate
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Шоколадне суфле
+- id: french_souffle_fromage
+  name: Cheese soufflé
+  kind: dish
+  tags:
+  - french
+  - souffle
+  missing_allowed: 2
+  source_family: french:souffle_fromage
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - main
+    - snack
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: hard_cheese
+    role: main
+    amount: normal
+    accepts:
+    - gruyere
+    - melting_cheese
+  - item: eggs
+    role: required
+    amount: many
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: flour
+    role: required
+    amount: little
+  name_uk: Сирне суфле
+- id: french_crepes_suzette
+  name: Pancakes with orange sauce
+  kind: dish
+  tags:
+  - crepe
+  - french
+  missing_allowed: 3
+  source_family: french:crepes_suzette
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: normal
+  - item: orange
+    role: required
+    amount: many
+    accepts:
+    - fruit
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+  - item: orange_liqueur
+    role: addition
+    amount: little
+  name_uk: Млинці з апельсиновим соусом
+- id: french_pain_epices
+  name: Spiced honey bread
+  kind: dish
+  tags:
+  - french
+  - honey
+  missing_allowed: 3
+  source_family: french:pain_epices
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    - bread
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: rye_flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: honey
+    role: required
+    amount: many
+    accepts:
+    - sweetener
+  - item: milk
+    role: addition
+    amount: normal
+    accepts:
+    - milk_like
+  - item: gingerbread_spice
+    role: required
+    amount: spice
+    accepts:
+    - warm_spice
+  name_uk: Пряний медовий хліб
+- id: french_nougat_montelimar
+  name: Meadow
+  kind: dish
+  tags:
+  - french
+  - nougat
+  missing_allowed: 3
+  source_family: french:nougat_montelimar
+  facets:
+    cuisine:
+    - french
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - boil
+    - set
+  comment: ''
+  ingredients:
+  - item: honey
+    role: main
+    amount: many
+    accepts:
+    - sweetener
+  - item: sugar
+    role: required
+    amount: many
+  - item: almonds
+    role: required
+    amount: many
+    accepts:
+    - nuts
+  - item: eggs
+    role: required
+    amount: normal
+  name_uk: Луг

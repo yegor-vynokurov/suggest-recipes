@@ -1,0 +1,5554 @@
+metadata:
+  version: 0.1-czech-large
+  purpose: Large Czech cuisine recipe templates for pantry-based suggestion engine
+  design_rules:
+  - If a title names a key ingredient, that ingredient appears as main or required.
+  - Broad categories are used mainly in accepts, not as a replacement for named title ingredients.
+  - Water is included as a technological ingredient, but should be treated as always available by inventory logic.
+  - Czech dumplings, sauces, pork roasts, sour cabbage and cream sauces keep their key ingredients explicit.
+  - These are ingredient templates, not exact step-by-step recipes.
+  - 'Time buckets: under_10, under_30, under_60, over_60.'
+  cuisines:
+    czech: чешская
+  quantity_scale:
+  - spice
+  - little
+  - normal
+  - many
+  source_notes:
+  - Soup block emphasizes česnečka, bramboračka, kulajda, kyselice, dršťková, gulášová, vývar and lentil/pea/bean soups.
+  - Main block emphasizes svíčková, rajská, koprová, guláš, vepřo knedlo zelo, roast duck/goose, schnitzel, fried cheese,
+    carp and potato dishes.
+  - Component/snack block includes houskový knedlík, bramborový knedlík, rohlíky, chlebíčky, pomazánky, utopenci and nakládaný
+    hermelín.
+  - Dessert block includes buchty, koláče, frgál, bublanina, štrúdl, perník, medovník, vánočka, ovocné knedlíky, palačinky,
+    trdelník and Czech pastry.
+recipes:
+- id: czech_cesnecka
+  name: Czech garlic soup
+  kind: dish
+  tags:
+  - czech
+  - garlic
+  - potato
+  - quick
+  missing_allowed: 2
+  source_family: czech:cesnecka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: dry_garlic
+    role: main
+    amount: spice
+  - item: potato
+    role: required
+    amount: normal
+  - item: bread
+    role: addition
+    amount: normal
+    accepts:
+    - bread_base
+  - item: hard_cheese
+    role: addition
+    amount: normal
+    accepts:
+    - cheese
+  - item: eggs
+    role: addition
+    amount: normal
+  - item: caraway
+    role: spice
+    amount: spice
+  - item: marjoram
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Чеський часниковий суп
+- id: czech_bramboracka
+  name: Potato soup with mushrooms
+  kind: dish
+  tags:
+  - czech
+  - mushroom
+  - potato
+  missing_allowed: 2
+  source_family: czech:bramboracka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: mushroom
+    role: required
+    amount: normal
+    accepts:
+    - dried_porcini
+  - item: carrot
+    role: required
+    amount: little
+  - item: celery_root
+    role: addition
+    amount: little
+    accepts:
+    - root_vegetable
+  - item: onion
+    role: required
+    amount: little
+  - item: marjoram
+    role: required
+    amount: spice
+  - item: caraway
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Картопляний суп з грибами
+- id: czech_kulajda
+  name: Mushroom soup with sour cream, dill and egg
+  kind: dish
+  tags:
+  - czech
+  - dill
+  - mushroom
+  - sour_cream
+  missing_allowed: 3
+  source_family: czech:kulajda
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: mushroom
+    role: main
+    amount: many
+    accepts:
+    - dried_porcini
+  - item: potato
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: dill
+    role: required
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: vinegar
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  - item: flour
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Грибний суп зі сметаною, кропом та яйцем
+- id: czech_zelna_polevka
+  name: Cabbage soup with sauerkraut
+  kind: dish
+  tags:
+  - czech
+  - sauerkraut
+  - sausage
+  missing_allowed: 2
+  source_family: czech:zelna_polevka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: sauerkraut
+    role: main
+    amount: many
+  - item: potato
+    role: required
+    amount: normal
+  - item: smoked_sausage
+    role: addition
+    amount: normal
+    accepts:
+    - sausage_product
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: caraway
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Капустяний суп з квашеною капустою
+- id: czech_valasska_kyselice
+  name: Vlach sour cabbage soup
+  kind: dish
+  tags:
+  - czech
+  - moravian
+  - sauerkraut
+  - smoked_meat
+  missing_allowed: 3
+  source_family: czech:valasska_kyselice
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: sauerkraut
+    role: main
+    amount: many
+  - item: smoked_meat
+    role: required
+    amount: normal
+    accepts:
+    - meat_product
+  - item: potato
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  - item: caraway
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Кислий капустяний суп
+- id: czech_drstkova_polevka
+  name: Tripe soup with paprika
+  kind: dish
+  tags:
+  - czech
+  - offal
+  - paprika
+  - tripe
+  missing_allowed: 3
+  source_family: czech:drstkova_polevka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: tripe
+    role: main
+    amount: many
+    accepts:
+    - offal
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: marjoram
+    role: required
+    amount: spice
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: flour
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Суп з рубця з паприкою
+- id: czech_gulasova_polevka
+  name: Goulash soup
+  kind: dish
+  tags:
+  - czech
+  - goulash
+  - paprika
+  missing_allowed: 3
+  source_family: czech:gulasova_polevka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    - main
+    time: over_60
+    method:
+    - stew
+    - boil
+  comment: ''
+  ingredients:
+  - item: beef_chunks
+    role: main
+    amount: normal
+    accepts:
+    - pork_chunks
+    - meat_piece
+  - item: potato
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: many
+  - item: paprika
+    role: required
+    amount: spice
+  - item: caraway
+    role: spice
+    amount: spice
+  - item: marjoram
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Суп-гуляш
+- id: czech_cockova_polevka
+  name: Lentil soup
+  kind: dish
+  tags:
+  - czech
+  - lentil
+  - sour
+  missing_allowed: 2
+  source_family: czech:cockova_polevka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: lentil
+    role: main
+    amount: many
+    accepts:
+    - red_lentils
+    - yellow_lentils
+    - legume
+  - item: onion
+    role: required
+    amount: normal
+  - item: carrot
+    role: addition
+    amount: little
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: allspice
+    role: spice
+    amount: spice
+  - item: vinegar
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  - item: water
+    role: required
+    amount: many
+  name_uk: Чечевичний суп
+- id: czech_hrachova_polevka
+  name: Pea soup
+  kind: dish
+  tags:
+  - czech
+  - peas
+  - smoked_meat
+  missing_allowed: 2
+  source_family: czech:hrachova_polevka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: split_peas
+    role: main
+    amount: many
+    accepts:
+    - peas
+    - legume
+  - item: smoked_meat
+    role: addition
+    amount: normal
+    accepts:
+    - meat_product
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: addition
+    amount: little
+  - item: marjoram
+    role: spice
+    amount: spice
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Гороховий суп
+- id: czech_fazolova_polevka
+  name: Bean soup
+  kind: dish
+  tags:
+  - beans
+  - czech
+  - smoked_meat
+  missing_allowed: 3
+  source_family: czech:fazolova_polevka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: beans
+    role: main
+    amount: many
+    accepts:
+    - canned_beans
+    - legume
+  - item: smoked_meat
+    role: addition
+    amount: normal
+    accepts:
+    - meat_product
+  - item: onion
+    role: required
+    amount: normal
+  - item: carrot
+    role: addition
+    amount: little
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Квасоляний суп
+- id: czech_vyvar_hovezi
+  name: Beef broth with noodles
+  kind: dish
+  tags:
+  - broth
+  - czech
+  - noodle
+  missing_allowed: 3
+  source_family: czech:vyvar_hovezi
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: beef_bones
+    role: main
+    amount: many
+    accepts:
+    - broth_meat
+  - item: beef_chunks
+    role: addition
+    amount: normal
+    accepts:
+    - meat_piece
+  - item: carrot
+    role: required
+    amount: normal
+  - item: celery_root
+    role: addition
+    amount: little
+    accepts:
+    - root_vegetable
+  - item: parsnip
+    role: addition
+    amount: little
+    accepts:
+    - root_vegetable
+  - item: noodle
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Яловичий бульйон з локшиною
+- id: czech_vyvar_kureci
+  name: Chicken broth with noodles
+  kind: dish
+  tags:
+  - broth
+  - chicken
+  - czech
+  - noodle
+  missing_allowed: 2
+  source_family: czech:vyvar_kureci
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: chicken_parts
+    role: main
+    amount: many
+  - item: carrot
+    role: required
+    amount: normal
+  - item: celery_root
+    role: addition
+    amount: little
+    accepts:
+    - root_vegetable
+  - item: noodle
+    role: required
+    amount: normal
+  - item: parsley
+    role: addition
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: water
+    role: required
+    amount: many
+  name_uk: Курячий бульйон з локшиною
+- id: czech_rajska_polevka
+  name: Tomato soup
+  kind: dish
+  tags:
+  - czech
+  - sweet_sour
+  - tomato
+  missing_allowed: 2
+  source_family: czech:rajska_polevka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: tomato_sauce
+    role: main
+    amount: many
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: little
+  - item: flour
+    role: addition
+    amount: little
+  - item: sugar
+    role: addition
+    amount: little
+  - item: allspice
+    role: spice
+    amount: spice
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Томатний суп
+- id: czech_kvetakova_polevka
+  name: Cauliflower soup
+  kind: dish
+  tags:
+  - cauliflower
+  - czech
+  missing_allowed: 2
+  source_family: czech:kvetakova_polevka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: cauliflower
+    role: main
+    amount: many
+  - item: potato
+    role: addition
+    amount: normal
+  - item: carrot
+    role: addition
+    amount: little
+  - item: flour
+    role: addition
+    amount: little
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: milk
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Суп із цвітної капусти
+- id: czech_brokolicova_polevka
+  name: Broccoli soup
+  kind: dish
+  tags:
+  - broccoli
+  - cream
+  - czech
+  missing_allowed: 2
+  source_family: czech:brokolicova_polevka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: broccoli
+    role: main
+    amount: many
+    accepts:
+    - cabbage_family
+    - vegetable
+  - item: potato
+    role: addition
+    amount: normal
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - sour_cream
+    - yogurt
+    - mascarpone
+    - soft_creamy_cheese
+    - cream_like
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  name_uk: Броколі-суп
+- id: czech_kminova_polevka
+  name: Soup with cumin and egg
+  kind: dish
+  tags:
+  - caraway
+  - czech
+  - egg
+  - simple
+  missing_allowed: 2
+  source_family: czech:kminova_polevka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+    - temper
+  comment: ''
+  ingredients:
+  - item: caraway
+    role: main
+    amount: spice
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  - item: fat
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Суп з кмином та яйцем
+- id: czech_chlebova_polevka
+  name: Bread soup
+  kind: dish
+  tags:
+  - bread
+  - czech
+  - garlic
+  missing_allowed: 2
+  source_family: czech:chlebova_polevka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: bread
+    role: main
+    amount: many
+    accepts:
+    - rye_bread
+    - bread_base
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: caraway
+    role: spice
+    amount: spice
+  - item: eggs
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Хлібний суп
+- id: czech_rybi_polevka_carp
+  name: Christmas carp fish soup
+  kind: dish
+  tags:
+  - carp
+  - christmas
+  - czech
+  - fish
+  missing_allowed: 3
+  source_family: czech:rybi_polevka_carp
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: carp
+    role: main
+    amount: many
+    accepts:
+    - fish
+  - item: fish_roes_milt
+    role: addition
+    amount: normal
+    accepts:
+    - fish
+  - item: carrot
+    role: required
+    amount: normal
+  - item: celery_root
+    role: addition
+    amount: little
+    accepts:
+    - root_vegetable
+  - item: onion
+    role: required
+    amount: little
+  - item: flour
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Різдвяний рибний суп із коропа
+- id: czech_koprova_polevka
+  name: Dill soup with sour cream
+  kind: dish
+  tags:
+  - czech
+  - dill
+  - sour_cream
+  missing_allowed: 2
+  source_family: czech:koprova_polevka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: dill
+    role: main
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: normal
+  - item: potato
+    role: addition
+    amount: normal
+  - item: vinegar
+    role: required
+    amount: little
+    accepts:
+    - acid_souring
+  - item: flour
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Кроповий суп зі сметаною
+- id: czech_kyselo
+  name: Sourdough sourdough soup
+  kind: dish
+  tags:
+  - czech
+  - krkonose
+  - mushroom
+  - sourdough
+  missing_allowed: 3
+  source_family: czech:kyselo
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - ferment
+    - boil
+  comment: ''
+  ingredients:
+  - item: sourdough_starter
+    role: main
+    amount: normal
+  - item: mushroom
+    role: required
+    amount: normal
+  - item: potato
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: caraway
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Кислий суп на заквасці
+- id: czech_oukrop
+  name: Simple garlic soup with bread
+  kind: dish
+  tags:
+  - bread
+  - czech
+  - garlic
+  - quick
+  missing_allowed: 2
+  source_family: czech:oukrop
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: under_10
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: dry_garlic
+    role: main
+    amount: spice
+  - item: bread
+    role: required
+    amount: normal
+    accepts:
+    - bread_base
+  - item: smalec
+    role: required
+    amount: little
+    accepts:
+    - salo
+  - item: marjoram
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Простий часниковий суп із хлібом
+- id: czech_slepičí_polevka
+  name: Chicken soup with vegetables
+  kind: dish
+  tags:
+  - broth
+  - chicken
+  - czech
+  missing_allowed: 2
+  source_family: czech:slepičí_polevka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: chicken_parts
+    role: main
+    amount: many
+  - item: carrot
+    role: required
+    amount: normal
+  - item: celery_root
+    role: addition
+    amount: little
+    accepts:
+    - root_vegetable
+  - item: parsnip
+    role: addition
+    amount: little
+    accepts:
+    - root_vegetable
+  - item: noodle
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Суп з курки з овочами
+- id: czech_jatrove_knedlicky_polevka
+  name: Soup with liver dumplings
+  kind: dish
+  tags:
+  - czech
+  - dumpling
+  - liver
+  missing_allowed: 3
+  source_family: czech:jatrove_knedlicky_polevka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: liver
+    role: main
+    amount: normal
+    accepts:
+    - liver_offal
+    - minced_meat
+  - item: breadcrumbs
+    role: required
+    amount: normal
+    accepts:
+    - bread
+  - item: eggs
+    role: required
+    amount: little
+  - item: broth_meat
+    role: addition
+    amount: normal
+  - item: carrot
+    role: addition
+    amount: little
+  - item: marjoram
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Суп з печінковими галушками
+- id: czech_koprivova_polevka
+  name: Nettle soup
+  kind: dish
+  tags:
+  - czech
+  - nettle
+  - spring
+  missing_allowed: 2
+  source_family: czech:koprivova_polevka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: nettle
+    role: main
+    amount: many
+    accepts:
+    - leafy_green
+  - item: potato
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: normal
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Кропив'яний суп
+- id: czech_krupicova_polevka
+  name: Soup with semolina dumplings
+  kind: dish
+  tags:
+  - czech
+  - dumpling
+  - semolina
+  missing_allowed: 2
+  source_family: czech:krupicova_polevka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: semolina
+    role: main
+    amount: normal
+  - item: eggs
+    role: required
+    amount: little
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: broth_meat
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Суп з манними галушками
+- id: czech_koprova_bramborova
+  name: Potato and dill soup
+  kind: dish
+  tags:
+  - czech
+  - dill
+  - potato
+  - sour_cream
+  missing_allowed: 2
+  source_family: czech:koprova_bramborova
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: dill
+    role: required
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: vinegar
+    role: addition
+    amount: little
+  - item: flour
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Суп з картоплі і кропу
+- id: czech_smetanova_houbova
+  name: Creamy mushroom soup
+  kind: dish
+  tags:
+  - cream
+  - czech
+  - mushroom
+  missing_allowed: 2
+  source_family: czech:smetanova_houbova
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: mushroom
+    role: main
+    amount: many
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - sour_cream
+    - yogurt
+    - mascarpone
+    - soft_creamy_cheese
+    - cream_like
+  - item: potato
+    role: addition
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: flour
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Вершково-грибний суп
+- id: czech_svickova_na_smetane
+  name: Beef in creamy vegetable sauce
+  kind: dish
+  tags:
+  - beef
+  - cream_sauce
+  - czech
+  - dumpling
+  missing_allowed: 3
+  source_family: czech:svickova_na_smetane
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+    - blend
+  comment: ''
+  ingredients:
+  - item: beef_sirloin
+    role: main
+    amount: many
+    accepts:
+    - beef_chunks
+    - meat_piece
+  - item: carrot
+    role: required
+    amount: normal
+  - item: celery_root
+    role: required
+    amount: little
+    accepts:
+    - root_vegetable
+  - item: parsnip
+    role: required
+    amount: little
+    accepts:
+    - root_vegetable
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - sour_cream
+    - yogurt
+    - mascarpone
+    - soft_creamy_cheese
+    - cream_like
+  - item: mustard
+    role: addition
+    amount: little
+  - item: lemon
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  - item: bread_dumpling
+    role: required
+    amount: many
+    accepts:
+    - bread_base
+  - item: cranberry_jam
+    role: addition
+    amount: little
+    accepts:
+    - fruit_preserve
+    - jam
+  name_uk: Яловичина у вершково-овочевому соусі
+- id: czech_rajska_omacka_hovezi
+  name: Beef with tomato sauce
+  kind: dish
+  tags:
+  - beef
+  - czech
+  - dumpling
+  - tomato_sauce
+  missing_allowed: 3
+  source_family: czech:rajska_omacka_hovezi
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: beef_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: tomato_sauce
+    role: required
+    amount: many
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: normal
+  - item: allspice
+    role: spice
+    amount: spice
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: sugar
+    role: addition
+    amount: little
+  - item: bread_dumpling
+    role: required
+    amount: many
+    accepts:
+    - bread_base
+  name_uk: Яловичина з томатним соусом
+- id: czech_koprova_omacka_hovezi
+  name: Beef with dill sauce
+  kind: dish
+  tags:
+  - beef
+  - cream_sauce
+  - czech
+  - dill
+  missing_allowed: 3
+  source_family: czech:koprova_omacka_hovezi
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: beef_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: dill
+    role: required
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - sour_cream
+  - item: vinegar
+    role: required
+    amount: little
+    accepts:
+    - acid_souring
+  - item: flour
+    role: addition
+    amount: little
+  - item: bread_dumpling
+    role: required
+    amount: many
+    accepts:
+    - bread_base
+  name_uk: Яловичина з кроповим соусом
+- id: czech_znojemska_pecene
+  name: Beef with pickles
+  kind: dish
+  tags:
+  - beef
+  - czech
+  - pickle
+  - sauce
+  missing_allowed: 3
+  source_family: czech:znojemska_pecene
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: beef_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: pickled_cucumber
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: mustard
+    role: required
+    amount: little
+  - item: flour
+    role: addition
+    amount: little
+  - item: rice
+    role: addition
+    amount: normal
+  - item: bread_dumpling
+    role: addition
+    amount: normal
+    accepts:
+    - bread_base
+  name_uk: Яловичина із солоними огірками
+- id: czech_spanelsky_ptacek
+  name: Beef roll with egg, cucumber and sausage
+  kind: dish
+  tags:
+  - beef
+  - czech
+  - pickle
+  - roll
+  missing_allowed: 3
+  source_family: czech:spanelsky_ptacek
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roll
+    - stew
+  comment: ''
+  ingredients:
+  - item: beef_steak
+    role: main
+    amount: many
+    accepts:
+    - cutlet_meat
+  - item: eggs
+    role: required
+    amount: normal
+  - item: pickled_cucumber
+    role: required
+    amount: normal
+  - item: smoked_sausage
+    role: required
+    amount: normal
+    accepts:
+    - sausage_product
+  - item: mustard
+    role: required
+    amount: little
+  - item: onion
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  name_uk: Яловичий рулет з яйцем, огірком та ковбасою
+- id: czech_hovezi_gulas
+  name: Czech beef goulash
+  kind: dish
+  tags:
+  - beef
+  - czech
+  - dumpling
+  - goulash
+  missing_allowed: 3
+  source_family: czech:hovezi_gulas
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: beef_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: onion
+    role: required
+    amount: many
+  - item: paprika
+    role: required
+    amount: spice
+  - item: caraway
+    role: spice
+    amount: spice
+  - item: marjoram
+    role: required
+    amount: spice
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: bread_dumpling
+    role: required
+    amount: many
+    accepts:
+    - bread_base
+  - item: water
+    role: addition
+    amount: normal
+  name_uk: Чеський яловичий гуляш
+- id: czech_veprovy_gulas
+  name: Pork goulash
+  kind: dish
+  tags:
+  - czech
+  - goulash
+  - pork
+  missing_allowed: 3
+  source_family: czech:veprovy_gulas
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: pork_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: onion
+    role: required
+    amount: many
+  - item: paprika
+    role: required
+    amount: spice
+  - item: marjoram
+    role: required
+    amount: spice
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: bread_dumpling
+    role: required
+    amount: many
+    accepts:
+    - bread_base
+  - item: water
+    role: addition
+    amount: normal
+  name_uk: Свинячий гуляш
+- id: czech_segedinsky_gulas
+  name: Segedin goulash with sauerkraut
+  kind: dish
+  tags:
+  - czech
+  - goulash
+  - sauerkraut
+  - sour_cream
+  missing_allowed: 3
+  source_family: czech:segedinsky_gulas
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: pork_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: sauerkraut
+    role: required
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: caraway
+    role: spice
+    amount: spice
+  - item: bread_dumpling
+    role: required
+    amount: many
+    accepts:
+    - bread_base
+  name_uk: Сегедінський гуляш із квашеною капустою
+- id: czech_bramborovy_gulas
+  name: Potato goulash with sausage
+  kind: dish
+  tags:
+  - czech
+  - goulash
+  - potato
+  - sausage
+  missing_allowed: 2
+  source_family: czech:bramborovy_gulas
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: smoked_sausage
+    role: required
+    amount: normal
+    accepts:
+    - sausage_product
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: marjoram
+    role: required
+    amount: spice
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Картопляний гуляш із ковбасою
+- id: czech_houbovy_gulas
+  name: Mushroom goulash
+  kind: dish
+  tags:
+  - czech
+  - goulash
+  - mushroom
+  missing_allowed: 2
+  source_family: czech:houbovy_gulas
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: mushroom
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: marjoram
+    role: required
+    amount: spice
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: bread_dumpling
+    role: addition
+    amount: many
+    accepts:
+    - bread_base
+  name_uk: Грибний гуляш
+- id: czech_vepro_knedlo_zelo
+  name: Pork, dumplings and cabbage
+  kind: dish
+  tags:
+  - cabbage
+  - czech
+  - dumpling
+  - pork
+  missing_allowed: 3
+  source_family: czech:vepro_knedlo_zelo
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roast
+    - stew
+  comment: ''
+  ingredients:
+  - item: pork_roast
+    role: main
+    amount: many
+    accepts:
+    - pork_chunks
+    - meat_piece
+  - item: bread_dumpling
+    role: required
+    amount: many
+    accepts:
+    - bread_base
+  - item: sauerkraut
+    role: required
+    amount: many
+    accepts:
+    - cabbage
+  - item: onion
+    role: required
+    amount: normal
+  - item: caraway
+    role: required
+    amount: spice
+  - item: dry_garlic
+    role: addition
+    amount: spice
+  name_uk: Свинина, кнедлики та капуста
+- id: czech_pecena_veprova_krkovice
+  name: Baked pork neck
+  kind: dish
+  tags:
+  - czech
+  - pork
+  - roast
+  missing_allowed: 3
+  source_family: czech:pecena_veprova_krkovice
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roast
+    - bake
+  comment: ''
+  ingredients:
+  - item: pork_neck
+    role: main
+    amount: many
+    accepts:
+    - pork_chunks
+    - meat_piece
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: caraway
+    role: required
+    amount: spice
+  - item: onion
+    role: addition
+    amount: normal
+  - item: potato_dumpling
+    role: addition
+    amount: many
+    accepts:
+    - potato
+  - item: sauerkraut
+    role: addition
+    amount: many
+  name_uk: Запечена свиняча шия
+- id: czech_veprove_koleno
+  name: Baked pork knuckle
+  kind: dish
+  tags:
+  - beer_hall
+  - czech
+  - hock
+  - pork
+  missing_allowed: 3
+  source_family: czech:veprove_koleno
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+    - roast
+  comment: ''
+  ingredients:
+  - item: pork_hock
+    role: main
+    amount: many
+    accepts:
+    - pork_shank
+    - broth_meat
+  - item: mustard
+    role: required
+    amount: normal
+  - item: horseradish
+    role: required
+    amount: little
+    accepts:
+    - pungent_spice
+  - item: bread
+    role: addition
+    amount: normal
+    accepts:
+    - bread_base
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: caraway
+    role: spice
+    amount: spice
+  name_uk: Запечена свиняча рулька
+- id: czech_moravsky_vrabec
+  name: Moravian sparrow, pork pieces with cabbage
+  kind: dish
+  tags:
+  - czech
+  - moravian
+  - pork
+  - sauerkraut
+  missing_allowed: 3
+  source_family: czech:moravsky_vrabec
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roast
+    - stew
+  comment: ''
+  ingredients:
+  - item: pork_belly
+    role: main
+    amount: normal
+    accepts:
+    - pork_chunks
+    - meat_piece
+  - item: pork_chunks
+    role: required
+    amount: normal
+    accepts:
+    - meat_piece
+  - item: sauerkraut
+    role: required
+    amount: many
+  - item: bread_dumpling
+    role: required
+    amount: many
+    accepts:
+    - bread_base
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: caraway
+    role: required
+    amount: spice
+  name_uk: Моравський горобець, свинячі шматочки з капустою
+- id: czech_veprova_plec_na_cesneku
+  name: Pork shoulder with garlic
+  kind: dish
+  tags:
+  - czech
+  - garlic
+  - pork
+  missing_allowed: 3
+  source_family: czech:veprova_plec_na_cesneku
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roast
+    - stew
+  comment: ''
+  ingredients:
+  - item: pork_shoulder
+    role: main
+    amount: many
+    accepts:
+    - pork_chunks
+    - meat_piece
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: caraway
+    role: spice
+    amount: spice
+  - item: onion
+    role: addition
+    amount: normal
+  - item: bread_dumpling
+    role: addition
+    amount: many
+    accepts:
+    - bread_base
+  name_uk: Свиняча лопатка з часником
+- id: czech_pecena_kachna_zeli
+  name: Baked duck with cabbage
+  kind: dish
+  tags:
+  - cabbage
+  - czech
+  - duck
+  - dumpling
+  missing_allowed: 3
+  source_family: czech:pecena_kachna_zeli
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roast
+    - stew
+  comment: ''
+  ingredients:
+  - item: duck
+    role: main
+    amount: many
+    accepts:
+    - duck_leg
+    - poultry
+  - item: red_cabbage
+    role: required
+    amount: many
+    accepts:
+    - cabbage
+  - item: potato_dumpling
+    role: required
+    amount: many
+    accepts:
+    - potato
+  - item: caraway
+    role: required
+    amount: spice
+  - item: apple
+    role: addition
+    amount: normal
+  name_uk: Запечена качка з капустою
+- id: czech_pecena_husa
+  name: Baked goose with cabbage
+  kind: dish
+  tags:
+  - cabbage
+  - czech
+  - goose
+  missing_allowed: 3
+  source_family: czech:pecena_husa
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roast
+    - stew
+  comment: ''
+  ingredients:
+  - item: goose
+    role: main
+    amount: many
+    accepts:
+    - goose_leg
+    - poultry
+  - item: red_cabbage
+    role: required
+    amount: many
+    accepts:
+    - cabbage
+  - item: potato_dumpling
+    role: required
+    amount: many
+    accepts:
+    - potato
+  - item: caraway
+    role: required
+    amount: spice
+  - item: apple
+    role: addition
+    amount: normal
+  name_uk: Запечена гуска з капустою
+- id: czech_kachni_stehno
+  name: Duck leg with cabbage
+  kind: dish
+  tags:
+  - czech
+  - duck
+  - leg
+  missing_allowed: 3
+  source_family: czech:kachni_stehno
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roast
+  comment: ''
+  ingredients:
+  - item: duck_leg
+    role: main
+    amount: many
+    accepts:
+    - poultry
+  - item: red_cabbage
+    role: required
+    amount: many
+    accepts:
+    - cabbage
+  - item: potato_dumpling
+    role: addition
+    amount: many
+    accepts:
+    - potato
+  - item: caraway
+    role: spice
+    amount: spice
+  name_uk: Качина ніжка з капустою
+- id: czech_smazeny_rizek
+  name: Czech schnitzel
+  kind: dish
+  tags:
+  - czech
+  - pork
+  - schnitzel
+  missing_allowed: 2
+  source_family: czech:smazeny_rizek
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: pork_chop
+    role: main
+    amount: many
+    accepts:
+    - cutlet_meat
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: normal
+  - item: breadcrumbs
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: many
+  - item: potato_salad
+    role: addition
+    amount: normal
+    accepts:
+    - potato
+  name_uk: Чеський шніцель
+- id: czech_kureci_rizek
+  name: Chicken schnitzel
+  kind: dish
+  tags:
+  - chicken
+  - czech
+  - schnitzel
+  missing_allowed: 2
+  source_family: czech:kureci_rizek
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: chicken_fillet
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: normal
+  - item: breadcrumbs
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: many
+  - item: potato_salad
+    role: addition
+    amount: normal
+    accepts:
+    - potato
+  name_uk: Курячий шніцель
+- id: czech_smazeny_syr
+  name: Breaded fried cheese
+  kind: dish
+  tags:
+  - czech
+  - fried_cheese
+  missing_allowed: 2
+  source_family: czech:smazeny_syr
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: hard_cheese
+    role: main
+    amount: many
+    accepts:
+    - cheese
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: normal
+  - item: breadcrumbs
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: many
+  - item: tartar_sauce
+    role: addition
+    amount: normal
+    accepts:
+    - mayonnaise
+    - remoulade
+  name_uk: Смажений сир у паніровці
+- id: czech_smazeny_kvetak
+  name: Breaded cauliflower
+  kind: dish
+  tags:
+  - cauliflower
+  - czech
+  - fried
+  missing_allowed: 2
+  source_family: czech:smazeny_kvetak
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+    - fry
+  comment: ''
+  ingredients:
+  - item: cauliflower
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: normal
+  - item: breadcrumbs
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: many
+  - item: tartar_sauce
+    role: addition
+    amount: normal
+    accepts:
+    - mayonnaise
+    - remoulade
+  name_uk: Цвітна капуста в паніровці
+- id: czech_smazeny_kapr
+  name: Fried carp
+  kind: dish
+  tags:
+  - carp
+  - christmas
+  - czech
+  - fried
+  missing_allowed: 2
+  source_family: czech:smazeny_kapr
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: carp
+    role: main
+    amount: many
+    accepts:
+    - fish
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: normal
+  - item: breadcrumbs
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: many
+  - item: lemon
+    role: addition
+    amount: little
+  name_uk: Смажений короп
+- id: czech_kapr_na_cerno
+  name: Carp in dark sweet-spicy sauce
+  kind: dish
+  tags:
+  - carp
+  - christmas
+  - czech
+  - sweet_sour
+  missing_allowed: 3
+  source_family: czech:kapr_na_cerno
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: carp
+    role: main
+    amount: many
+    accepts:
+    - fish
+  - item: root_vegetable
+    role: required
+    amount: normal
+    accepts:
+    - carrot
+    - celery_root
+  - item: prunes
+    role: addition
+    amount: little
+  - item: raisins
+    role: addition
+    amount: little
+  - item: gingerbread
+    role: required
+    amount: normal
+    accepts:
+    - bread
+  - item: vinegar
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Короп у темному солодко-пряному соусі
+- id: czech_pstruh_na_masle
+  name: Trout in butter
+  kind: dish
+  tags:
+  - butter
+  - czech
+  - trout
+  missing_allowed: 2
+  source_family: czech:pstruh_na_masle
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: trout
+    role: main
+    amount: many
+    accepts:
+    - fish
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: lemon
+    role: addition
+    amount: little
+  - item: parsley
+    role: addition
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Форель на вершковому маслі
+- id: czech_bramboraky
+  name: Potato pancakes with marjoram
+  kind: dish
+  tags:
+  - czech
+  - marjoram
+  - pancake
+  - potato
+  missing_allowed: 2
+  source_family: czech:bramboraky
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: normal
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: marjoram
+    role: required
+    amount: spice
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Картопляні драники з майораном
+- id: czech_bramboraky_se_zeli
+  name: Potato pancakes with sauerkraut
+  kind: dish
+  tags:
+  - czech
+  - potato
+  - sauerkraut
+  missing_allowed: 2
+  source_family: czech:bramboraky_se_zeli
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: sauerkraut
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: normal
+  - item: marjoram
+    role: required
+    amount: spice
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Драники з квашеною капустою
+- id: czech_cmunda_po_kaplicku
+  name: Potato pancakes with smoked meat and cabbage
+  kind: dish
+  tags:
+  - czech
+  - potato
+  - sauerkraut
+  - smoked_meat
+  missing_allowed: 3
+  source_family: czech:cmunda_po_kaplicku
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: smoked_meat
+    role: required
+    amount: normal
+    accepts:
+    - meat_product
+  - item: sauerkraut
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: normal
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: marjoram
+    role: spice
+    amount: spice
+  name_uk: Драник з копченим м'ясом та капустою
+- id: czech_skubanky
+  name: Potato dumplings with poppy seeds or cracklings
+  kind: dish
+  tags:
+  - czech
+  - dumpling
+  - potato
+  missing_allowed: 3
+  source_family: czech:skubanky
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    - dessert
+    time: under_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: flour
+    role: required
+    amount: normal
+  - item: poppy_seed
+    role: addition
+    amount: normal
+    accepts:
+    - seed
+  - item: pork_cracklings
+    role: addition
+    amount: normal
+    accepts:
+    - salo
+    - pork_belly
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Картопляні галушки з маком або шкварками
+- id: czech_chlupate_knedliky
+  name: Potato dumplings
+  kind: dish
+  tags:
+  - czech
+  - potato_dumpling
+  missing_allowed: 2
+  source_family: czech:chlupate_knedliky
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: flour
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  - item: sauerkraut
+    role: addition
+    amount: many
+  - item: smoked_meat
+    role: addition
+    amount: normal
+    accepts:
+    - meat_product
+  name_uk: Картопляні кнедлики
+- id: czech_bramborove_knedliky_uzenym
+  name: Potato dumplings with smoked meat
+  kind: dish
+  tags:
+  - czech
+  - potato_dumpling
+  - smoked_meat
+  missing_allowed: 3
+  source_family: czech:bramborove_knedliky_uzenym
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: flour
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  - item: smoked_meat
+    role: required
+    amount: many
+    accepts:
+    - meat_product
+  - item: sauerkraut
+    role: addition
+    amount: many
+  - item: onion
+    role: addition
+    amount: normal
+  name_uk: Картопляні кнедлики з копченим м'ясом
+- id: czech_ovocne_knedliky_tvaroh
+  name: Fruit dumplings made from cottage cheese dough
+  kind: dish
+  tags:
+  - cottage_cheese
+  - czech
+  - fruit_dumpling
+  missing_allowed: 3
+  source_family: czech:ovocne_knedliky_tvaroh
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    - dessert
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: cottage_cheese
+    role: main
+    amount: many
+  - item: flour
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: fruit
+    role: required
+    amount: many
+    accepts:
+    - strawberry
+    - plum
+    - apricot
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: addition
+    amount: normal
+  name_uk: Фруктові кнедлики із сирного тіста
+- id: czech_sisky_s_makem
+  name: Potato fingers with poppy seeds
+  kind: dish
+  tags:
+  - czech
+  - poppy_seed
+  - potato
+  missing_allowed: 2
+  source_family: czech:sisky_s_makem
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    - dessert
+    time: under_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: flour
+    role: required
+    amount: normal
+  - item: poppy_seed
+    role: required
+    amount: normal
+    accepts:
+    - seed
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Картопляні пальчики з маком
+- id: czech_nudle_s_makem
+  name: Noodles with poppy seeds
+  kind: dish
+  tags:
+  - czech
+  - noodle
+  - poppy_seed
+  missing_allowed: 2
+  source_family: czech:nudle_s_makem
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    - dessert
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: wide_noodles
+    role: main
+    amount: many
+    accepts:
+    - noodle
+  - item: poppy_seed
+    role: required
+    amount: normal
+    accepts:
+    - seed
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Локшина з маком
+- id: czech_nudle_s_tvarohem
+  name: Noodles with cottage cheese
+  kind: dish
+  tags:
+  - cottage_cheese
+  - czech
+  - noodle
+  missing_allowed: 2
+  source_family: czech:nudle_s_tvarohem
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: wide_noodles
+    role: main
+    amount: many
+    accepts:
+    - noodle
+  - item: cottage_cheese
+    role: required
+    amount: many
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: sugar
+    role: optional
+    amount: little
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Локшина з сиром
+- id: czech_fleky_se_zelim
+  name: Noodles with cabbage
+  kind: dish
+  tags:
+  - cabbage
+  - czech
+  - noodle
+  missing_allowed: 2
+  source_family: czech:fleky_se_zelim
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - mix
+  comment: ''
+  ingredients:
+  - item: wide_noodles
+    role: main
+    amount: many
+    accepts:
+    - noodle
+  - item: cabbage
+    role: required
+    amount: many
+  - item: fat
+    role: required
+    amount: normal
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: sugar
+    role: addition
+    amount: little
+  name_uk: Локшина з капустою
+- id: czech_spekové_knedliky
+  name: Bread dumplings with bacon
+  kind: dish
+  tags:
+  - bacon
+  - bread_dumpling
+  - czech
+  missing_allowed: 2
+  source_family: czech:spekové_knedliky
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: bread_roll
+    role: main
+    amount: many
+    accepts:
+    - bread
+  - item: bacon
+    role: required
+    amount: normal
+    accepts:
+    - pork_belly
+    - salo
+  - item: eggs
+    role: required
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: normal
+  name_uk: Хлібні кнедлики з беконом
+- id: czech_uzene_maso_se_spenatem
+  name: Smoked meat with spinach
+  kind: dish
+  tags:
+  - czech
+  - dumpling
+  - smoked_meat
+  - spinach
+  missing_allowed: 3
+  source_family: czech:uzene_maso_se_spenatem
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: smoked_meat
+    role: main
+    amount: many
+    accepts:
+    - meat_product
+  - item: spinach
+    role: required
+    amount: many
+  - item: potato_dumpling
+    role: required
+    amount: many
+    accepts:
+    - potato
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: eggs
+    role: addition
+    amount: normal
+  name_uk: Копчене м'ясо зі шпинатом
+- id: czech_kure_na_paprice
+  name: Chicken in paprika-sour cream sauce
+  kind: dish
+  tags:
+  - chicken
+  - czech
+  - paprika
+  - sour_cream
+  missing_allowed: 2
+  source_family: czech:kure_na_paprice
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: chicken_parts
+    role: main
+    amount: many
+    accepts:
+    - chicken_fillet
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  - item: bread_dumpling
+    role: addition
+    amount: many
+    accepts:
+    - bread_base
+  name_uk: Курка в папрично-сметанному соусі
+- id: czech_kralik_na_smetane
+  name: Rabbit in sour cream
+  kind: dish
+  tags:
+  - czech
+  - rabbit
+  - sour_cream
+  missing_allowed: 3
+  source_family: czech:kralik_na_smetane
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: rabbit
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: mustard
+    role: addition
+    amount: little
+  - item: onion
+    role: required
+    amount: normal
+  - item: root_vegetable
+    role: addition
+    amount: normal
+    accepts:
+    - carrot
+    - celery_root
+  - item: bread_dumpling
+    role: addition
+    amount: many
+    accepts:
+    - bread_base
+  name_uk: Кролик у сметані
+- id: czech_kralik_na_cesneku
+  name: Rabbit with garlic
+  kind: dish
+  tags:
+  - czech
+  - garlic
+  - rabbit
+  missing_allowed: 3
+  source_family: czech:kralik_na_cesneku
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roast
+  comment: ''
+  ingredients:
+  - item: rabbit
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: caraway
+    role: spice
+    amount: spice
+  - item: onion
+    role: addition
+    amount: normal
+  - item: potato
+    role: addition
+    amount: many
+  name_uk: Кролик із часником
+- id: czech_jitrnice_zeli
+  name: Liver sausage with cabbage
+  kind: dish
+  tags:
+  - czech
+  - sauerkraut
+  - sausage
+  missing_allowed: 3
+  source_family: czech:jitrnice_zeli
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: jitrnice
+    role: main
+    amount: many
+    accepts:
+    - sausage_product
+  - item: sauerkraut
+    role: required
+    amount: many
+  - item: potato
+    role: addition
+    amount: many
+  - item: onion
+    role: addition
+    amount: normal
+  name_uk: Ліверна ковбаса з капустою
+- id: czech_jelito_zeli
+  name: Blood sausage with cabbage
+  kind: dish
+  tags:
+  - blood_sausage
+  - czech
+  - sauerkraut
+  missing_allowed: 3
+  source_family: czech:jelito_zeli
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: jelito
+    role: main
+    amount: many
+    accepts:
+    - blood_sausage_base
+    - sausage_product
+  - item: sauerkraut
+    role: required
+    amount: many
+  - item: potato
+    role: addition
+    amount: many
+  - item: onion
+    role: addition
+    amount: normal
+  name_uk: Кров'яна ковбаса з капустою
+- id: czech_klobasa_s_chlebem
+  name: Sausage with bread and mustard
+  kind: dish
+  tags:
+  - czech
+  - sausage
+  - snack
+  missing_allowed: 2
+  source_family: czech:klobasa_s_chlebem
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - main
+    - snack
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: smoked_sausage
+    role: main
+    amount: normal
+    accepts:
+    - sausage_product
+  - item: bread
+    role: required
+    amount: normal
+  - item: mustard
+    role: required
+    amount: little
+  - item: horseradish
+    role: addition
+    amount: little
+    accepts:
+    - pungent_spice
+  name_uk: Ковбаса з хлібом та гірчицею
+- id: czech_bramborovy_salad
+  name: Czech potato salad
+  kind: dish
+  tags:
+  - christmas
+  - czech
+  - potato_salad
+  missing_allowed: 2
+  source_family: czech:bramborovy_salad
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - salad
+    - side
+    time: under_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: carrot
+    role: required
+    amount: normal
+  - item: pickled_cucumber
+    role: required
+    amount: normal
+  - item: canned_peas
+    role: addition
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: mayonnaise
+    role: required
+    amount: normal
+    accepts:
+    - remoulade
+    - tartar_sauce
+  - item: mustard
+    role: addition
+    amount: little
+  name_uk: Чеський картопляний салат
+- id: czech_okurkovy_salat
+  name: Cucumber salad
+  kind: dish
+  tags:
+  - cucumber
+  - czech
+  - salad
+  missing_allowed: 2
+  source_family: czech:okurkovy_salat
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - salad
+    - side
+    time: under_10
+    method:
+    - raw
+    - mix
+  comment: ''
+  ingredients:
+  - item: cucumber
+    role: main
+    amount: many
+  - item: vinegar
+    role: required
+    amount: little
+  - item: sugar
+    role: addition
+    amount: little
+  - item: dill
+    role: addition
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Огірковий салат
+- id: czech_rajcatovy_salat
+  name: Tomato salad
+  kind: dish
+  tags:
+  - czech
+  - salad
+  - tomato
+  missing_allowed: 2
+  source_family: czech:rajcatovy_salat
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - salad
+    - side
+    time: under_10
+    method:
+    - raw
+    - mix
+  comment: ''
+  ingredients:
+  - item: tomato
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: little
+  - item: vinegar
+    role: addition
+    amount: little
+  - item: plant_oil
+    role: addition
+    amount: little
+  name_uk: Салат з помідорів
+- id: czech_zelny_salat
+  name: Coleslaw
+  kind: dish
+  tags:
+  - cabbage
+  - czech
+  - salad
+  missing_allowed: 2
+  source_family: czech:zelny_salat
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - salad
+    - side
+    time: under_10
+    method:
+    - raw
+    - mix
+  comment: ''
+  ingredients:
+  - item: cabbage
+    role: main
+    amount: many
+    accepts:
+    - young_cabbage
+  - item: carrot
+    role: addition
+    amount: little
+  - item: vinegar
+    role: required
+    amount: little
+  - item: sugar
+    role: addition
+    amount: little
+  - item: caraway
+    role: spice
+    amount: spice
+  name_uk: Капустяний салат
+- id: czech_cervene_zeli
+  name: Stewed red cabbage
+  kind: dish
+  tags:
+  - czech
+  - red_cabbage
+  - side
+  missing_allowed: 2
+  source_family: czech:cervene_zeli
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - side
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: red_cabbage
+    role: main
+    amount: many
+    accepts:
+    - cabbage
+  - item: apple
+    role: addition
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: vinegar
+    role: addition
+    amount: little
+  - item: sugar
+    role: addition
+    amount: little
+  - item: caraway
+    role: spice
+    amount: spice
+  name_uk: Тушкована червона капуста
+- id: czech_bile_zeli
+  name: Stewed white cabbage
+  kind: dish
+  tags:
+  - cabbage
+  - czech
+  - side
+  missing_allowed: 2
+  source_family: czech:bile_zeli
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - side
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: cabbage
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: caraway
+    role: spice
+    amount: spice
+  - item: vinegar
+    role: addition
+    amount: little
+  - item: sugar
+    role: addition
+    amount: little
+  name_uk: Тушкована біла капуста
+- id: czech_spenat_cesnek
+  name: Spinach with garlic
+  kind: dish
+  tags:
+  - czech
+  - side
+  - spinach
+  missing_allowed: 2
+  source_family: czech:spenat_cesnek
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - side
+    time: under_30
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: spinach
+    role: main
+    amount: many
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: eggs
+    role: addition
+    amount: normal
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - sour_cream
+    - yogurt
+    - mascarpone
+    - soft_creamy_cheese
+    - cream_like
+  name_uk: Шпинат із часником
+- id: czech_bramborova_kase
+  name: Mashed potatoes
+  kind: dish
+  tags:
+  - czech
+  - potato
+  - side
+  missing_allowed: 2
+  source_family: czech:bramborova_kase
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - side
+    time: under_30
+    method:
+    - boil
+    - mash
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: milk
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Картопляне пюре
+- id: czech_stouchane_brambory
+  name: Crushed potatoes with onions
+  kind: dish
+  tags:
+  - czech
+  - onion
+  - potato
+  - side
+  missing_allowed: 2
+  source_family: czech:stouchane_brambory
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - side
+    - main
+    time: under_30
+    method:
+    - boil
+    - fry
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  - item: bacon
+    role: addition
+    amount: normal
+    accepts:
+    - salo
+    - pork_belly
+  name_uk: Товчена картопля з цибулею
+- id: czech_houskovy_knedlik
+  name: Bread dumpling
+  kind: dish
+  tags:
+  - bread_dumpling
+  - czech
+  - dumpling
+  missing_allowed: 2
+  source_family: czech:houskovy_knedlik
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - component
+    - side
+    - bread
+    time: over_60
+    method:
+    - steam
+    - boil
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: bread_roll
+    role: required
+    amount: normal
+    accepts:
+    - bread
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: addition
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Хлібний кнедлик
+- id: czech_bramborovy_knedlik_component
+  name: Potato dumpling
+  kind: dish
+  tags:
+  - czech
+  - dumpling
+  - potato
+  missing_allowed: 2
+  source_family: czech:bramborovy_knedlik_component
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - component
+    - side
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: flour
+    role: required
+    amount: normal
+  - item: semolina
+    role: addition
+    amount: normal
+  - item: eggs
+    role: required
+    amount: little
+  name_uk: Картопляний кнедлик
+- id: czech_karlovarsky_knedlik
+  name: Karlovy Vary dumpling
+  kind: dish
+  tags:
+  - bread
+  - czech
+  - dumpling
+  missing_allowed: 2
+  source_family: czech:karlovarsky_knedlik
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - component
+    - side
+    time: under_60
+    method:
+    - boil
+    - steam
+  comment: ''
+  ingredients:
+  - item: bread_roll
+    role: main
+    amount: many
+    accepts:
+    - bread
+  - item: eggs
+    role: required
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  - item: parsley
+    role: addition
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Карловарський кнедлик
+- id: czech_chlupaty_knedlik_component
+  name: Raw potato dumpling
+  kind: dish
+  tags:
+  - czech
+  - dumpling
+  - potato
+  missing_allowed: 2
+  source_family: czech:chlupaty_knedlik_component
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - component
+    - side
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: flour
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  name_uk: Сирий картопляний кнедлик
+- id: czech_bramborove_lokse
+  name: Potato cakes
+  kind: dish
+  tags:
+  - czech
+  - flatbread
+  - potato
+  missing_allowed: 2
+  source_family: czech:bramborove_lokse
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - bread
+    - side
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: flour
+    role: required
+    amount: normal
+  - item: fat
+    role: addition
+    amount: little
+  name_uk: Картопляні коржі
+- id: czech_chleb_kmin
+  name: Bread with cumin
+  kind: dish
+  tags:
+  - bread
+  - caraway
+  - czech
+  missing_allowed: 2
+  source_family: czech:chleb_kmin
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - bread
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: rye_flour
+    role: addition
+    amount: normal
+    accepts:
+    - flour
+  - item: yeast
+    role: required
+    amount: little
+  - item: caraway
+    role: required
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Хліб із кмином
+- id: czech_rohliky
+  name: Czech bagels
+  kind: dish
+  tags:
+  - bread
+  - czech
+  - roll
+  missing_allowed: 2
+  source_family: czech:rohliky
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - bread
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Чеські рогалики
+- id: czech_chlebicky
+  name: Open sandwiches
+  kind: dish
+  tags:
+  - czech
+  - party
+  - sandwich
+  missing_allowed: 3
+  source_family: czech:chlebicky
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - snack
+    time: under_30
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: bread
+    role: main
+    amount: many
+  - item: ham
+    role: required
+    amount: normal
+    accepts:
+    - smoked_ham
+    - meat_product
+  - item: hard_cheese
+    role: addition
+    amount: normal
+    accepts:
+    - cheese
+  - item: eggs
+    role: addition
+    amount: normal
+  - item: pickled_cucumber
+    role: addition
+    amount: normal
+  - item: mayonnaise
+    role: addition
+    amount: normal
+    accepts:
+    - remoulade
+    - tartar_sauce
+  name_uk: Відкриті бутерброди
+- id: czech_topinky_s_cesnekem
+  name: Fried garlic bread
+  kind: dish
+  tags:
+  - bread
+  - czech
+  - garlic
+  - quick
+  missing_allowed: 2
+  source_family: czech:topinky_s_cesnekem
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - snack
+    - main
+    time: under_10
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: bread
+    role: main
+    amount: normal
+    accepts:
+    - rye_bread
+    - bread_base
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: fat
+    role: required
+    amount: normal
+  - item: hard_cheese
+    role: addition
+    amount: normal
+    accepts:
+    - cheese
+  name_uk: Смажений хліб із часником
+- id: czech_skvarkova_pomazanka
+  name: Crackling spread
+  kind: dish
+  tags:
+  - cracklings
+  - czech
+  - spread
+  missing_allowed: 2
+  source_family: czech:skvarkova_pomazanka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - snack
+    time: under_30
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: pork_cracklings
+    role: main
+    amount: many
+    accepts:
+    - salo
+    - pork_belly
+  - item: eggs
+    role: addition
+    amount: normal
+  - item: mustard
+    role: required
+    amount: little
+  - item: onion
+    role: required
+    amount: little
+  - item: bread
+    role: addition
+    amount: normal
+  name_uk: Намазка зі шкварок
+- id: czech_tvarohova_pomazanka
+  name: Cottage cheese spread
+  kind: dish
+  tags:
+  - cottage_cheese
+  - czech
+  - spread
+  missing_allowed: 2
+  source_family: czech:tvarohova_pomazanka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - snack
+    time: under_10
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: cottage_cheese
+    role: main
+    amount: many
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: dry_garlic
+    role: addition
+    amount: spice
+  - item: greens
+    role: addition
+    amount: little
+  - item: bread
+    role: addition
+    amount: normal
+  name_uk: Сирна намазка
+- id: czech_vajickova_pomazanka
+  name: Egg spread
+  kind: dish
+  tags:
+  - czech
+  - egg
+  - spread
+  missing_allowed: 2
+  source_family: czech:vajickova_pomazanka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - snack
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: many
+  - item: mayonnaise
+    role: required
+    amount: normal
+    accepts:
+    - remoulade
+    - tartar_sauce
+  - item: mustard
+    role: addition
+    amount: little
+  - item: onion
+    role: addition
+    amount: little
+  - item: bread
+    role: addition
+    amount: normal
+  name_uk: Яєчний спред
+- id: czech_hermelin_pomazanka
+  name: Cheese spread
+  kind: dish
+  tags:
+  - cheese
+  - czech
+  - spread
+  missing_allowed: 2
+  source_family: czech:hermelin_pomazanka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - snack
+    time: under_10
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: hermelin_cheese
+    role: main
+    amount: many
+    accepts:
+    - soft_cheese
+    - cheese
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: onion
+    role: addition
+    amount: little
+  - item: bread
+    role: addition
+    amount: normal
+  name_uk: Сирна намазка
+- id: czech_nakladany_hermelin_czech
+  name: Pickled hermelin
+  kind: dish
+  tags:
+  - cheese
+  - czech
+  - marinated
+  missing_allowed: 3
+  source_family: czech:nakladany_hermelin_czech
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - snack
+    time: over_60
+    method:
+    - marinate
+  comment: ''
+  ingredients:
+  - item: hermelin_cheese
+    role: main
+    amount: many
+    accepts:
+    - soft_cheese
+    - cheese
+  - item: plant_oil
+    role: required
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  name_uk: Маринований гермелін
+- id: czech_utopenci_czech
+  name: Pickled sausages
+  kind: dish
+  tags:
+  - czech
+  - pickle
+  - sausage
+  missing_allowed: 3
+  source_family: czech:utopenci_czech
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - snack
+    time: over_60
+    method:
+    - pickle
+  comment: ''
+  ingredients:
+  - item: sausages
+    role: main
+    amount: many
+    accepts:
+    - sausage_product
+  - item: onion
+    role: required
+    amount: normal
+  - item: vinegar
+    role: required
+    amount: normal
+  - item: pickled_cucumber
+    role: addition
+    amount: normal
+  - item: mustard_seeds
+    role: spice
+    amount: spice
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  name_uk: Мариновані сардельки
+- id: czech_buchty_povidla
+  name: Yeast buns with plum jam
+  kind: dish
+  tags:
+  - bun
+  - czech
+  - plum_jam
+  missing_allowed: 3
+  source_family: czech:buchty_povidla
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: plum_jam
+    role: required
+    amount: normal
+    accepts:
+    - fruit_preserve
+    - jam
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Дріжджові булочки зі сливовим повидлом
+- id: czech_buchty_tvaroh
+  name: Buns with cottage cheese
+  kind: dish
+  tags:
+  - bun
+  - cottage_cheese
+  - czech
+  missing_allowed: 3
+  source_family: czech:buchty_tvaroh
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: cottage_cheese
+    role: required
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Булочки з сиром
+- id: czech_kolace_povidla
+  name: Cakes with plum povidlom
+  kind: dish
+  tags:
+  - czech
+  - kolace
+  - plum_jam
+  missing_allowed: 3
+  source_family: czech:kolace_povidla
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: plum_jam
+    role: required
+    amount: normal
+    accepts:
+    - fruit_preserve
+    - jam
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Коржі зі сливовим повідлом
+- id: czech_kolace_tvaroh_mak
+  name: Kolaches with cottage cheese and poppy seeds
+  kind: dish
+  tags:
+  - cottage_cheese
+  - czech
+  - kolace
+  - poppy_seed
+  missing_allowed: 3
+  source_family: czech:kolace_tvaroh_mak
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: cottage_cheese
+    role: required
+    amount: normal
+  - item: poppy_seed
+    role: required
+    amount: normal
+    accepts:
+    - seed
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Колачі з сиром та маком
+- id: czech_moravske_kolace
+  name: Moravian cakes
+  kind: dish
+  tags:
+  - czech
+  - kolace
+  - moravian
+  missing_allowed: 3
+  source_family: czech:moravske_kolace
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: cottage_cheese
+    role: required
+    amount: normal
+  - item: plum_jam
+    role: required
+    amount: normal
+    accepts:
+    - jam
+  - item: poppy_seed
+    role: addition
+    amount: normal
+    accepts:
+    - seed
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Моравські коржі
+- id: czech_frgal
+  name: Large wallachian pie
+  kind: dish
+  tags:
+  - czech
+  - frgal
+  - moravian
+  - pie
+  missing_allowed: 3
+  source_family: czech:frgal
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: pear_jam
+    role: required
+    amount: normal
+    accepts:
+    - plum_jam
+    - fruit_preserve
+  - item: cottage_cheese
+    role: addition
+    amount: normal
+  - item: poppy_seed
+    role: addition
+    amount: normal
+    accepts:
+    - seed
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Великий волоський пиріг
+- id: czech_bublanina_cherry
+  name: Bublanina with cherries
+  kind: dish
+  tags:
+  - cake
+  - cherry
+  - czech
+  missing_allowed: 2
+  source_family: czech:bublanina_cherry
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: cherry
+    role: main
+    amount: many
+    accepts:
+    - fruit
+  - item: flour
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: milk
+    role: addition
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Бубланіна з вишнею
+- id: czech_bublanina_strawberry
+  name: Bublanina with strawberries
+  kind: dish
+  tags:
+  - cake
+  - czech
+  - strawberry
+  missing_allowed: 2
+  source_family: czech:bublanina_strawberry
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: strawberry
+    role: main
+    amount: many
+    accepts:
+    - berries
+    - fruit
+  - item: flour
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: milk
+    role: addition
+    amount: normal
+  name_uk: Бубланіна з полуницею
+- id: czech_jablecny_strudl
+  name: Apple strudel
+  kind: dish
+  tags:
+  - apple
+  - czech
+  - strudel
+  missing_allowed: 3
+  source_family: czech:jablecny_strudl
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - roll
+  comment: ''
+  ingredients:
+  - item: strudel_dough
+    role: main
+    amount: many
+    accepts:
+    - filo_dough
+    - flour
+  - item: apple
+    role: required
+    amount: many
+  - item: raisins
+    role: addition
+    amount: little
+  - item: breadcrumbs
+    role: addition
+    amount: little
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Яблучний штрудель
+- id: czech_makovy_zavin
+  name: Poppy seed roll
+  kind: dish
+  tags:
+  - czech
+  - poppy_seed
+  - roll
+  missing_allowed: 3
+  source_family: czech:makovy_zavin
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - roll
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: poppy_seed
+    role: required
+    amount: many
+    accepts:
+    - seed
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Маковий рулет
+- id: czech_orechovy_zavin
+  name: Nut roll
+  kind: dish
+  tags:
+  - czech
+  - roll
+  - walnut
+  missing_allowed: 3
+  source_family: czech:orechovy_zavin
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - roll
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: walnuts
+    role: required
+    amount: many
+    accepts:
+    - nuts
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Горіховий рулет
+- id: czech_pernik
+  name: Czech gingerbread pie
+  kind: dish
+  tags:
+  - cake
+  - czech
+  - gingerbread
+  missing_allowed: 3
+  source_family: czech:pernik
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: honey
+    role: addition
+    amount: normal
+    accepts:
+    - sweetener
+  - item: sugar
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: milk
+    role: addition
+    amount: normal
+  - item: cocoa_powder
+    role: addition
+    amount: normal
+  - item: gingerbread_spice
+    role: required
+    amount: spice
+    accepts:
+    - warm_spice
+    - spice
+  name_uk: Чеський пряник-пиріг
+- id: czech_medovnik
+  name: Honeydew
+  kind: dish
+  tags:
+  - czech
+  - honey_cake
+  missing_allowed: 3
+  source_family: czech:medovnik
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: honey
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - sour_cream
+    - yogurt
+    - mascarpone
+    - soft_creamy_cheese
+    - cream_like
+  name_uk: Медовик
+- id: czech_vanocka
+  name: Christmas wicker
+  kind: dish
+  tags:
+  - christmas
+  - czech
+  - sweet_bread
+  missing_allowed: 3
+  source_family: czech:vanocka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: raisins
+    role: addition
+    amount: normal
+  - item: almonds
+    role: addition
+    amount: normal
+    accepts:
+    - nuts
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Різдвяна плетінка
+- id: czech_mazanec
+  name: Easter sweet bread
+  kind: dish
+  tags:
+  - czech
+  - easter
+  - sweet_bread
+  missing_allowed: 3
+  source_family: czech:mazanec
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: raisins
+    role: addition
+    amount: normal
+  - item: almonds
+    role: addition
+    amount: normal
+    accepts:
+    - nuts
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Пасхальний солодкий хліб
+- id: czech_vanilkove_rohlicky
+  name: Vanilla horns
+  kind: dish
+  tags:
+  - christmas_cookie
+  - czech
+  - walnut
+  missing_allowed: 3
+  source_family: czech:vanilkove_rohlicky
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: walnuts
+    role: required
+    amount: normal
+    accepts:
+    - nuts
+  - item: sugar
+    role: required
+    amount: normal
+  - item: vanilla_sugar
+    role: required
+    amount: little
+    accepts:
+    - sweetener
+  name_uk: Ванільні ріжки
+- id: czech_linecke_cukrovi
+  name: Linzer cookies
+  kind: dish
+  tags:
+  - christmas_cookie
+  - czech
+  - jam
+  missing_allowed: 2
+  source_family: czech:linecke_cukrovi
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: eggs
+    role: addition
+    amount: little
+  - item: sugar
+    role: required
+    amount: normal
+  - item: jam
+    role: required
+    amount: normal
+    accepts:
+    - fruit_preserve
+  name_uk: Лінцерське печиво
+- id: czech_vosi_hnizda
+  name: Wasp nests
+  kind: dish
+  tags:
+  - christmas_cookie
+  - czech
+  - no_bake
+  missing_allowed: 3
+  source_family: czech:vosi_hnizda
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - mix
+    - set
+  comment: ''
+  ingredients:
+  - item: biscuit_crumbs
+    role: main
+    amount: many
+    accepts:
+    - breadcrumbs
+    - bread
+  - item: cocoa_powder
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+  - item: rum
+    role: addition
+    amount: little
+  name_uk: Осині гнізда
+- id: czech_ovocne_knedliky_svestky
+  name: Plum dumplings
+  kind: dish
+  tags:
+  - czech
+  - fruit_dumpling
+  - plum
+  missing_allowed: 3
+  source_family: czech:ovocne_knedliky_svestky
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    - main
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: plum
+    role: main
+    amount: many
+    accepts:
+    - fruit
+  - item: potato
+    role: required
+    amount: many
+  - item: flour
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: addition
+    amount: normal
+  name_uk: Сливові кнедлики
+- id: czech_ovocne_knedliky_merunky
+  name: Apricot dumplings
+  kind: dish
+  tags:
+  - apricot
+  - czech
+  - fruit_dumpling
+  missing_allowed: 3
+  source_family: czech:ovocne_knedliky_merunky
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    - main
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: apricot
+    role: main
+    amount: many
+    accepts:
+    - fruit
+  - item: cottage_cheese
+    role: addition
+    amount: normal
+  - item: flour
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: addition
+    amount: normal
+  name_uk: Абрикосові кнедлики
+- id: czech_ovocne_knedliky_jahody
+  name: Strawberry dumplings
+  kind: dish
+  tags:
+  - czech
+  - fruit_dumpling
+  - strawberry
+  missing_allowed: 3
+  source_family: czech:ovocne_knedliky_jahody
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    - main
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: strawberry
+    role: main
+    amount: many
+    accepts:
+    - berries
+    - fruit
+  - item: cottage_cheese
+    role: addition
+    amount: normal
+  - item: flour
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: addition
+    amount: normal
+  name_uk: Полуничні кнедлики
+- id: czech_palacinky_jam
+  name: Pancakes with jam
+  kind: dish
+  tags:
+  - czech
+  - jam
+  - pancake
+  missing_allowed: 2
+  source_family: czech:palacinky_jam
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: jam
+    role: required
+    amount: normal
+    accepts:
+    - fruit_preserve
+  - item: sugar
+    role: addition
+    amount: little
+  - item: fat
+    role: required
+    amount: little
+  name_uk: Млинці з джемом
+- id: czech_palacinky_tvaroh
+  name: Pancakes with cottage cheese
+  kind: dish
+  tags:
+  - cottage_cheese
+  - czech
+  - pancake
+  missing_allowed: 2
+  source_family: czech:palacinky_tvaroh
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: under_30
+    method:
+    - fry
+    - assemble
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: cottage_cheese
+    role: required
+    amount: many
+  - item: sugar
+    role: required
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  name_uk: Млинці з сиром
+- id: czech_zemlovka
+  name: Bread casserole with apples and cottage cheese
+  kind: dish
+  tags:
+  - apple
+  - bread_pudding
+  - czech
+  missing_allowed: 3
+  source_family: czech:zemlovka
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: bread_roll
+    role: main
+    amount: many
+    accepts:
+    - bread
+  - item: apple
+    role: required
+    amount: many
+  - item: cottage_cheese
+    role: addition
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Хлібна запіканка з яблуками та сиром
+- id: czech_ryzovy_nakyp
+  name: Rice casserole
+  kind: dish
+  tags:
+  - casserole
+  - czech
+  - rice
+  missing_allowed: 2
+  source_family: czech:ryzovy_nakyp
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - boil
+    - bake
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: milk
+    role: required
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: fruit
+    role: addition
+    amount: normal
+    accepts:
+    - apricot
+    - plum
+    - apple
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Рисова запіканка
+- id: czech_krupicova_kase
+  name: Semolina with cocoa
+  kind: dish
+  tags:
+  - breakfast
+  - czech
+  - semolina
+  missing_allowed: 2
+  source_family: czech:krupicova_kase
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    - breakfast
+    time: under_10
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: semolina
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: many
+  - item: sugar
+    role: required
+    amount: little
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  - item: cocoa_powder
+    role: addition
+    amount: little
+  name_uk: Манна крупа з какао
+- id: czech_livance
+  name: Yeast pancakes
+  kind: dish
+  tags:
+  - czech
+  - pancake
+  - yeast
+  missing_allowed: 2
+  source_family: czech:livance
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    - breakfast
+    time: over_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: little
+  - item: jam
+    role: addition
+    amount: normal
+    accepts:
+    - fruit_preserve
+  name_uk: Дріжджові оладки
+- id: czech_vdolky
+  name: Fried or baked donuts with jam
+  kind: dish
+  tags:
+  - czech
+  - fried_dough
+  - plum_jam
+  missing_allowed: 3
+  source_family: czech:vdolky
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - fry
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: normal
+  - item: plum_jam
+    role: required
+    amount: normal
+    accepts:
+    - jam
+  - item: cottage_cheese
+    role: addition
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Смажені або печені пампушки з повидлом
+- id: czech_trdelnik
+  name: Tubular sweet pastries
+  kind: dish
+  tags:
+  - chimney_cake
+  - czech
+  - street_food
+  missing_allowed: 2
+  source_family: czech:trdelnik
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - roll
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: normal
+  - item: sugar
+    role: required
+    amount: many
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Трубчаста солодка випічка
+- id: czech_rakvicky
+  name: Sweet shells with cream
+  kind: dish
+  tags:
+  - cream
+  - czech
+  - pastry
+  missing_allowed: 2
+  source_family: czech:rakvicky
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: many
+  - item: sugar
+    role: required
+    amount: many
+  - item: cream
+    role: required
+    amount: normal
+  name_uk: Солодкі мушлі з вершками
+- id: czech_vetrnik
+  name: Custard cake with cream
+  kind: dish
+  tags:
+  - choux
+  - cream
+  - czech
+  missing_allowed: 3
+  source_family: czech:vetrnik
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: eggs
+    role: required
+    amount: many
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: milk
+    role: required
+    amount: normal
+  - item: cream
+    role: required
+    amount: normal
+  - item: caramel
+    role: addition
+    amount: normal
+    accepts:
+    - sweetener
+  name_uk: Заварне тістечко з кремом
+- id: czech_venecek
+  name: Custard ring with cream
+  kind: dish
+  tags:
+  - choux
+  - cream
+  - czech
+  missing_allowed: 3
+  source_family: czech:venecek
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: eggs
+    role: required
+    amount: many
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: milk
+    role: required
+    amount: normal
+  - item: cream
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Заварне кільце з кремом
+- id: czech_kremrole
+  name: Tubes with cream
+  kind: dish
+  tags:
+  - cream
+  - czech
+  - pastry
+  missing_allowed: 3
+  source_family: czech:kremrole
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: puff_pastry
+    role: main
+    amount: many
+    accepts:
+    - flour
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: cream
+    role: addition
+    amount: normal
+  name_uk: Трубочки з кремом
+- id: czech_misa_rezy
+  name: Cottage cheese and chocolate cakes
+  kind: dish
+  tags:
+  - cake
+  - chocolate
+  - cottage_cheese
+  - czech
+  missing_allowed: 3
+  source_family: czech:misa_rezy
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - set
+  comment: ''
+  ingredients:
+  - item: cottage_cheese
+    role: main
+    amount: many
+  - item: flour
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: chocolate
+    role: required
+    amount: normal
+  name_uk: Сирно-шоколадні тістечка
+- id: czech_krtkuv_dort
+  name: Mole cake with banana
+  kind: dish
+  tags:
+  - banana
+  - cake
+  - cream
+  - czech
+  missing_allowed: 3
+  source_family: czech:krtkuv_dort
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: cocoa_powder
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: banana
+    role: required
+    amount: many
+    accepts:
+    - fruit
+  - item: cream
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Торт кріт з бананом
+- id: czech_povidlove_tasky
+  name: Bags of plum jam
+  kind: dish
+  tags:
+  - czech
+  - plum_jam
+  - potato_dough
+  missing_allowed: 3
+  source_family: czech:povidlove_tasky
+  facets:
+    cuisine:
+    - czech
+    dish_type:
+    - dessert
+    - main
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: flour
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  - item: plum_jam
+    role: required
+    amount: normal
+    accepts:
+    - fruit_preserve
+  - item: breadcrumbs
+    role: addition
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Мішечки зі сливовим повидлом

@@ -1,0 +1,116 @@
+metadata:
+  version: '0.1'
+  kind: ingredients
+  domain: fats_oils
+ingredients:
+  butter:
+    name: butter
+    name_uk: масло вершкове
+    groups:
+    - animal_fat
+    - fat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  coconut_oil:
+    name: coconut oil
+    name_uk: кокосова олія
+    groups:
+    - plant_oil
+    - fat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  duck_fat:
+    name: duck fat
+    name_uk: качиний жир
+    groups:
+    - animal_fat
+    - fat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ghee:
+    name: ghee
+    name_uk: гхі / топлена олія
+    groups:
+    - animal_fat
+    - fat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  goose_fat:
+    name: goose fat
+    name_uk: гусячий жир
+    groups:
+    - animal_fat
+    - fat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  olive_oil:
+    name: olive oil
+    name_uk: оливкова олія
+    groups:
+    - plant_oil
+    - fat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rapeseed_oil:
+    name: rapeseed oil
+    name_uk: рапсова олія
+    groups:
+    - plant_oil
+    - fat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  salo:
+    name: salo
+    name_uk: сало
+    groups:
+    - animal_fat
+    - fat
+    - meat_product
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - сало
+  smalec:
+    name: smalec
+    name_uk: смалець
+    groups:
+    - animal_fat
+    - fat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false

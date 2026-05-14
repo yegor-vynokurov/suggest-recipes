@@ -1,0 +1,290 @@
+metadata:
+  version: '0.1'
+  kind: ingredients
+  domain: nuts_seeds_sweeteners
+ingredients:
+  almonds:
+    name: almonds
+    name_uk: мигдаль
+    groups:
+    - nuts
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  caramel:
+    name: caramel
+    name_uk: карамель
+    groups:
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cashews:
+    name: cashews
+    name_uk: кеш'ю
+    groups:
+    - nuts
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chestnut_puree:
+    name: chestnut puree
+    name_uk: пюре із каштану
+    groups:
+    - nuts
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chestnuts:
+    name: chestnuts
+    name_uk: каштани
+    groups:
+    - nuts
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  coconut:
+    name: coconut
+    name_uk: кокос
+    groups:
+    - nuts
+    - plant_food
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  coconut_flakes:
+    name: coconut flakes
+    name_uk: кокосові пластівці
+    groups:
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fennel_seeds:
+    name: fennel seeds
+    name_uk: насіння фенхелю
+    groups:
+    - seed
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  flax_seeds:
+    name: flax seeds
+    name_uk: лляне насіння
+    groups:
+    - seed
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  grape_molasses:
+    name: grape molasses
+    name_uk: виноградний сироп / пекмез
+    groups:
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  hazelnuts:
+    name: hazelnuts
+    name_uk: лісові горіхи
+    groups:
+    - nuts
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  honey:
+    name: honey
+    name_uk: мед
+    groups:
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - мед
+  jaggery:
+    name: jaggery
+    name_uk: джагери / нерафінований цукор
+    groups:
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  marzipan:
+    name: marzipan
+    name_uk: марципан
+    groups:
+    - nuts
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pastry_cream:
+    name: pastry cream
+    name_uk: заварний крем
+    groups:
+    - sweetener
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  peanuts:
+    name: peanuts
+    name_uk: арахіс
+    groups:
+    - nuts
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pine_nuts:
+    name: pine nuts
+    name_uk: кедровий горіх
+    groups:
+    - nuts
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pistachios:
+    name: pistachios
+    name_uk: фісташки
+    groups:
+    - nuts
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  poppy_seed:
+    name: poppy seed
+    name_uk: мак
+    groups:
+    - seed
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - макове насіння
+  sesame:
+    name: sesame
+    name_uk: кунжут
+    groups:
+    - seed
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sugar:
+    name: sugar
+    name_uk: цукор
+    groups:
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sunflower_seeds:
+    name: sunflower seeds
+    name_uk: насіння соняшнику
+    groups:
+    - seed
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tahini:
+    name: tahini
+    name_uk: тахіні
+    groups:
+    - sauce
+    - seed
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  vanilla_sugar:
+    name: vanilla sugar
+    name_uk: ванільний цукор
+    groups:
+    - sweetener
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  walnuts:
+    name: walnuts
+    name_uk: волоські горіхи
+    groups:
+    - nuts
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false

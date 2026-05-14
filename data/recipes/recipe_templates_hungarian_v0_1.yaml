@@ -1,0 +1,5911 @@
+metadata:
+  version: 0.1-hungarian-large
+  purpose: Large Hungarian cuisine recipe templates for pantry-based suggestion engine
+  design_rules:
+  - If a title names a key ingredient, that ingredient appears as main or required.
+  - Broad categories are used mainly in accepts, not as a replacement for named title ingredients.
+  - Water is included as a technological ingredient, but should be treated as always available by inventory logic.
+  - Paprika-heavy Hungarian stews and soups keep paprika explicit as required/spice where it defines the dish.
+  - These are ingredient templates, not exact step-by-step recipes.
+  - 'Time buckets: under_10, under_30, under_60, over_60.'
+  cuisines:
+    hungarian: венгерская
+  quantity_scale:
+  - spice
+  - little
+  - normal
+  - many
+  source_notes:
+  - Soup block emphasizes gulyásleves, halászlé, húsleves, Jókai bableves, Palócleves, korhelyleves, fruit soups and vegetable
+    soups.
+  - Main block emphasizes pörkölt, paprikás, lecsó, stuffed cabbage, stuffed peppers, rakott dishes, főzelék, nokedli, tarhonya
+    and breaded dishes.
+  - Snack/side block includes lángos, pogácsa, nokedli, csipetke, tarhonya, cucumber salads, pickles, körözött and sausage
+    plates.
+  - Dessert block includes Dobos torta, Esterházy, Somlói galuska, Kürtőskalács, palacsinta, gombóc, mákos guba, bejgli, rétes,
+    zserbó, krémes and fánk.
+recipes:
+- id: hungarian_gulyasleves_beef
+  name: Hungarian goulash soup with beef
+  kind: dish
+  tags:
+  - beef
+  - goulash
+  - hungarian
+  - paprika
+  missing_allowed: 3
+  source_family: hungarian:gulyasleves_beef
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    - main
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: beef_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: onion
+    role: required
+    amount: normal
+  - item: potato
+    role: required
+    amount: normal
+  - item: carrot
+    role: required
+    amount: normal
+  - item: parsnip
+    role: addition
+    amount: little
+    accepts:
+    - root_vegetable
+  - item: paprika
+    role: required
+    amount: spice
+  - item: caraway
+    role: spice
+    amount: spice
+  - item: csipetke
+    role: addition
+    amount: normal
+    accepts:
+    - flour
+  - item: water
+    role: required
+    amount: many
+  name_uk: Угорський суп-гуляш із яловичиною
+- id: hungarian_bogracs_gulyas
+  name: Goulash in a bowl
+  kind: dish
+  tags:
+  - goulash
+  - hungarian
+  - kettle
+  missing_allowed: 3
+  source_family: hungarian:bogracs_gulyas
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    - main
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: beef_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: onion
+    role: required
+    amount: normal
+  - item: potato
+    role: required
+    amount: normal
+  - item: carrot
+    role: required
+    amount: normal
+  - item: bell_pepper
+    role: addition
+    amount: normal
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: paprika
+    role: required
+    amount: spice
+  - item: caraway
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Гуляш в котелке
+- id: hungarian_babgulyas
+  name: Bean goulash
+  kind: dish
+  tags:
+  - beans
+  - goulash
+  - hungarian
+  missing_allowed: 3
+  source_family: hungarian:babgulyas
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    - main
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: beans
+    role: main
+    amount: many
+    accepts:
+    - kidney_beans
+    - canned_beans
+    - legume
+  - item: beef_chunks
+    role: required
+    amount: normal
+    accepts:
+    - pork_chunks
+    - meat_piece
+  - item: onion
+    role: required
+    amount: normal
+  - item: carrot
+    role: required
+    amount: little
+  - item: paprika
+    role: required
+    amount: spice
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Квасоляний гуляш
+- id: hungarian_ham_babgulyas
+  name: Bean goulash with smoked meats
+  kind: dish
+  tags:
+  - beans
+  - goulash
+  - hungarian
+  - smoked_meat
+  missing_allowed: 3
+  source_family: hungarian:ham_babgulyas
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    - main
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: beans
+    role: main
+    amount: many
+    accepts:
+    - kidney_beans
+    - legume
+  - item: smoked_pork_ribs
+    role: required
+    amount: normal
+    accepts:
+    - smoked_meat
+    - meat_product
+  - item: onion
+    role: required
+    amount: normal
+  - item: carrot
+    role: required
+    amount: little
+  - item: paprika
+    role: required
+    amount: spice
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Квасоляний гуляш з копченостями
+- id: hungarian_szekely_gulyas
+  name: Goulash with sauerkraut and sour cream
+  kind: dish
+  tags:
+  - goulash
+  - hungarian
+  - pork
+  - sauerkraut
+  missing_allowed: 3
+  source_family: hungarian:szekely_gulyas
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: pork_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: sauerkraut
+    role: required
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: caraway
+    role: spice
+    amount: spice
+  - item: water
+    role: addition
+    amount: normal
+  name_uk: Гуляш з квашеною капустою та сметаною
+- id: hungarian_csango_gulyas
+  name: Goulash with rice and sauerkraut
+  kind: dish
+  tags:
+  - goulash
+  - hungarian
+  - rice
+  - sauerkraut
+  missing_allowed: 3
+  source_family: hungarian:csango_gulyas
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    - main
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: beef_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: sauerkraut
+    role: required
+    amount: normal
+  - item: rice
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Гуляш з рисом та квашеною капустою
+- id: hungarian_halaszle_carp
+  name: Fish soup with carp
+  kind: dish
+  tags:
+  - fish_soup
+  - hungarian
+  - paprika
+  missing_allowed: 3
+  source_family: hungarian:halaszle_carp
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: carp
+    role: main
+    amount: many
+    accepts:
+    - fish
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: hot_paprika
+    role: addition
+    amount: spice
+    accepts:
+    - chili_spice
+    - hot_spice
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: bell_pepper
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Рибний суп з коропом
+- id: hungarian_szeged_halaszle
+  name: Szeged fish soup
+  kind: dish
+  tags:
+  - fish_soup
+  - hungarian
+  - szeged
+  missing_allowed: 3
+  source_family: hungarian:szeged_halaszle
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: mixed_freshwater_fish
+    role: main
+    amount: many
+    accepts:
+    - carp
+    - fish
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: hot_paprika
+    role: addition
+    amount: spice
+    accepts:
+    - hot_spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Сегедський рибний суп
+- id: hungarian_baja_halaszle_noodles
+  name: Bai fish noodle soup
+  kind: dish
+  tags:
+  - baja
+  - fish_soup
+  - hungarian
+  - noodle
+  missing_allowed: 3
+  source_family: hungarian:baja_halaszle_noodles
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: carp
+    role: main
+    amount: many
+    accepts:
+    - fish
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: noodle
+    role: required
+    amount: normal
+    accepts:
+    - pasta_noodle
+  - item: hot_paprika
+    role: addition
+    amount: spice
+    accepts:
+    - hot_spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Байський рибний суп з локшиною
+- id: hungarian_ujhazy_chicken_soup
+  name: Rich chicken soup
+  kind: dish
+  tags:
+  - chicken_soup
+  - hungarian
+  - noodle
+  missing_allowed: 3
+  source_family: hungarian:ujhazy_chicken_soup
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: chicken_parts
+    role: main
+    amount: many
+  - item: carrot
+    role: required
+    amount: normal
+  - item: parsnip
+    role: required
+    amount: little
+    accepts:
+    - root_vegetable
+  - item: celery_root
+    role: addition
+    amount: little
+    accepts:
+    - root_vegetable
+  - item: onion
+    role: required
+    amount: little
+  - item: noodle
+    role: required
+    amount: normal
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Наваристий курячий суп
+- id: hungarian_husleves_beef
+  name: Meat broth with vegetables and noodles
+  kind: dish
+  tags:
+  - broth
+  - hungarian
+  - noodle
+  missing_allowed: 3
+  source_family: hungarian:husleves_beef
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: broth_meat
+    role: main
+    amount: many
+    accepts:
+    - beef_chunks
+    - chicken_parts
+  - item: carrot
+    role: required
+    amount: normal
+  - item: parsnip
+    role: required
+    amount: little
+    accepts:
+    - root_vegetable
+  - item: onion
+    role: required
+    amount: little
+  - item: noodle
+    role: required
+    amount: normal
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: М'ясний бульйон з овочами та локшиною
+- id: hungarian_jokai_bableves
+  name: Thick bean soup with smoked meats
+  kind: dish
+  tags:
+  - beans
+  - hungarian
+  - smoked_meat
+  - sour_cream
+  missing_allowed: 3
+  source_family: hungarian:jokai_bableves
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: beans
+    role: main
+    amount: many
+    accepts:
+    - kidney_beans
+    - legume
+  - item: smoked_pork_hock
+    role: required
+    amount: normal
+    accepts:
+    - pork_hock
+    - smoked_meat
+  - item: carrot
+    role: required
+    amount: little
+  - item: onion
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  - item: paprika
+    role: required
+    amount: spice
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Густий квасоляний суп з копченостями
+- id: hungarian_palocleves
+  name: Stick soup with meat and green beans
+  kind: dish
+  tags:
+  - green_beans
+  - hungarian
+  - lamb
+  - sour_cream
+  missing_allowed: 3
+  source_family: hungarian:palocleves
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: lamb_chunks
+    role: main
+    amount: many
+    accepts:
+    - beef_chunks
+    - meat_piece
+  - item: green_beans
+    role: required
+    amount: many
+  - item: potato
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: dill
+    role: addition
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: water
+    role: required
+    amount: many
+  name_uk: Паличський суп з м'ясом та стручковою квасолею
+- id: hungarian_korhelyleves
+  name: Sour soup with sauerkraut and sausage
+  kind: dish
+  tags:
+  - hungarian
+  - sauerkraut
+  - sausage
+  - sour
+  missing_allowed: 2
+  source_family: hungarian:korhelyleves
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: sauerkraut
+    role: main
+    amount: many
+  - item: smoked_sausage
+    role: required
+    amount: normal
+    accepts:
+    - sausage_product
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: paprika
+    role: required
+    amount: spice
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Кислий суп з квашеною капустою та ковбасою
+- id: hungarian_meggyleves
+  name: Cold cherry soup
+  kind: dish
+  tags:
+  - cherry
+  - cold_soup
+  - hungarian
+  missing_allowed: 2
+  source_family: hungarian:meggyleves
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    - dessert
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: cherry
+    role: main
+    amount: many
+    accepts:
+    - fruit
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Холодний вишневий суп
+- id: hungarian_hideg_gyumolcsleves
+  name: Cold fruit soup
+  kind: dish
+  tags:
+  - cold_soup
+  - fruit
+  - hungarian
+  missing_allowed: 2
+  source_family: hungarian:hideg_gyumolcsleves
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    - dessert
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: fruit
+    role: main
+    amount: many
+    accepts:
+    - apple
+    - berries
+    - cherry
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: lemon
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Холодний фруктовий суп
+- id: hungarian_gombaleves
+  name: Mushroom soup
+  kind: dish
+  tags:
+  - hungarian
+  - mushroom
+  - sour_cream
+  missing_allowed: 2
+  source_family: hungarian:gombaleves
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: mushroom
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: carrot
+    role: addition
+    amount: little
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Грибний суп
+- id: hungarian_burgonyaleves
+  name: Potato soup with paprika
+  kind: dish
+  tags:
+  - hungarian
+  - paprika
+  - potato
+  missing_allowed: 2
+  source_family: hungarian:burgonyaleves
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: carrot
+    role: addition
+    amount: little
+  - item: smoked_sausage
+    role: addition
+    amount: normal
+    accepts:
+    - sausage_product
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Картопляний суп з паприкою
+- id: hungarian_krumplileves_sourcream
+  name: Potato soup with sour cream
+  kind: dish
+  tags:
+  - hungarian
+  - potato
+  - sour_cream
+  missing_allowed: 1
+  source_family: hungarian:krumplileves_sourcream
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: flour
+    role: addition
+    amount: little
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Картопляний суп зі сметаною
+- id: hungarian_lencseleves
+  name: Lentil soup
+  kind: dish
+  tags:
+  - hungarian
+  - lentil
+  missing_allowed: 3
+  source_family: hungarian:lencseleves
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: lentil
+    role: main
+    amount: many
+    accepts:
+    - red_lentils
+    - yellow_lentils
+    - legume
+  - item: smoked_meat
+    role: addition
+    amount: normal
+    accepts:
+    - meat_product
+  - item: onion
+    role: required
+    amount: normal
+  - item: carrot
+    role: addition
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Чечевичний суп
+- id: hungarian_zoldborsoleves
+  name: Green pea soup
+  kind: dish
+  tags:
+  - hungarian
+  - peas
+  - quick
+  missing_allowed: 2
+  source_family: hungarian:zoldborsoleves
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: canned_peas
+    role: main
+    amount: many
+    accepts:
+    - peas
+  - item: carrot
+    role: addition
+    amount: little
+  - item: flour
+    role: addition
+    amount: little
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: nokedli
+    role: addition
+    amount: normal
+    accepts:
+    - flour
+  - item: water
+    role: required
+    amount: many
+  name_uk: Суп із зеленого горошку
+- id: hungarian_zoldsegleves
+  name: Vegetable soup with dumplings
+  kind: dish
+  tags:
+  - hungarian
+  - nokedli
+  - vegetable
+  missing_allowed: 2
+  source_family: hungarian:zoldsegleves
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: vegetable_mix
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: carrot
+    role: required
+    amount: normal
+  - item: parsnip
+    role: addition
+    amount: little
+    accepts:
+    - root_vegetable
+  - item: nokedli
+    role: addition
+    amount: normal
+    accepts:
+    - flour
+  - item: water
+    role: required
+    amount: many
+  name_uk: Овочевий суп з галушками
+- id: hungarian_komenymagleves
+  name: Cumin soup
+  kind: dish
+  tags:
+  - caraway
+  - hungarian
+  - simple
+  missing_allowed: 1
+  source_family: hungarian:komenymagleves
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+    - temper
+  comment: ''
+  ingredients:
+  - item: caraway
+    role: main
+    amount: spice
+  - item: flour
+    role: required
+    amount: little
+  - item: fat
+    role: required
+    amount: little
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: bread
+    role: addition
+    amount: normal
+    accepts:
+    - bread_base
+  - item: water
+    role: required
+    amount: many
+  name_uk: Суп з кмином
+- id: hungarian_majgombocleves
+  name: Soup with liver dumplings
+  kind: dish
+  tags:
+  - dumpling
+  - hungarian
+  - liver
+  missing_allowed: 3
+  source_family: hungarian:majgombocleves
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: liver
+    role: main
+    amount: normal
+    accepts:
+    - liver_offal
+    - minced_meat
+  - item: breadcrumbs
+    role: required
+    amount: normal
+    accepts:
+    - bread
+  - item: eggs
+    role: required
+    amount: little
+  - item: broth_meat
+    role: addition
+    amount: normal
+  - item: carrot
+    role: addition
+    amount: little
+  - item: onion
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Суп з печінковими галушками
+- id: hungarian_tarkonyos_raguleves
+  name: Stew soup with tarragon
+  kind: dish
+  tags:
+  - hungarian
+  - ragout_soup
+  - tarragon
+  missing_allowed: 3
+  source_family: hungarian:tarkonyos_raguleves
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: chicken_parts
+    role: main
+    amount: normal
+    accepts:
+    - pork_chunks
+    - meat_piece
+  - item: mushroom
+    role: addition
+    amount: normal
+  - item: carrot
+    role: required
+    amount: little
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: lemon
+    role: addition
+    amount: little
+  - item: tarragon
+    role: required
+    amount: spice
+    accepts:
+    - herb
+  - item: water
+    role: required
+    amount: many
+  name_uk: Тушонка з естрагоном
+- id: hungarian_karalabeleves
+  name: Kohlrabi soup
+  kind: dish
+  tags:
+  - hungarian
+  - kohlrabi
+  - vegetable
+  missing_allowed: 2
+  source_family: hungarian:karalabeleves
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: kohlrabi
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: carrot
+    role: addition
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Суп из кольраби
+- id: hungarian_toltott_paprika_soup
+  name: Stuffed pepper soup
+  kind: dish
+  tags:
+  - hungarian
+  - stuffed_pepper
+  - tomato
+  missing_allowed: 3
+  source_family: hungarian:toltott_paprika_soup
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    - main
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: bell_pepper
+    role: main
+    amount: many
+  - item: minced_meat
+    role: required
+    amount: many
+  - item: rice
+    role: required
+    amount: normal
+  - item: tomato_sauce
+    role: required
+    amount: many
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Суп із фаршированим перцем
+- id: hungarian_savanyu_tojasleves
+  name: Sour egg soup
+  kind: dish
+  tags:
+  - egg
+  - hungarian
+  - sour
+  missing_allowed: 2
+  source_family: hungarian:savanyu_tojasleves
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: normal
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: vinegar
+    role: required
+    amount: little
+    accepts:
+    - acid_souring
+  - item: flour
+    role: addition
+    amount: little
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Кислий яєчний суп
+- id: hungarian_marhaporkolt
+  name: Beef perkelt
+  kind: dish
+  tags:
+  - beef
+  - hungarian
+  - porkolt
+  missing_allowed: 3
+  source_family: hungarian:marhaporkolt
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: beef_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: onion
+    role: required
+    amount: many
+  - item: paprika
+    role: required
+    amount: spice
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: bell_pepper
+    role: addition
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  - item: nokedli
+    role: addition
+    amount: normal
+    accepts:
+    - flour
+  name_uk: Яловичий перкельт
+- id: hungarian_sertesporkolt
+  name: Pork perkölt
+  kind: dish
+  tags:
+  - hungarian
+  - pork
+  - porkolt
+  missing_allowed: 3
+  source_family: hungarian:sertesporkolt
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: pork_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: onion
+    role: required
+    amount: many
+  - item: paprika
+    role: required
+    amount: spice
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: bell_pepper
+    role: addition
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  - item: nokedli
+    role: addition
+    amount: normal
+    accepts:
+    - flour
+  name_uk: Свинячий перкельт
+- id: hungarian_csirkeporkolt
+  name: Chicken perkölt
+  kind: dish
+  tags:
+  - chicken
+  - hungarian
+  - porkolt
+  missing_allowed: 2
+  source_family: hungarian:csirkeporkolt
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: chicken_parts
+    role: main
+    amount: many
+    accepts:
+    - chicken_fillet
+  - item: onion
+    role: required
+    amount: many
+  - item: paprika
+    role: required
+    amount: spice
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: normal
+  - item: nokedli
+    role: addition
+    amount: normal
+    accepts:
+    - flour
+  name_uk: Курячий перкельт
+- id: hungarian_borjuporkolt
+  name: Veal purkölt
+  kind: dish
+  tags:
+  - hungarian
+  - porkolt
+  - veal
+  missing_allowed: 3
+  source_family: hungarian:borjuporkolt
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: veal_chunks
+    role: main
+    amount: many
+    accepts:
+    - beef_chunks
+    - meat_piece
+  - item: onion
+    role: required
+    amount: many
+  - item: paprika
+    role: required
+    amount: spice
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: normal
+  - item: nokedli
+    role: addition
+    amount: normal
+    accepts:
+    - flour
+  name_uk: Телячий перкельт
+- id: hungarian_gombaporkolt
+  name: Mushroom perkölt
+  kind: dish
+  tags:
+  - hungarian
+  - mushroom
+  - porkolt
+  missing_allowed: 2
+  source_family: hungarian:gombaporkolt
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: mushroom
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  - item: nokedli
+    role: addition
+    amount: normal
+    accepts:
+    - flour
+  name_uk: Грибний перкельт
+- id: hungarian_pacalporkolt
+  name: Tripe perkölt
+  kind: dish
+  tags:
+  - hungarian
+  - offal
+  - porkolt
+  missing_allowed: 3
+  source_family: hungarian:pacalporkolt
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: tripe
+    role: main
+    amount: many
+    accepts:
+    - offal
+  - item: onion
+    role: required
+    amount: many
+  - item: paprika
+    role: required
+    amount: spice
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: fat
+    role: required
+    amount: normal
+  - item: water
+    role: addition
+    amount: normal
+  name_uk: Перкельт із рубця
+- id: hungarian_zuzaporkolt
+  name: Chicken gizzard perkölt
+  kind: dish
+  tags:
+  - hungarian
+  - offal
+  - porkolt
+  missing_allowed: 3
+  source_family: hungarian:zuzaporkolt
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: chicken_gizzards
+    role: main
+    amount: many
+    accepts:
+    - offal
+  - item: onion
+    role: required
+    amount: many
+  - item: paprika
+    role: required
+    amount: spice
+  - item: dry_garlic
+    role: addition
+    amount: spice
+  - item: fat
+    role: required
+    amount: normal
+  - item: water
+    role: addition
+    amount: normal
+  name_uk: Перкельт із курячих шлунків
+- id: hungarian_vadporkolt
+  name: Game perkölt
+  kind: dish
+  tags:
+  - game
+  - hungarian
+  - porkolt
+  missing_allowed: 3
+  source_family: hungarian:vadporkolt
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: venison_chunks
+    role: main
+    amount: many
+    accepts:
+    - red_meat
+    - meat_piece
+  - item: onion
+    role: required
+    amount: many
+  - item: paprika
+    role: required
+    amount: spice
+  - item: red_wine
+    role: addition
+    amount: normal
+  - item: juniper
+    role: spice
+    amount: spice
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Перкельт з дичини
+- id: hungarian_csirkepaprikas
+  name: Chicken paprikash
+  kind: dish
+  tags:
+  - chicken
+  - hungarian
+  - paprikash
+  missing_allowed: 2
+  source_family: hungarian:csirkepaprikas
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: chicken_parts
+    role: main
+    amount: many
+    accepts:
+    - chicken_fillet
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  - item: fat
+    role: required
+    amount: normal
+  - item: nokedli
+    role: addition
+    amount: normal
+    accepts:
+    - flour
+  name_uk: Курячий паприкаш
+- id: hungarian_harcsapaprikas
+  name: Catfish stew
+  kind: dish
+  tags:
+  - fish
+  - hungarian
+  - paprikash
+  missing_allowed: 3
+  source_family: hungarian:harcsapaprikas
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: catfish
+    role: main
+    amount: many
+    accepts:
+    - fish
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  - item: nokedli
+    role: addition
+    amount: normal
+    accepts:
+    - flour
+  name_uk: Тушкована зубатка
+- id: hungarian_borjupaprikas
+  name: Veal paprikash
+  kind: dish
+  tags:
+  - hungarian
+  - paprikash
+  - veal
+  missing_allowed: 3
+  source_family: hungarian:borjupaprikas
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: veal_chunks
+    role: main
+    amount: many
+    accepts:
+    - beef_chunks
+    - meat_piece
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Телячий паприкаш
+- id: hungarian_gombapaprikas
+  name: Mushroom paprikash
+  kind: dish
+  tags:
+  - hungarian
+  - mushroom
+  - paprikash
+  missing_allowed: 1
+  source_family: hungarian:gombapaprikas
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: mushroom
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Грибний паприкаш
+- id: hungarian_lecso_basic
+  name: Pepper and tomato lecho
+  kind: dish
+  tags:
+  - hungarian
+  - lecso
+  - vegetable
+  missing_allowed: 1
+  source_family: hungarian:lecso_basic
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: bell_pepper
+    role: main
+    amount: many
+  - item: tomato
+    role: required
+    amount: many
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Лечо з перцю та помідорів
+- id: hungarian_kolbaszos_lecso
+  name: Lecho with sausage
+  kind: dish
+  tags:
+  - hungarian
+  - lecso
+  - sausage
+  missing_allowed: 2
+  source_family: hungarian:kolbaszos_lecso
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: bell_pepper
+    role: main
+    amount: many
+  - item: tomato
+    role: required
+    amount: many
+    accepts:
+    - tomato_base
+  - item: smoked_sausage
+    role: required
+    amount: normal
+    accepts:
+    - sausage_product
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Лечо з ковбасою
+- id: hungarian_tojasos_lecso
+  name: Lecho with eggs
+  kind: dish
+  tags:
+  - egg
+  - hungarian
+  - lecso
+  missing_allowed: 2
+  source_family: hungarian:tojasos_lecso
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: bell_pepper
+    role: main
+    amount: many
+  - item: tomato
+    role: required
+    amount: many
+    accepts:
+    - tomato_base
+  - item: eggs
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Лечо з яйцями
+- id: hungarian_rizses_lecso
+  name: Lecho with rice
+  kind: dish
+  tags:
+  - hungarian
+  - lecso
+  - rice
+  missing_allowed: 2
+  source_family: hungarian:rizses_lecso
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: bell_pepper
+    role: main
+    amount: many
+  - item: tomato
+    role: required
+    amount: many
+    accepts:
+    - tomato_base
+  - item: rice
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Лечо з рисом
+- id: hungarian_toltott_kaposzta
+  name: Stuffed cabbage rolls in Hungarian style
+  kind: dish
+  tags:
+  - hungarian
+  - stuffed_cabbage
+  missing_allowed: 3
+  source_family: hungarian:toltott_kaposzta
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: sauerkraut
+    role: main
+    amount: many
+    accepts:
+    - cabbage
+  - item: cabbage
+    role: required
+    amount: many
+  - item: minced_meat
+    role: required
+    amount: many
+  - item: rice
+    role: required
+    amount: normal
+  - item: smoked_meat
+    role: addition
+    amount: normal
+    accepts:
+    - smoked_pork_ribs
+    - meat_product
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Голубці у угорському стилі
+- id: hungarian_toltott_paprika
+  name: Stuffed peppers in tomato sauce
+  kind: dish
+  tags:
+  - hungarian
+  - stuffed_pepper
+  missing_allowed: 3
+  source_family: hungarian:toltott_paprika
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: bell_pepper
+    role: main
+    amount: many
+  - item: minced_meat
+    role: required
+    amount: many
+  - item: rice
+    role: required
+    amount: normal
+  - item: tomato_sauce
+    role: required
+    amount: many
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  - item: water
+    role: addition
+    amount: normal
+  name_uk: Фарширований перець у томатному соусі
+- id: hungarian_hortobagyi_palacsinta
+  name: Pancakes with meat and paprikash sauce
+  kind: dish
+  tags:
+  - hungarian
+  - meat
+  - palacsinta
+  missing_allowed: 3
+  source_family: hungarian:hortobagyi_palacsinta
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - fry
+    - stew
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: minced_meat
+    role: required
+    amount: many
+    accepts:
+    - chicken_parts
+    - pork_chunks
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Млинці з м'ясом та паприкаш-соусом
+- id: hungarian_rakott_krumpli
+  name: Potato casserole with egg and sausage
+  kind: dish
+  tags:
+  - casserole
+  - hungarian
+  - potato
+  missing_allowed: 2
+  source_family: hungarian:rakott_krumpli
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+    - bake
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  - item: smoked_sausage
+    role: required
+    amount: normal
+    accepts:
+    - sausage_product
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Картопляна запіканка з яйцем та ковбасою
+- id: hungarian_rakott_kaposzta
+  name: Casserole with cabbage, rice and meat
+  kind: dish
+  tags:
+  - cabbage
+  - casserole
+  - hungarian
+  missing_allowed: 3
+  source_family: hungarian:rakott_kaposzta
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+    - bake
+  comment: ''
+  ingredients:
+  - item: sauerkraut
+    role: main
+    amount: many
+    accepts:
+    - cabbage
+  - item: minced_meat
+    role: required
+    amount: many
+  - item: rice
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  name_uk: Запіканка з капустою, рисом та м'ясом
+- id: hungarian_paprikas_krumpli
+  name: Potatoes with paprika and sausage
+  kind: dish
+  tags:
+  - hungarian
+  - potato
+  - sausage
+  missing_allowed: 2
+  source_family: hungarian:paprikas_krumpli
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: smoked_sausage
+    role: required
+    amount: normal
+    accepts:
+    - sausage_product
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: water
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Картопля з паприкою та ковбасою
+- id: hungarian_brassoi_apropecsenye
+  name: Fried pork with potatoes and garlic
+  kind: dish
+  tags:
+  - hungarian
+  - pork
+  - potato
+  missing_allowed: 2
+  source_family: hungarian:brassoi_apropecsenye
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: pork_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: potato
+    role: required
+    amount: many
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: fat
+    role: required
+    amount: normal
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Смажена свинина з картоплею та часником
+- id: hungarian_rantott_hus
+  name: Breaded Hungarian chop
+  kind: dish
+  tags:
+  - breaded
+  - hungarian
+  - pork
+  missing_allowed: 2
+  source_family: hungarian:rantott_hus
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: pork_chop
+    role: main
+    amount: many
+    accepts:
+    - cutlet_meat
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: normal
+  - item: breadcrumbs
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: many
+  name_uk: Угорська відбивна в паніровці
+- id: hungarian_rantott_csirke
+  name: Breaded chicken
+  kind: dish
+  tags:
+  - breaded
+  - chicken
+  - hungarian
+  missing_allowed: 2
+  source_family: hungarian:rantott_csirke
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: chicken_parts
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: normal
+  - item: breadcrumbs
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: many
+  name_uk: Курка в паніровці
+- id: hungarian_rantott_sajt
+  name: Breaded fried cheese
+  kind: dish
+  tags:
+  - breaded
+  - cheese
+  - hungarian
+  missing_allowed: 2
+  source_family: hungarian:rantott_sajt
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: hard_cheese
+    role: main
+    amount: many
+    accepts:
+    - cheese
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: normal
+  - item: breadcrumbs
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: many
+  name_uk: Смажений сир у паніровці
+- id: hungarian_rantott_gomba
+  name: Breaded mushrooms
+  kind: dish
+  tags:
+  - breaded
+  - hungarian
+  - mushroom
+  missing_allowed: 2
+  source_family: hungarian:rantott_gomba
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: mushroom
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: normal
+  - item: breadcrumbs
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: many
+  name_uk: Гриби в паніровці
+- id: hungarian_fasirt
+  name: Hungarian meat cutlets
+  kind: dish
+  tags:
+  - cutlet
+  - hungarian
+  - minced_meat
+  missing_allowed: 2
+  source_family: hungarian:fasirt
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: minced_meat
+    role: main
+    amount: many
+  - item: bread
+    role: required
+    amount: normal
+    accepts:
+    - breadcrumbs
+  - item: eggs
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Угорські м'ясні котлети
+- id: hungarian_vadas_marha
+  name: Beef in vegetable and sour cream sauce
+  kind: dish
+  tags:
+  - beef
+  - hungarian
+  - sour_cream
+  missing_allowed: 3
+  source_family: hungarian:vadas_marha
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: beef_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: carrot
+    role: required
+    amount: normal
+  - item: parsnip
+    role: required
+    amount: little
+    accepts:
+    - root_vegetable
+  - item: mustard
+    role: required
+    amount: little
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Яловичина в овочево-сметанному соусі
+- id: hungarian_bakonyi_sertesszelet
+  name: Pork chop with mushroom and sour cream sauce
+  kind: dish
+  tags:
+  - hungarian
+  - mushroom
+  - pork
+  missing_allowed: 3
+  source_family: hungarian:bakonyi_sertesszelet
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: pork_chop
+    role: main
+    amount: many
+    accepts:
+    - cutlet_meat
+  - item: mushroom
+    role: required
+    amount: many
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: flour
+    role: addition
+    amount: little
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Свиняча відбивна з грибно-сметанним соусом
+- id: hungarian_szuzpecsenye
+  name: Pork tenderloin with paprika
+  kind: dish
+  tags:
+  - hungarian
+  - pork
+  - tenderloin
+  missing_allowed: 3
+  source_family: hungarian:szuzpecsenye
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: pork_tenderloin
+    role: main
+    amount: many
+    accepts:
+    - pork_chunks
+    - cutlet_meat
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Свиняча вирізка з паприкою
+- id: hungarian_libamaj
+  name: Goose liver
+  kind: dish
+  tags:
+  - goose
+  - hungarian
+  - liver
+  missing_allowed: 3
+  source_family: hungarian:libamaj
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: goose_liver
+    role: main
+    amount: many
+    accepts:
+    - liver_offal
+  - item: onion
+    role: addition
+    amount: little
+  - item: fat
+    role: required
+    amount: normal
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Гусяча печінка
+- id: hungarian_sult_libacomb
+  name: Baked goose leg
+  kind: dish
+  tags:
+  - goose
+  - hungarian
+  - roast
+  missing_allowed: 3
+  source_family: hungarian:sult_libacomb
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roast
+    - bake
+  comment: ''
+  ingredients:
+  - item: goose_leg
+    role: main
+    amount: many
+    accepts:
+    - poultry
+  - item: dry_garlic
+    role: addition
+    amount: spice
+  - item: caraway
+    role: spice
+    amount: spice
+  - item: cabbage
+    role: addition
+    amount: many
+  - item: potato
+    role: addition
+    amount: many
+  name_uk: Запечена гусяча ніжка
+- id: hungarian_sult_kacsacomb
+  name: Baked duck leg
+  kind: dish
+  tags:
+  - duck
+  - hungarian
+  - roast
+  missing_allowed: 3
+  source_family: hungarian:sult_kacsacomb
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roast
+    - bake
+  comment: ''
+  ingredients:
+  - item: duck_leg
+    role: main
+    amount: many
+    accepts:
+    - poultry
+  - item: dry_garlic
+    role: addition
+    amount: spice
+  - item: caraway
+    role: spice
+    amount: spice
+  - item: cabbage
+    role: addition
+    amount: many
+  - item: potato
+    role: addition
+    amount: many
+  name_uk: Запечена качина ніжка
+- id: hungarian_turos_csusza
+  name: Noodles with cottage cheese, sour cream and cracklings
+  kind: dish
+  tags:
+  - cottage_cheese
+  - hungarian
+  - noodle
+  missing_allowed: 2
+  source_family: hungarian:turos_csusza
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: wide_noodles
+    role: main
+    amount: many
+    accepts:
+    - noodle
+    - pasta_noodle
+  - item: cottage_cheese
+    role: required
+    amount: many
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: bacon
+    role: addition
+    amount: normal
+    accepts:
+    - salo
+    - pork_belly
+  name_uk: Локшина з сиром, сметаною та шкварками
+- id: hungarian_juhturos_sztrapacska
+  name: Potato dumplings with cheese
+  kind: dish
+  tags:
+  - cheese
+  - dumpling
+  - hungarian
+  - potato
+  missing_allowed: 3
+  source_family: hungarian:juhturos_sztrapacska
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: flour
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  - item: white_cheese
+    role: required
+    amount: normal
+    accepts:
+    - sheep_cheese
+    - feta_cheese
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: bacon
+    role: addition
+    amount: normal
+    accepts:
+    - salo
+  name_uk: Картопляні галушки з бринзою
+- id: hungarian_nokedli_main
+  name: Dumplings as a main course with sour cream
+  kind: dish
+  tags:
+  - hungarian
+  - nokedli
+  missing_allowed: 1
+  source_family: hungarian:nokedli_main
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Галушки як основна страва зі сметаною
+- id: hungarian_tarhonya_pork
+  name: Tarhonya with meat
+  kind: dish
+  tags:
+  - hungarian
+  - pork
+  - tarhonya
+  missing_allowed: 3
+  source_family: hungarian:tarhonya_pork
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: tarhonya
+    role: main
+    amount: many
+    accepts:
+    - pasta_noodle
+  - item: pork_chunks
+    role: required
+    amount: normal
+    accepts:
+    - meat_piece
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Тархоня з м'ясом
+- id: hungarian_tarhonya_egg
+  name: Tarhonya with egg
+  kind: dish
+  tags:
+  - egg
+  - hungarian
+  - tarhonya
+  missing_allowed: 2
+  source_family: hungarian:tarhonya_egg
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+    - boil
+  comment: ''
+  ingredients:
+  - item: tarhonya
+    role: main
+    amount: many
+    accepts:
+    - pasta_noodle
+  - item: eggs
+    role: required
+    amount: normal
+  - item: onion
+    role: addition
+    amount: little
+  - item: fat
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Тархоня з яйцем
+- id: hungarian_fozelek_lentil
+  name: Thick lentil dish
+  kind: dish
+  tags:
+  - fozelek
+  - hungarian
+  - lentil
+  missing_allowed: 2
+  source_family: hungarian:fozelek_lentil
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: lentil
+    role: main
+    amount: many
+    accepts:
+    - legume
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: little
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: mustard
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Густа страва з сочевиці
+- id: hungarian_fozelek_pea
+  name: Green pea fözelek
+  kind: dish
+  tags:
+  - fozelek
+  - hungarian
+  - peas
+  missing_allowed: 2
+  source_family: hungarian:fozelek_pea
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: canned_peas
+    role: main
+    amount: many
+    accepts:
+    - peas
+  - item: milk
+    role: addition
+    amount: normal
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: flour
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Фезелек із зеленого горошку
+- id: hungarian_fozelek_spinach
+  name: Spinach fözelek
+  kind: dish
+  tags:
+  - fozelek
+  - hungarian
+  - spinach
+  missing_allowed: 2
+  source_family: hungarian:fozelek_spinach
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: spinach
+    role: main
+    amount: many
+  - item: milk
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: little
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: eggs
+    role: addition
+    amount: normal
+  - item: fat
+    role: required
+    amount: little
+  name_uk: Шпинатний фезелек
+- id: hungarian_fozelek_potato
+  name: Potato fözelek
+  kind: dish
+  tags:
+  - fozelek
+  - hungarian
+  - potato
+  missing_allowed: 1
+  source_family: hungarian:fozelek_potato
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: little
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Картопляний фезелек
+- id: hungarian_fozelek_squash
+  name: Zucchini or pumpkin fözelek with dill
+  kind: dish
+  tags:
+  - fozelek
+  - hungarian
+  - squash
+  missing_allowed: 2
+  source_family: hungarian:fozelek_squash
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: zucchini
+    role: main
+    amount: many
+    accepts:
+    - pumpkin
+    - squash_family
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: little
+  - item: dill
+    role: required
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: vinegar
+    role: addition
+    amount: little
+  - item: water
+    role: addition
+    amount: normal
+  name_uk: Фезелек з кабачка або гарбуза з кропом
+- id: hungarian_fozelek_yellow_beans
+  name: Fözelek of green beans
+  kind: dish
+  tags:
+  - fozelek
+  - green_beans
+  - hungarian
+  missing_allowed: 2
+  source_family: hungarian:fozelek_yellow_beans
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: green_beans
+    role: main
+    amount: many
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: little
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: dry_garlic
+    role: addition
+    amount: spice
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Фезелек зі стручкової квасолі
+- id: hungarian_kaposztas_teszta
+  name: Noodles with cabbage
+  kind: dish
+  tags:
+  - cabbage
+  - hungarian
+  - noodle
+  missing_allowed: 2
+  source_family: hungarian:kaposztas_teszta
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - mix
+  comment: ''
+  ingredients:
+  - item: wide_noodles
+    role: main
+    amount: many
+    accepts:
+    - noodle
+  - item: cabbage
+    role: required
+    amount: many
+  - item: fat
+    role: required
+    amount: normal
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: sugar
+    role: optional
+    amount: little
+  name_uk: Локшина з капустою
+- id: hungarian_krumplis_teszta
+  name: Noodles with potato paprika
+  kind: dish
+  tags:
+  - hungarian
+  - noodle
+  - potato
+  missing_allowed: 2
+  source_family: hungarian:krumplis_teszta
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: wide_noodles
+    role: main
+    amount: many
+    accepts:
+    - noodle
+  - item: potato
+    role: required
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Локшина з картопляною паприкою
+- id: hungarian_makos_teszta
+  name: Sweet noodles with poppy seeds
+  kind: dish
+  tags:
+  - hungarian
+  - noodle
+  - poppy_seed
+  missing_allowed: 2
+  source_family: hungarian:makos_teszta
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    - dessert
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: wide_noodles
+    role: main
+    amount: many
+    accepts:
+    - noodle
+  - item: poppy_seed
+    role: required
+    amount: normal
+    accepts:
+    - seed
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Солодка локшина з маком
+- id: hungarian_dios_teszta
+  name: Sweet noodles with nuts
+  kind: dish
+  tags:
+  - hungarian
+  - noodle
+  - walnut
+  missing_allowed: 2
+  source_family: hungarian:dios_teszta
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    - dessert
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: wide_noodles
+    role: main
+    amount: many
+    accepts:
+    - noodle
+  - item: walnuts
+    role: required
+    amount: normal
+    accepts:
+    - nuts
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Солодка локшина з горіхами
+- id: hungarian_sajtos_tejfolos_teszta
+  name: Noodles with cheese and sour cream
+  kind: dish
+  tags:
+  - cheese
+  - hungarian
+  - noodle
+  missing_allowed: 1
+  source_family: hungarian:sajtos_tejfolos_teszta
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: wide_noodles
+    role: main
+    amount: many
+    accepts:
+    - noodle
+  - item: hard_cheese
+    role: required
+    amount: normal
+    accepts:
+    - cheese
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Локшина з сиром та сметаною
+- id: hungarian_kolbaszos_tarhonya
+  name: Tarhonya with sausage
+  kind: dish
+  tags:
+  - hungarian
+  - sausage
+  - tarhonya
+  missing_allowed: 2
+  source_family: hungarian:kolbaszos_tarhonya
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: tarhonya
+    role: main
+    amount: many
+    accepts:
+    - pasta_noodle
+  - item: smoked_sausage
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Тархоня з ковбасою
+- id: hungarian_hurka_kolbasz
+  name: Baked gurka and sausage
+  kind: dish
+  tags:
+  - baked
+  - hungarian
+  - sausage
+  missing_allowed: 3
+  source_family: hungarian:hurka_kolbasz
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: hurka
+    role: main
+    amount: many
+    accepts:
+    - sausage_product
+  - item: smoked_sausage
+    role: required
+    amount: normal
+    accepts:
+    - sausage_product
+  - item: potato
+    role: addition
+    amount: many
+  - item: pickled_cucumber
+    role: addition
+    amount: normal
+  name_uk: Запечена гурка та ковбаса
+- id: hungarian_rakott_teszta
+  name: Noodle casserole
+  kind: dish
+  tags:
+  - casserole
+  - hungarian
+  - noodle
+  missing_allowed: 2
+  source_family: hungarian:rakott_teszta
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - bake
+  comment: ''
+  ingredients:
+  - item: wide_noodles
+    role: main
+    amount: many
+    accepts:
+    - noodle
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: hard_cheese
+    role: addition
+    amount: normal
+  - item: smoked_sausage
+    role: addition
+    amount: normal
+    accepts:
+    - sausage_product
+  name_uk: Запіканка з локшини
+- id: hungarian_csirkemell_bakonyi
+  name: Chicken breast with mushroom and sour cream sauce
+  kind: dish
+  tags:
+  - chicken
+  - hungarian
+  - mushroom
+  missing_allowed: 2
+  source_family: hungarian:csirkemell_bakonyi
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: chicken_fillet
+    role: main
+    amount: many
+  - item: mushroom
+    role: required
+    amount: many
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: flour
+    role: addition
+    amount: little
+  name_uk: Куряча грудка з грибно-сметанним соусом
+- id: hungarian_tejszines_gombas_csirke
+  name: Chicken with mushrooms and cream
+  kind: dish
+  tags:
+  - chicken
+  - cream
+  - hungarian
+  - mushroom
+  missing_allowed: 2
+  source_family: hungarian:tejszines_gombas_csirke
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: chicken_fillet
+    role: main
+    amount: many
+  - item: mushroom
+    role: required
+    amount: many
+  - item: cream
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Курка з грибами та вершками
+- id: hungarian_tojasos_nokedli
+  name: Knockedley with egg
+  kind: dish
+  tags:
+  - egg
+  - hungarian
+  - nokedli
+  missing_allowed: 1
+  source_family: hungarian:tojasos_nokedli
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+    - fry
+  comment: ''
+  ingredients:
+  - item: nokedli
+    role: main
+    amount: many
+    accepts:
+    - flour
+  - item: eggs
+    role: required
+    amount: many
+  - item: fat
+    role: required
+    amount: normal
+  - item: cucumber
+    role: addition
+    amount: normal
+  name_uk: Нокедлі з яйцем
+- id: hungarian_csaszarmorzsa_main
+  name: Imperial baby as sweet main
+  kind: dish
+  tags:
+  - hungarian
+  - semolina
+  - sweet_main
+  missing_allowed: 3
+  source_family: hungarian:csaszarmorzsa_main
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    - dessert
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: semolina
+    role: main
+    amount: normal
+  - item: flour
+    role: required
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: jam
+    role: addition
+    amount: normal
+    accepts:
+    - fruit_preserve
+  name_uk: Імператорська крихта як солодке основне
+- id: hungarian_rakott_zoldbab
+  name: Green bean casserole with meat
+  kind: dish
+  tags:
+  - casserole
+  - green_beans
+  - hungarian
+  missing_allowed: 3
+  source_family: hungarian:rakott_zoldbab
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+    - bake
+  comment: ''
+  ingredients:
+  - item: green_beans
+    role: main
+    amount: many
+  - item: minced_meat
+    role: required
+    amount: normal
+  - item: rice
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: spice
+    amount: spice
+  name_uk: Запіканка зі стручкової квасолі з м'ясом
+- id: hungarian_csikos_tokany
+  name: Meat strips with sour cream and paprika
+  kind: dish
+  tags:
+  - hungarian
+  - pork
+  - tokany
+  missing_allowed: 3
+  source_family: hungarian:csikos_tokany
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: pork_chunks
+    role: main
+    amount: many
+    accepts:
+    - beef_chunks
+    - meat_piece
+  - item: onion
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: bacon
+    role: addition
+    amount: normal
+  - item: water
+    role: addition
+    amount: normal
+  name_uk: М'ясна соломка зі сметаною та паприкою
+- id: hungarian_borsos_tokany
+  name: Pepper tokan
+  kind: dish
+  tags:
+  - hungarian
+  - pepper
+  - tokany
+  missing_allowed: 3
+  source_family: hungarian:borsos_tokany
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: beef_chunks
+    role: main
+    amount: many
+    accepts:
+    - pork_chunks
+    - meat_piece
+  - item: onion
+    role: required
+    amount: normal
+  - item: black_pepper
+    role: required
+    amount: spice
+  - item: bacon
+    role: addition
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  - item: water
+    role: addition
+    amount: normal
+  name_uk: Перцевий токань
+- id: hungarian_debreceni_kolbasz_potato
+  name: Debreceni sausage with potatoes
+  kind: dish
+  tags:
+  - hungarian
+  - potato
+  - sausage
+  missing_allowed: 2
+  source_family: hungarian:debreceni_kolbasz_potato
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: debreceni_sausage
+    role: main
+    amount: many
+    accepts:
+    - smoked_sausage
+    - sausage_product
+  - item: potato
+    role: required
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: paprika
+    role: spice
+    amount: spice
+  name_uk: Дебреценська ковбаса з картоплею
+- id: hungarian_tojasos_gomba
+  name: Mushrooms with egg
+  kind: dish
+  tags:
+  - egg
+  - hungarian
+  - mushroom
+  missing_allowed: 1
+  source_family: hungarian:tojasos_gomba
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: mushroom
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: many
+  - item: onion
+    role: required
+    amount: little
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Гриби з яйцем
+- id: hungarian_langos_sourcream_cheese
+  name: Langos with sour cream and cheese
+  kind: dish
+  tags:
+  - hungarian
+  - langos
+  - street_food
+  missing_allowed: 3
+  source_family: hungarian:langos_sourcream_cheese
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - snack
+    - bread
+    time: over_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: hard_cheese
+    role: required
+    amount: normal
+    accepts:
+    - cheese
+  - item: dry_garlic
+    role: addition
+    amount: spice
+  - item: fat
+    role: required
+    amount: many
+  name_uk: Лангош зі сметаною та сиром
+- id: hungarian_langos_garlic
+  name: Garlic langoustine
+  kind: dish
+  tags:
+  - hungarian
+  - langos
+  missing_allowed: 2
+  source_family: hungarian:langos_garlic
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - snack
+    - bread
+    time: over_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: fat
+    role: required
+    amount: many
+  name_uk: Часниковий лангет
+- id: hungarian_pogacsa_cheese
+  name: Cheese cake
+  kind: dish
+  tags:
+  - cheese
+  - hungarian
+  - pogacsa
+  missing_allowed: 3
+  source_family: hungarian:pogacsa_cheese
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - snack
+    - bread
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: hard_cheese
+    role: required
+    amount: normal
+    accepts:
+    - cheese
+  - item: eggs
+    role: required
+    amount: normal
+  - item: yeast
+    role: addition
+    amount: little
+  name_uk: Сирний пиріг
+- id: hungarian_tepertos_pogacsa
+  name: Crackling cake
+  kind: dish
+  tags:
+  - cracklings
+  - hungarian
+  - pogacsa
+  missing_allowed: 3
+  source_family: hungarian:tepertos_pogacsa
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - snack
+    - bread
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: pork_cracklings
+    role: required
+    amount: normal
+    accepts:
+    - salo
+    - pork_belly
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: yeast
+    role: addition
+    amount: little
+  name_uk: Шкварковий корж
+- id: hungarian_kifli
+  name: Hungarian bagel bread
+  kind: dish
+  tags:
+  - bread
+  - hungarian
+  - roll
+  missing_allowed: 2
+  source_family: hungarian:kifli
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - bread
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Угорський рогалик-хліб
+- id: hungarian_kenyer
+  name: White homemade bread
+  kind: dish
+  tags:
+  - bread
+  - hungarian
+  missing_allowed: 1
+  source_family: hungarian:kenyer
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - bread
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: fat
+    role: addition
+    amount: little
+  name_uk: Білий домашній хліб
+- id: hungarian_nokedli_component
+  name: Basic Hungarian dumplings
+  kind: dish
+  tags:
+  - component
+  - hungarian
+  - nokedli
+  missing_allowed: 1
+  source_family: hungarian:nokedli_component
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - component
+    - side
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Базові угорські галушки
+- id: hungarian_csipetke_component
+  name: Plucked goulash dumplings
+  kind: dish
+  tags:
+  - component
+  - goulash
+  - hungarian
+  missing_allowed: 1
+  source_family: hungarian:csipetke_component
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - component
+    - side
+    time: under_30
+    method:
+    - knead
+    - boil
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: eggs
+    role: required
+    amount: little
+  - item: water
+    role: addition
+    amount: little
+  name_uk: Щипані галушки для гуляшу
+- id: hungarian_tarhonya_side
+  name: Fried egg crumble side dish
+  kind: dish
+  tags:
+  - hungarian
+  - side
+  - tarhonya
+  missing_allowed: 1
+  source_family: hungarian:tarhonya_side
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - side
+    time: under_30
+    method:
+    - fry
+    - boil
+  comment: ''
+  ingredients:
+  - item: tarhonya
+    role: main
+    amount: many
+    accepts:
+    - pasta_noodle
+  - item: fat
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Смажена яєчна крупка-гарнір
+- id: hungarian_rizibizi
+  name: Rice with green peas
+  kind: dish
+  tags:
+  - hungarian
+  - peas
+  - rice
+  - side
+  missing_allowed: 1
+  source_family: hungarian:rizibizi
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - side
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: canned_peas
+    role: required
+    amount: normal
+    accepts:
+    - peas
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  name_uk: Рис із зеленим горошком
+- id: hungarian_petrezselymes_burgonya
+  name: Potatoes with parsley
+  kind: dish
+  tags:
+  - hungarian
+  - potato
+  - side
+  missing_allowed: 1
+  source_family: hungarian:petrezselymes_burgonya
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - side
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: parsley
+    role: required
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Картопля з петрушкою
+- id: hungarian_uborkasalata
+  name: Cucumber salad with sour cream
+  kind: dish
+  tags:
+  - cucumber
+  - hungarian
+  - salad
+  missing_allowed: 1
+  source_family: hungarian:uborkasalata
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - salad
+    - side
+    time: under_10
+    method:
+    - raw
+    - mix
+  comment: ''
+  ingredients:
+  - item: cucumber
+    role: main
+    amount: many
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: vinegar
+    role: addition
+    amount: little
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: dry_garlic
+    role: addition
+    amount: spice
+  name_uk: Огірковий салат зі сметаною
+- id: hungarian_ecetes_uborka
+  name: Cucumbers in vinegar dressing
+  kind: dish
+  tags:
+  - cucumber
+  - hungarian
+  - salad
+  missing_allowed: 1
+  source_family: hungarian:ecetes_uborka
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - salad
+    - side
+    time: under_10
+    method:
+    - raw
+    - mix
+  comment: ''
+  ingredients:
+  - item: cucumber
+    role: main
+    amount: many
+  - item: vinegar
+    role: required
+    amount: normal
+  - item: sugar
+    role: addition
+    amount: little
+  - item: paprika
+    role: spice
+    amount: spice
+  name_uk: Огірки в оцтовій заправці
+- id: hungarian_vegyes_savanyusag
+  name: Pickled vegetables
+  kind: dish
+  tags:
+  - hungarian
+  - pickles
+  - side
+  missing_allowed: 3
+  source_family: hungarian:vegyes_savanyusag
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - side
+    - snack
+    time: over_60
+    method:
+    - pickle
+  comment: ''
+  ingredients:
+  - item: vegetable_mix
+    role: main
+    amount: many
+    accepts:
+    - cucumber
+    - cabbage
+    - bell_pepper
+  - item: vinegar
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: little
+  - item: mustard_seeds
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Мариновані овочі
+- id: hungarian_korozott
+  name: Cottage cheese-pepper spread
+  kind: dish
+  tags:
+  - cottage_cheese
+  - hungarian
+  - spread
+  missing_allowed: 1
+  source_family: hungarian:korozott
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - snack
+    time: under_10
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: cottage_cheese
+    role: main
+    amount: many
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: paprika
+    role: required
+    amount: spice
+  - item: caraway
+    role: spice
+    amount: spice
+  - item: onion
+    role: addition
+    amount: little
+  - item: bread
+    role: addition
+    amount: normal
+  name_uk: Сирно-перцевої намазки
+- id: hungarian_libazsir_kenyer
+  name: Bread with goose fat and onions
+  kind: dish
+  tags:
+  - goose_fat
+  - hungarian
+  - snack
+  missing_allowed: 2
+  source_family: hungarian:libazsir_kenyer
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - snack
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: goose_fat
+    role: main
+    amount: normal
+    accepts:
+    - animal_fat
+    - duck_fat
+  - item: bread
+    role: required
+    amount: normal
+    accepts:
+    - bread_base
+  - item: onion
+    role: required
+    amount: little
+  - item: paprika
+    role: spice
+    amount: spice
+  name_uk: Хліб з гусячим жиром та цибулею
+- id: hungarian_hidegtal
+  name: Cold meat plate
+  kind: dish
+  tags:
+  - cold_plate
+  - hungarian
+  - sausage
+  missing_allowed: 3
+  source_family: hungarian:hidegtal
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - snack
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: smoked_sausage
+    role: main
+    amount: normal
+    accepts:
+    - sausage_product
+  - item: salami
+    role: required
+    amount: normal
+    accepts:
+    - sausage_product
+  - item: smoked_ham
+    role: addition
+    amount: normal
+    accepts:
+    - meat_product
+  - item: bread
+    role: required
+    amount: normal
+  - item: pickled_cucumber
+    role: addition
+    amount: normal
+  name_uk: Холодна м'ясна тарілка
+- id: hungarian_tepertok
+  name: Cracklings
+  kind: dish
+  tags:
+  - cracklings
+  - hungarian
+  - pork
+  missing_allowed: 1
+  source_family: hungarian:tepertok
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - snack
+    - component
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: pork_belly
+    role: main
+    amount: many
+    accepts:
+    - salo
+  - item: fat
+    role: addition
+    amount: normal
+  name_uk: Шкварки
+- id: hungarian_kolbasz_bread_mustard
+  name: Sausage with bread and mustard
+  kind: dish
+  tags:
+  - hungarian
+  - sausage
+  - snack
+  missing_allowed: 1
+  source_family: hungarian:kolbasz_bread_mustard
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - snack
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: smoked_sausage
+    role: main
+    amount: normal
+    accepts:
+    - sausage_product
+  - item: bread
+    role: required
+    amount: normal
+  - item: mustard
+    role: required
+    amount: little
+  - item: pickled_cucumber
+    role: addition
+    amount: normal
+  name_uk: Ковбаса з хлібом та гірчицею
+- id: hungarian_cucumber_sourcream_side
+  name: Cucumbers in sour cream
+  kind: dish
+  tags:
+  - hungarian
+  - salad
+  - sour_cream
+  missing_allowed: 1
+  source_family: hungarian:cucumber_sourcream_side
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - salad
+    - side
+    time: under_10
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: cucumber
+    role: main
+    amount: many
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: dry_garlic
+    role: addition
+    amount: spice
+  - item: paprika
+    role: spice
+    amount: spice
+  name_uk: Огірки в сметані
+- id: hungarian_paprika_salata
+  name: Sweet pepper salad
+  kind: dish
+  tags:
+  - hungarian
+  - pepper
+  - salad
+  missing_allowed: 1
+  source_family: hungarian:paprika_salata
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - salad
+    - side
+    time: under_10
+    method:
+    - raw
+    - mix
+  comment: ''
+  ingredients:
+  - item: bell_pepper
+    role: main
+    amount: many
+  - item: vinegar
+    role: required
+    amount: little
+  - item: sugar
+    role: addition
+    amount: little
+  - item: onion
+    role: addition
+    amount: little
+  name_uk: Салат із солодкого перцю
+- id: hungarian_tomato_onion_salad
+  name: Tomato and onion salad
+  kind: dish
+  tags:
+  - hungarian
+  - salad
+  - tomato
+  missing_allowed: 1
+  source_family: hungarian:tomato_onion_salad
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - salad
+    - side
+    time: under_10
+    method:
+    - raw
+    - mix
+  comment: ''
+  ingredients:
+  - item: tomato
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: little
+  - item: vinegar
+    role: addition
+    amount: little
+  - item: plant_oil
+    role: addition
+    amount: little
+  name_uk: Салат з помідорів та цибулі
+- id: hungarian_dobos_torta
+  name: Doboš cake
+  kind: dish
+  tags:
+  - cake
+  - caramel
+  - chocolate
+  - hungarian
+  missing_allowed: 3
+  source_family: hungarian:dobos_torta
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: eggs
+    role: required
+    amount: many
+  - item: sugar
+    role: required
+    amount: many
+  - item: butter
+    role: required
+    amount: many
+    accepts:
+    - ghee
+  - item: chocolate
+    role: required
+    amount: normal
+  - item: caramel
+    role: required
+    amount: normal
+    accepts:
+    - sugar
+  name_uk: Торт Добош
+- id: hungarian_esterhazy_torta
+  name: Esterhazy cake
+  kind: dish
+  tags:
+  - cake
+  - hungarian
+  - nuts
+  missing_allowed: 3
+  source_family: hungarian:esterhazy_torta
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: many
+  - item: almonds
+    role: required
+    amount: normal
+    accepts:
+    - walnuts
+    - nuts
+  - item: sugar
+    role: required
+    amount: many
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: flour
+    role: addition
+    amount: little
+  name_uk: Торт Естерхазі
+- id: hungarian_somloi_galuska
+  name: Hungarian trifle with nuts and chocolate
+  kind: dish
+  tags:
+  - cake
+  - hungarian
+  - trifle
+  missing_allowed: 3
+  source_family: hungarian:somloi_galuska
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: sponge_cake
+    role: main
+    amount: many
+    accepts:
+    - flour
+    - eggs
+  - item: walnuts
+    role: required
+    amount: normal
+    accepts:
+    - nuts
+  - item: raisins
+    role: addition
+    amount: little
+  - item: chocolate
+    role: required
+    amount: normal
+  - item: cream
+    role: required
+    amount: normal
+  - item: rum
+    role: addition
+    amount: little
+  name_uk: Угорський трайфл з горіхами та шоколадом
+- id: hungarian_kurtoskalacs
+  name: Kürtöskalács, tubular sweet bread
+  kind: dish
+  tags:
+  - chimney_cake
+  - hungarian
+  missing_allowed: 3
+  source_family: hungarian:kurtoskalacs
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - roll
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: many
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Кюртешкалач, трубчастий солодкий хліб
+- id: hungarian_palacsinta_jam
+  name: Pancakes with jam
+  kind: dish
+  tags:
+  - hungarian
+  - jam
+  - palacsinta
+  missing_allowed: 2
+  source_family: hungarian:palacsinta_jam
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: jam
+    role: required
+    amount: normal
+    accepts:
+    - fruit_preserve
+  - item: sugar
+    role: addition
+    amount: little
+  - item: fat
+    role: required
+    amount: little
+  name_uk: Млинці з джемом
+- id: hungarian_gundel_palacsinta
+  name: Pancakes with nuts and chocolate
+  kind: dish
+  tags:
+  - hungarian
+  - palacsinta
+  missing_allowed: 3
+  source_family: hungarian:gundel_palacsinta
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - fry
+    - assemble
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: walnuts
+    role: required
+    amount: normal
+    accepts:
+    - nuts
+  - item: chocolate
+    role: required
+    amount: normal
+  - item: cream
+    role: addition
+    amount: normal
+  - item: rum
+    role: addition
+    amount: little
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Млинці з горіхами та шоколадом
+- id: hungarian_turos_palacsinta
+  name: Pancakes with cottage cheese
+  kind: dish
+  tags:
+  - cottage_cheese
+  - hungarian
+  - palacsinta
+  missing_allowed: 2
+  source_family: hungarian:turos_palacsinta
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: under_30
+    method:
+    - fry
+    - assemble
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: cottage_cheese
+    role: required
+    amount: many
+  - item: sugar
+    role: required
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  name_uk: Млинці з сиром
+- id: hungarian_turos_gomboc
+  name: Cottage cheese dumplings
+  kind: dish
+  tags:
+  - cottage_cheese
+  - dumpling
+  - hungarian
+  missing_allowed: 2
+  source_family: hungarian:turos_gomboc
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    - main
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: cottage_cheese
+    role: main
+    amount: many
+  - item: semolina
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: breadcrumbs
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: sugar
+    role: addition
+    amount: little
+  name_uk: Сирні галушки
+- id: hungarian_szilvasgomboc
+  name: Plum potato dumplings
+  kind: dish
+  tags:
+  - dumpling
+  - hungarian
+  - plum
+  missing_allowed: 3
+  source_family: hungarian:szilvasgomboc
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    - main
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: plum
+    role: required
+    amount: many
+    accepts:
+    - fruit
+  - item: flour
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  - item: breadcrumbs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Сливові картопляні галушки
+- id: hungarian_barackos_gomboc
+  name: Apricot dumplings
+  kind: dish
+  tags:
+  - apricot
+  - dumpling
+  - hungarian
+  missing_allowed: 3
+  source_family: hungarian:barackos_gomboc
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    - main
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: apricot
+    role: required
+    amount: many
+    accepts:
+    - fruit
+  - item: flour
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  - item: breadcrumbs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Абрикосові галушки
+- id: hungarian_makos_guba
+  name: Bread slices with poppy seeds and milk
+  kind: dish
+  tags:
+  - hungarian
+  - poppy_seed
+  missing_allowed: 2
+  source_family: hungarian:makos_guba
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: bread_roll
+    role: main
+    amount: many
+    accepts:
+    - kifli
+    - bread
+  - item: poppy_seed
+    role: required
+    amount: normal
+    accepts:
+    - seed
+  - item: milk
+    role: required
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Булочні скибочки з маком та молоком
+- id: hungarian_dios_guba
+  name: Bakery slices with nuts
+  kind: dish
+  tags:
+  - hungarian
+  - walnut
+  missing_allowed: 2
+  source_family: hungarian:dios_guba
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: bread_roll
+    role: main
+    amount: many
+    accepts:
+    - kifli
+    - bread
+  - item: walnuts
+    role: required
+    amount: normal
+    accepts:
+    - nuts
+  - item: milk
+    role: required
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Булочні скибочки з горіхами
+- id: hungarian_aranygaluska
+  name: Golden yeast dumplings with nuts
+  kind: dish
+  tags:
+  - hungarian
+  - walnut
+  missing_allowed: 3
+  source_family: hungarian:aranygaluska
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: walnuts
+    role: required
+    amount: normal
+    accepts:
+    - nuts
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Золоті дріжджові галушки з горіхами
+- id: hungarian_beigli_makos
+  name: Roll with poppy seeds
+  kind: dish
+  tags:
+  - bejgli
+  - hungarian
+  - poppy_seed
+  missing_allowed: 3
+  source_family: hungarian:beigli_makos
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - roll
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: poppy_seed
+    role: required
+    amount: many
+    accepts:
+    - seed
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: eggs
+    role: addition
+    amount: normal
+  name_uk: Рулет із маком
+- id: hungarian_beigli_dios
+  name: Roll with nuts
+  kind: dish
+  tags:
+  - bejgli
+  - hungarian
+  - walnut
+  missing_allowed: 3
+  source_family: hungarian:beigli_dios
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - roll
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: walnuts
+    role: required
+    amount: many
+    accepts:
+    - nuts
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: eggs
+    role: addition
+    amount: normal
+  name_uk: Рулет з горіхами
+- id: hungarian_almaretes
+  name: Apple strudel
+  kind: dish
+  tags:
+  - apple
+  - hungarian
+  - strudel
+  missing_allowed: 3
+  source_family: hungarian:almaretes
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - roll
+  comment: ''
+  ingredients:
+  - item: strudel_dough
+    role: main
+    amount: many
+    accepts:
+    - filo_dough
+    - flour
+  - item: apple
+    role: required
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  - item: breadcrumbs
+    role: addition
+    amount: little
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Яблучний штрудель
+- id: hungarian_meggyes_retes
+  name: Cherry strudel
+  kind: dish
+  tags:
+  - cherry
+  - hungarian
+  - strudel
+  missing_allowed: 3
+  source_family: hungarian:meggyes_retes
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - roll
+  comment: ''
+  ingredients:
+  - item: strudel_dough
+    role: main
+    amount: many
+    accepts:
+    - filo_dough
+    - flour
+  - item: cherry
+    role: required
+    amount: many
+    accepts:
+    - fruit
+  - item: sugar
+    role: required
+    amount: normal
+  - item: breadcrumbs
+    role: addition
+    amount: little
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Вишневий штрудель
+- id: hungarian_turos_retes
+  name: Cottage cheese strudel
+  kind: dish
+  tags:
+  - cottage_cheese
+  - hungarian
+  - strudel
+  missing_allowed: 3
+  source_family: hungarian:turos_retes
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - roll
+  comment: ''
+  ingredients:
+  - item: strudel_dough
+    role: main
+    amount: many
+    accepts:
+    - filo_dough
+    - flour
+  - item: cottage_cheese
+    role: required
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: raisins
+    role: addition
+    amount: little
+  name_uk: Сирний штрудель
+- id: hungarian_makos_retes
+  name: Poppy seed strudel
+  kind: dish
+  tags:
+  - hungarian
+  - poppy_seed
+  - strudel
+  missing_allowed: 3
+  source_family: hungarian:makos_retes
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - roll
+  comment: ''
+  ingredients:
+  - item: strudel_dough
+    role: main
+    amount: many
+    accepts:
+    - filo_dough
+    - flour
+  - item: poppy_seed
+    role: required
+    amount: many
+    accepts:
+    - seed
+  - item: sugar
+    role: required
+    amount: normal
+  - item: milk
+    role: addition
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Маковий штрудель
+- id: hungarian_zserbo
+  name: Gerbeau with nuts and apricot jam
+  kind: dish
+  tags:
+  - cake
+  - hungarian
+  - walnut
+  missing_allowed: 3
+  source_family: hungarian:zserbo
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: addition
+    amount: little
+  - item: walnuts
+    role: required
+    amount: many
+    accepts:
+    - nuts
+  - item: apricot_jam
+    role: required
+    amount: normal
+    accepts:
+    - jam
+    - fruit_preserve
+  - item: chocolate
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Жербо з горіхами та абрикосовим джемом
+- id: hungarian_kremes
+  name: Cream with vanilla cream
+  kind: dish
+  tags:
+  - cake
+  - custard
+  - hungarian
+  missing_allowed: 3
+  source_family: hungarian:kremes
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: puff_pastry
+    role: main
+    amount: many
+    accepts:
+    - filo_dough
+    - flour
+  - item: milk
+    role: required
+    amount: many
+  - item: eggs
+    role: required
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  - item: starch
+    role: required
+    amount: normal
+  name_uk: Кремеш із ванільним кремом
+- id: hungarian_gesztenyepure
+  name: Chestnut puree with cream
+  kind: dish
+  tags:
+  - chestnut
+  - hungarian
+  missing_allowed: 3
+  source_family: hungarian:gesztenyepure
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: under_30
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: chestnut_puree
+    role: main
+    amount: many
+    accepts:
+    - nuts
+  - item: cream
+    role: required
+    amount: normal
+  - item: sugar
+    role: addition
+    amount: little
+  - item: rum
+    role: addition
+    amount: little
+  name_uk: Каштанове пюре з вершками
+- id: hungarian_madartej
+  name: Bird's milk, vanilla cream with proteins
+  kind: dish
+  tags:
+  - custard
+  - hungarian
+  - milk
+  missing_allowed: 2
+  source_family: hungarian:madartej
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  - item: starch
+    role: addition
+    amount: little
+  name_uk: Пташине молоко, ванільний крем з білками
+- id: hungarian_csoroge_fank
+  name: Crispy fried ribbons
+  kind: dish
+  tags:
+  - fried
+  - hungarian
+  missing_allowed: 2
+  source_family: hungarian:csoroge_fank
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: many
+  name_uk: Хрусткі смажені стрічки
+- id: hungarian_farsangi_fank
+  name: Carnival donuts
+  kind: dish
+  tags:
+  - doughnut
+  - hungarian
+  missing_allowed: 3
+  source_family: hungarian:farsangi_fank
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: jam
+    role: addition
+    amount: normal
+    accepts:
+    - fruit_preserve
+  - item: fat
+    role: required
+    amount: many
+  name_uk: Карнавальні пончики
+- id: hungarian_turos_batyu
+  name: Cottage cheese envelopes
+  kind: dish
+  tags:
+  - cottage_cheese
+  - hungarian
+  - pastry
+  missing_allowed: 3
+  source_family: hungarian:turos_batyu
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: cottage_cheese
+    role: required
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: raisins
+    role: addition
+    amount: little
+  name_uk: Сирні конвертики
+- id: hungarian_kakaos_csiga
+  name: Cocoa snail
+  kind: dish
+  tags:
+  - cocoa
+  - hungarian
+  - pastry
+  missing_allowed: 3
+  source_family: hungarian:kakaos_csiga
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - roll
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: cocoa_powder
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Какао-равлик
+- id: hungarian_dios_kalacs
+  name: Nut roll
+  kind: dish
+  tags:
+  - hungarian
+  - sweet_bread
+  - walnut
+  missing_allowed: 3
+  source_family: hungarian:dios_kalacs
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - roll
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: walnuts
+    role: required
+    amount: many
+    accepts:
+    - nuts
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Горіховий калач
+- id: hungarian_makos_kalacs
+  name: Poppy roll
+  kind: dish
+  tags:
+  - hungarian
+  - poppy_seed
+  - sweet_bread
+  missing_allowed: 3
+  source_family: hungarian:makos_kalacs
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - roll
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: poppy_seed
+    role: required
+    amount: many
+    accepts:
+    - seed
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Маковий калач
+- id: hungarian_rizskoch
+  name: Rice casserole
+  kind: dish
+  tags:
+  - casserole
+  - hungarian
+  - rice
+  missing_allowed: 2
+  source_family: hungarian:rizskoch
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - boil
+    - bake
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: milk
+    role: required
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: raisins
+    role: addition
+    amount: little
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Рисова запіканка
+- id: hungarian_meggyes_piskota
+  name: Cherry sponge cake
+  kind: dish
+  tags:
+  - cake
+  - cherry
+  - hungarian
+  missing_allowed: 2
+  source_family: hungarian:meggyes_piskota
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: cherry
+    role: main
+    amount: many
+    accepts:
+    - fruit
+  - item: flour
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Вишневий бісквіт
+- id: hungarian_alma_pite
+  name: Apple pie
+  kind: dish
+  tags:
+  - apple
+  - hungarian
+  - pie
+  missing_allowed: 2
+  source_family: hungarian:alma_pite
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: apple
+    role: main
+    amount: many
+  - item: flour
+    role: required
+    amount: many
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: eggs
+    role: addition
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: breadcrumbs
+    role: addition
+    amount: little
+  name_uk: Яблучний пиріг
+- id: hungarian_szilvalekvaros_bukta
+  name: Buns with plum jam
+  kind: dish
+  tags:
+  - bun
+  - hungarian
+  - plum_jam
+  missing_allowed: 3
+  source_family: hungarian:szilvalekvaros_bukta
+  facets:
+    cuisine:
+    - hungarian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: plum_jam
+    role: required
+    amount: normal
+    accepts:
+    - jam
+    - fruit_preserve
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Булочки зі сливовим повидлом

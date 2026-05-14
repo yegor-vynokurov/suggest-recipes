@@ -1,0 +1,5755 @@
+metadata:
+  version: 0.6-turkish-large
+  purpose: Large Turkish cuisine recipe templates for pantry-based suggestion engine
+  design_rules:
+  - If a title names a key ingredient, that ingredient appears as main or required.
+  - Broad categories are used mainly in accepts, not as a replacement for named title ingredients.
+  - Water is included as a technological ingredient, but should be treated as always available by inventory logic.
+  - These are ingredient templates, not exact step-by-step recipes.
+  - 'Time buckets: under_10, under_30, under_60, over_60.'
+  cuisines:
+    turkish: турецкая
+  quantity_scale:
+  - spice
+  - little
+  - normal
+  - many
+  source_notes:
+  - Soup list draws on common Turkish soups such as mercimek, ezogelin, yayla, tarhana, iskembe, kelle paca, beyran, toyga,
+    tutmac, sehriye, tavuk suyu and balik corbasi.
+  - 'Main dishes emphasize Turkish patterns: kofte, kebab, pide, borek, gozleme, manti, dolma/sarma, pilav, eggplant dishes,
+    legumes, meze and salads.'
+  - Desserts emphasize milk puddings, syrup pastries, helva, lokum, asure and fruit-in-syrup desserts.
+recipes:
+- id: turkish_mercimek_corbasi
+  name: Red lentil soup
+  kind: dish
+  tags:
+  - budget
+  - lentil
+  - soup
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:mercimek_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: red_lentils
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: addition
+    amount: little
+  - item: potato
+    role: addition
+    amount: little
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  - item: tomato_paste
+    role: addition
+    amount: little
+    accepts:
+    - tomato_base
+  - item: dried_mint
+    role: spice
+    amount: spice
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Суп із червоної сочевиці
+- id: turkish_ezogelin_corbasi
+  name: Bride's soup with lentils, rice and bulgur
+  kind: dish
+  tags:
+  - bulgur
+  - lentil
+  - rice
+  - soup
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:ezogelin_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: red_lentils
+    role: main
+    amount: many
+  - item: bulgur
+    role: required
+    amount: little
+    accepts:
+    - rice
+  - item: rice
+    role: required
+    amount: little
+    accepts:
+    - bulgur
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato_paste
+    role: required
+    amount: little
+    accepts:
+    - tomato_base
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  - item: dried_mint
+    role: spice
+    amount: spice
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Суп нареченої з сочевицею, рисом і булгуром
+- id: turkish_mahluta_corbasi
+  name: Lentil soup with rice
+  kind: dish
+  tags:
+  - lentil
+  - rice
+  - soup
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:mahluta_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: red_lentils
+    role: main
+    amount: many
+  - item: rice
+    role: required
+    amount: little
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato_paste
+    role: addition
+    amount: little
+    accepts:
+    - tomato_base
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  - item: dried_mint
+    role: spice
+    amount: spice
+  - item: paprika
+    role: spice
+    amount: spice
+  name_uk: Сочевий суп з рисом
+- id: turkish_yayla_corbasi
+  name: Yogurt soup with rice and mint
+  kind: dish
+  tags:
+  - rice
+  - soup
+  - turkish
+  - yogurt
+  missing_allowed: 2
+  source_family: turkish:yayla_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: yogurt
+    role: main
+    amount: many
+  - item: rice
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: little
+  - item: flour
+    role: required
+    amount: little
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  - item: dried_mint
+    role: spice
+    amount: spice
+  name_uk: Йогуртовий суп з рисом та м'ятою
+- id: turkish_tarhana_corbasi
+  name: Tarhana soup
+  kind: dish
+  tags:
+  - soup
+  - tarhana
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:tarhana_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: tarhana
+    role: main
+    amount: normal
+  - item: tomato_paste
+    role: addition
+    amount: little
+    accepts:
+    - tomato_base
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  - item: dried_mint
+    role: spice
+    amount: spice
+  - item: paprika
+    role: spice
+    amount: spice
+  name_uk: Суп із тархани
+- id: turkish_domates_corbasi
+  name: Tomato soup
+  kind: dish
+  tags:
+  - soup
+  - tomato
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:domates_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: tomato
+    role: main
+    amount: many
+    accepts:
+    - tomato_sauce
+    - tomato_paste
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: flour
+    role: required
+    amount: little
+  - item: milk
+    role: addition
+    amount: little
+    accepts:
+    - cream
+  - item: water
+    role: required
+    amount: many
+  - item: hard_cheese
+    role: addition
+    amount: little
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Томатний суп
+- id: turkish_tavuk_suyu_corbasi
+  name: Chicken broth soup
+  kind: dish
+  tags:
+  - broth
+  - chicken
+  - soup
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:tavuk_suyu_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: chicken_parts
+    role: main
+    amount: many
+    accepts:
+    - chicken_fillet
+    - broth_meat
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: vermicelli
+    role: addition
+    amount: little
+    accepts:
+    - pasta
+    - rice
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: lemon
+    role: optional
+    amount: little
+  name_uk: Курячий бульйонний суп
+- id: turkish_sehriye_corbasi
+  name: Soup with vermicelli
+  kind: dish
+  tags:
+  - soup
+  - turkish
+  - vermicelli
+  missing_allowed: 2
+  source_family: turkish:sehriye_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: vermicelli
+    role: main
+    amount: normal
+    accepts:
+    - pasta
+  - item: tomato_paste
+    role: required
+    amount: little
+    accepts:
+    - tomato_base
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+    accepts:
+    - chicken_broth
+  - item: dried_mint
+    role: spice
+    amount: spice
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Суп з вермішеллю
+- id: turkish_iskembe_corbasi
+  name: Tripe soup
+  kind: dish
+  tags:
+  - offal
+  - soup
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:iskembe_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: tripe
+    role: main
+    amount: many
+  - item: flour
+    role: required
+    amount: little
+  - item: eggs
+    role: addition
+    amount: little
+  - item: yogurt
+    role: addition
+    amount: normal
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: vinegar
+    role: required
+    amount: little
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Суп з рубця
+- id: turkish_kelle_paca_corbasi
+  name: Head and foot soup
+  kind: dish
+  tags:
+  - broth
+  - offal
+  - soup
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:kelle_paca_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: lamb_head_trotters
+    role: main
+    amount: many
+    accepts:
+    - broth_meat
+    - meat_bones
+  - item: flour
+    role: addition
+    amount: little
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  - item: vinegar
+    role: required
+    amount: little
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  - item: lemon
+    role: optional
+    amount: little
+  name_uk: Суп з голови та ніжок
+- id: turkish_beyran_corbasi
+  name: Spicy lamb soup with rice
+  kind: dish
+  tags:
+  - lamb
+  - rice
+  - soup
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:beyran_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: lamb_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+    - beef_chunks
+  - item: rice
+    role: required
+    amount: normal
+  - item: meat_broth
+    role: required
+    amount: many
+    accepts:
+    - water
+    - broth_meat
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: red_pepper_flakes
+    role: spice
+    amount: spice
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Гострий баранячий суп з рисом
+- id: turkish_dugun_corbasi
+  name: Wedding soup with meat and yoghurt-egg dressing
+  kind: dish
+  tags:
+  - lamb
+  - soup
+  - turkish
+  - yogurt
+  missing_allowed: 3
+  source_family: turkish:dugun_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: lamb_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+    - chicken_parts
+  - item: meat_broth
+    role: required
+    amount: many
+    accepts:
+    - water
+    - broth_meat
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: little
+  - item: flour
+    role: required
+    amount: little
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  - item: dried_mint
+    role: spice
+    amount: spice
+  name_uk: Весільний суп з м'ясом та йогуртово-яєчною заправкою
+- id: turkish_tutmac_corbasi
+  name: Noodle soup with lentils and yogurt
+  kind: dish
+  tags:
+  - lentil
+  - noodle
+  - soup
+  - turkish
+  - yogurt
+  missing_allowed: 3
+  source_family: turkish:tutmac_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: noodle
+    role: main
+    amount: normal
+    accepts:
+    - pasta
+  - item: red_lentils
+    role: required
+    amount: normal
+    accepts:
+    - legume
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: dried_mint
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Суп з локшиною, сочевицею та йогуртом
+- id: turkish_toyga_corbasi
+  name: Yoghurt soup with chickpeas and wheat
+  kind: dish
+  tags:
+  - chickpea
+  - grain
+  - soup
+  - turkish
+  - yogurt
+  missing_allowed: 3
+  source_family: turkish:toyga_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: yogurt
+    role: main
+    amount: many
+  - item: chickpea
+    role: required
+    amount: normal
+    accepts:
+    - legume
+  - item: wheat_berries
+    role: required
+    amount: normal
+    accepts:
+    - grain
+  - item: eggs
+    role: addition
+    amount: little
+  - item: flour
+    role: addition
+    amount: little
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: dried_mint
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Йогуртовий суп з нутом та пшеницею
+- id: turkish_lebeniye_corbasi
+  name: Soup with yogurt, chickpeas and small meatballs
+  kind: dish
+  tags:
+  - chickpea
+  - meatballs
+  - soup
+  - turkish
+  - yogurt
+  missing_allowed: 3
+  source_family: turkish:lebeniye_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: yogurt
+    role: main
+    amount: many
+  - item: chickpea
+    role: required
+    amount: normal
+    accepts:
+    - legume
+  - item: minced_meat
+    role: required
+    amount: normal
+  - item: rice
+    role: addition
+    amount: little
+  - item: eggs
+    role: addition
+    amount: little
+  - item: flour
+    role: addition
+    amount: little
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: dried_mint
+    role: spice
+    amount: spice
+  name_uk: Суп с йогуртом, нутом и маленькими фрикадельками
+- id: turkish_sebze_corbasi
+  name: Turkish vegetable soup
+  kind: dish
+  tags:
+  - soup
+  - turkish
+  - vegetable
+  missing_allowed: 2
+  source_family: turkish:sebze_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: normal
+  - item: carrot
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: flour
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Турецький овочевий суп
+- id: turkish_mantar_corbasi
+  name: Turkish mushroom soup
+  kind: dish
+  tags:
+  - mushroom
+  - soup
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:mantar_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: mushroom
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: little
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: flour
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - cream
+  - item: water
+    role: required
+    amount: many
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Грибний суп по-турецьки
+- id: turkish_balik_corbasi
+  name: Fish soup
+  kind: dish
+  tags:
+  - fish
+  - soup
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:balik_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: fish
+    role: main
+    amount: many
+    accepts:
+    - frozen_hake
+    - generic_fish
+  - item: potato
+    role: addition
+    amount: normal
+  - item: carrot
+    role: required
+    amount: little
+  - item: onion
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: lemon
+    role: required
+    amount: little
+  - item: greens
+    role: addition
+    amount: little
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Рибний суп
+- id: turkish_pumpkin_soup_turkish
+  name: Turkish style pumpkin soup
+  kind: dish
+  tags:
+  - pumpkin
+  - soup
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:pumpkin_soup_turkish
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: pumpkin
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: onion
+    role: required
+    amount: little
+  - item: milk
+    role: addition
+    amount: normal
+    accepts:
+    - yogurt
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Гарбузовий суп у турецькому стилі
+- id: turkish_sogan_corbasi
+  name: Turkish style onion soup
+  kind: dish
+  tags:
+  - onion
+  - soup
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:sogan_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: onion
+    role: main
+    amount: many
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: flour
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+    accepts:
+    - meat_broth
+  - item: hard_cheese
+    role: addition
+    amount: little
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Цибульний суп у турецькому стилі
+- id: turkish_pazi_corbasi
+  name: Chard or greens soup
+  kind: dish
+  tags:
+  - greens
+  - soup
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:pazi_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: chard
+    role: main
+    amount: many
+    accepts:
+    - greens
+  - item: rice
+    role: required
+    amount: little
+  - item: onion
+    role: required
+    amount: little
+  - item: yogurt
+    role: addition
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  name_uk: Суп із мангольду чи зелені
+- id: turkish_lahana_corbasi
+  name: Cabbage soup
+  kind: dish
+  tags:
+  - cabbage
+  - soup
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:lahana_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: cabbage
+    role: main
+    amount: many
+    accepts:
+    - young_cabbage
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: addition
+    amount: little
+  - item: tomato_paste
+    role: addition
+    amount: little
+    accepts:
+    - tomato_base
+  - item: rice
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: fat
+    role: required
+    amount: little
+  name_uk: Капустяний суп
+- id: turkish_yuksuk_corbasi
+  name: Soup with small manti and chickpeas
+  kind: dish
+  tags:
+  - chickpea
+  - dumpling
+  - soup
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:yuksuk_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: manti
+    role: main
+    amount: many
+    accepts:
+    - pelmeni
+  - item: chickpea
+    role: required
+    amount: normal
+    accepts:
+    - legume
+  - item: tomato_paste
+    role: required
+    amount: little
+    accepts:
+    - tomato_base
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  - item: dried_mint
+    role: spice
+    amount: spice
+  name_uk: Суп з маленькими мантами та нутом
+- id: turkish_ekshi_asi
+  name: Sour soup with legumes and grains
+  kind: dish
+  tags:
+  - legume
+  - soup
+  - sour
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:ekshi_asi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: chickpea
+    role: main
+    amount: normal
+    accepts:
+    - legume
+  - item: wheat_berries
+    role: required
+    amount: normal
+    accepts:
+    - grain
+  - item: tomato_paste
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: little
+  - item: lemon
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: dried_mint
+    role: spice
+    amount: spice
+  name_uk: Кислий суп з бобовими та зерном
+- id: turkish_ayran_asi_corbasi
+  name: Cold yogurt soup with grains
+  kind: dish
+  tags:
+  - cold
+  - grain
+  - soup
+  - turkish
+  - yogurt
+  missing_allowed: 3
+  source_family: turkish:ayran_asi_corbasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: yogurt
+    role: main
+    amount: many
+  - item: wheat_berries
+    role: required
+    amount: normal
+    accepts:
+    - grain
+  - item: chickpea
+    role: addition
+    amount: normal
+    accepts:
+    - legume
+  - item: cucumber
+    role: addition
+    amount: normal
+  - item: greens
+    role: required
+    amount: little
+  - item: dried_mint
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Холодний йогуртовий суп із зерном
+- id: turkish_menemen
+  name: Eggs with tomatoes and peppers
+  kind: dish
+  tags:
+  - breakfast
+  - eggs
+  - tomato
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:menemen
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - breakfast
+    - main
+    time: under_30
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: many
+  - item: tomato
+    role: required
+    amount: many
+    accepts:
+    - tomato_sauce
+    - tomato_paste
+  - item: bell_pepper
+    role: required
+    amount: normal
+    accepts:
+    - vegetable
+  - item: onion
+    role: addition
+    amount: little
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Яйця з томатами та перцем
+- id: turkish_cilbir
+  name: Eggs with yogurt and garlic butter
+  kind: dish
+  tags:
+  - breakfast
+  - eggs
+  - turkish
+  - yogurt
+  missing_allowed: 2
+  source_family: turkish:cilbir
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - breakfast
+    - main
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: many
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: red_pepper_flakes
+    role: spice
+    amount: spice
+  name_uk: Яйця з йогуртом та часниковою олією
+- id: turkish_sucuklu_yumurta
+  name: Eggs with sujukom
+  kind: dish
+  tags:
+  - breakfast
+  - eggs
+  - sausage
+  - turkish
+  missing_allowed: 1
+  source_family: turkish:sucuklu_yumurta
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - breakfast
+    - main
+    time: under_10
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: many
+  - item: sucuk
+    role: required
+    amount: normal
+    accepts:
+    - sausage_product
+    - smoked_sausage
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Яйця з суджуком
+- id: turkish_pastirmali_yumurta
+  name: Eggs with pasta
+  kind: dish
+  tags:
+  - breakfast
+  - eggs
+  - meat_product
+  - turkish
+  missing_allowed: 1
+  source_family: turkish:pastirmali_yumurta
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - breakfast
+    - main
+    time: under_10
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: many
+  - item: pastirma
+    role: required
+    amount: normal
+    accepts:
+    - meat_product
+    - bacon
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Яйця з пастирмою
+- id: turkish_patatesli_yumurta
+  name: Eggs with potatoes
+  kind: dish
+  tags:
+  - eggs
+  - potato
+  - turkish
+  missing_allowed: 1
+  source_family: turkish:patatesli_yumurta
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - breakfast
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: many
+  - item: potato
+    role: required
+    amount: many
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: onion
+    role: addition
+    amount: little
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Яйця з картоплею
+- id: turkish_kuru_fasulye
+  name: White beans in tomato sauce
+  kind: dish
+  tags:
+  - beans
+  - stew
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:kuru_fasulye
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: beans
+    role: main
+    amount: many
+    accepts:
+    - canned_beans
+    - legume
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato_paste
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: meat_piece
+    role: addition
+    amount: normal
+    accepts:
+    - stew
+  - item: water
+    role: required
+    amount: many
+  - item: paprika
+    role: spice
+    amount: spice
+  name_uk: Біла квасоля в томатній підливі
+- id: turkish_nohut_yemegi
+  name: Chickpeas in tomato sauce
+  kind: dish
+  tags:
+  - chickpea
+  - stew
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:nohut_yemegi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: chickpea
+    role: main
+    amount: many
+    accepts:
+    - legume
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato_paste
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: meat_piece
+    role: addition
+    amount: normal
+    accepts:
+    - stew
+  - item: fat
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: paprika
+    role: spice
+    amount: spice
+  name_uk: Нут у томатній підливі
+- id: turkish_sade_pilav
+  name: Simple rice pilaf
+  kind: dish
+  tags:
+  - pilaf
+  - rice
+  - side
+  - turkish
+  missing_allowed: 1
+  source_family: turkish:sade_pilav
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    - side
+    time: under_30
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: vermicelli
+    role: addition
+    amount: little
+    accepts:
+    - pasta
+  - item: water
+    role: required
+    amount: many
+    accepts:
+    - chicken_broth
+  name_uk: Простий рисовий пилав
+- id: turkish_bulgur_pilavi
+  name: Bulgur pilaf with tomato base
+  kind: dish
+  tags:
+  - bulgur
+  - pilaf
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:bulgur_pilavi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    - side
+    time: under_30
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: bulgur
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato_paste
+    role: required
+    amount: little
+    accepts:
+    - tomato_base
+  - item: bell_pepper
+    role: addition
+    amount: normal
+    accepts:
+    - vegetable
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Булгур-пілав із томатною базою
+- id: turkish_tavuklu_pilav
+  name: Rice with chicken
+  kind: dish
+  tags:
+  - chicken
+  - rice
+  - street_food
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:tavuklu_pilav
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: chicken_fillet
+    role: required
+    amount: normal
+    accepts:
+    - chicken_parts
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+    accepts:
+    - chicken_broth
+  - item: chickpea
+    role: addition
+    amount: normal
+    accepts:
+    - canned_peas
+    - legume
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Рис з куркою
+- id: turkish_etli_pilav
+  name: Rice with meat
+  kind: dish
+  tags:
+  - meat
+  - pilaf
+  - rice
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:etli_pilav
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: meat_piece
+    role: required
+    amount: normal
+    accepts:
+    - stew
+    - lamb_chunks
+    - beef_chunks
+  - item: onion
+    role: addition
+    amount: little
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+    accepts:
+    - meat_broth
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Рис з м'ясом
+- id: turkish_ic_pilav
+  name: Festive rice with onions, dried fruits and nuts
+  kind: dish
+  tags:
+  - festive
+  - pilaf
+  - rice
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:ic_pilav
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: little
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: raisins
+    role: addition
+    amount: little
+  - item: nuts
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+    accepts:
+    - chicken_broth
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Святковий рис з цибулею, сухофруктами та горіхами
+- id: turkish_hamsili_pilav
+  name: Rice with anchovies or small fish
+  kind: dish
+  tags:
+  - black_sea
+  - fish
+  - rice
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:hamsili_pilav
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: anchovy
+    role: required
+    amount: many
+    accepts:
+    - fish
+    - frozen_capelin
+  - item: onion
+    role: required
+    amount: little
+  - item: raisins
+    role: addition
+    amount: little
+  - item: nuts
+    role: addition
+    amount: little
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Рис з анчоусами або дрібною рибою
+- id: turkish_kofte
+  name: Turkish cutlets
+  kind: dish
+  tags:
+  - kofte
+  - minced_meat
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:kofte
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - grill
+  comment: ''
+  ingredients:
+  - item: minced_meat
+    role: main
+    amount: many
+    accepts:
+    - ground_meat
+  - item: onion
+    role: required
+    amount: normal
+  - item: breadcrumbs
+    role: required
+    amount: little
+    accepts:
+    - bread
+    - flour
+  - item: eggs
+    role: addition
+    amount: little
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: fat
+    role: required
+    amount: little
+  name_uk: Турецькі котлетки
+- id: turkish_izmir_kofte
+  name: Kofte with potatoes and tomato sauce
+  kind: dish
+  tags:
+  - kofte
+  - potato
+  - tomato
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:izmir_kofte
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - bake
+    - stew
+  comment: ''
+  ingredients:
+  - item: minced_meat
+    role: main
+    amount: many
+  - item: potato
+    role: required
+    amount: many
+  - item: tomato_paste
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: normal
+  - item: breadcrumbs
+    role: addition
+    amount: little
+    accepts:
+    - bread
+    - flour
+  - item: eggs
+    role: addition
+    amount: little
+  - item: fat
+    role: required
+    amount: normal
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Кефті з картоплею та томатною підливою
+- id: turkish_kadinbudu_kofte
+  name: Breaded cutlets with rice
+  kind: dish
+  tags:
+  - fried
+  - kofte
+  - rice
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:kadinbudu_kofte
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: minced_meat
+    role: main
+    amount: many
+  - item: rice
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: little
+  - item: onion
+    role: required
+    amount: little
+  - item: fat
+    role: required
+    amount: normal
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Котлети з рисом у паніровці
+- id: turkish_sulu_kofte
+  name: Meat balls with potatoes in broth
+  kind: dish
+  tags:
+  - kofte
+  - potato
+  - soupish
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:sulu_kofte
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: minced_meat
+    role: main
+    amount: many
+  - item: bulgur
+    role: required
+    amount: little
+    accepts:
+    - rice
+  - item: potato
+    role: required
+    amount: normal
+  - item: carrot
+    role: addition
+    amount: little
+  - item: tomato_paste
+    role: addition
+    amount: little
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+    accepts:
+    - meat_broth
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: М'ясні кульки з картоплею у бульйоні
+- id: turkish_tekirdag_kofte
+  name: Tekirdag cutlets
+  kind: dish
+  tags:
+  - kofte
+  - regional
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:tekirdag_kofte
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - grill
+  comment: ''
+  ingredients:
+  - item: minced_meat
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: breadcrumbs
+    role: required
+    amount: normal
+    accepts:
+    - bread
+  - item: eggs
+    role: addition
+    amount: little
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: fat
+    role: required
+    amount: little
+  name_uk: Текirдагські котлетки
+- id: turkish_mercimek_koftesi
+  name: Lentil kofte without meat
+  kind: dish
+  tags:
+  - kofte
+  - lentil
+  - turkish
+  - vegetarian
+  missing_allowed: 2
+  source_family: turkish:mercimek_koftesi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    - snack
+    time: under_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: red_lentils
+    role: main
+    amount: many
+  - item: bulgur
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato_paste
+    role: required
+    amount: little
+    accepts:
+    - tomato_base
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: lemon
+    role: required
+    amount: little
+  - item: greens
+    role: required
+    amount: little
+  - item: paprika
+    role: spice
+    amount: spice
+  name_uk: Сочевичне кефт без м'яса
+- id: turkish_cig_kofte_vegan
+  name: Bulgurny kefte not us
+  kind: dish
+  tags:
+  - bulgur
+  - kofte
+  - street_food
+  - turkish
+  - vegan
+  missing_allowed: 2
+  source_family: turkish:cig_kofte_vegan
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    - snack
+    time: under_60
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: bulgur
+    role: main
+    amount: many
+  - item: tomato_paste
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: normal
+  - item: red_pepper_flakes
+    role: required
+    amount: spice
+  - item: greens
+    role: required
+    amount: little
+  - item: lemon
+    role: required
+    amount: little
+  - item: lavash
+    role: addition
+    amount: normal
+    accepts:
+    - flatbread
+  name_uk: Булгурний кефте не нас
+- id: turkish_adana_kebab
+  name: Spicy minced meat on a skewer
+  kind: dish
+  tags:
+  - kebab
+  - minced_meat
+  - spicy
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:adana_kebab
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - grill
+    - fry
+  comment: ''
+  ingredients:
+  - item: minced_meat
+    role: main
+    amount: many
+    accepts:
+    - ground_lamb
+    - ground_beef
+  - item: red_pepper_flakes
+    role: required
+    amount: spice
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: onion
+    role: addition
+    amount: little
+  - item: flatbread
+    role: addition
+    amount: normal
+    accepts:
+    - bread_base
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - vegetable
+  - item: onion_salad
+    role: addition
+    amount: normal
+    accepts:
+    - onion
+  name_uk: Гострий фарш на шампурі
+- id: turkish_urfa_kebab
+  name: Soft minced meat on a skewer
+  kind: dish
+  tags:
+  - kebab
+  - minced_meat
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:urfa_kebab
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - grill
+    - fry
+  comment: ''
+  ingredients:
+  - item: minced_meat
+    role: main
+    amount: many
+    accepts:
+    - ground_lamb
+    - ground_beef
+  - item: onion
+    role: addition
+    amount: little
+  - item: flatbread
+    role: addition
+    amount: normal
+    accepts:
+    - bread_base
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - vegetable
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: М'який фарш на шампурі
+- id: turkish_sis_kebab
+  name: Shish kebab from pieces of meat
+  kind: dish
+  tags:
+  - grill
+  - kebab
+  - meat_piece
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:sis_kebab
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - grill
+    - fry
+  comment: ''
+  ingredients:
+  - item: meat_piece
+    role: main
+    amount: many
+    accepts:
+    - lamb_chunks
+    - beef_chunks
+    - chicken_pieces
+  - item: onion
+    role: required
+    amount: normal
+  - item: yogurt
+    role: addition
+    amount: normal
+  - item: fat
+    role: addition
+    amount: little
+  - item: flatbread
+    role: addition
+    amount: normal
+    accepts:
+    - bread_base
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Шашлик зі шматочків м'яса
+- id: turkish_tavuk_sis
+  name: Chicken kebab
+  kind: dish
+  tags:
+  - chicken
+  - grill
+  - kebab
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:tavuk_sis
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - grill
+    - fry
+  comment: ''
+  ingredients:
+  - item: chicken_fillet
+    role: main
+    amount: many
+    accepts:
+    - chicken_pieces
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: fat
+    role: addition
+    amount: little
+  - item: flatbread
+    role: addition
+    amount: normal
+    accepts:
+    - bread_base
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Курячий шашлик
+- id: turkish_cag_kebab
+  name: Lamb on spit, homemade template
+  kind: dish
+  tags:
+  - grill
+  - kebab
+  - lamb
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:cag_kebab
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - grill
+    - roast
+  comment: ''
+  ingredients:
+  - item: lamb_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: onion
+    role: required
+    amount: normal
+  - item: yogurt
+    role: addition
+    amount: normal
+  - item: flatbread
+    role: addition
+    amount: normal
+    accepts:
+    - bread_base
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Баранина на рожні, домашній шаблон
+- id: turkish_doner_home
+  name: Homemade meat template in flatbread
+  kind: dish
+  tags:
+  - doner
+  - flatbread
+  - street_food
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:doner_home
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: meat_piece
+    role: main
+    amount: many
+    accepts:
+    - chicken_fillet
+    - beef_chunks
+    - lamb_chunks
+  - item: flatbread
+    role: required
+    amount: normal
+    accepts:
+    - lavash
+    - bread_base
+  - item: yogurt
+    role: addition
+    amount: normal
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - vegetable
+  - item: onion
+    role: addition
+    amount: little
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  name_uk: Домашній шаблон м'яса в коржі
+- id: turkish_iskender_home
+  name: Meat on bread with tomato butter and yogurt
+  kind: dish
+  tags:
+  - kebab
+  - tomato
+  - turkish
+  - yogurt
+  missing_allowed: 3
+  source_family: turkish:iskender_home
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: meat_piece
+    role: main
+    amount: many
+    accepts:
+    - chicken_fillet
+    - beef_chunks
+    - lamb_chunks
+  - item: bread
+    role: required
+    amount: normal
+    accepts:
+    - flatbread
+    - bread_base
+  - item: tomato_paste
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: yogurt
+    role: required
+    amount: normal
+  name_uk: М'ясо на хлібі з томатною олією та йогуртом
+- id: turkish_lahmacun
+  name: Thin flatbread with meat filling
+  kind: dish
+  tags:
+  - bake
+  - flatbread
+  - minced_meat
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:lahmacun
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    - snack
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: minced_meat
+    role: required
+    amount: normal
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_paste
+    - tomato_base
+  - item: onion
+    role: required
+    amount: little
+  - item: bell_pepper
+    role: addition
+    amount: little
+    accepts:
+    - vegetable
+  - item: greens
+    role: addition
+    amount: little
+  - item: paprika
+    role: spice
+    amount: spice
+  name_uk: Тонкий коржик з м'ясною начинкою
+- id: turkish_kiymali_pide
+  name: Pide with minced meat
+  kind: dish
+  tags:
+  - minced_meat
+  - pide
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:kiymali_pide
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    - snack
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: minced_meat
+    role: required
+    amount: many
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: bell_pepper
+    role: addition
+    amount: little
+    accepts:
+    - vegetable
+  - item: eggs
+    role: addition
+    amount: little
+  name_uk: Піде з фаршем
+- id: turkish_peynirli_pide
+  name: Pide with cheese
+  kind: dish
+  tags:
+  - cheese
+  - pide
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:peynirli_pide
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    - snack
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: white_cheese
+    role: required
+    amount: many
+    accepts:
+    - hard_cheese
+    - feta_cheese
+  - item: eggs
+    role: addition
+    amount: little
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  - item: greens
+    role: addition
+    amount: little
+  name_uk: Піде з сиром
+- id: turkish_kusbasili_pide
+  name: Pide with meat pieces
+  kind: dish
+  tags:
+  - meat_piece
+  - pide
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:kusbasili_pide
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    - snack
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: meat_piece
+    role: required
+    amount: many
+    accepts:
+    - beef_chunks
+    - lamb_chunks
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: bell_pepper
+    role: addition
+    amount: normal
+    accepts:
+    - vegetable
+  - item: onion
+    role: required
+    amount: little
+  name_uk: Піде з м'ясом шматочками
+- id: turkish_gozleme_peynirli
+  name: Gozleme with cheese and herbs
+  kind: dish
+  tags:
+  - cheese
+  - flatbread
+  - gozleme
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:gozleme_peynirli
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    - snack
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: white_cheese
+    role: required
+    amount: normal
+    accepts:
+    - hard_cheese
+    - feta_cheese
+  - item: greens
+    role: required
+    amount: little
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Гезлеме з сиром та зеленню
+- id: turkish_gozleme_patatesli
+  name: Gozleme with potatoes
+  kind: dish
+  tags:
+  - flatbread
+  - gozleme
+  - potato
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:gozleme_patatesli
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    - snack
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: potato
+    role: required
+    amount: many
+  - item: onion
+    role: addition
+    amount: little
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Гезлемі з картоплею
+- id: turkish_gozleme_ispanakli
+  name: Gozleme with spinach or greens
+  kind: dish
+  tags:
+  - flatbread
+  - gozleme
+  - greens
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:gozleme_ispanakli
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    - snack
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: spinach
+    role: required
+    amount: many
+    accepts:
+    - greens
+  - item: white_cheese
+    role: addition
+    amount: normal
+    accepts:
+    - hard_cheese
+    - feta_cheese
+  - item: onion
+    role: addition
+    amount: little
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Гезлемі зі шпинатом або зеленню
+- id: turkish_borek_peynirli
+  name: Börek with cheese
+  kind: dish
+  tags:
+  - borek
+  - cheese
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:borek_peynirli
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    - snack
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: filo_dough
+    role: main
+    amount: many
+    accepts:
+    - flour
+    - flatbread
+  - item: white_cheese
+    role: required
+    amount: many
+    accepts:
+    - hard_cheese
+    - feta_cheese
+  - item: eggs
+    role: required
+    amount: little
+  - item: milk
+    role: addition
+    amount: normal
+    accepts:
+    - yogurt
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: greens
+    role: addition
+    amount: little
+  name_uk: Берек із сиром
+- id: turkish_borek_kiymali
+  name: Börek with minced meat
+  kind: dish
+  tags:
+  - borek
+  - minced_meat
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:borek_kiymali
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    - snack
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: filo_dough
+    role: main
+    amount: many
+    accepts:
+    - flour
+    - flatbread
+  - item: minced_meat
+    role: required
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  - item: milk
+    role: addition
+    amount: normal
+    accepts:
+    - yogurt
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Берек з фаршем
+- id: turkish_borek_patatesli
+  name: Börek with potatoes
+  kind: dish
+  tags:
+  - borek
+  - potato
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:borek_patatesli
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    - snack
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: filo_dough
+    role: main
+    amount: many
+    accepts:
+    - flour
+    - flatbread
+  - item: potato
+    role: required
+    amount: many
+  - item: onion
+    role: addition
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  - item: milk
+    role: addition
+    amount: normal
+    accepts:
+    - yogurt
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: paprika
+    role: spice
+    amount: spice
+  name_uk: Берек з картоплею
+- id: turkish_manti
+  name: Turkish dumplings with yogurt and butter
+  kind: dish
+  tags:
+  - dumpling
+  - minced_meat
+  - turkish
+  - yogurt
+  missing_allowed: 3
+  source_family: turkish:manti
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: minced_meat
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: eggs
+    role: addition
+    amount: little
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: paprika
+    role: spice
+    amount: spice
+  name_uk: Турецькі пельмені з йогуртом та олією
+- id: turkish_kayseri_manti
+  name: Small manti with yogurt
+  kind: dish
+  tags:
+  - dumpling
+  - regional
+  - turkish
+  - yogurt
+  missing_allowed: 3
+  source_family: turkish:kayseri_manti
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: minced_meat
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: tomato_paste
+    role: addition
+    amount: little
+    accepts:
+    - tomato_base
+  - item: dried_mint
+    role: spice
+    amount: spice
+  name_uk: Маленькі манти з йогуртом
+- id: turkish_etli_yaprak_sarma
+  name: Grape leaves with meat and rice
+  kind: dish
+  tags:
+  - meat
+  - rice
+  - sarma
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:etli_yaprak_sarma
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: grape_leaves
+    role: main
+    amount: many
+  - item: minced_meat
+    role: required
+    amount: normal
+  - item: rice
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato_paste
+    role: addition
+    amount: little
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: little
+  - item: lemon
+    role: addition
+    amount: little
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Виноградне листя з м'ясом та рисом
+- id: turkish_zeytinyagli_yaprak_sarma
+  name: Lenten sarma with rice
+  kind: dish
+  tags:
+  - rice
+  - sarma
+  - turkish
+  - vegetarian
+  missing_allowed: 3
+  source_family: turkish:zeytinyagli_yaprak_sarma
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: grape_leaves
+    role: main
+    amount: many
+  - item: rice
+    role: required
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: raisins
+    role: addition
+    amount: little
+  - item: nuts
+    role: addition
+    amount: little
+  - item: lemon
+    role: addition
+    amount: little
+  - item: dried_mint
+    role: spice
+    amount: spice
+  name_uk: Пісна сарма з рисом
+- id: turkish_biber_dolmasi
+  name: Stuffed peppers
+  kind: dish
+  tags:
+  - dolma
+  - pepper
+  - rice
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:biber_dolmasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: bell_pepper
+    role: main
+    amount: many
+  - item: rice
+    role: required
+    amount: normal
+  - item: minced_meat
+    role: addition
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato_paste
+    role: required
+    amount: little
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: little
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Фарширований перець
+- id: turkish_kabak_dolmasi
+  name: Stuffed zucchini
+  kind: dish
+  tags:
+  - dolma
+  - rice
+  - turkish
+  - zucchini
+  missing_allowed: 3
+  source_family: turkish:kabak_dolmasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: zucchini
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: rice
+    role: required
+    amount: normal
+  - item: minced_meat
+    role: addition
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato_paste
+    role: required
+    amount: little
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: little
+  - item: yogurt
+    role: addition
+    amount: normal
+  name_uk: Фаршировані кабачки
+- id: turkish_karniyarik
+  name: Eggplant stuffed with meat
+  kind: dish
+  tags:
+  - eggplant
+  - minced_meat
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:karniyarik
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - fry
+    - bake
+  comment: ''
+  ingredients:
+  - item: eggplant
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: minced_meat
+    role: required
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: bell_pepper
+    role: addition
+    amount: normal
+    accepts:
+    - vegetable
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Баклажани з м'ясною начинкою
+- id: turkish_imam_bayildi
+  name: Eggplants with onions and tomatoes
+  kind: dish
+  tags:
+  - eggplant
+  - olive_oil
+  - turkish
+  - vegetarian
+  missing_allowed: 2
+  source_family: turkish:imam_bayildi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - fry
+    - bake
+  comment: ''
+  ingredients:
+  - item: eggplant
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: onion
+    role: required
+    amount: many
+  - item: tomato
+    role: required
+    amount: many
+    accepts:
+    - tomato_base
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Баклажани з цибулею та томатами
+- id: turkish_patlican_musakka
+  name: Turkish moussaka with eggplant and minced meat
+  kind: dish
+  tags:
+  - eggplant
+  - minced_meat
+  - stew
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:patlican_musakka
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: eggplant
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: minced_meat
+    role: required
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: bell_pepper
+    role: addition
+    amount: normal
+    accepts:
+    - vegetable
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Турецька мусака з баклажаном та фаршем
+- id: turkish_turlu
+  name: Turkish vegetable stew
+  kind: dish
+  tags:
+  - stew
+  - turkish
+  - vegetable
+  missing_allowed: 3
+  source_family: turkish:turlu
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: eggplant
+    role: required
+    amount: normal
+    accepts:
+    - vegetable
+  - item: potato
+    role: required
+    amount: normal
+  - item: bell_pepper
+    role: required
+    amount: normal
+    accepts:
+    - vegetable
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: little
+  - item: fat
+    role: required
+    amount: little
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Овочеве рагу по-турецьки
+- id: turkish_guvec
+  name: Meat with vegetables in a pot
+  kind: dish
+  tags:
+  - meat
+  - stew
+  - turkish
+  - vegetable
+  missing_allowed: 3
+  source_family: turkish:guvec
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+    - bake
+  comment: ''
+  ingredients:
+  - item: meat_piece
+    role: main
+    amount: many
+    accepts:
+    - chicken_fillet
+    - stew
+  - item: potato
+    role: required
+    amount: normal
+  - item: eggplant
+    role: addition
+    amount: normal
+    accepts:
+    - vegetable
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: little
+  name_uk: М'ясо з овочами в горщику
+- id: turkish_hunkar_begendi
+  name: Eggplant-milk based meat
+  kind: dish
+  tags:
+  - dairy
+  - eggplant
+  - meat
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:hunkar_begendi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+    - roast
+  comment: ''
+  ingredients:
+  - item: meat_piece
+    role: main
+    amount: many
+    accepts:
+    - lamb_chunks
+    - beef_chunks
+  - item: eggplant
+    role: required
+    amount: many
+    accepts:
+    - vegetable
+  - item: milk
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: flour
+    role: required
+    amount: little
+  - item: hard_cheese
+    role: addition
+    amount: little
+  - item: tomato_paste
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: little
+  name_uk: М'ясо на баклажанно-молочній основі
+- id: turkish_et_sote
+  name: Meat pieces with onions and peppers
+  kind: dish
+  tags:
+  - meat
+  - stir_fry
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:et_sote
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: meat_piece
+    role: main
+    amount: many
+    accepts:
+    - chicken_fillet
+    - beef_chunks
+  - item: onion
+    role: required
+    amount: normal
+  - item: bell_pepper
+    role: required
+    amount: normal
+    accepts:
+    - vegetable
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: little
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: М'ясо шматочками з цибулею та перцем
+- id: turkish_tavuk_sote
+  name: Chicken with onions, peppers and tomatoes
+  kind: dish
+  tags:
+  - chicken
+  - stir_fry
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:tavuk_sote
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: chicken_fillet
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: bell_pepper
+    role: required
+    amount: normal
+    accepts:
+    - vegetable
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: little
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: paprika
+    role: spice
+    amount: spice
+  name_uk: Курица с луком, перцем и томатами
+- id: turkish_sac_kavurma
+  name: Meat in a frying pan
+  kind: dish
+  tags:
+  - fry
+  - grillish
+  - meat
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:sac_kavurma
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: meat_piece
+    role: main
+    amount: many
+    accepts:
+    - lamb_chunks
+    - beef_chunks
+    - chicken_pieces
+  - item: onion
+    role: required
+    amount: normal
+  - item: bell_pepper
+    role: required
+    amount: normal
+    accepts:
+    - vegetable
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: little
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: М'ясо на сковороді-саджі
+- id: turkish_mucver
+  name: Zucchini pancakes with herbs
+  kind: dish
+  tags:
+  - fritter
+  - turkish
+  - vegetarian
+  - zucchini
+  missing_allowed: 2
+  source_family: turkish:mucver
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    - snack
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: zucchini
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: normal
+  - item: white_cheese
+    role: addition
+    amount: normal
+    accepts:
+    - hard_cheese
+  - item: greens
+    role: required
+    amount: little
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Кабачкові оладки із зеленню
+- id: turkish_kisir
+  name: Bulgur salad with tomato paste and herbs
+  kind: dish
+  tags:
+  - bulgur
+  - salad
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:kisir
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - salad
+    - main
+    time: under_30
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: bulgur
+    role: main
+    amount: many
+  - item: tomato_paste
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: greens
+    role: required
+    amount: little
+  - item: onion
+    role: addition
+    amount: little
+  - item: lemon
+    role: required
+    amount: little
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: paprika
+    role: spice
+    amount: spice
+  name_uk: Салат з булгура з томатною пастою та зеленню
+- id: turkish_piyaz
+  name: Bean salad
+  kind: dish
+  tags:
+  - beans
+  - salad
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:piyaz
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - salad
+    - main
+    time: under_30
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: beans
+    role: main
+    amount: many
+    accepts:
+    - canned_beans
+    - legume
+  - item: onion
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: normal
+  - item: greens
+    role: addition
+    amount: little
+  - item: lemon
+    role: required
+    amount: little
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Квасоляний салат
+- id: turkish_coban_salatasi
+  name: Shepherd's salad
+  kind: dish
+  tags:
+  - fresh
+  - salad
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:coban_salatasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - salad
+    time: under_10
+    method:
+    - raw
+    - mix
+  comment: ''
+  ingredients:
+  - item: tomato
+    role: main
+    amount: many
+  - item: cucumber
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: bell_pepper
+    role: addition
+    amount: normal
+    accepts:
+    - vegetable
+  - item: greens
+    role: addition
+    amount: little
+  - item: lemon
+    role: required
+    amount: little
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Пастуший салат
+- id: turkish_cacik
+  name: Yogurt with cucumber, garlic and herbs
+  kind: dish
+  tags:
+  - cucumber
+  - sauce
+  - turkish
+  - yogurt
+  missing_allowed: 1
+  source_family: turkish:cacik
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - sauce
+    - salad
+    - snack
+    time: under_10
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: yogurt
+    role: main
+    amount: many
+  - item: cucumber
+    role: required
+    amount: normal
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: greens
+    role: addition
+    amount: little
+  - item: dried_mint
+    role: spice
+    amount: spice
+  name_uk: Йогурт з огірком, часником та зеленню
+- id: turkish_haydari
+  name: Thick yoghurt snack with mint
+  kind: dish
+  tags:
+  - meze
+  - turkish
+  - yogurt
+  missing_allowed: 1
+  source_family: turkish:haydari
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - sauce
+    - snack
+    time: under_10
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: yogurt
+    role: main
+    amount: many
+  - item: white_cheese
+    role: addition
+    amount: normal
+    accepts:
+    - hard_cheese
+    - feta_cheese
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: dried_mint
+    role: required
+    amount: spice
+  - item: olive_oil
+    role: addition
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Густа йогуртова закуска з м'ятою
+- id: turkish_hummus_turkish
+  name: Chickpea paste
+  kind: dish
+  tags:
+  - chickpea
+  - meze
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:hummus_turkish
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - sauce
+    - snack
+    time: under_30
+    method:
+    - blend
+    - mix
+  comment: ''
+  ingredients:
+  - item: chickpea
+    role: main
+    amount: many
+    accepts:
+    - legume
+  - item: tahini
+    role: required
+    amount: normal
+  - item: lemon
+    role: required
+    amount: little
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: paprika
+    role: spice
+    amount: spice
+  name_uk: Нутова паста
+- id: turkish_muhammara
+  name: Pepper and nut paste
+  kind: dish
+  tags:
+  - meze
+  - pepper
+  - turkish
+  - walnut
+  missing_allowed: 2
+  source_family: turkish:muhammara
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - sauce
+    - snack
+    time: under_30
+    method:
+    - blend
+    - mix
+  comment: ''
+  ingredients:
+  - item: bell_pepper
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: walnuts
+    role: required
+    amount: normal
+    accepts:
+    - nuts
+  - item: breadcrumbs
+    role: required
+    amount: little
+    accepts:
+    - bread
+  - item: tomato_paste
+    role: addition
+    amount: little
+    accepts:
+    - tomato_base
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: red_pepper_flakes
+    role: spice
+    amount: spice
+  name_uk: Паста з перцю та горіхів
+- id: turkish_midye_dolma
+  name: Mussels with spicy rice
+  kind: dish
+  tags:
+  - rice
+  - seafood
+  - street_food
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:midye_dolma
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    - snack
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: mussels
+    role: main
+    amount: many
+    accepts:
+    - seafood
+  - item: rice
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: raisins
+    role: addition
+    amount: little
+  - item: nuts
+    role: addition
+    amount: little
+  - item: lemon
+    role: required
+    amount: little
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Мідії з пряним рисом
+- id: turkish_simit
+  name: Sesame ring
+  kind: dish
+  tags:
+  - bread
+  - pastry
+  - sesame
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:simit
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - bread
+    - snack
+    - breakfast
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: grape_molasses
+    role: required
+    amount: little
+    accepts:
+    - sugar
+  - item: sesame
+    role: required
+    amount: normal
+  - item: fat
+    role: addition
+    amount: little
+  name_uk: Кунжутне кільце
+- id: turkish_pogaca_peynirli
+  name: Soft bun with cheese
+  kind: dish
+  tags:
+  - cheese
+  - pastry
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:pogaca_peynirli
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - bread
+    - snack
+    - breakfast
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: little
+  - item: fat
+    role: required
+    amount: normal
+  - item: white_cheese
+    role: required
+    amount: normal
+    accepts:
+    - hard_cheese
+    - feta_cheese
+  - item: water
+    role: addition
+    amount: little
+  name_uk: М'яка булочка з сиром
+- id: turkish_pogaca_patatesli
+  name: Bun with potatoes
+  kind: dish
+  tags:
+  - pastry
+  - potato
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:pogaca_patatesli
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - bread
+    - snack
+    - breakfast
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: little
+  - item: fat
+    role: required
+    amount: normal
+  - item: potato
+    role: required
+    amount: many
+  - item: paprika
+    role: spice
+    amount: spice
+  name_uk: Булочка з картоплею
+- id: turkish_acma
+  name: Soft Turkish bun
+  kind: dish
+  tags:
+  - breakfast
+  - pastry
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:acma
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - bread
+    - snack
+    - breakfast
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: sugar
+    role: addition
+    amount: little
+  - item: eggs
+    role: required
+    amount: little
+  - item: fat
+    role: required
+    amount: normal
+  - item: sesame
+    role: addition
+    amount: little
+  name_uk: М'яка турецька булочка
+- id: turkish_bazlama
+  name: Turkish frying pan bread
+  kind: dish
+  tags:
+  - bread
+  - flatbread
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:bazlama
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - bread
+    - snack
+    time: over_60
+    method:
+    - fry
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: yogurt
+    role: addition
+    amount: normal
+  - item: fat
+    role: addition
+    amount: little
+  name_uk: Турецька сковорідна коржик
+- id: turkish_yufka
+  name: Thin base for börek and gozleme
+  kind: dish
+  tags:
+  - component
+  - flatbread
+  - turkish
+  missing_allowed: 1
+  source_family: turkish:yufka
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - bread
+    - component
+    time: under_60
+    method:
+    - roll
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: water
+    role: required
+    amount: normal
+  - item: fat
+    role: addition
+    amount: little
+  name_uk: Тонка основа для берека та гезлеме
+- id: turkish_katmer
+  name: Puff pastry with butter
+  kind: dish
+  tags:
+  - flatbread
+  - pastry
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:katmer
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - bread
+    - snack
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: water
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: addition
+    amount: little
+  name_uk: Листковий коржик з олією
+- id: turkish_gozleme_kiymali
+  name: Gozleme with minced meat
+  kind: dish
+  tags:
+  - gozleme
+  - minced_meat
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:gozleme_kiymali
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    - snack
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: minced_meat
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Гезлемі з фаршем
+- id: turkish_gozleme_mantarli
+  name: Gozleme with mushrooms
+  kind: dish
+  tags:
+  - gozleme
+  - mushroom
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:gozleme_mantarli
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    - snack
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: mushroom
+    role: required
+    amount: many
+  - item: onion
+    role: addition
+    amount: little
+  - item: white_cheese
+    role: addition
+    amount: normal
+    accepts:
+    - hard_cheese
+  - item: water
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  name_uk: Гезлемі з грибами
+- id: turkish_su_boregi
+  name: Water börek with cheese
+  kind: dish
+  tags:
+  - borek
+  - cheese
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:su_boregi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    - snack
+    time: over_60
+    method:
+    - boil
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  - item: white_cheese
+    role: required
+    amount: many
+    accepts:
+    - hard_cheese
+    - feta_cheese
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: greens
+    role: addition
+    amount: little
+  name_uk: Водяний берек із сиром
+- id: turkish_sigara_boregi
+  name: Fried rolls with cheese
+  kind: dish
+  tags:
+  - borek
+  - cheese
+  - fried
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:sigara_boregi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - snack
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: filo_dough
+    role: main
+    amount: many
+    accepts:
+    - yufka
+    - flour
+  - item: white_cheese
+    role: required
+    amount: normal
+    accepts:
+    - hard_cheese
+    - feta_cheese
+  - item: greens
+    role: addition
+    amount: little
+  - item: eggs
+    role: addition
+    amount: little
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Смажені трубочки із сиром
+- id: turkish_kol_boregi
+  name: Long börek roll with filling
+  kind: dish
+  tags:
+  - borek
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:kol_boregi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - main
+    - snack
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: filo_dough
+    role: main
+    amount: many
+    accepts:
+    - yufka
+    - flour
+  - item: white_cheese
+    role: required
+    amount: normal
+    accepts:
+    - minced_meat
+    - potato
+    - hard_cheese
+  - item: eggs
+    role: addition
+    amount: little
+  - item: milk
+    role: addition
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Довгий рулет-берек з начинкою
+- id: turkish_tahinli_corek
+  name: Tahini bun
+  kind: dish
+  tags:
+  - pastry
+  - tahini
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:tahinli_corek
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    - bread
+    - snack
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: tahini
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  - item: sesame
+    role: addition
+    amount: little
+  name_uk: Булочка з тахіні
+- id: turkish_ramazan_pidesi
+  name: Ramadan cake
+  kind: dish
+  tags:
+  - bread
+  - flatbread
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:ramazan_pidesi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - bread
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: eggs
+    role: addition
+    amount: little
+  - item: yogurt
+    role: addition
+    amount: little
+  - item: sesame
+    role: addition
+    amount: little
+  name_uk: Торт Рамадан
+- id: turkish_lahmacun_dough
+  name: Dough for lahmajun
+  kind: dish
+  tags:
+  - component
+  - dough
+  - turkish
+  missing_allowed: 1
+  source_family: turkish:lahmacun_dough
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - component
+    - bread
+    time: over_60
+    method:
+    - knead
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: water
+    role: required
+    amount: many
+  - item: yeast
+    role: addition
+    amount: little
+  - item: fat
+    role: addition
+    amount: little
+  name_uk: Тісто для лахмаджуну
+- id: turkish_pide_dough
+  name: Pide dough
+  kind: dish
+  tags:
+  - component
+  - dough
+  - turkish
+  missing_allowed: 1
+  source_family: turkish:pide_dough
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - component
+    - bread
+    time: over_60
+    method:
+    - knead
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: water
+    role: required
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: fat
+    role: addition
+    amount: little
+  - item: sugar
+    role: addition
+    amount: little
+  name_uk: Тісто для піде
+- id: turkish_sutlac
+  name: Rice milk pudding
+  kind: dish
+  tags:
+  - dessert
+  - milk
+  - pudding
+  - rice
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:sutlac
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - boil
+    - bake
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+  - item: rice
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: starch
+    role: addition
+    amount: little
+    accepts:
+    - flour
+  - item: eggs
+    role: addition
+    amount: little
+  name_uk: Рисовий молочний пудинг
+- id: turkish_muhallebi
+  name: Milk pudding
+  kind: dish
+  tags:
+  - dessert
+  - milk
+  - pudding
+  - turkish
+  missing_allowed: 1
+  source_family: turkish:muhallebi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  - item: starch
+    role: required
+    amount: normal
+    accepts:
+    - flour
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  name_uk: Молочний пудинг
+- id: turkish_kazandibi
+  name: Caramelized milk pudding
+  kind: dish
+  tags:
+  - caramelized
+  - dessert
+  - milk
+  - pudding
+  - turkish
+  missing_allowed: 1
+  source_family: turkish:kazandibi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - boil
+    - caramelize
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  - item: starch
+    role: required
+    amount: normal
+    accepts:
+    - flour
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  name_uk: Карамелізований молочний пудинг
+- id: turkish_keskul
+  name: Almond milk pudding
+  kind: dish
+  tags:
+  - almond
+  - dessert
+  - milk
+  - pudding
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:keskul
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  - item: starch
+    role: required
+    amount: normal
+    accepts:
+    - flour
+  - item: almonds
+    role: required
+    amount: little
+    accepts:
+    - nuts
+  name_uk: Мигдальний молочний пудинг
+- id: turkish_tavuk_gogsu
+  name: Dairy dessert with chicken breast
+  kind: dish
+  tags:
+  - chicken
+  - dessert
+  - historical
+  - milk
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:tavuk_gogsu
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  - item: starch
+    role: required
+    amount: normal
+    accepts:
+    - flour
+  - item: chicken_fillet
+    role: required
+    amount: little
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  name_uk: Молочний десерт з курячою грудкою
+- id: turkish_gullac
+  name: Milk dessert with thin sheets and nuts
+  kind: dish
+  tags:
+  - dessert
+  - milk
+  - ramadan
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:gullac
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - soak
+    - mix
+  comment: ''
+  ingredients:
+  - item: gullac_sheets
+    role: main
+    amount: many
+    accepts:
+    - filo_dough
+  - item: milk
+    role: required
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  - item: walnuts
+    role: addition
+    amount: normal
+    accepts:
+    - nuts
+  name_uk: Молочний десерт з тонкими листками та горіхами
+- id: turkish_baklava
+  name: Baklava
+  kind: dish
+  tags:
+  - dessert
+  - nuts
+  - phyllo
+  - syrup
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:baklava
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: filo_dough
+    role: main
+    amount: many
+    accepts:
+    - flour
+  - item: butter
+    role: required
+    amount: many
+    accepts:
+    - ghee
+  - item: nuts
+    role: required
+    amount: normal
+    accepts:
+    - walnuts
+    - pistachios
+  - item: sugar
+    role: required
+    amount: many
+  - item: water
+    role: required
+    amount: normal
+  - item: lemon
+    role: addition
+    amount: little
+  name_uk: Пахлава
+- id: turkish_sobiyet
+  name: Baklava with milk filling
+  kind: dish
+  tags:
+  - dessert
+  - phyllo
+  - semolina
+  - syrup
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:sobiyet
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: filo_dough
+    role: main
+    amount: many
+    accepts:
+    - flour
+  - item: butter
+    role: required
+    amount: many
+    accepts:
+    - ghee
+  - item: semolina
+    role: required
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+  - item: nuts
+    role: addition
+    amount: normal
+    accepts:
+    - pistachios
+  - item: sugar
+    role: required
+    amount: many
+  name_uk: Пахлава з молочною начинкою
+- id: turkish_kunefe
+  name: Hot dessert with kadaif and cheese
+  kind: dish
+  tags:
+  - cheese
+  - dessert
+  - kadayif
+  - syrup
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:kunefe
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: kadayif
+    role: main
+    amount: many
+    accepts:
+    - filo_dough
+  - item: butter
+    role: required
+    amount: many
+    accepts:
+    - ghee
+  - item: kunefe_cheese
+    role: required
+    amount: normal
+    accepts:
+    - white_cheese
+  - item: sugar
+    role: required
+    amount: many
+  - item: water
+    role: required
+    amount: normal
+  - item: nuts
+    role: addition
+    amount: little
+    accepts:
+    - pistachios
+  name_uk: Гарячий десерт з кадаїфом та сиром
+- id: turkish_revani
+  name: Semolina syrup pie
+  kind: dish
+  tags:
+  - cake
+  - dessert
+  - semolina
+  - syrup
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:revani
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: semolina
+    role: main
+    amount: many
+  - item: flour
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: many
+  - item: fat
+    role: required
+    amount: normal
+  - item: lemon
+    role: addition
+    amount: little
+  name_uk: Манний сиропний пиріг
+- id: turkish_irmik_helvasi
+  name: Semolina halva
+  kind: dish
+  tags:
+  - dessert
+  - halva
+  - semolina
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:irmik_helvasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: under_30
+    method:
+    - fry
+    - boil
+  comment: ''
+  ingredients:
+  - item: semolina
+    role: main
+    amount: many
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - water
+  - item: nuts
+    role: addition
+    amount: little
+  name_uk: Манної халви
+- id: turkish_un_helvasi
+  name: Flour halva
+  kind: dish
+  tags:
+  - dessert
+  - flour
+  - halva
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:un_helvasi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: under_30
+    method:
+    - fry
+    - boil
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - water
+  - item: nuts
+    role: addition
+    amount: little
+  name_uk: Борошняна халва
+- id: turkish_lokma
+  name: Fried balls in syrup
+  kind: dish
+  tags:
+  - dessert
+  - fried_dough
+  - syrup
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:lokma
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: sugar
+    role: required
+    amount: many
+  - item: water
+    role: required
+    amount: many
+  - item: fat
+    role: required
+    amount: many
+  - item: lemon
+    role: addition
+    amount: little
+  name_uk: Смажені кульки в сиропі
+- id: turkish_lokum
+  name: My pleasure
+  kind: dish
+  tags:
+  - confection
+  - dessert
+  - sugar
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:lokum
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - boil
+    - set
+  comment: ''
+  ingredients:
+  - item: sugar
+    role: main
+    amount: many
+  - item: starch
+    role: required
+    amount: many
+  - item: water
+    role: required
+    amount: many
+  - item: lemon
+    role: required
+    amount: little
+  - item: nuts
+    role: addition
+    amount: normal
+  name_uk: Моє задоволення
+- id: turkish_asure
+  name: Noah pudding made from grains, legumes and dried fruits
+  kind: dish
+  tags:
+  - dessert
+  - grain
+  - legume
+  - pudding
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:asure
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: wheat_berries
+    role: main
+    amount: many
+    accepts:
+    - grain
+  - item: chickpea
+    role: required
+    amount: normal
+    accepts:
+    - legume
+  - item: beans
+    role: required
+    amount: normal
+    accepts:
+    - legume
+  - item: sugar
+    role: required
+    amount: many
+  - item: raisins
+    role: addition
+    amount: normal
+  - item: nuts
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Ноев пудинг із зерна, бобових та сухофруктів
+- id: turkish_ayva_tatlisi
+  name: Quince in syrup
+  kind: dish
+  tags:
+  - dessert
+  - fruit
+  - syrup
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:ayva_tatlisi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: quince
+    role: main
+    amount: many
+    accepts:
+    - apple
+    - fruit
+  - item: sugar
+    role: required
+    amount: many
+  - item: water
+    role: required
+    amount: normal
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - sour_cream
+    - yogurt
+    - mascarpone
+    - soft_creamy_cheese
+    - cream_like
+  - item: nuts
+    role: addition
+    amount: little
+  name_uk: Айва в сиропе
+- id: turkish_kabak_tatlisi
+  name: Pumpkin in syrup
+  kind: dish
+  tags:
+  - dessert
+  - pumpkin
+  - syrup
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:kabak_tatlisi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - stew
+    - bake
+  comment: ''
+  ingredients:
+  - item: pumpkin
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: sugar
+    role: required
+    amount: many
+  - item: water
+    role: addition
+    amount: little
+  - item: nuts
+    role: addition
+    amount: normal
+    accepts:
+    - walnuts
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - sour_cream
+    - yogurt
+    - mascarpone
+    - soft_creamy_cheese
+    - cream_like
+  name_uk: Гарбуз у сиропі
+- id: turkish_cezerye
+  name: Carrot sweets with nuts
+  kind: dish
+  tags:
+  - carrot
+  - confection
+  - dessert
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:cezerye
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - boil
+    - set
+  comment: ''
+  ingredients:
+  - item: carrot
+    role: main
+    amount: many
+  - item: sugar
+    role: required
+    amount: many
+  - item: nuts
+    role: required
+    amount: normal
+  - item: starch
+    role: addition
+    amount: little
+  name_uk: Морквяна насолода з горіхами
+- id: turkish_hosmerim
+  name: Cheesy semolina dessert
+  kind: dish
+  tags:
+  - cheese
+  - dessert
+  - semolina
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:hosmerim
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: fresh_cheese
+    role: main
+    amount: many
+    accepts:
+    - cottage_cheese
+  - item: semolina
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  name_uk: Сирний манний десерт
+- id: turkish_sekerpare
+  name: Cookies in syrup
+  kind: dish
+  tags:
+  - cookie
+  - dessert
+  - syrup
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:sekerpare
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: semolina
+    role: addition
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: many
+  - item: water
+    role: required
+    amount: normal
+  - item: lemon
+    role: addition
+    amount: little
+  name_uk: Печиво в сиропі
+- id: turkish_kalburabasti
+  name: Cookies with nut filling in syrup
+  kind: dish
+  tags:
+  - cookie
+  - dessert
+  - nuts
+  - syrup
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:kalburabasti
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: yogurt
+    role: addition
+    amount: normal
+  - item: nuts
+    role: required
+    amount: normal
+    accepts:
+    - walnuts
+  - item: sugar
+    role: required
+    amount: many
+  - item: water
+    role: required
+    amount: normal
+  - item: lemon
+    role: addition
+    amount: little
+  name_uk: Печиво з горіховою начинкою в сиропі
+- id: turkish_sambali
+  name: Semolina pie in syrup
+  kind: dish
+  tags:
+  - cake
+  - dessert
+  - semolina
+  - syrup
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:sambali
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: semolina
+    role: main
+    amount: many
+  - item: sugar
+    role: required
+    amount: many
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  - item: nuts
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  - item: lemon
+    role: addition
+    amount: little
+  name_uk: Манний пиріг у сиропі
+- id: turkish_acibadem_kurabiyesi
+  name: Macaroons
+  kind: dish
+  tags:
+  - almond
+  - cookie
+  - dessert
+  - turkish
+  missing_allowed: 2
+  source_family: turkish:acibadem_kurabiyesi
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: almonds
+    role: main
+    amount: many
+    accepts:
+    - nuts
+  - item: sugar
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  name_uk: Мигдальне печиво
+- id: turkish_dondurma
+  name: Turkish ice cream, homemade template
+  kind: dish
+  tags:
+  - dessert
+  - ice_cream
+  - milk
+  - turkish
+  missing_allowed: 3
+  source_family: turkish:dondurma
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - freeze
+    - mix
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - sour_cream
+    - yogurt
+    - mascarpone
+    - soft_creamy_cheese
+    - cream_like
+  - item: salep
+    role: required
+    amount: little
+    accepts:
+    - starch
+  name_uk: Турецьке морозиво, домашній шаблон
+- id: turkish_hosaf
+  name: Dried fruit compote
+  kind: dish
+  tags:
+  - dessert
+  - drink
+  - fruit
+  - turkish
+  missing_allowed: 1
+  source_family: turkish:hosaf
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    - drink
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: dried_fruit
+    role: main
+    amount: many
+    accepts:
+    - fruit
+    - raisins
+  - item: sugar
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Компот із сухофруктів
+- id: turkish_tahin_pekmez
+  name: Tahini with grape syrup
+  kind: dish
+  tags:
+  - dessert
+  - quick
+  - tahini
+  - turkish
+  missing_allowed: 1
+  source_family: turkish:tahin_pekmez
+  facets:
+    cuisine:
+    - turkish
+    dish_type:
+    - dessert
+    - snack
+    time: under_10
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: tahini
+    role: main
+    amount: normal
+  - item: grape_molasses
+    role: required
+    amount: normal
+    accepts:
+    - sugar
+  - item: bread
+    role: addition
+    amount: normal
+    accepts:
+    - bread_base
+  name_uk: Тахіні з виноградним сиропом

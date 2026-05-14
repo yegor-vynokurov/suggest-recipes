@@ -1,0 +1,232 @@
+metadata:
+  version: '0.1'
+  kind: ingredients
+  domain: legumes
+ingredients:
+  beans:
+    name: beans
+    name_uk: квасоля
+    groups:
+    - bean
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  black_eyed_peas:
+    name: black eyed peas
+    name_uk: вигна / чорноока квасоля
+    groups:
+    - bean
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  black_lentils:
+    name: black lentils
+    name_uk: чорна сочевиця / уряд
+    groups:
+    - lentil
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  canned_beans:
+    name: canned beans
+    name_uk: консервована квасоля
+    groups:
+    - bean
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  canned_peas:
+    name: canned peas
+    name_uk: консервований зелений горошок
+    groups:
+    - pea_chickpea
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chana_dal:
+    name: chana dal
+    name_uk: чана дав
+    groups:
+    - lentil
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chickpea:
+    name: chickpea
+    name_uk: нут
+    groups:
+    - pea_chickpea
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chickpea_flour:
+    name: chickpea flour
+    name_uk: нутове борошно
+    groups:
+    - flour_group
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fava_beans:
+    name: fava beans
+    name_uk: боб садовий
+    groups:
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  green_peas:
+    name: green peas
+    name_uk: зелений горошок
+    groups:
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  kidney_beans:
+    name: kidney beans
+    name_uk: червона квасоля
+    groups:
+    - bean
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mung_beans:
+    name: mung beans
+    name_uk: маш/мунг
+    groups:
+    - pea_chickpea
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  peas:
+    name: peas
+    name_uk: горошок
+    groups:
+    - pea_chickpea
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  red_lentils:
+    name: red lentils
+    name_uk: червона сочевиця
+    groups:
+    - lentil
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  split_peas:
+    name: split peas
+    name_uk: колотий горох
+    groups:
+    - pea_chickpea
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - горох колотий
+  toor_dal:
+    name: toor dal
+    name_uk: тур дав
+    groups:
+    - lentil
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  urad_dal:
+    name: urad dal
+    name_uk: урад дав
+    groups:
+    - lentil
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  white_beans:
+    name: white beans
+    name_uk: біла квасоля
+    groups:
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  yellow_lentils:
+    name: yellow lentils
+    name_uk: жовта сочевиця / дав
+    groups:
+    - lentil
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false

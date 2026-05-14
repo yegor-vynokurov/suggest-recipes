@@ -1,0 +1,134 @@
+metadata:
+  version: '0.1'
+  kind: ingredients
+  domain: technical
+ingredients:
+  beef_broth:
+    name: beef broth
+    name_uk: яловичий бульйон
+    comment: 'auto-draft; priority=required; roles={''required'': 1, ''accepts'': 1}; recipes=french_espagnole_sauce, french_soupe_oignon'
+    comment_uk: 'авточернетка; пріоритет=потрібний; roles={''required'': 1, ''accepts'': 1}; рецепти=французький_іспанський_соус,
+      французький_суп_уньйон'
+    groups:
+    - technical
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    review: true
+  brown_gravy:
+    name: brown gravy
+    name_uk: підливка (з соку при смаженні м'яса чи птиці)
+    comment: 'auto-draft; priority=required; roles={''required'': 1, ''addition'': 1}; recipes=scandinavian_flaeskesteg, scandinavian_hakkebof'
+    comment_uk: 'авточернетка; пріоритет=потрібний; roles={''required'': 1, ''addition'': 1}; recipes=scandinavian_flaeskesteg,
+      scandinavian_hakkebof'
+    groups:
+    - technical
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    review: true
+  chicken_broth:
+    name: chicken broth
+    name_uk: курячий бульйон
+    groups:
+    - technical
+    abstract: false
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  fish_broth:
+    name: fish broth
+    name_uk: рибний бульйон
+    comment: 'auto-draft; priority=required; roles={''required'': 1}; recipes=italian_risotto_seafood'
+    comment_uk: 'авточернетка; пріоритет=потрібний; roles={''required'': 1}; рецепти=італійське_різотто_морепродукти'
+    groups:
+    - fish
+    - technical
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    review: true
+  gelatin:
+    name: gelatin
+    name_uk: желатин
+    comment: 'auto-draft; priority=required; roles={''required'': 1}; recipes=italian_panna_cotta'
+    comment_uk: 'авточернетка; пріоритет=потрібний; roles={''required'': 1}; рецепти=італійська_паннакота'
+    groups:
+    - technical
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    review: true
+  gravy:
+    name: gravy
+    name_uk: підливка
+    groups:
+    - technical
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  meat_broth:
+    name: meat broth
+    name_uk: м'ясний бульйон
+    groups:
+    - technical
+    abstract: false
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  sourdough_starter:
+    name: sourdough starter
+    name_uk: хлібна закваска
+    comment: 'auto-draft; priority=main; roles={''main'': 1}; recipes=czech_kyselo'
+    comment_uk: 'авточернетка; пріоритет=основний; roles={''main'': 1}; рецепти=чеське_кісело'
+    groups:
+    - technical
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    review: true
+  water:
+    name: water
+    name_uk: вода
+    groups:
+    - technical
+    abstract: false
+    aliases: []
+    inventory:
+      track: false
+      default_amount: many
+      hide_from_template: true
+      always_available: true
+  yeast:
+    name: yeast
+    name_uk: дріжджі
+    groups:
+    - technical
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false

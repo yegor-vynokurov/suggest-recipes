@@ -1,0 +1,912 @@
+metadata:
+  version: '0.1'
+  kind: ingredients
+  domain: vegetables_mushrooms_fruits
+ingredients:
+  apple:
+    name: apple
+    name_uk: яблуко
+    groups:
+    - fresh_fruit
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  apricot:
+    name: apricot
+    name_uk: абрикоси
+    groups:
+    - fresh_fruit
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  artichoke:
+    name: artichoke
+    name_uk: артишок
+    groups:
+    - vegetable
+    - leafy_green
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  asparagus:
+    name: asparagus
+    name_uk: спаржа
+    groups:
+    - leafy_green
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  banana:
+    name: banana
+    name_uk: банан
+    groups:
+    - fresh_fruit
+    - fruit
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  beet:
+    name: beet
+    name_uk: буряк
+    groups:
+    - root_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  beet_greens:
+    name: beet greens
+    name_uk: бадилля буряків
+    groups:
+    - leafy_green
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - бурячиння
+  bell_pepper:
+    name: bell pepper
+    name_uk: солодкий перець
+    groups:
+    - nightshade_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  berries:
+    name: berries
+    name_uk: ягоди
+    groups:
+    - fresh_fruit
+    - fruit
+    - berry
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - ягоди
+  blueberries:
+    name: blueberries
+    name_uk: лохина
+    groups:
+    - fresh_fruit
+    - fruit
+    - berry
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  broccoli:
+    name: broccoli
+    name_uk: броколі
+    groups:
+    - cabbage_family
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  broccoli_rabe:
+    name: broccoli rabe
+    name_uk: рапіні, гіркий брокколі
+    groups:
+    - cabbage_family
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cabbage:
+    name: cabbage
+    name_uk: капуста
+    groups:
+    - cabbage_family
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  candied_fruit:
+    name: candied fruit
+    name_uk: цукати
+    groups:
+    - dried_fruit_group
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  candied_orange:
+    name: candied orange
+    name_uk: Цитрусові цукати з цілих апельсинів
+    groups:
+    - dried_fruit_group
+    - sweetener
+    - acid_souring
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  capers:
+    name: capers
+    name_uk: каперси
+    groups:
+    - vegetable
+    - pickled_vegetable
+    - fermented_condiment
+    - acid_souring
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  carrot:
+    name: carrot
+    name_uk: морква
+    groups:
+    - root_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cauliflower:
+    name: cauliflower
+    name_uk: цвітна капуста
+    groups:
+    - cabbage_family
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  celery:
+    name: celery
+    name_uk: селера
+    groups:
+    - root_vegetable
+    - pungent_spice
+    - aromatic_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  celery_root:
+    name: celery root
+    name_uk: корінь селери
+    groups:
+    - root_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chard:
+    name: chard
+    name_uk: мангольд
+    groups:
+    - leafy_green
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cherry:
+    name: cherry
+    name_uk: вишня
+    groups:
+    - fresh_fruit
+    - fruit
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - вишня
+  chives:
+    name: chives
+    name_uk: цибуля скорода
+    groups:
+    - aromatic_vegetable
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cloudberries:
+    name: cloudberries
+    name_uk: морошка
+    groups:
+    - fresh_fruit
+    - fruit
+    - berry
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cranberries:
+    name: cranberries
+    name_uk: журавлина
+    groups:
+    - fresh_fruit
+    - fruit
+    - berry
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cucumber:
+    name: cucumber
+    name_uk: огірок
+    groups:
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  dried_fruit:
+    name: dried fruit
+    name_uk: сухофрукти
+    groups:
+    - dried_fruit_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  dried_porcini:
+    name: dried porcini
+    name_uk: сушені білі гриби
+    groups:
+    - mushroom
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  drumstick_pods:
+    name: drumstick pods
+    name_uk: стручки морінги
+    groups:
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  eggplant:
+    name: eggplant
+    name_uk: баклажан
+    groups:
+    - nightshade_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  endive:
+    name: endive
+    name_uk: салатний цикорій
+    groups:
+    - cabbage_family
+    - aromatic_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fennel_bulb:
+    name: fennel bulb
+    name_uk: розширення стебла фенхелю
+    groups:
+    - aromatic_vegetable
+    - root_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fried_onion:
+    name: fried onion
+    name_uk: смажену цибулю
+    groups:
+    - aromatic_vegetable
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  grape_leaves:
+    name: grape leaves
+    name_uk: виноградне листя
+    groups:
+    - leafy_green
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  green_beans:
+    name: green beans
+    name_uk: стручкова квасоля
+    groups:
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  greens:
+    name: greens
+    name_uk: зелень
+    groups:
+    - leafy_green
+    - fresh_herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  kohlrabi:
+    name: kohlrabi
+    name_uk: кольрабі
+    groups:
+    - cabbage_family
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  kokum:
+    name: kokum
+    name_uk: кокум
+    groups:
+    - acid_souring
+    - fruit
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  leek:
+    name: leek
+    name_uk: цибуля порей
+    groups:
+    - aromatic_vegetable
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lemon:
+    name: lemon
+    name_uk: лимон
+    groups:
+    - acid_souring
+    - fresh_fruit
+    - seasoning
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lingonberries:
+    name: lingonberries
+    name_uk: брусниця
+    groups:
+    - fresh_fruit
+    - fruit
+    - berry
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  melon:
+    name: melon
+    name_uk: диня
+    groups:
+    - squash_family
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mushroom:
+    name: mushroom
+    name_uk: гриби
+    groups:
+    - mushroom
+    abstract: false
+    aliases:
+    - mushrooms
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  nettle:
+    name: nettle
+    name_uk: кропива
+    groups:
+    - leafy_green
+    - fresh_herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - кропива
+  okra:
+    name: okra
+    name_uk: окра
+    groups:
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  olive:
+    name: olive
+    name_uk: оливка
+    groups:
+    - vegetable
+    - pickled_vegetable
+    - fermented_condiment
+    abstract: false
+    aliases:
+    - olives
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - оливка
+    - ??????
+  onion:
+    name: onion
+    name_uk: цибуля
+    groups:
+    - aromatic_vegetable
+    - vegetable
+    abstract: false
+    aliases:
+    - raw onion
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - ???? ??????
+  onion_salad:
+    name: onion salad
+    name_uk: цибульний салат
+    groups:
+    - aromatic_vegetable
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  orange:
+    name: orange
+    name_uk: апельсин
+    groups:
+    - acid_souring
+    - fresh_fruit
+    - seasoning
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  parsnip:
+    name: parsnip
+    name_uk: пастернак
+    groups:
+    - root_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pear:
+    name: pear
+    name_uk: груша
+    groups:
+    - fresh_fruit
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pickled_beet:
+    name: pickled beet
+    name_uk: маринований буряк
+    groups:
+    - fermented_condiment
+    - vegetable
+    - pickled_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pickled_cucumber:
+    name: pickled cucumber
+    name_uk: солоний огірок
+    groups:
+    - vegetable
+    - pickled_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - квашений огірок
+    - солоні огірки
+  pickled_vegetable:
+    name: pickled vegetable
+    name_uk: мариновані овочі
+    groups:
+    - fermented_condiment
+    - vegetable
+    - pickled_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  plum:
+    name: plum
+    name_uk: слива
+    groups:
+    - fresh_fruit
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  potato:
+    name: potato
+    name_uk: картопля
+    groups:
+    - root_vegetable
+    - base_starch
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  prunes:
+    name: prunes
+    name_uk: чорнослив
+    groups:
+    - dried_fruit_group
+    - fruit
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - чорнослив
+  pumpkin:
+    name: pumpkin
+    name_uk: гарбуз
+    groups:
+    - squash_family
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  quince:
+    name: quince
+    name_uk: айва
+    groups:
+    - fresh_fruit
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  radicchio:
+    name: radicchio
+    name_uk: різновид цикорію
+    groups:
+    - cabbage_family
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  raisins:
+    name: raisins
+    name_uk: родзинки
+    groups:
+    - dried_fruit_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  raspberry:
+    name: raspberry
+    name_uk: малина
+    groups:
+    - fresh_fruit
+    - fruit
+    - berry
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  red_cabbage:
+    name: red cabbage
+    name_uk: червона капуста
+    groups:
+    - cabbage_family
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  red_currant:
+    name: red currant
+    name_uk: червона смородина
+    groups:
+    - fresh_fruit
+    - fruit
+    - berry
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rutabaga:
+    name: rutabaga
+    name_uk: брюква
+    groups:
+    - root_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sauerkraut:
+    name: sauerkraut
+    name_uk: квашена капуста
+    groups:
+    - cabbage_family
+    - fermented_condiment
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - квашена капуста
+  shallot:
+    name: shallot
+    name_uk: лук шалот
+    groups:
+    - aromatic_vegetable
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sorrel:
+    name: sorrel
+    name_uk: щавель
+    groups:
+    - leafy_green
+    - acid_souring
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - щавель
+  spinach:
+    name: spinach
+    name_uk: шпинат
+    groups:
+    - leafy_green
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  strawberry:
+    name: strawberry
+    name_uk: полуниця
+    groups:
+    - fresh_fruit
+    - fruit
+    - berry
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tomato:
+    name: tomato
+    name_uk: помідор
+    groups:
+    - nightshade_vegetable
+    - tomato_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  turnip:
+    name: turnip
+    name_uk: турнепс
+    groups:
+    - aromatic_vegetable
+    - root_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  young_cabbage:
+    name: young cabbage
+    name_uk: молода капуста
+    groups:
+    - cabbage_family
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  zucchini:
+    name: zucchini
+    name_uk: кабачок
+    groups:
+    - squash_family
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  zucchini_flowers:
+    name: zucchini flowers
+    name_uk: квіти цукіні
+    groups:
+    - leafy_green
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false

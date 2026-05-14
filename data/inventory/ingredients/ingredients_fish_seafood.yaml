@@ -1,0 +1,557 @@
+metadata:
+  version: '0.1'
+  kind: ingredients
+  domain: fish_seafood
+ingredients:
+  anchovy:
+    name: anchovy
+    name_uk: анчоуси / хамса
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  baccala:
+    name: baccala
+    name_uk: солона та сушена тріска
+    groups:
+    - fish
+    - fish_product
+    - salted_fish
+    - dried_fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  baltic_herring:
+    name: baltic herring
+    name_uk: атлантичний оселедець, оселедець
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  canned_tuna:
+    name: canned tuna
+    name_uk: консервований тунець
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  carp:
+    name: carp
+    name_uk: короп
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  catfish:
+    name: catfish
+    name_uk: сом
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  clams:
+    name: clams
+    name_uk: двостулкові молюски
+    groups:
+    - seafood
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cod:
+    name: cod
+    name_uk: тріска
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  crayfish:
+    name: crayfish
+    name_uk: раки
+    groups:
+    - seafood
+    - crustacean
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fermented_fish:
+    name: fermented fish
+    name_uk: ферментована риба
+    groups:
+    - fish
+    - fish_product
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fish_roes_milt:
+    name: fish roes milt
+    name_uk: риба ікра та молоки
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  frozen_capelin:
+    name: frozen capelin
+    name_uk: заморожена мойва
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  frozen_hake:
+    name: frozen hake
+    name_uk: заморожений хек
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  haddock:
+    name: haddock
+    name_uk: пікша
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  herring:
+    name: herring
+    name_uk: оселедець
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  klippfisk:
+    name: klippfisk
+    name_uk: сушена тріска або оселедець пресовані
+    groups:
+    - fish
+    - fish_product
+    - dried_fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  langoustine:
+    name: langoustine
+    name_uk: лангустини
+    groups:
+    - seafood
+    - crustacean
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lobster_shells:
+    name: lobster shells
+    name_uk: панцирі омара
+    groups:
+    - seafood
+    - crustacean
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lutefisk:
+    name: lutefisk
+    name_uk: сушена риба, вимочена в луги
+    groups:
+    - fish
+    - fish_product
+    - dried_fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  matjes_herring:
+    name: matjes herring
+    name_uk: оселедець матіас
+    groups:
+    - fish
+    - fish_product
+    - marinated_fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mixed_freshwater_fish:
+    name: mixed freshwater fish
+    name_uk: змішана прісноводна риба
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mixed_sea_fish:
+    name: mixed sea fish
+    name_uk: суміш морської риби
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mussels:
+    name: mussels
+    name_uk: мідії
+    groups:
+    - seafood
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pickled_herring:
+    name: pickled herring
+    name_uk: маринований оселедець
+    groups:
+    - fish
+    - fish_product
+    - marinated_fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pike:
+    name: pike
+    name_uk: щука
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  plaice:
+    name: plaice
+    name_uk: камбала
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rakfisk:
+    name: rakfisk
+    name_uk: ракфіск - норвезька рибна страва, приготовлена ​​з форелі або гольця, засолена і автолізована протягом двох-трьох
+      місяців, а то й року.
+    groups:
+    - fish
+    - fish_product
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  salmon:
+    name: salmon
+    name_uk: лосось
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  salt_cod:
+    name: salt cod
+    name_uk: солона тріска
+    groups:
+    - fish
+    - fish_product
+    - salted_fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  salted_herring:
+    name: salted herring
+    name_uk: солоний оселедець
+    groups:
+    - fish
+    - fish_product
+    - salted_fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  salted_mackerel:
+    name: salted mackerel
+    name_uk: солона скумбрія
+    groups:
+    - fish
+    - fish_product
+    - salted_fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sardines:
+    name: sardines
+    name_uk: сардини
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  scallops:
+    name: scallops
+    name_uk: морські гребінці
+    groups:
+    - seafood
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  shellfish:
+    name: shellfish
+    name_uk: молюски
+    groups:
+    - seafood
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  shrimp:
+    name: shrimp
+    name_uk: креветки
+    groups:
+    - seafood
+    - crustacean
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  shrimp_shells:
+    name: shrimp shells
+    name_uk: панцирі креветок
+    groups:
+    - seafood
+    - crustacean
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  skrei:
+    name: skrei
+    name_uk: атлантична тріска
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  smoked_fish:
+    name: smoked fish
+    name_uk: копчена риба
+    groups:
+    - fish
+    - fish_product
+    - smoked_fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  smoked_salmon:
+    name: smoked salmon
+    name_uk: копчений лосось
+    groups:
+    - fish
+    - fish_product
+    - smoked_fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  snails:
+    name: snails
+    name_uk: равлики
+    groups:
+    - seafood
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sole_fish:
+    name: sole fish
+    name_uk: щось типу камбали
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  squid:
+    name: squid
+    name_uk: кальмари
+    groups:
+    - seafood
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  stockfish:
+    name: stockfish
+    name_uk: в'ялена риба
+    groups:
+    - fish
+    - fish_product
+    - dried_fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  surstromming:
+    name: surstromming
+    name_uk: консервований квашений оселедець
+    groups:
+    - fish
+    - fish_product
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  trout:
+    name: trout
+    name_uk: форель
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  vendace:
+    name: vendace
+    name_uk: європейська ряпушка
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  white_fish:
+    name: white fish
+    name_uk: біла риба
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false

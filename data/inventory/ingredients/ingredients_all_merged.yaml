@@ -1,0 +1,6845 @@
+metadata:
+  version: '0.1'
+  kind: merged_ingredients
+categories:
+  ingredient:
+    name: ingredient
+    name_uk: інгредієнт
+    parents: []
+    abstract: true
+  abstract_ingredient:
+    name: abstract ingredient
+    name_uk: абстрактна категорія-інгредієнт
+    parents:
+    - ingredient
+    abstract: true
+  technical:
+    name: technical
+    name_uk: технічні інгредієнти
+    parents:
+    - ingredient
+    abstract: true
+  protein:
+    name: protein
+    name_uk: білкові продукти
+    parents:
+    - ingredient
+    abstract: true
+  meat:
+    name: meat
+    name_uk: м'ясо
+    parents:
+    - protein
+    abstract: true
+  meat_piece:
+    name: meat piece
+    name_uk: м'ясо шматочками
+    parents:
+    - meat
+    abstract: true
+  meat_on_bone:
+    name: meat on bone
+    name_uk: м'ясо на кістки / ребра / гомілки
+    parents:
+    - meat_piece
+    abstract: true
+  cutlet_meat:
+    name: cutlet meat
+    name_uk: м'ясо для відбивних
+    parents:
+    - meat_piece
+    abstract: true
+  broth_meat:
+    name: broth meat
+    name_uk: м'ясо або кістки для бульйону
+    parents:
+    - meat
+    abstract: true
+  minced_meat:
+    name: minced meat
+    name_uk: фарш
+    parents:
+    - meat
+    abstract: true
+  poultry:
+    name: poultry
+    name_uk: птах
+    parents:
+    - meat
+    abstract: true
+  red_meat:
+    name: red meat
+    name_uk: червоне м'ясо
+    parents:
+    - meat
+    abstract: true
+  meat_product:
+    name: meat product
+    name_uk: м'ясні вироби
+    parents:
+    - meat
+    abstract: true
+  prepared_meat:
+    name: prepared meat
+    name_uk: готові м'ясні вироби
+    parents:
+    - meat_product
+    abstract: true
+  sausage_product:
+    name: sausage product
+    name_uk: ковбаси та ковбасні вироби
+    parents:
+    - meat_product
+    - prepared_meat
+    abstract: true
+  offal:
+    name: offal
+    name_uk: субпродукти
+    parents:
+    - meat
+    abstract: true
+  liver_offal:
+    name: liver offal
+    name_uk: печінка та печінкові субпродукти
+    parents:
+    - offal
+    abstract: true
+  fish:
+    name: fish
+    name_uk: риба
+    parents:
+    - protein
+    abstract: true
+  fish_product:
+    name: fish product
+    name_uk: оброблена риба та рибні вироби
+    parents:
+    - fish
+    abstract: true
+  marinated_fish:
+    name: marinated fish
+    name_uk: маринована риба
+    parents:
+    - fish_product
+    abstract: true
+  salted_fish:
+    name: salted fish
+    name_uk: солона риба
+    parents:
+    - fish_product
+    abstract: true
+  dried_fish:
+    name: dried fish
+    name_uk: сушена риба
+    parents:
+    - fish_product
+    abstract: true
+  smoked_fish:
+    name: smoked fish
+    name_uk: копчена риба
+    parents:
+    - fish_product
+    abstract: true
+  seafood:
+    name: seafood
+    name_uk: морепродукти
+    parents:
+    - protein
+    abstract: true
+  crustacean:
+    name: crustacean
+    name_uk: ракоподібні
+    parents:
+    - seafood
+    abstract: true
+  egg:
+    name: egg
+    name_uk: яйця
+    parents:
+    - protein
+    abstract: true
+  dairy:
+    name: dairy
+    name_uk: молочні продукти
+    parents:
+    - protein
+    abstract: true
+  milk_like:
+    name: milk like
+    name_uk: молоко та близькі рідкі молочні продукти
+    parents:
+    - dairy
+    abstract: true
+  cream_like:
+    name: cream like
+    name_uk: вершкова / сметанна основа
+    parents:
+    - dairy
+    abstract: true
+  fermented_dairy:
+    name: fermented dairy
+    name_uk: кисломолочні продукти
+    parents:
+    - dairy
+    abstract: true
+  sour_cream_like:
+    name: sour cream like
+    name_uk: сметанна/кисломолочна вершкова основа
+    parents:
+    - cream_like
+    - fermented_dairy
+    abstract: true
+  cheese:
+    name: cheese
+    name_uk: сир
+    parents:
+    - dairy
+    abstract: true
+  fresh_cheese_group:
+    name: fresh cheese group
+    name_uk: свіжий сир / сир
+    parents:
+    - cheese
+    abstract: true
+  soft_creamy_cheese:
+    name: soft creamy cheese
+    name_uk: м'який вершковий сир
+    parents:
+    - cheese
+    abstract: true
+  legume:
+    name: legume
+    name_uk: бобові
+    parents:
+    - protein
+    abstract: true
+  bean:
+    name: bean
+    name_uk: квасоля та квасоля
+    parents:
+    - legume
+    abstract: true
+  lentil:
+    name: lentil
+    name_uk: сочевиця і дав
+    parents:
+    - legume
+    abstract: true
+  pea_chickpea:
+    name: pea chickpea
+    name_uk: горох, нут, маш
+    parents:
+    - legume
+    abstract: true
+  plant_food:
+    name: plant food
+    name_uk: рослинні продукти
+    parents:
+    - ingredient
+    abstract: true
+  base_starch:
+    name: base starch
+    name_uk: крохмальна основа
+    parents:
+    - plant_food
+    abstract: true
+  grain:
+    name: grain
+    name_uk: крупи та зерно
+    parents:
+    - base_starch
+    abstract: true
+  rice_group:
+    name: rice group
+    name_uk: рисова основа
+    parents:
+    - grain
+    abstract: true
+  wheat_group:
+    name: wheat group
+    name_uk: пшениця та пшенична основа
+    parents:
+    - grain
+    abstract: true
+  corn_group:
+    name: corn group
+    name_uk: кукурудзяна основа
+    parents:
+    - grain
+    abstract: true
+  flour_group:
+    name: flour group
+    name_uk: борошно та борошняна основа
+    parents:
+    - base_starch
+    abstract: true
+  bread_base:
+    name: bread base
+    name_uk: хлібна основа
+    parents:
+    - base_starch
+    abstract: true
+  flatbread:
+    name: flatbread
+    name_uk: плоский хліб / коржі
+    parents:
+    - bread_base
+    abstract: true
+  pasta_noodle:
+    name: pasta noodle
+    name_uk: паста, локшина та вермішель
+    parents:
+    - base_starch
+    abstract: true
+  vegetable:
+    name: vegetable
+    name_uk: овочі
+    parents:
+    - plant_food
+    abstract: true
+  vegetable_mix:
+    name: vegetable mix
+    name_uk: суміш овочів
+    parents:
+    - vegetable
+    abstract: true
+  root_vegetable:
+    name: root vegetable
+    name_uk: коренеплоди та бульби
+    parents:
+    - vegetable
+    abstract: true
+  leafy_green:
+    name: leafy green
+    name_uk: листова зелень
+    parents:
+    - vegetable
+    abstract: true
+  nightshade_vegetable:
+    name: nightshade vegetable
+    name_uk: пасльонові овочі
+    parents:
+    - vegetable
+    abstract: true
+  cabbage_family:
+    name: cabbage family
+    name_uk: капустяні
+    parents:
+    - vegetable
+    abstract: true
+  pickled_vegetable:
+    name: pickled vegetable
+    name_uk: мариновані овочі
+    parents:
+    - vegetable
+    abstract: true
+  squash_family:
+    name: squash family
+    name_uk: гарбузові та кабачкові
+    parents:
+    - vegetable
+    abstract: true
+  mushroom:
+    name: mushroom
+    name_uk: гриби
+    parents:
+    - plant_food
+    abstract: true
+  fruit:
+    name: fruit
+    name_uk: фрукти та сухофрукти
+    parents:
+    - plant_food
+    abstract: true
+  fresh_fruit:
+    name: fresh fruit
+    name_uk: свіжі фрукти
+    parents:
+    - fruit
+    abstract: true
+  berry:
+    name: berry
+    name_uk: ягоди
+    parents:
+    - fresh_fruit
+    abstract: true
+  dried_fruit_group:
+    name: dried fruit group
+    name_uk: сухофрукти
+    parents:
+    - fruit
+    abstract: true
+  nuts:
+    name: nuts
+    name_uk: горіхи
+    parents:
+    - plant_food
+    abstract: true
+  seed:
+    name: seed
+    name_uk: насіння
+    parents:
+    - plant_food
+    abstract: true
+  fat:
+    name: fat
+    name_uk: жири
+    parents:
+    - ingredient
+    abstract: true
+  animal_fat:
+    name: animal fat
+    name_uk: тваринні жири
+    parents:
+    - fat
+    abstract: true
+  plant_oil:
+    name: plant oil
+    name_uk: рослинні олії
+    parents:
+    - fat
+    abstract: true
+  sweetener:
+    name: sweetener
+    name_uk: солодка основа
+    parents:
+    - ingredient
+    abstract: true
+  seasoning:
+    name: seasoning
+    name_uk: приправи та смакові добавки
+    parents:
+    - ingredient
+    abstract: true
+  sauce:
+    name: sauce
+    name_uk: соуси
+    parents:
+    - seasoning
+    abstract: true
+  fruit_preserve:
+    name: fruit preserve
+    name_uk: варення / повидло / джем
+    parents:
+    - sauce
+    - sweetener
+    abstract: true
+  chutney_group:
+    name: chutney group
+    name_uk: чатні
+    parents:
+    - sauce
+    abstract: true
+  tomato_base:
+    name: tomato base
+    name_uk: томатна основа
+    parents:
+    - sauce
+    - nightshade_vegetable
+    abstract: true
+  acid_souring:
+    name: acid souring
+    name_uk: кисла добавка
+    parents:
+    - seasoning
+    abstract: true
+  fermented_condiment:
+    name: fermented condiment
+    name_uk: ферментовані соуси та оцти
+    parents:
+    - seasoning
+    abstract: true
+  spice:
+    name: spice
+    name_uk: спеції
+    parents:
+    - seasoning
+    abstract: true
+  hot_spice:
+    name: hot spice
+    name_uk: гострі спеції
+    parents:
+    - spice
+    abstract: true
+  chili_spice:
+    name: chili spice
+    name_uk: чилі та червоний перець
+    parents:
+    - hot_spice
+    abstract: true
+  pungent_spice:
+    name: pungent spice
+    name_uk: різкі / пекучі спеції
+    parents:
+    - spice
+    abstract: true
+  mild_spice:
+    name: mild spice
+    name_uk: м'які спеції
+    parents:
+    - spice
+    abstract: true
+  warm_spice:
+    name: warm spice
+    name_uk: теплі солодкувато-пряні спеції
+    parents:
+    - spice
+    abstract: true
+  earthy_spice:
+    name: earthy spice
+    name_uk: землісті та фонові спеції
+    parents:
+    - spice
+    abstract: true
+  seed_spice:
+    name: seed spice
+    name_uk: насіннєві спеції
+    parents:
+    - spice
+    abstract: true
+  color_spice:
+    name: color spice
+    name_uk: колірні спеції
+    parents:
+    - spice
+    abstract: true
+  aromatic_spice:
+    name: aromatic spice
+    name_uk: ароматичні спеції
+    parents:
+    - spice
+    abstract: true
+  masala_mix:
+    name: masala mix
+    name_uk: суміші спецій/масла
+    parents:
+    - spice
+    abstract: true
+  herb:
+    name: herb
+    name_uk: трави
+    parents:
+    - seasoning
+    abstract: true
+  fresh_herb:
+    name: fresh herb
+    name_uk: свіжі трави
+    parents:
+    - herb
+    abstract: true
+  dried_herb:
+    name: dried herb
+    name_uk: сухі трави
+    parents:
+    - herb
+    abstract: true
+  aromatic_vegetable:
+    name: aromatic vegetable
+    name_uk: ароматичні овочі
+    parents:
+    - seasoning
+    - vegetable
+    abstract: true
+  prepared_component:
+    name: prepared component
+    name_uk: готові компоненти
+    parents:
+    - ingredient
+    abstract: true
+ingredients:
+  allspice:
+    name: allspice
+    name_uk: запашний перець
+    groups:
+    - warm_spice
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  almonds:
+    name: almonds
+    name_uk: мигдаль
+    groups:
+    - nuts
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  anchovy:
+    name: anchovy
+    name_uk: анчоуси / хамса
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  andouillette:
+    name: andouillette
+    name_uk: сорт ковбаси типу зельця
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  apple:
+    name: apple
+    name_uk: яблуко
+    groups:
+    - fresh_fruit
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  apricot:
+    name: apricot
+    name_uk: абрикоси
+    groups:
+    - fresh_fruit
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  apricot_jam:
+    name: apricot jam
+    name_uk: абрикосове варення
+    groups:
+    - sweetener
+    - sauce
+    - fruit_preserve
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  arborio_rice:
+    name: arborio rice
+    name_uk: рис арборіо
+    groups:
+    - rice_group
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  artichoke:
+    name: artichoke
+    name_uk: артишок
+    groups:
+    - vegetable
+    - leafy_green
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  arugula:
+    name: arugula
+    name_uk: рукола
+    groups:
+    - dried_herb
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  asparagus:
+    name: asparagus
+    name_uk: спаржа
+    groups:
+    - leafy_green
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  baccala:
+    name: baccala
+    name_uk: солона та сушена тріска
+    groups:
+    - fish
+    - fish_product
+    - salted_fish
+    - dried_fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  bacon:
+    name: bacon
+    name_uk: бекон
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  baguette:
+    name: baguette
+    name_uk: багет
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  baltic_herring:
+    name: baltic herring
+    name_uk: атлантичний оселедець, оселедець
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  banana:
+    name: banana
+    name_uk: банан
+    groups:
+    - fresh_fruit
+    - fruit
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  barley:
+    name: barley
+    name_uk: перловка
+    groups:
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - перлова крупа
+  barley_flour:
+    name: barley flour
+    name_uk: ячмінне борошно
+    groups:
+    - corn_group
+    - flour_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  basil:
+    name: basil
+    name_uk: базилік
+    groups:
+    - dried_herb
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  bay_leaf:
+    name: bay leaf
+    name_uk: лавровий лист
+    groups:
+    - dried_herb
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  beans:
+    name: beans
+    name_uk: квасоля
+    groups:
+    - bean
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  bechamel:
+    name: bechamel
+    name_uk: соус бешамель
+    groups:
+    - sauce
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  beef_bones:
+    name: beef bones
+    name_uk: яловичі кістки
+    groups:
+    - red_meat
+    - meat_piece
+    - meat_on_bone
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  beef_broth:
+    name: beef broth
+    name_uk: яловичий бульйон
+    comment: 'auto-draft; priority=required; roles={''required'': 1, ''accepts'': 1}; recipes=french_espagnole_sauce, french_soupe_oignon'
+    comment_uk: 'авточернетка; пріоритет=потрібний; roles={''required'': 1, ''accepts'': 1}; рецепти=французький_іспанський_соус,
+      французький_суп_уньйон'
+    groups:
+    - technical
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    review: true
+  beef_chunks:
+    name: beef chunks
+    name_uk: яловичина шматочками
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  beef_sirloin:
+    name: beef sirloin
+    name_uk: яловича вирізка
+    groups:
+    - red_meat
+    - meat_piece
+    - cutlet_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  beef_steak:
+    name: beef steak
+    name_uk: стейк яловичий / відбивна
+    groups:
+    - red_meat
+    - cutlet_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - яловича відбивна
+  beet:
+    name: beet
+    name_uk: буряк
+    groups:
+    - root_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  beet_greens:
+    name: beet greens
+    name_uk: бадилля буряків
+    groups:
+    - leafy_green
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - бурячиння
+  bell_pepper:
+    name: bell pepper
+    name_uk: солодкий перець
+    groups:
+    - nightshade_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  berries:
+    name: berries
+    name_uk: ягоди
+    groups:
+    - fresh_fruit
+    - fruit
+    - berry
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - ягоди
+  biryani_masala:
+    name: biryani masala
+    name_uk: бір'яни масалу
+    groups:
+    - masala_mix
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  biscuit_crumbs:
+    name: biscuit crumbs
+    name_uk: бісквітні крихти
+    groups:
+    - bread_base
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  black_eyed_peas:
+    name: black eyed peas
+    name_uk: вигна / чорноока квасоля
+    groups:
+    - bean
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  black_lentils:
+    name: black lentils
+    name_uk: чорна сочевиця / уряд
+    groups:
+    - lentil
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  black_pepper:
+    name: black pepper
+    name_uk: чорний перець
+    groups:
+    - hot_spice
+    - pungent_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  blood_sausage_base:
+    name: blood sausage base
+    name_uk: основа для кров'яної ковбаси
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - кров'янка
+    - кров'яна ковбаса
+  blueberries:
+    name: blueberries
+    name_uk: лохина
+    groups:
+    - fresh_fruit
+    - fruit
+    - berry
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  boiled_sausage:
+    name: boiled sausage
+    name_uk: варена ковбаса
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  bouquet_garni:
+    name: bouquet garni
+    name_uk: букет запашних трав
+    groups:
+    - aromatic_spice
+    - herb
+    - fresh_herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  bread:
+    name: bread
+    name_uk: хліб
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  bread_base:
+    name: bread base
+    name_uk: хлібна основа
+    groups:
+    - abstract_ingredient
+    - bread_base
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  bread_dough:
+    name: bread dough
+    name_uk: тісто
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  bread_dumpling:
+    name: bread dumpling
+    name_uk: кнедліки
+    groups:
+    - bread_base
+    - prepared_component
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  bread_roll:
+    name: bread roll
+    name_uk: булка
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  breadcrumbs:
+    name: breadcrumbs
+    name_uk: панірувальні сухарі
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  bresaola:
+    name: bresaola
+    name_uk: брезаола
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  broccoli:
+    name: broccoli
+    name_uk: броколі
+    groups:
+    - cabbage_family
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  broccoli_rabe:
+    name: broccoli rabe
+    name_uk: рапіні, гіркий брокколі
+    groups:
+    - cabbage_family
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  broth_meat:
+    name: broth meat
+    name_uk: м'ясо або кістки для бульйону
+    groups:
+    - abstract_ingredient
+    - broth_meat
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  brown_gravy:
+    name: brown gravy
+    name_uk: підливка (з соку при смаженні м'яса чи птиці)
+    comment: 'auto-draft; priority=required; roles={''required'': 1, ''addition'': 1}; recipes=scandinavian_flaeskesteg, scandinavian_hakkebof'
+    comment_uk: 'авточернетка; пріоритет=потрібний; roles={''required'': 1, ''addition'': 1}; recipes=scandinavian_flaeskesteg,
+      scandinavian_hakkebof'
+    groups:
+    - technical
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    review: true
+  brunost:
+    name: brunost
+    name_uk: особливий тип норвезького сиру
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  bucatini:
+    name: bucatini
+    name_uk: товсті макарони
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  buckwheat:
+    name: buckwheat
+    name_uk: гречка
+    groups:
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  buckwheat_flour:
+    name: buckwheat flour
+    name_uk: гречане борошно
+    groups:
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  buckwheat_pasta:
+    name: buckwheat pasta
+    name_uk: плоскі стрічкоподібні макарони
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  bulgur:
+    name: bulgur
+    name_uk: булгур
+    groups:
+    - wheat_group
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  butter:
+    name: butter
+    name_uk: масло вершкове
+    groups:
+    - animal_fat
+    - fat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  buttermilk:
+    name: buttermilk
+    name_uk: пахта, сироватка
+    groups:
+    - milk_like
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cabbage:
+    name: cabbage
+    name_uk: капуста
+    groups:
+    - cabbage_family
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cake_crumbs:
+    name: cake crumbs
+    name_uk: крихти пирога
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  calvados:
+    name: calvados
+    name_uk: кальвадос
+    groups:
+    - acid_souring
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  candied_fruit:
+    name: candied fruit
+    name_uk: цукати
+    groups:
+    - dried_fruit_group
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  candied_orange:
+    name: candied orange
+    name_uk: Цитрусові цукати з цілих апельсинів
+    groups:
+    - dried_fruit_group
+    - sweetener
+    - acid_souring
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  canned_beans:
+    name: canned beans
+    name_uk: консервована квасоля
+    groups:
+    - bean
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  canned_peas:
+    name: canned peas
+    name_uk: консервований зелений горошок
+    groups:
+    - pea_chickpea
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  canned_tuna:
+    name: canned tuna
+    name_uk: консервований тунець
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cannelloni_tubes:
+    name: cannelloni tubes
+    name_uk: макарони для фарширування, товсті труби
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  capers:
+    name: capers
+    name_uk: каперси
+    groups:
+    - vegetable
+    - pickled_vegetable
+    - fermented_condiment
+    - acid_souring
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  caramel:
+    name: caramel
+    name_uk: карамель
+    groups:
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  caraway:
+    name: caraway
+    name_uk: коровай
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cardamom:
+    name: cardamom
+    name_uk: кардамон
+    groups:
+    - warm_spice
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  carp:
+    name: carp
+    name_uk: короп
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  carrot:
+    name: carrot
+    name_uk: морква
+    groups:
+    - root_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cashews:
+    name: cashews
+    name_uk: кеш'ю
+    groups:
+    - nuts
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  catfish:
+    name: catfish
+    name_uk: сом
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cauliflower:
+    name: cauliflower
+    name_uk: цвітна капуста
+    groups:
+    - cabbage_family
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  celery:
+    name: celery
+    name_uk: селера
+    groups:
+    - root_vegetable
+    - pungent_spice
+    - aromatic_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  celery_root:
+    name: celery root
+    name_uk: корінь селери
+    groups:
+    - root_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  celery_stalk:
+    name: celery stalk
+    name_uk: стебло селери
+    groups:
+    - aromatic_spice
+    - herb
+    - fresh_herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chana_dal:
+    name: chana dal
+    name_uk: чана дав
+    groups:
+    - lentil
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chana_masala_spice:
+    name: chana masala spice
+    name_uk: чана масалу спеції
+    groups:
+    - masala_mix
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chapati:
+    name: chapati
+    name_uk: чапаті
+    groups:
+    - bread_base
+    - flatbread
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chard:
+    name: chard
+    name_uk: мангольд
+    groups:
+    - leafy_green
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cherry:
+    name: cherry
+    name_uk: вишня
+    groups:
+    - fresh_fruit
+    - fruit
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - вишня
+  cherry_sauce:
+    name: cherry sauce
+    name_uk: вишневий соус
+    groups:
+    - sauce
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chestnut_flour:
+    name: chestnut flour
+    name_uk: каштанове борошно
+    groups:
+    - flour_group
+    - nuts
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chestnut_puree:
+    name: chestnut puree
+    name_uk: пюре із каштану
+    groups:
+    - nuts
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chestnuts:
+    name: chestnuts
+    name_uk: каштани
+    groups:
+    - nuts
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chicken_broth:
+    name: chicken broth
+    name_uk: курячий бульйон
+    groups:
+    - technical
+    abstract: false
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  chicken_drumstick:
+    name: chicken drumstick
+    name_uk: куряча гомілка
+    groups:
+    - poultry
+    - meat_piece
+    - meat_on_bone
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - куряча гомілка
+  chicken_fillet:
+    name: chicken fillet
+    name_uk: куряче філе
+    groups:
+    - poultry
+    - meat_piece
+    - cutlet_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chicken_gizzards:
+    name: chicken gizzards
+    name_uk: курячі шлунки
+    groups:
+    - poultry
+    - meat_piece
+    - offal
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chicken_liver:
+    name: chicken liver
+    name_uk: курячі потрухи
+    groups:
+    - poultry
+    - offal
+    - liver_offal
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chicken_parts:
+    name: chicken parts
+    name_uk: частини курки
+    groups:
+    - poultry
+    - broth_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chicken_pieces:
+    name: chicken pieces
+    name_uk: курка шматочками
+    groups:
+    - poultry
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chicken_thigh:
+    name: chicken thigh
+    name_uk: куряче стегно
+    groups:
+    - poultry
+    - meat_piece
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chickpea:
+    name: chickpea
+    name_uk: нут
+    groups:
+    - pea_chickpea
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chickpea_flour:
+    name: chickpea flour
+    name_uk: нутове борошно
+    groups:
+    - flour_group
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chives:
+    name: chives
+    name_uk: цибуля скорода
+    groups:
+    - aromatic_vegetable
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chocolate:
+    name: chocolate
+    name_uk: шоколад
+    groups:
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chutney:
+    name: chutney
+    name_uk: чатні
+    groups:
+    - chutney_group
+    - sauce
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cinnamon:
+    name: cinnamon
+    name_uk: кориця
+    groups:
+    - warm_spice
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  clams:
+    name: clams
+    name_uk: двостулкові молюски
+    groups:
+    - seafood
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cloudberries:
+    name: cloudberries
+    name_uk: морошка
+    groups:
+    - fresh_fruit
+    - fruit
+    - berry
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cloves:
+    name: cloves
+    name_uk: гвоздика
+    groups:
+    - warm_spice
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cocoa:
+    name: cocoa
+    name_uk: какао
+    groups:
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cocoa_powder:
+    name: cocoa powder
+    name_uk: какао-порошок
+    groups:
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    aliases_uk:
+    - какао
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  coconut:
+    name: coconut
+    name_uk: кокос
+    groups:
+    - nuts
+    - plant_food
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  coconut_flakes:
+    name: coconut flakes
+    name_uk: кокосові пластівці
+    groups:
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  coconut_milk:
+    name: coconut milk
+    name_uk: кокосове молоко
+    groups:
+    - sauce
+    - plant_food
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  coconut_oil:
+    name: coconut oil
+    name_uk: кокосова олія
+    groups:
+    - plant_oil
+    - fat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cod:
+    name: cod
+    name_uk: тріска
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  coffee:
+    name: coffee
+    name_uk: кава
+    groups:
+    - warm_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cognac:
+    name: cognac
+    name_uk: коньяк
+    groups:
+    - acid_souring
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  corn:
+    name: corn
+    name_uk: кукурудза
+    groups:
+    - corn_group
+    - grain
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  corn_grits:
+    name: corn grits
+    name_uk: кукурудзяна крупа
+    groups:
+    - corn_group
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cornmeal:
+    name: cornmeal
+    name_uk: кукурудзяне борошно
+    groups:
+    - corn_group
+    - flour_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cottage_cheese:
+    name: cottage cheese
+    name_uk: сир
+    groups:
+    - fresh_cheese_group
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cranberries:
+    name: cranberries
+    name_uk: журавлина
+    groups:
+    - fresh_fruit
+    - fruit
+    - berry
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cranberry_jam:
+    name: cranberry jam
+    name_uk: журавлинний джем
+    groups:
+    - sweetener
+    - sauce
+    - fruit_preserve
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  crayfish:
+    name: crayfish
+    name_uk: раки
+    groups:
+    - seafood
+    - crustacean
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cream:
+    name: cream
+    name_uk: вершки
+    groups:
+    - cream_like
+    - milk_like
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cream_cheese:
+    name: cream cheese
+    name_uk: вершковий сир
+    groups:
+    - soft_creamy_cheese
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  csipetke:
+    name: csipetke
+    name_uk: угорські галушки, приготовані з яєць та борошна, без додавання води
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cucumber:
+    name: cucumber
+    name_uk: огірок
+    groups:
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cumin:
+    name: cumin
+    name_uk: кумін / зіра
+    groups:
+    - seed_spice
+    - aromatic_spice
+    - earthy_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cured_lamb:
+    name: cured lamb
+    name_uk: баранячий хамон
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  curry_leaves:
+    name: curry leaves
+    name_uk: листя каррі
+    groups:
+    - fresh_herb
+    - herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  curry_powder:
+    name: curry powder
+    name_uk: порошок каррі
+    groups:
+    - masala_mix
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cutlet_meat:
+    name: cutlet meat
+    name_uk: м'ясо для відбивних
+    groups:
+    - abstract_ingredient
+    - cutlet_meat
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  dairy:
+    name: dairy
+    name_uk: молочні продукти
+    groups:
+    - abstract_ingredient
+    - dairy
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  debreceni_sausage:
+    name: debreceni sausage
+    name_uk: угорські сосиски
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  dill:
+    name: dill
+    name_uk: кріп
+    groups:
+    - dried_herb
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  dill_crown:
+    name: dill crown
+    name_uk: головки кропу
+    groups:
+    - dried_herb
+    - aromatic_spice
+    - fresh_herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  dried_fruit:
+    name: dried fruit
+    name_uk: сухофрукти
+    groups:
+    - dried_fruit_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  dried_mint:
+    name: dried mint
+    name_uk: суха м'ята
+    groups:
+    - dried_herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  dried_porcini:
+    name: dried porcini
+    name_uk: сушені білі гриби
+    groups:
+    - mushroom
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  drumstick_pods:
+    name: drumstick pods
+    name_uk: стручки морінги
+    groups:
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  dry_garlic:
+    name: dry garlic
+    name_uk: сухий часник
+    groups:
+    - aromatic_vegetable
+    - seasoning
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  duck:
+    name: duck
+    name_uk: качка
+    groups:
+    - poultry
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  duck_breast:
+    name: duck breast
+    name_uk: качина грудка
+    groups:
+    - poultry
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  duck_confit:
+    name: duck confit
+    name_uk: качка або окремі її частини, приготовлені методом конфі - повільного, до 3-4 годин, томлення в качиному жирі
+    groups:
+    - poultry
+    - meat_piece
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  duck_fat:
+    name: duck fat
+    name_uk: качиний жир
+    groups:
+    - animal_fat
+    - fat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  duck_leg:
+    name: duck leg
+    name_uk: нога качки
+    groups:
+    - poultry
+    - meat_piece
+    - meat_on_bone
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  dumplings:
+    name: dumplings
+    name_uk: галушки
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  eggplant:
+    name: eggplant
+    name_uk: баклажан
+    groups:
+    - nightshade_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  eggs:
+    name: eggs
+    name_uk: яйця
+    groups:
+    - egg
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  endive:
+    name: endive
+    name_uk: салатний цикорій
+    groups:
+    - cabbage_family
+    - aromatic_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  falukorv:
+    name: falukorv
+    name_uk: ковбаса фалу з копченого м'яса
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  farro:
+    name: farro
+    name_uk: вид пшеничних зерен з горіховим ароматом
+    groups:
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fat:
+    name: fat
+    name_uk: жир
+    groups:
+    - abstract_ingredient
+    - fat
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  fava_beans:
+    name: fava beans
+    name_uk: боб садовий
+    groups:
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fenalar:
+    name: fenalar
+    name_uk: феналар
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fennel:
+    name: fennel
+    name_uk: фенхель
+    groups:
+    - seed_spice
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fennel_bulb:
+    name: fennel bulb
+    name_uk: розширення стебла фенхелю
+    groups:
+    - aromatic_vegetable
+    - root_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fennel_seeds:
+    name: fennel seeds
+    name_uk: насіння фенхелю
+    groups:
+    - seed
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fermented_fish:
+    name: fermented fish
+    name_uk: ферментована риба
+    groups:
+    - fish
+    - fish_product
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fermented_lamb:
+    name: fermented lamb
+    name_uk: ферментоване ягня
+    groups:
+    - meat_product
+    - prepared_meat
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  feta_cheese:
+    name: feta cheese
+    name_uk: фета / бринза
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fettuccine:
+    name: fettuccine
+    name_uk: тонкі плоскі смужки тіста
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  filo_dough:
+    name: filo dough
+    name_uk: тісто філо
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fine_herbs:
+    name: fine herbs
+    name_uk: дрібні трави
+    groups:
+    - aromatic_spice
+    - herb
+    - fresh_herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fish:
+    name: fish
+    name_uk: риба
+    groups:
+    - abstract_ingredient
+    - fish
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  fish_broth:
+    name: fish broth
+    name_uk: рибний бульйон
+    comment: 'auto-draft; priority=required; roles={''required'': 1}; recipes=italian_risotto_seafood'
+    comment_uk: 'авточернетка; пріоритет=потрібний; roles={''required'': 1}; рецепти=італійське_різотто_морепродукти'
+    groups:
+    - fish
+    - technical
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    review: true
+  fish_roes_milt:
+    name: fish roes milt
+    name_uk: риба ікра та молоки
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fish_sauce_base:
+    name: fish sauce base
+    name_uk: рибний соус
+    groups:
+    - fish_product
+    - sauce
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  flatbread:
+    name: flatbread
+    name_uk: коржик
+    groups:
+    - bread_base
+    - flatbread
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  flattened_rice:
+    name: flattened rice
+    name_uk: плющений рис/поха
+    groups:
+    - rice_group
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  flax_seeds:
+    name: flax seeds
+    name_uk: лляне насіння
+    groups:
+    - seed
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  flour:
+    name: flour
+    name_uk: борошно
+    groups:
+    - flour_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fontina:
+    name: fontina
+    name_uk: італійський напівтвердий сир
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fresh_cheese:
+    name: fresh cheese
+    name_uk: свіжий сир / сир
+    groups:
+    - soft_creamy_cheese
+    - fresh_cheese_group
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fried_onion:
+    name: fried onion
+    name_uk: смажену цибулю
+    groups:
+    - aromatic_vegetable
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  frozen_capelin:
+    name: frozen capelin
+    name_uk: заморожена мойва
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  frozen_hake:
+    name: frozen hake
+    name_uk: заморожений хек
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fruit:
+    name: fruit
+    name_uk: фрукти
+    groups:
+    - abstract_ingredient
+    - fruit
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  fruit_preserve:
+    name: fruit preserve
+    name_uk: фруктове варення / повидло
+    groups:
+    - sweetener
+    - sauce
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  garam_masala:
+    name: garam masala
+    name_uk: гарам масалу
+    groups:
+    - masala_mix
+    - warm_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  gelatin:
+    name: gelatin
+    name_uk: желатин
+    comment: 'auto-draft; priority=required; roles={''required'': 1}; recipes=italian_panna_cotta'
+    comment_uk: 'авточернетка; пріоритет=потрібний; roles={''required'': 1}; рецепти=італійська_паннакота'
+    groups:
+    - technical
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    review: true
+  generic_fish:
+    name: generic fish
+    name_uk: будь-яка риба
+    groups:
+    - abstract_ingredient
+    - fish
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  ghee:
+    name: ghee
+    name_uk: гхі / топлена олія
+    groups:
+    - animal_fat
+    - fat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ginger:
+    name: ginger
+    name_uk: імбир
+    groups:
+    - pungent_spice
+    - aromatic_vegetable
+    - seasoning
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  gingerbread:
+    name: gingerbread
+    name_uk: пряник
+    groups:
+    - bread_base
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  gingerbread_spice:
+    name: gingerbread spice
+    name_uk: пряникова спеція
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  gnocchi:
+    name: gnocchi
+    name_uk: ньоккі
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  goat_cheese:
+    name: goat cheese
+    name_uk: козячий сир
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  goose:
+    name: goose
+    name_uk: гусак
+    groups:
+    - poultry
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  goose_fat:
+    name: goose fat
+    name_uk: гусячий жир
+    groups:
+    - animal_fat
+    - fat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  goose_leg:
+    name: goose leg
+    name_uk: нога гусака
+    groups:
+    - poultry
+    - meat_piece
+    - meat_on_bone
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  goose_liver:
+    name: goose liver
+    name_uk: гусяча печінка
+    groups:
+    - poultry
+    - offal
+    - liver_offal
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  gorgonzola:
+    name: gorgonzola
+    name_uk: горгонзола
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  grain:
+    name: grain
+    name_uk: крупа / зернова основа
+    groups:
+    - abstract_ingredient
+    - grain
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  grape_leaves:
+    name: grape leaves
+    name_uk: виноградне листя
+    groups:
+    - leafy_green
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  grape_molasses:
+    name: grape molasses
+    name_uk: виноградний сироп / пекмез
+    groups:
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  gravy:
+    name: gravy
+    name_uk: підливка
+    groups:
+    - technical
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  green_beans:
+    name: green beans
+    name_uk: стручкова квасоля
+    groups:
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  green_peas:
+    name: green peas
+    name_uk: зелений горошок
+    groups:
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  greens:
+    name: greens
+    name_uk: зелень
+    groups:
+    - leafy_green
+    - fresh_herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ground_beef:
+    name: ground beef
+    name_uk: яловичий фарш
+    groups:
+    - red_meat
+    - minced_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ground_chicken:
+    name: ground chicken
+    name_uk: курячий фарш
+    groups:
+    - poultry
+    - minced_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ground_lamb:
+    name: ground lamb
+    name_uk: фарш із баранини
+    groups:
+    - red_meat
+    - minced_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ground_meat:
+    name: ground meat
+    name_uk: фарш будь-який
+    groups:
+    - abstract_ingredient
+    - minced_meat
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  ground_pork:
+    name: ground pork
+    name_uk: свинячий фарш
+    groups:
+    - red_meat
+    - minced_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ground_veal:
+    name: ground veal
+    name_uk: телячий фарш
+    groups:
+    - minced_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  gruyere:
+    name: gruyere
+    name_uk: сир грюєр
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  guanciale:
+    name: guanciale
+    name_uk: копчені свинячі щіки
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  gullac_sheets:
+    name: gullac sheets
+    name_uk: листи гюлач
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  haddock:
+    name: haddock
+    name_uk: пікша
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ham:
+    name: ham
+    name_uk: шинка
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  hard_cheese:
+    name: hard cheese
+    name_uk: твердий сир
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  hard_cheese_group:
+    name: hard cheese group
+    name_uk: тверді сири
+    groups:
+    - cheese
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  hazelnuts:
+    name: hazelnuts
+    name_uk: лісові горіхи
+    groups:
+    - nuts
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  hermelin_cheese:
+    name: hermelin cheese
+    name_uk: гермелін / м'який сир з білою пліснявою
+    groups:
+    - fresh_cheese_group
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  herring:
+    name: herring
+    name_uk: оселедець
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  honey:
+    name: honey
+    name_uk: мед
+    groups:
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - мед
+  horseradish:
+    name: horseradish
+    name_uk: хрін
+    groups:
+    - pungent_spice
+    - seasoning
+    - root_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - хрін
+  hot_paprika:
+    name: hot paprika
+    name_uk: копчена паприка
+    groups:
+    - color_spice
+    - mild_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  hotdog_bun:
+    name: hotdog bun
+    name_uk: булочка для хотдогів
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  hotdog_sausage:
+    name: hotdog sausage
+    name_uk: сосиска для хотдогу
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  hurka:
+    name: hurka
+    name_uk: домашня ковбаска
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ice_cream:
+    name: ice cream
+    name_uk: морозиво
+    groups:
+    - milk_like
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  idli_rice:
+    name: idli rice
+    name_uk: рис для ішли
+    groups:
+    - rice_group
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  isterband:
+    name: isterband
+    name_uk: підкопчена ковбаса великого помелу
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  italian_sausage:
+    name: italian sausage
+    name_uk: італійські сосиски
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  jaggery:
+    name: jaggery
+    name_uk: джагери / нерафінований цукор
+    groups:
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  jam:
+    name: jam
+    name_uk: джем
+    groups:
+    - sweetener
+    - sauce
+    - fruit_preserve
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  jelito:
+    name: jelito
+    name_uk: еліто / чеська кров'яна ковбаса
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  jitrnice:
+    name: jitrnice
+    name_uk: йітрниці / чеська ліверна ковбаса
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  juniper:
+    name: juniper
+    name_uk: ялівець
+    groups:
+    - warm_spice
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  kadayif:
+    name: kadayif
+    name_uk: кадаїф
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  kashmiri_chili:
+    name: kashmiri chili
+    name_uk: кашмірський чилі
+    groups:
+    - chili_spice
+    - hot_spice
+    - color_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ketchup:
+    name: ketchup
+    name_uk: кетчуп
+    groups:
+    - sauce
+    - tomato_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  khoya:
+    name: khoya
+    name_uk: кхоя / уварене молоко
+    groups:
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  kidney_beans:
+    name: kidney beans
+    name_uk: червона квасоля
+    groups:
+    - bean
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  kifli:
+    name: kifli
+    name_uk: рогалик з повидлом
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  klippfisk:
+    name: klippfisk
+    name_uk: сушена тріска або оселедець пресовані
+    groups:
+    - fish
+    - fish_product
+    - dried_fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  kohlrabi:
+    name: kohlrabi
+    name_uk: кольрабі
+    groups:
+    - cabbage_family
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  kokum:
+    name: kokum
+    name_uk: кокум
+    groups:
+    - acid_souring
+    - fruit
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  kunefe_cheese:
+    name: kunefe cheese
+    name_uk: сир для кюнефі
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ladyfingers:
+    name: ladyfingers
+    name_uk: бісквітне печиво витягнутої плоскої форми, зверху покрите крупинками цукру
+    groups:
+    - bread_base
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lamb:
+    name: lamb
+    name_uk: баранина
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lamb_chunks:
+    name: lamb chunks
+    name_uk: баранина шматочками
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lamb_head_trotters:
+    name: lamb head trotters
+    name_uk: бараняча голова та ніжки
+    groups:
+    - offal
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lamb_leg:
+    name: lamb leg
+    name_uk: нога ягняти
+    groups:
+    - red_meat
+    - meat_piece
+    - meat_on_bone
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lamb_ribs:
+    name: lamb ribs
+    name_uk: ребра ягняти
+    groups:
+    - red_meat
+    - meat_piece
+    - meat_on_bone
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lamb_shank:
+    name: lamb shank
+    name_uk: бараняча гомілка
+    groups:
+    - red_meat
+    - meat_piece
+    - meat_on_bone
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  langoustine:
+    name: langoustine
+    name_uk: лангустини
+    groups:
+    - seafood
+    - crustacean
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lasagna_sheets:
+    name: lasagna sheets
+    name_uk: листи лазаньї
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lavash:
+    name: lavash
+    name_uk: лаваш
+    groups:
+    - bread_base
+    - flatbread
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  leek:
+    name: leek
+    name_uk: цибуля порей
+    groups:
+    - aromatic_vegetable
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lefse:
+    name: lefse
+    name_uk: тонкі млинці
+    groups:
+    - bread_base
+    - flatbread
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  legume:
+    name: legume
+    name_uk: бобові
+    groups:
+    - abstract_ingredient
+    - legume
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  lemon:
+    name: lemon
+    name_uk: лимон
+    groups:
+    - acid_souring
+    - fresh_fruit
+    - seasoning
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lingonberries:
+    name: lingonberries
+    name_uk: брусниця
+    groups:
+    - fresh_fruit
+    - fruit
+    - berry
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lingonberry_jam:
+    name: lingonberry jam
+    name_uk: брусничний джем
+    groups:
+    - sweetener
+    - sauce
+    - fruit_preserve
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  liver:
+    name: liver
+    name_uk: печінка
+    groups:
+    - offal
+    - liver_offal
+    - meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - печінка
+  liver_pate:
+    name: liver pate
+    name_uk: печінковий паштет
+    groups:
+    - offal
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lobster_shells:
+    name: lobster shells
+    name_uk: панцирі омара
+    groups:
+    - seafood
+    - crustacean
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lutefisk:
+    name: lutefisk
+    name_uk: сушена риба, вимочена в луги
+    groups:
+    - fish
+    - fish_product
+    - dried_fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  macaroni:
+    name: macaroni
+    name_uk: макарони
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  manti:
+    name: manti
+    name_uk: манти / маленькі пельмені
+    groups:
+    - pasta_noodle
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  marjoram:
+    name: marjoram
+    name_uk: майоран
+    groups:
+    - herb
+    - dried_herb
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  maroilles:
+    name: maroilles
+    name_uk: сир Марауль
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  marsala_wine:
+    name: marsala wine
+    name_uk: вино марсала
+    groups:
+    - acid_souring
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  marzipan:
+    name: marzipan
+    name_uk: марципан
+    groups:
+    - nuts
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mascarpone:
+    name: mascarpone
+    name_uk: італійський вершковий сир
+    groups:
+    - soft_creamy_cheese
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  matjes_herring:
+    name: matjes herring
+    name_uk: оселедець матіас
+    groups:
+    - fish
+    - fish_product
+    - marinated_fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mayonnaise:
+    name: mayonnaise
+    name_uk: майонез
+    groups:
+    - sauce
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  meat:
+    name: meat
+    name_uk: м'ясо
+    groups:
+    - abstract_ingredient
+    - meat
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  meat_bones:
+    name: meat bones
+    name_uk: м'ясні кістки
+    groups:
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  meat_broth:
+    name: meat broth
+    name_uk: м'ясний бульйон
+    groups:
+    - technical
+    abstract: false
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  meat_leftovers:
+    name: meat leftovers
+    name_uk: м'ясні млинці-рулетики
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  meat_piece:
+    name: meat piece
+    name_uk: м'ясо шматочками
+    groups:
+    - abstract_ingredient
+    - meat_piece
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  meat_product:
+    name: meat product
+    name_uk: м'ясні вироби
+    groups:
+    - abstract_ingredient
+    - meat_product
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  meatballs:
+    name: meatballs
+    name_uk: котлети
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  medisterpolse:
+    name: medisterpolse
+    name_uk: датська товста пряна ковбаса
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  melon:
+    name: melon
+    name_uk: диня
+    groups:
+    - squash_family
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  melting_cheese:
+    name: melting cheese
+    name_uk: плавлений сир (можливо, фондю)
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  milk:
+    name: milk
+    name_uk: молоко
+    groups:
+    - milk_like
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  milk_powder:
+    name: milk powder
+    name_uk: сухе молоко
+    groups:
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  millet:
+    name: millet
+    name_uk: пшоно
+    groups:
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - пшоно
+  minced_meat:
+    name: minced meat
+    name_uk: фарш
+    groups:
+    - abstract_ingredient
+    - minced_meat
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  mint:
+    name: mint
+    name_uk: м'ята
+    groups:
+    - dried_herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mint_chutney:
+    name: mint chutney
+    name_uk: м'ятне чатні
+    groups:
+    - chutney_group
+    - sauce
+    - fresh_herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mixed_freshwater_fish:
+    name: mixed freshwater fish
+    name_uk: змішана прісноводна риба
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mixed_sea_fish:
+    name: mixed sea fish
+    name_uk: суміш морської риби
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  montasio:
+    name: montasio
+    name_uk: італійський напівтвердий сир із коров'ячого молока
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mozzarella:
+    name: mozzarella
+    name_uk: моцарела
+    groups:
+    - cheese
+    - dairy
+    - fresh_cheese_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mung_beans:
+    name: mung beans
+    name_uk: маш/мунг
+    groups:
+    - pea_chickpea
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mushroom:
+    name: mushroom
+    name_uk: гриби
+    groups:
+    - mushroom
+    abstract: false
+    aliases:
+    - mushrooms
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mussels:
+    name: mussels
+    name_uk: мідії
+    groups:
+    - seafood
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mustard:
+    name: mustard
+    name_uk: гірчиця
+    groups:
+    - sauce
+    - pungent_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - гірчиця
+  mustard_seeds:
+    name: mustard seeds
+    name_uk: насіння гірчиці
+    groups:
+    - seed_spice
+    - pungent_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mutton_chunks:
+    name: mutton chunks
+    name_uk: баранина / козлятина шматочками
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  nettle:
+    name: nettle
+    name_uk: кропива
+    groups:
+    - leafy_green
+    - fresh_herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - кропива
+  nihari_masala:
+    name: nihari masala
+    name_uk: німарі масалу
+    groups:
+    - masala_mix
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  nokedli:
+    name: nokedli
+    name_uk: шпецле, маленькі галушки
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  noodle:
+    name: noodle
+    name_uk: локшина
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  nutmeg:
+    name: nutmeg
+    name_uk: мускатний горіх
+    groups:
+    - warm_spice
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  nuts:
+    name: nuts
+    name_uk: горіхи
+    groups:
+    - abstract_ingredient
+    - nuts
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  oats:
+    name: oats
+    name_uk: овес
+    groups:
+    - grain
+    - rice_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  okra:
+    name: okra
+    name_uk: окра
+    groups:
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  olive:
+    name: olive
+    name_uk: оливка
+    groups:
+    - vegetable
+    - pickled_vegetable
+    - fermented_condiment
+    abstract: false
+    aliases:
+    - olives
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - оливка
+    - ??????
+  olive_oil:
+    name: olive oil
+    name_uk: оливкова олія
+    groups:
+    - plant_oil
+    - fat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  onion:
+    name: onion
+    name_uk: цибуля
+    groups:
+    - aromatic_vegetable
+    - vegetable
+    abstract: false
+    aliases:
+    - raw onion
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - ???? ??????
+  onion_salad:
+    name: onion salad
+    name_uk: цибульний салат
+    groups:
+    - aromatic_vegetable
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  orange:
+    name: orange
+    name_uk: апельсин
+    groups:
+    - acid_souring
+    - fresh_fruit
+    - seasoning
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  orange_liqueur:
+    name: orange liqueur
+    name_uk: помаранчевий лікер
+    groups:
+    - acid_souring
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  orecchiette:
+    name: orecchiette
+    name_uk: паста типу черепашок
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  oregano:
+    name: oregano
+    name_uk: орегано
+    groups:
+    - dried_herb
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  oxtail:
+    name: oxtail
+    name_uk: яловичий хвіст
+    groups:
+    - red_meat
+    - offal
+    - meat_on_bone
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pancetta:
+    name: pancetta
+    name_uk: панчетта
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  paneer:
+    name: paneer
+    name_uk: панір
+    groups:
+    - fresh_cheese_group
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pappardelle:
+    name: pappardelle
+    name_uk: великі, дуже широкі, плоскі макаронні вироби
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  paprika:
+    name: paprika
+    name_uk: паприка
+    groups:
+    - color_spice
+    - mild_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  parmesan:
+    name: parmesan
+    name_uk: пармезан
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  parsley:
+    name: parsley
+    name_uk: петрушка
+    groups:
+    - dried_herb
+    - aromatic_spice
+    - fresh_herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  parsnip:
+    name: parsnip
+    name_uk: пастернак
+    groups:
+    - root_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pasta:
+    name: pasta
+    name_uk: паста
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pastirma:
+    name: pastirma
+    name_uk: пастирма
+    groups:
+    - meat_product
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pastry_cream:
+    name: pastry cream
+    name_uk: заварний крем
+    groups:
+    - sweetener
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pate:
+    name: pate
+    name_uk: щось типу пюре з м'яса чи овочів
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pav_bhaji_masala:
+    name: pav bhaji masala
+    name_uk: упав бхаджі масалу
+    groups:
+    - masala_mix
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  peanuts:
+    name: peanuts
+    name_uk: арахіс
+    groups:
+    - nuts
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pear:
+    name: pear
+    name_uk: груша
+    groups:
+    - fresh_fruit
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pear_jam:
+    name: pear jam
+    name_uk: грушеве повидло
+    groups:
+    - sweetener
+    - sauce
+    - fruit_preserve
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  peas:
+    name: peas
+    name_uk: горошок
+    groups:
+    - pea_chickpea
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pecorino:
+    name: pecorino
+    name_uk: сир із овечого молока
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pelmeni:
+    name: pelmeni
+    name_uk: пельмені
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  penne:
+    name: penne
+    name_uk: скошені трубочки
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  piadina:
+    name: piadina
+    name_uk: тонкий італійський коржик
+    groups:
+    - bread_base
+    - flatbread
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pickled_beet:
+    name: pickled beet
+    name_uk: маринований буряк
+    groups:
+    - fermented_condiment
+    - vegetable
+    - pickled_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pickled_cucumber:
+    name: pickled cucumber
+    name_uk: солоний огірок
+    groups:
+    - vegetable
+    - pickled_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - квашений огірок
+    - солоні огірки
+  pickled_herring:
+    name: pickled herring
+    name_uk: маринований оселедець
+    groups:
+    - fish
+    - fish_product
+    - marinated_fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pickled_vegetable:
+    name: pickled vegetable
+    name_uk: мариновані овочі
+    groups:
+    - fermented_condiment
+    - vegetable
+    - pickled_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pike:
+    name: pike
+    name_uk: щука
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  piment_espelette:
+    name: piment espelette
+    name_uk: еспелетський перець
+    groups:
+    - hot_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pine_nuts:
+    name: pine nuts
+    name_uk: кедровий горіх
+    groups:
+    - nuts
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pistachios:
+    name: pistachios
+    name_uk: фісташки
+    groups:
+    - nuts
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  plaice:
+    name: plaice
+    name_uk: камбала
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  plum:
+    name: plum
+    name_uk: слива
+    groups:
+    - fresh_fruit
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  plum_jam:
+    name: plum jam
+    name_uk: сливове повидло
+    groups:
+    - sweetener
+    - sauce
+    - fruit_preserve
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  poppy_seed:
+    name: poppy seed
+    name_uk: мак
+    groups:
+    - seed
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - макове насіння
+  pork_belly:
+    name: pork belly
+    name_uk: підчеревок
+    groups:
+    - red_meat
+    - meat_piece
+    - animal_fat
+    - fat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - підчеревок
+    - свиняча грудинка
+  pork_chop:
+    name: pork chop
+    name_uk: свиняча відбивна
+    groups:
+    - red_meat
+    - cutlet_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - свиняча відбивна
+  pork_chunks:
+    name: pork chunks
+    name_uk: свинина шматочками
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pork_cracklings:
+    name: pork cracklings
+    name_uk: шкварки
+    groups:
+    - red_meat
+    - meat_piece
+    - offal
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pork_ears:
+    name: pork ears
+    name_uk: свинячі вушка
+    groups:
+    - offal
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - свинячі вушка
+    - свинячі вуха
+  pork_hock:
+    name: pork hock
+    name_uk: свиняча гомілка / рулька
+    groups:
+    - red_meat
+    - meat_piece
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - свиняча голінка
+    - свиняча гомілка
+  pork_lardons:
+    name: pork lardons
+    name_uk: нарізане сало
+    groups:
+    - red_meat
+    - meat_piece
+    - fat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pork_liver:
+    name: pork liver
+    name_uk: свиняча печінка
+    groups:
+    - meat_piece
+    - offal
+    - liver_offal
+    - meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pork_neck:
+    name: pork neck
+    name_uk: свиняча шия
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pork_ribs:
+    name: pork ribs
+    name_uk: свинячі ребра
+    groups:
+    - red_meat
+    - meat_piece
+    - meat_on_bone
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - свинячі ребра
+  pork_roast:
+    name: pork roast
+    name_uk: свиняче жарке
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pork_shank:
+    name: pork shank
+    name_uk: свиняча рулька
+    groups:
+    - red_meat
+    - meat_piece
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - свиняча рулька
+  pork_shoulder:
+    name: pork shoulder
+    name_uk: свиняча лопатка
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pork_tail:
+    name: pork tail
+    name_uk: свинячий хвіст
+    groups:
+    - offal
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - свинячий хвіст
+  pork_tenderloin:
+    name: pork tenderloin
+    name_uk: свиняча вирізка
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pork_trotters:
+    name: pork trotters
+    name_uk: свинячі ніжки
+    groups:
+    - offal
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - свинячі ніжки
+    - свинячі ноги
+  potato:
+    name: potato
+    name_uk: картопля
+    groups:
+    - root_vegetable
+    - base_starch
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  potato_dumpling:
+    name: potato dumpling
+    name_uk: картопляні галушки
+    groups:
+    - bread_base
+    - prepared_component
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  potato_salad:
+    name: potato salad
+    name_uk: картопляний салат
+    groups:
+    - prepared_component
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  potato_starch:
+    name: potato starch
+    name_uk: картопляний крохмаль
+    groups:
+    - flour_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  prosciutto:
+    name: prosciutto
+    name_uk: прошутто
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  prosciutto_cotto:
+    name: prosciutto cotto
+    name_uk: нарізана прошутто
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  prune_jam:
+    name: prune jam
+    name_uk: сливовий джем
+    groups:
+    - sweetener
+    - sauce
+    - fruit_preserve
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  prunes:
+    name: prunes
+    name_uk: чорнослив
+    groups:
+    - dried_fruit_group
+    - fruit
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - чорнослив
+  puff_pastry:
+    name: puff pastry
+    name_uk: листкове тісто
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  puffed_rice:
+    name: puffed rice
+    name_uk: повітряний рис
+    groups:
+    - rice_group
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pumpkin:
+    name: pumpkin
+    name_uk: гарбуз
+    groups:
+    - squash_family
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  puri_shells:
+    name: puri shells
+    name_uk: пурі-кульки
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  quince:
+    name: quince
+    name_uk: айва
+    groups:
+    - fresh_fruit
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rabbit:
+    name: rabbit
+    name_uk: кролик
+    groups:
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  raclette_cheese:
+    name: raclette cheese
+    name_uk: сир Раклет
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  radicchio:
+    name: radicchio
+    name_uk: різновид цикорію
+    groups:
+    - cabbage_family
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  raisins:
+    name: raisins
+    name_uk: родзинки
+    groups:
+    - dried_fruit_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rakfisk:
+    name: rakfisk
+    name_uk: ракфіск - норвезька рибна страва, приготовлена ​​з форелі або гольця, засолена і автолізована протягом двох-трьох
+      місяців, а то й року.
+    groups:
+    - fish
+    - fish_product
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rapeseed_oil:
+    name: rapeseed oil
+    name_uk: рапсова олія
+    groups:
+    - plant_oil
+    - fat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rasam_powder:
+    name: rasam powder
+    name_uk: расам масалу
+    groups:
+    - masala_mix
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  raspberry:
+    name: raspberry
+    name_uk: малина
+    groups:
+    - fresh_fruit
+    - fruit
+    - berry
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  raspberry_jam:
+    name: raspberry jam
+    name_uk: малиновий джем
+    groups:
+    - sweetener
+    - sauce
+    - fruit_preserve
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ravioli:
+    name: ravioli
+    name_uk: равіолі
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  reblochon:
+    name: reblochon
+    name_uk: реблошон
+    groups:
+    - soft_creamy_cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  red_cabbage:
+    name: red cabbage
+    name_uk: червона капуста
+    groups:
+    - cabbage_family
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  red_currant:
+    name: red currant
+    name_uk: червона смородина
+    groups:
+    - fresh_fruit
+    - fruit
+    - berry
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  red_lentils:
+    name: red lentils
+    name_uk: червона сочевиця
+    groups:
+    - lentil
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  red_pepper_flakes:
+    name: red pepper flakes
+    name_uk: пластівці червоного перцю
+    groups:
+    - chili_spice
+    - hot_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  red_sausage:
+    name: red sausage
+    name_uk: червона сосиска
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  red_wine:
+    name: red wine
+    name_uk: червоне вино
+    groups:
+    - acid_souring
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  reindeer_meat:
+    name: reindeer meat
+    name_uk: м'ясо північного оленя
+    groups:
+    - meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  remoulade:
+    name: remoulade
+    name_uk: До складу соусу традиційно входять мариновані огірки, каперси, петрушка, зелена цибуля, часник, оливкова олія,
+      пряний оцет, гірчиця та анчоуси. Якщо з ремуладу виключити анчоуси, то вийде соус тартар
+    groups:
+    - sauce
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rice:
+    name: rice
+    name_uk: рис
+    groups:
+    - rice_group
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rice_flour:
+    name: rice flour
+    name_uk: рисове борошно
+    groups:
+    - flour_group
+    - rice_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ricotta:
+    name: ricotta
+    name_uk: Рікотта
+    groups:
+    - dairy
+    - fresh_cheese_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ricotta_salata:
+    name: ricotta salata
+    name_uk: ricotta для салату
+    groups:
+    - dairy
+    - fresh_cheese_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rigatoni:
+    name: rigatoni
+    name_uk: макарони-трубочки
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  roast_beef:
+    name: roast beef
+    name_uk: запечений у духовці великий шматок яловичого м'яса
+    groups:
+    - red_meat
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rosemary:
+    name: rosemary
+    name_uk: розмарин
+    groups:
+    - dried_herb
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rugbraud:
+    name: rugbraud
+    name_uk: ісландський житній хліб
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rum:
+    name: rum
+    name_uk: ром
+    groups:
+    - acid_souring
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rutabaga:
+    name: rutabaga
+    name_uk: брюква
+    groups:
+    - root_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rye_bread:
+    name: rye bread
+    name_uk: житній хліб
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - житній хліб
+  rye_flour:
+    name: rye flour
+    name_uk: житнє борошно
+    groups:
+    - flour_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  saffron:
+    name: saffron
+    name_uk: шафран
+    groups:
+    - dried_herb
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sage:
+    name: sage
+    name_uk: спеція
+    groups:
+    - fresh_herb
+    - dried_herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  salami:
+    name: salami
+    name_uk: салямі
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  salep:
+    name: salep
+    name_uk: саліп
+    groups:
+    - flour_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  salmon:
+    name: salmon
+    name_uk: лосось
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  salo:
+    name: salo
+    name_uk: сало
+    groups:
+    - animal_fat
+    - fat
+    - meat_product
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - сало
+  salt_cod:
+    name: salt cod
+    name_uk: солона тріска
+    groups:
+    - fish
+    - fish_product
+    - salted_fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  salt_pork:
+    name: salt pork
+    name_uk: солонина зі свинини
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  salted_herring:
+    name: salted herring
+    name_uk: солоний оселедець
+    groups:
+    - fish
+    - fish_product
+    - salted_fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  salted_lamb_ribs:
+    name: salted lamb ribs
+    name_uk: солонина з баранячих ребер
+    groups:
+    - red_meat
+    - meat_piece
+    - meat_on_bone
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  salted_mackerel:
+    name: salted mackerel
+    name_uk: солона скумбрія
+    groups:
+    - fish
+    - fish_product
+    - salted_fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sambar_powder:
+    name: sambar powder
+    name_uk: самбар масалу
+    groups:
+    - masala_mix
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sardines:
+    name: sardines
+    name_uk: сардини
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sauce:
+    name: sauce
+    name_uk: соус
+    groups:
+    - abstract_ingredient
+    - sauce
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  sauerkraut:
+    name: sauerkraut
+    name_uk: квашена капуста
+    groups:
+    - cabbage_family
+    - fermented_condiment
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - квашена капуста
+  sausage_casing:
+    name: sausage casing
+    name_uk: ковбасна оболонка
+    groups:
+    - prepared_component
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - кишка для ковбаси
+    - оболонка для ковбаси
+  sausage_product:
+    name: sausage product
+    name_uk: ковбаси та ковбасні вироби
+    groups:
+    - abstract_ingredient
+    - sausage_product
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  sausages:
+    name: sausages
+    name_uk: сосиски
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  scallops:
+    name: scallops
+    name_uk: морські гребінці
+    groups:
+    - seafood
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  seafood:
+    name: seafood
+    name_uk: морепродукти
+    groups:
+    - abstract_ingredient
+    - seafood
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  semolina:
+    name: semolina
+    name_uk: манка/семоліна
+    groups:
+    - wheat_group
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sesame:
+    name: sesame
+    name_uk: кунжут
+    groups:
+    - seed
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  shallot:
+    name: shallot
+    name_uk: лук шалот
+    groups:
+    - aromatic_vegetable
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sheep_cheese:
+    name: sheep cheese
+    name_uk: овеча бринза
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  shellfish:
+    name: shellfish
+    name_uk: молюски
+    groups:
+    - seafood
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  shortcrust_pastry:
+    name: shortcrust pastry
+    name_uk: пісочне тісто
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  shrimp:
+    name: shrimp
+    name_uk: креветки
+    groups:
+    - seafood
+    - crustacean
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  shrimp_shells:
+    name: shrimp shells
+    name_uk: панцирі креветок
+    groups:
+    - seafood
+    - crustacean
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  skrei:
+    name: skrei
+    name_uk: атлантична тріска
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  skyr:
+    name: skyr
+    name_uk: скир, щось середнє між сметаною та сирною масою
+    groups:
+    - sour_cream_like
+    - fermented_dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  smalec:
+    name: smalec
+    name_uk: смалець
+    groups:
+    - animal_fat
+    - fat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  smoked_fish:
+    name: smoked fish
+    name_uk: копчена риба
+    groups:
+    - fish
+    - fish_product
+    - smoked_fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  smoked_ham:
+    name: smoked ham
+    name_uk: копчена шинка
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  smoked_lamb:
+    name: smoked lamb
+    name_uk: копчене ягня
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  smoked_meat:
+    name: smoked meat
+    name_uk: копчене м'ясо
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  smoked_pork_hock:
+    name: smoked pork hock
+    name_uk: копчені голяшки
+    groups:
+    - red_meat
+    - meat_piece
+    - meat_on_bone
+    - broth_meat
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  smoked_pork_ribs:
+    name: smoked pork ribs
+    name_uk: копчені свинячі ребра
+    groups:
+    - meat_product
+    - prepared_meat
+    - red_meat
+    - meat_on_bone
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - копчені свинячі ребра
+  smoked_salmon:
+    name: smoked salmon
+    name_uk: копчений лосось
+    groups:
+    - fish
+    - fish_product
+    - smoked_fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  smoked_sausage:
+    name: smoked sausage
+    name_uk: копчена ковбаса
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  snails:
+    name: snails
+    name_uk: равлики
+    groups:
+    - seafood
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  soft_cheese:
+    name: soft cheese
+    name_uk: м'який сир
+    groups:
+    - soft_creamy_cheese
+    - dairy
+    - fresh_cheese_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sole_fish:
+    name: sole fish
+    name_uk: щось типу камбали
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sorrel:
+    name: sorrel
+    name_uk: щавель
+    groups:
+    - leafy_green
+    - acid_souring
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - щавель
+  sour_cream:
+    name: sour cream
+    name_uk: сметана
+    groups:
+    - sour_cream_like
+    - fermented_dairy
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sourdough_starter:
+    name: sourdough starter
+    name_uk: хлібна закваска
+    comment: 'auto-draft; priority=main; roles={''main'': 1}; recipes=czech_kyselo'
+    comment_uk: 'авточернетка; пріоритет=основний; roles={''main'': 1}; рецепти=чеське_кісело'
+    groups:
+    - technical
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    review: true
+  soy_sauce:
+    name: soy sauce
+    name_uk: соєвий соус
+    groups:
+    - fermented_condiment
+    - sauce
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  spaghetti:
+    name: spaghetti
+    name_uk: спагетті
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  spinach:
+    name: spinach
+    name_uk: шпинат
+    groups:
+    - leafy_green
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  split_peas:
+    name: split peas
+    name_uk: колотий горох
+    groups:
+    - pea_chickpea
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - горох колотий
+  sponge_cake:
+    name: sponge cake
+    name_uk: бісквіт
+    groups:
+    - bread_base
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  squid:
+    name: squid
+    name_uk: кальмари
+    groups:
+    - seafood
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  starch:
+    name: starch
+    name_uk: крохмаль
+    groups:
+    - flour_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  stew:
+    name: stew
+    name_uk: тушонка
+    groups:
+    - meat_product
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  stockfish:
+    name: stockfish
+    name_uk: в'ялена риба
+    groups:
+    - fish
+    - fish_product
+    - dried_fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  strawberry:
+    name: strawberry
+    name_uk: полуниця
+    groups:
+    - fresh_fruit
+    - fruit
+    - berry
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  strudel_dough:
+    name: strudel dough
+    name_uk: тісто для штруделю
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sucuk:
+    name: sucuk
+    name_uk: суджук
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sugar:
+    name: sugar
+    name_uk: цукор
+    groups:
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sunflower_seeds:
+    name: sunflower seeds
+    name_uk: насіння соняшнику
+    groups:
+    - seed
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  surstromming:
+    name: surstromming
+    name_uk: консервований квашений оселедець
+    groups:
+    - fish
+    - fish_product
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tagliatelle:
+    name: tagliatelle
+    name_uk: щось типу локшини
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tahini:
+    name: tahini
+    name_uk: тахіні
+    groups:
+    - sauce
+    - seed
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tamarind:
+    name: tamarind
+    name_uk: тамаринд
+    groups:
+    - acid_souring
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tandoori_masala:
+    name: tandoori masala
+    name_uk: тандурі масалу
+    groups:
+    - masala_mix
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tarhana:
+    name: tarhana
+    name_uk: тархана
+    groups:
+    - grain
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tarhonya:
+    name: tarhonya
+    name_uk: макаронки-дрібні-кульки
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tarragon:
+    name: tarragon
+    name_uk: естрагон
+    groups:
+    - dried_herb
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tartar_sauce:
+    name: tartar sauce
+    name_uk: тартар
+    groups:
+    - sauce
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tartlet_shells:
+    name: tartlet shells
+    name_uk: чашки для тарталеток
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  thyme:
+    name: thyme
+    name_uk: чебрець, чебрець
+    groups:
+    - dried_herb
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tomato:
+    name: tomato
+    name_uk: помідор
+    groups:
+    - nightshade_vegetable
+    - tomato_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tomato_base:
+    name: tomato base
+    name_uk: томатна основа
+    groups:
+    - abstract_ingredient
+    - tomato_base
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  tomato_paste:
+    name: tomato paste
+    name_uk: томатна паста
+    groups:
+    - tomato_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tomato_sauce:
+    name: tomato sauce
+    name_uk: томатний соус
+    groups:
+    - tomato_base
+    - sauce
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tomme_cheese:
+    name: tomme cheese
+    name_uk: сир томме
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  toor_dal:
+    name: toor dal
+    name_uk: тур дав
+    groups:
+    - lentil
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tortellini:
+    name: tortellini
+    name_uk: пельмені з сиром, м'ясом чи овочами
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tripe:
+    name: tripe
+    name_uk: рубець
+    groups:
+    - offal
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  trofie:
+    name: trofie
+    name_uk: веретеноподібні макаронки
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  trout:
+    name: trout
+    name_uk: форель
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  turmeric:
+    name: turmeric
+    name_uk: куркума
+    groups:
+    - color_spice
+    - earthy_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  turnip:
+    name: turnip
+    name_uk: турнепс
+    groups:
+    - aromatic_vegetable
+    - root_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  urad_dal:
+    name: urad dal
+    name_uk: урад дав
+    groups:
+    - lentil
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  vanilla:
+    name: vanilla
+    name_uk: ваніль
+    groups:
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  vanilla_sugar:
+    name: vanilla sugar
+    name_uk: ванільний цукор
+    groups:
+    - sweetener
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  vareniki:
+    name: vareniki
+    name_uk: вареники
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  veal_chunks:
+    name: veal chunks
+    name_uk: телятина шматочками
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  veal_cutlet:
+    name: veal cutlet
+    name_uk: міланська відбивна / котлета
+    groups:
+    - red_meat
+    - meat_piece
+    - cutlet_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  veal_roast:
+    name: veal roast
+    name_uk: смажена яловичина
+    groups:
+    - red_meat
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  veal_shank:
+    name: veal shank
+    name_uk: теляче м'ясо на кістці за формою як відбивна
+    groups:
+    - red_meat
+    - meat_piece
+    - meat_on_bone
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  vegetable:
+    name: vegetable
+    name_uk: овочі
+    groups:
+    - abstract_ingredient
+    - vegetable
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  vegetable_mix:
+    name: vegetable mix
+    name_uk: суміш овочів
+    groups:
+    - abstract_ingredient
+    - vegetable_mix
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  vendace:
+    name: vendace
+    name_uk: європейська ряпушка
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  venison_chunks:
+    name: venison chunks
+    name_uk: шматочки оленини
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  vermicelli:
+    name: vermicelli
+    name_uk: вермішель
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  vinegar:
+    name: vinegar
+    name_uk: оцет
+    groups:
+    - acid_souring
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  walnuts:
+    name: walnuts
+    name_uk: волоські горіхи
+    groups:
+    - nuts
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  water:
+    name: water
+    name_uk: вода
+    groups:
+    - technical
+    abstract: false
+    aliases: []
+    inventory:
+      track: false
+      default_amount: many
+      hide_from_template: true
+      always_available: true
+  wheat_berries:
+    name: wheat berries
+    name_uk: пшеничне зерно
+    groups:
+    - wheat_group
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  wheat_flour:
+    name: wheat flour
+    name_uk: пшеничне борошно
+    groups:
+    - corn_group
+    - flour_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  white_beans:
+    name: white beans
+    name_uk: біла квасоля
+    groups:
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  white_bread:
+    name: white bread
+    name_uk: білий хліб
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  white_cheese:
+    name: white cheese
+    name_uk: білий сир / бринза
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  white_fish:
+    name: white fish
+    name_uk: біла риба
+    groups:
+    - fish
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  white_sauce:
+    name: white sauce
+    name_uk: білий соус
+    groups:
+    - sauce
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  white_wine:
+    name: white wine
+    name_uk: біле вино
+    groups:
+    - acid_souring
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  whole_chicken:
+    name: whole chicken
+    name_uk: ціла курка
+    groups:
+    - poultry
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  wide_noodles:
+    name: wide noodles
+    name_uk: широка локшина
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  wild_boar:
+    name: wild boar
+    name_uk: дикий кабан
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  yeast:
+    name: yeast
+    name_uk: дріжджі
+    groups:
+    - technical
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  yellow_lentils:
+    name: yellow lentils
+    name_uk: жовта сочевиця / дав
+    groups:
+    - lentil
+    - legume
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  yogurt:
+    name: yogurt
+    name_uk: йогурт
+    groups:
+    - sour_cream_like
+    - cream_like
+    - fermented_dairy
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  young_cabbage:
+    name: young cabbage
+    name_uk: молода капуста
+    groups:
+    - cabbage_family
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  yufka:
+    name: yufka
+    name_uk: юфка
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  zeltz:
+    name: zeltz
+    name_uk: сальтисон
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  zucchini:
+    name: zucchini
+    name_uk: кабачок
+    groups:
+    - squash_family
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  zucchini_flowers:
+    name: zucchini flowers
+    name_uk: квіти цукіні
+    groups:
+    - leafy_green
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false

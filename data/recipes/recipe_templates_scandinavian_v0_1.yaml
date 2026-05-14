@@ -1,0 +1,5851 @@
+metadata:
+  version: 0.1-scandinavian-large
+  purpose: Large Scandinavian and Nordic cuisine recipe templates for pantry-based suggestion engine
+  design_rules:
+  - If a title names a key ingredient, that ingredient appears as main or required.
+  - Broad categories are used mainly in accepts, not as a replacement for named title ingredients.
+  - Water is included as a technological ingredient, but should be treated as always available by inventory logic.
+  - Cream, milk, sour cream and cheese are kept explicit; broad dairy is avoided as a direct substitute for liquid dairy.
+  - Nordic preservation patterns such as curing, smoking, pickling and fermenting are represented as methods/tags.
+  - These are ingredient templates, not exact step-by-step recipes.
+  - 'Time buckets: under_10, under_30, under_60, over_60.'
+  cuisines:
+    scandinavian: скандинавская / североевропейская
+    nordic: новая северная / общесеверная
+    norwegian: норвежская
+    swedish: шведская
+    danish: датская
+    finnish: финская
+    icelandic: исландская
+    faroese: фарерская
+  quantity_scale:
+  - spice
+  - little
+  - normal
+  - many
+  source_notes:
+  - Norwegian block emphasizes fårikål, fish soup, potato dumplings, cured/fermented fish, lamb, pork belly, lefse, porridge
+    and cloudberry desserts.
+  - Swedish block emphasizes meatballs, gravlax, herring, potato dishes, casseroles, open sandwich/cake formats and classic
+    fika sweets.
+  - Danish block emphasizes smørrebrød, pork belly, frikadeller, roast pork, red cabbage, tartlets, hot dogs and Christmas
+    desserts.
+  - Finnish block emphasizes salmon soup, Karelian pies, rye bread, reindeer, casseroles, fish, berry desserts and cinnamon-cardamom
+    buns.
+  - Icelandic/Faroese block emphasizes lamb, fish, skyr, rye bread, smoked/fermented meat and fish, and simple North Atlantic
+    desserts.
+  - Cross-Nordic block includes pantry-friendly modern Nordic templates based on rye, barley, roots, berries, mushrooms, fish
+    and dairy.
+recipes:
+- id: scandinavian_farikal
+  name: Norwegian lamb with cabbage
+  kind: dish
+  tags:
+  - cabbage
+  - lamb
+  - national_dish
+  - norwegian
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:farikal
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: lamb_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: cabbage
+    role: required
+    amount: many
+  - item: black_pepper
+    role: required
+    amount: spice
+  - item: flour
+    role: addition
+    amount: little
+  - item: potato
+    role: addition
+    amount: many
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Норвезька баранина з капустою
+- id: scandinavian_kjottkaker
+  name: Norwegian meat cutlets with sauce
+  kind: dish
+  tags:
+  - meatballs
+  - norwegian
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:kjottkaker
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: minced_meat
+    role: main
+    amount: many
+    accepts:
+    - ground_beef
+    - ground_pork
+  - item: onion
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: flour
+    role: addition
+    amount: little
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - cream_like
+  - item: potato
+    role: addition
+    amount: many
+  - item: lingonberry_jam
+    role: addition
+    amount: normal
+    accepts:
+    - fruit_preserve
+  name_uk: Норвезькі м'ясні котлети із соусом
+- id: scandinavian_fiskesuppe
+  name: Norwegian creamy fish soup
+  kind: dish
+  tags:
+  - cream_soup
+  - fish
+  - norwegian
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:fiskesuppe
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: fish
+    role: main
+    amount: many
+    accepts:
+    - cod
+    - salmon
+    - haddock
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: carrot
+    role: required
+    amount: normal
+  - item: leek
+    role: required
+    amount: normal
+    accepts:
+    - onion
+  - item: potato
+    role: addition
+    amount: normal
+  - item: dill
+    role: addition
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: water
+    role: required
+    amount: many
+  name_uk: Норвезький вершковий рибний суп
+- id: scandinavian_raspeballer
+  name: Norwegian potato dumplings
+  kind: dish
+  tags:
+  - norwegian
+  - potato_dumpling
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:raspeballer
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: barley_flour
+    role: required
+    amount: normal
+    accepts:
+    - flour_group
+  - item: flour
+    role: addition
+    amount: normal
+  - item: smoked_meat
+    role: addition
+    amount: normal
+    accepts:
+    - meat_product
+  - item: rutabaga
+    role: addition
+    amount: normal
+    accepts:
+    - root_vegetable
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Норвезькі картопляні галушки
+- id: scandinavian_lapskaus
+  name: Norwegian meat and vegetable stew
+  kind: dish
+  tags:
+  - norwegian
+  - scandinavian
+  - stew
+  missing_allowed: 2
+  source_family: scandinavian:lapskaus
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: beef_chunks
+    role: main
+    amount: many
+    accepts:
+    - lamb_chunks
+    - meat_piece
+  - item: potato
+    role: required
+    amount: many
+  - item: carrot
+    role: required
+    amount: normal
+  - item: rutabaga
+    role: addition
+    amount: normal
+    accepts:
+    - root_vegetable
+  - item: onion
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Норвезьке м'ясо-овочеве рагу
+- id: scandinavian_lutefisk
+  name: Lutefisk with potatoes, bacon and pea puree
+  kind: dish
+  tags:
+  - christmas
+  - fish
+  - norwegian
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:lutefisk
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+    - bake
+  comment: ''
+  ingredients:
+  - item: lutefisk
+    role: main
+    amount: many
+    accepts:
+    - stockfish
+    - cod
+    - fish
+  - item: potato
+    role: required
+    amount: many
+  - item: bacon
+    role: required
+    amount: normal
+    accepts:
+    - pork_lardons
+    - meat_product
+  - item: split_peas
+    role: addition
+    amount: normal
+    accepts:
+    - legume
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Лютефіск з картоплею, беконом та гороховим пюре
+- id: scandinavian_rakfisk
+  name: Fermented trout with potatoes and flatbread
+  kind: dish
+  tags:
+  - fermented_fish
+  - norwegian
+  - scandinavian
+  missing_allowed: 4
+  source_family: scandinavian:rakfisk
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: rakfisk
+    role: main
+    amount: many
+    accepts:
+    - fermented_fish
+    - trout
+    - fish
+  - item: potato
+    role: required
+    amount: many
+  - item: lefse
+    role: required
+    amount: normal
+    accepts:
+    - flatbread
+    - bread_base
+  - item: sour_cream
+    role: required
+    amount: normal
+    accepts:
+    - sour_cream_like
+  - item: onion
+    role: addition
+    amount: normal
+  name_uk: Ферментована форель з картоплею та коржом
+- id: scandinavian_pinnekjott
+  name: Salted dried lamb ribs
+  kind: dish
+  tags:
+  - christmas
+  - lamb
+  - norwegian
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:pinnekjott
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - steam
+  comment: ''
+  ingredients:
+  - item: salted_lamb_ribs
+    role: main
+    amount: many
+    accepts:
+    - lamb_ribs
+    - meat_product
+  - item: rutabaga
+    role: required
+    amount: many
+    accepts:
+    - root_vegetable
+  - item: potato
+    role: required
+    amount: many
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  name_uk: Солоні сушені баранячі ребра
+- id: scandinavian_ribbe_norwegian
+  name: Norwegian pork belly with crispy skin
+  kind: dish
+  tags:
+  - christmas
+  - norwegian
+  - pork
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:ribbe_norwegian
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roast
+  comment: ''
+  ingredients:
+  - item: pork_belly
+    role: main
+    amount: many
+  - item: cabbage
+    role: addition
+    amount: many
+  - item: potato
+    role: required
+    amount: many
+  - item: apple
+    role: addition
+    amount: normal
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Норвезька свиняча грудинка з хрусткою кіркою
+- id: scandinavian_medisterkaker
+  name: Norwegian pork cutlets
+  kind: dish
+  tags:
+  - meatballs
+  - norwegian
+  - pork
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:medisterkaker
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: ground_pork
+    role: main
+    amount: many
+    accepts:
+    - minced_meat
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  - item: ginger
+    role: spice
+    amount: spice
+  - item: potato
+    role: addition
+    amount: many
+  name_uk: Норвезькі свинячі котлети
+- id: scandinavian_fiskekaker_norwegian
+  name: Norwegian fish cakes
+  kind: dish
+  tags:
+  - fish_cake
+  - norwegian
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:fiskekaker_norwegian
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: white_fish
+    role: main
+    amount: many
+    accepts:
+    - cod
+    - haddock
+    - fish
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: normal
+  - item: potato_starch
+    role: addition
+    amount: little
+    accepts:
+    - starch
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: potato
+    role: addition
+    amount: many
+  name_uk: Норвезькі рибні котлети
+- id: scandinavian_fiskegrateng
+  name: Norwegian fish gratin
+  kind: dish
+  tags:
+  - casserole
+  - fish
+  - norwegian
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:fiskegrateng
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: white_fish
+    role: main
+    amount: many
+    accepts:
+    - cod
+    - fish
+  - item: macaroni
+    role: required
+    amount: normal
+    accepts:
+    - pasta_noodle
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: normal
+  - item: breadcrumbs
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Норвезький рибний гратен
+- id: scandinavian_bacalao_norwegian
+  name: Klipfisk with tomatoes and potatoes
+  kind: dish
+  tags:
+  - cod
+  - norwegian
+  - scandinavian
+  - tomato
+  missing_allowed: 2
+  source_family: scandinavian:bacalao_norwegian
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: klippfisk
+    role: main
+    amount: many
+    accepts:
+    - salt_cod
+    - cod
+    - fish
+  - item: potato
+    role: required
+    amount: many
+  - item: tomato_sauce
+    role: required
+    amount: many
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: normal
+  - item: bell_pepper
+    role: addition
+    amount: normal
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  name_uk: Кліпфіск з томатами та картоплею
+- id: scandinavian_skrei_butter
+  name: Winter cod with butter sauce
+  kind: dish
+  tags:
+  - butter
+  - cod
+  - norwegian
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:skrei_butter
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - emulsify
+  comment: ''
+  ingredients:
+  - item: skrei
+    role: main
+    amount: many
+    accepts:
+    - cod
+    - fish
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: potato
+    role: required
+    amount: many
+  - item: carrot
+    role: addition
+    amount: normal
+  - item: lemon
+    role: addition
+    amount: little
+  name_uk: Зимова тріска з олійним соусом
+- id: scandinavian_lefserull_salmon
+  name: Lefse with smoked salmon
+  kind: dish
+  tags:
+  - lefse
+  - norwegian
+  - salmon
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:lefserull_salmon
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - snack
+    - main
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: lefse
+    role: main
+    amount: normal
+    accepts:
+    - flatbread
+    - bread_base
+  - item: smoked_salmon
+    role: required
+    amount: normal
+    accepts:
+    - salmon
+    - fish
+  - item: cream_cheese
+    role: required
+    amount: normal
+    accepts:
+    - soft_creamy_cheese
+    - cream_like
+  - item: dill
+    role: addition
+    amount: spice
+  name_uk: Лефсе з копченим лососем
+- id: scandinavian_lefse_sweet
+  name: Sweet lefse
+  kind: dish
+  tags:
+  - lefse
+  - norwegian
+  - scandinavian
+  - sweet
+  missing_allowed: 2
+  source_family: scandinavian:lefse_sweet
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - dessert
+    - snack
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: lefse
+    role: main
+    amount: normal
+    accepts:
+    - flatbread
+    - bread_base
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+  - item: cinnamon
+    role: required
+    amount: spice
+  name_uk: Солодка лефсе
+- id: scandinavian_lefse_basic
+  name: Norwegian potato cake
+  kind: dish
+  tags:
+  - flatbread
+  - norwegian
+  - potato
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:lefse_basic
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - bread
+    - component
+    time: over_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: flour
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  - item: milk
+    role: addition
+    amount: normal
+    accepts:
+    - milk_like
+  name_uk: Норвезька картопляна коржик
+- id: scandinavian_rommegrot
+  name: Sour cream porridge
+  kind: dish
+  tags:
+  - norwegian
+  - porridge
+  - scandinavian
+  - sour_cream
+  missing_allowed: 2
+  source_family: scandinavian:rommegrot
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - main
+    - dessert
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: sour_cream
+    role: main
+    amount: many
+    accepts:
+    - sour_cream_like
+  - item: flour
+    role: required
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: addition
+    amount: normal
+  - item: cinnamon
+    role: addition
+    amount: spice
+  name_uk: Каша зі сметани
+- id: scandinavian_risgrot_norwegian
+  name: Rice milk porridge
+  kind: dish
+  tags:
+  - norwegian
+  - porridge
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:risgrot_norwegian
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - main
+    - dessert
+    - breakfast
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: milk
+    role: required
+    amount: many
+    accepts:
+    - milk_like
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: addition
+    amount: normal
+  - item: cinnamon
+    role: addition
+    amount: spice
+  name_uk: Рисова молочна каша
+- id: scandinavian_brunost_sandwich
+  name: Bread with brown cheese
+  kind: dish
+  tags:
+  - brunost
+  - norwegian
+  - sandwich
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:brunost_sandwich
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - breakfast
+    - snack
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: bread
+    role: main
+    amount: normal
+    accepts:
+    - rye_bread
+    - bread_base
+  - item: brunost
+    role: required
+    amount: normal
+    accepts:
+    - cheese
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Хліб із коричневим сиром
+- id: scandinavian_rekesmorrebrod
+  name: Norwegian shrimp sandwich
+  kind: dish
+  tags:
+  - norwegian
+  - open_sandwich
+  - scandinavian
+  - shrimp
+  missing_allowed: 2
+  source_family: scandinavian:rekesmorrebrod
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - main
+    - snack
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: bread
+    role: main
+    amount: normal
+    accepts:
+    - rye_bread
+  - item: shrimp
+    role: required
+    amount: normal
+    accepts:
+    - seafood
+  - item: mayonnaise
+    role: required
+    amount: normal
+    accepts:
+    - remoulade
+    - tartar_sauce
+  - item: eggs
+    role: addition
+    amount: normal
+  - item: lemon
+    role: addition
+    amount: little
+  name_uk: Норвезький бутерброд із креветками
+- id: scandinavian_sodd
+  name: Norwegian holiday soup with meat and dumplings
+  kind: dish
+  tags:
+  - meatballs
+  - norwegian
+  - scandinavian
+  - soup
+  missing_allowed: 4
+  source_family: scandinavian:sodd
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - soup
+    - main
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: lamb_chunks
+    role: main
+    amount: normal
+    accepts:
+    - beef_chunks
+    - meat_piece
+  - item: meatballs
+    role: required
+    amount: normal
+    accepts:
+    - minced_meat
+  - item: potato
+    role: required
+    amount: many
+  - item: carrot
+    role: addition
+    amount: normal
+  - item: dumplings
+    role: required
+    amount: normal
+    accepts:
+    - flour
+  - item: water
+    role: required
+    amount: many
+  name_uk: Норвезький святковий суп з м'ясом та галушками
+- id: scandinavian_fenalar_plate
+  name: Dried leg of lamb with bread
+  kind: dish
+  tags:
+  - cured_lamb
+  - norwegian
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:fenalar_plate
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - snack
+    - main
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: fenalar
+    role: main
+    amount: normal
+    accepts:
+    - cured_lamb
+    - meat_product
+  - item: flatbread
+    role: required
+    amount: normal
+    accepts:
+    - bread_base
+  - item: sour_cream
+    role: addition
+    amount: normal
+    accepts:
+    - sour_cream_like
+  name_uk: Сушена бараняча нога з хлібом
+- id: scandinavian_multekrem
+  name: Cloudberries with cream
+  kind: dish
+  tags:
+  - cloudberry
+  - cream
+  - norwegian
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:multekrem
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - dessert
+    time: under_10
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: cloudberries
+    role: main
+    amount: many
+    accepts:
+    - berries
+    - fruit
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Морошка з вершками
+- id: scandinavian_tilslorte_bondepiker
+  name: Apple dessert with cream and crumbs
+  kind: dish
+  tags:
+  - apple
+  - cream
+  - norwegian
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:tilslorte_bondepiker
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - dessert
+    time: under_30
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: apple
+    role: main
+    amount: many
+  - item: breadcrumbs
+    role: required
+    amount: normal
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: sugar
+    role: required
+    amount: normal
+  - item: cinnamon
+    role: addition
+    amount: spice
+  name_uk: Яблучний десерт з вершками та крихтою
+- id: scandinavian_skolebrod
+  name: School bun with cream and coconut
+  kind: dish
+  tags:
+  - custard
+  - norwegian
+  - scandinavian
+  - sweet_bun
+  missing_allowed: 2
+  source_family: scandinavian:skolebrod
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: pastry_cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: coconut_flakes
+    role: required
+    amount: normal
+  name_uk: Шкільна булочка з кремом і кокосом
+- id: scandinavian_kransekake
+  name: Almond tower
+  kind: dish
+  tags:
+  - almond
+  - celebration
+  - danish
+  - norwegian
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:kransekake
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    - danish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: almonds
+    role: main
+    amount: many
+    accepts:
+    - nuts
+  - item: sugar
+    role: required
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  name_uk: Мигдальна вежа
+- id: scandinavian_norwegian_waffles
+  name: Norwegian waffles
+  kind: dish
+  tags:
+  - norwegian
+  - scandinavian
+  - waffle
+  missing_allowed: 2
+  source_family: scandinavian:norwegian_waffles
+  facets:
+    cuisine:
+    - scandinavian
+    - norwegian
+    dish_type:
+    - dessert
+    - breakfast
+    time: under_30
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: addition
+    amount: little
+  - item: cardamom
+    role: addition
+    amount: spice
+  - item: sour_cream
+    role: addition
+    amount: normal
+    accepts:
+    - sour_cream_like
+  name_uk: Норвезькі вафлі
+- id: scandinavian_swedish_meatballs
+  name: Swedish meatballs
+  kind: dish
+  tags:
+  - meatballs
+  - scandinavian
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:swedish_meatballs
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: minced_meat
+    role: main
+    amount: many
+    accepts:
+    - ground_beef
+    - ground_pork
+  - item: breadcrumbs
+    role: required
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: potato
+    role: addition
+    amount: many
+  - item: lingonberry_jam
+    role: addition
+    amount: normal
+    accepts:
+    - fruit_preserve
+  name_uk: Шведські фрикадельки
+- id: scandinavian_gravad_lax
+  name: Gravlax
+  kind: dish
+  tags:
+  - cured
+  - salmon
+  - scandinavian
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:gravad_lax
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - main
+    - snack
+    time: over_60
+    method:
+    - cure
+  comment: ''
+  ingredients:
+  - item: salmon
+    role: main
+    amount: many
+    accepts:
+    - fish
+  - item: dill
+    role: required
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: sugar
+    role: required
+    amount: normal
+  - item: mustard
+    role: addition
+    amount: little
+  name_uk: Гравлакс
+- id: scandinavian_janssons_frestelse
+  name: Potato casserole with anchovies
+  kind: dish
+  tags:
+  - anchovy
+  - casserole
+  - potato
+  - scandinavian
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:janssons_frestelse
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: anchovy
+    role: required
+    amount: normal
+    accepts:
+    - fish
+  - item: onion
+    role: required
+    amount: normal
+  - item: cream
+    role: required
+    amount: many
+    accepts:
+    - cream_like
+  - item: breadcrumbs
+    role: addition
+    amount: normal
+  name_uk: Картопляна запіканка з анчоусами
+- id: scandinavian_artsoppa
+  name: Swedish pea soup
+  kind: dish
+  tags:
+  - peas
+  - scandinavian
+  - soup
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:artsoppa
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: split_peas
+    role: main
+    amount: many
+    accepts:
+    - legume
+  - item: pork_hock
+    role: addition
+    amount: normal
+    accepts:
+    - smoked_meat
+  - item: onion
+    role: required
+    amount: normal
+  - item: mustard
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Шведський гороховий суп
+- id: scandinavian_swedish_pancakes
+  name: Swedish thin pancakes
+  kind: dish
+  tags:
+  - pancake
+  - scandinavian
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:swedish_pancakes
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - dessert
+    - breakfast
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: jam
+    role: addition
+    amount: normal
+    accepts:
+    - fruit_preserve
+  name_uk: Шведські тонкі млинці
+- id: scandinavian_raggmunk
+  name: Swedish potato pancakes
+  kind: dish
+  tags:
+  - potato_pancake
+  - scandinavian
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:raggmunk
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: flour
+    role: required
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: normal
+  - item: bacon
+    role: required
+    amount: normal
+    accepts:
+    - pork_lardons
+  - item: lingonberry_jam
+    role: addition
+    amount: normal
+    accepts:
+    - fruit_preserve
+  name_uk: Шведські картопляні оладки
+- id: scandinavian_pyttipanna
+  name: Fried potatoes with meat and egg
+  kind: dish
+  tags:
+  - hash
+  - quick
+  - scandinavian
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:pyttipanna
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: meat_leftovers
+    role: required
+    amount: normal
+    accepts:
+    - meat_product
+    - pork_chunks
+  - item: onion
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: pickled_beet
+    role: addition
+    amount: normal
+    accepts:
+    - beet
+    - pickled_vegetable
+  name_uk: Смажена картопля з м'ясом та яйцем
+- id: scandinavian_kalops
+  name: Swedish beef stew with allspice
+  kind: dish
+  tags:
+  - beef
+  - scandinavian
+  - stew
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:kalops
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: beef_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: carrot
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: allspice
+    role: required
+    amount: spice
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: potato
+    role: addition
+    amount: many
+  - item: pickled_beet
+    role: addition
+    amount: normal
+  name_uk: Шведське яловиче рагу з запашним перцем
+- id: scandinavian_kaldolmar
+  name: Swedish cabbage rolls
+  kind: dish
+  tags:
+  - cabbage
+  - scandinavian
+  - stuffed
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:kaldolmar
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+    - bake
+  comment: ''
+  ingredients:
+  - item: cabbage
+    role: main
+    amount: many
+  - item: minced_meat
+    role: required
+    amount: many
+  - item: rice
+    role: required
+    amount: normal
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - cream_like
+  - item: lingonberry_jam
+    role: addition
+    amount: normal
+    accepts:
+    - fruit_preserve
+  name_uk: Шведські голубці
+- id: scandinavian_kroppkakor
+  name: Potato dumplings with pork
+  kind: dish
+  tags:
+  - pork
+  - potato_dumpling
+  - scandinavian
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:kroppkakor
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: flour
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  - item: pork_belly
+    role: required
+    amount: normal
+    accepts:
+    - bacon
+    - meat_product
+  - item: onion
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  - item: lingonberry_jam
+    role: addition
+    amount: normal
+  name_uk: Картопляні галушки зі свининою
+- id: scandinavian_palt
+  name: North Swedish potato dumplings
+  kind: dish
+  tags:
+  - potato_dumpling
+  - scandinavian
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:palt
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: barley_flour
+    role: required
+    amount: normal
+    accepts:
+    - flour_group
+  - item: pork_belly
+    role: required
+    amount: normal
+    accepts:
+    - salt_pork
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  - item: lingonberry_jam
+    role: addition
+    amount: normal
+  name_uk: Північношведські картопляні галушки
+- id: scandinavian_isterband_potatoes
+  name: Sour sausages with potatoes
+  kind: dish
+  tags:
+  - potato
+  - sausage
+  - scandinavian
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:isterband_potatoes
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: isterband
+    role: main
+    amount: many
+    accepts:
+    - sausage_product
+  - item: potato
+    role: required
+    amount: many
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: dill
+    role: addition
+    amount: spice
+  - item: pickled_beet
+    role: addition
+    amount: normal
+  name_uk: Кислі ковбаски з картоплею
+- id: scandinavian_falukorv_oven
+  name: Baked falukorv with cheese
+  kind: dish
+  tags:
+  - bake
+  - sausage
+  - scandinavian
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:falukorv_oven
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: falukorv
+    role: main
+    amount: many
+    accepts:
+    - sausage_product
+  - item: hard_cheese
+    role: required
+    amount: normal
+    accepts:
+    - melting_cheese
+  - item: mustard
+    role: required
+    amount: normal
+  - item: tomato
+    role: addition
+    amount: normal
+  - item: potato
+    role: addition
+    amount: many
+  name_uk: Запечена фалукорв із сиром
+- id: scandinavian_korvstroganoff
+  name: Sausage stroganoff
+  kind: dish
+  tags:
+  - quick
+  - sausage
+  - scandinavian
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:korvstroganoff
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: falukorv
+    role: main
+    amount: many
+    accepts:
+    - sausage_product
+  - item: tomato_paste
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: onion
+    role: required
+    amount: normal
+  - item: rice
+    role: addition
+    amount: many
+  name_uk: Ковбасний струганів
+- id: scandinavian_dillkott
+  name: Meat in dill sauce
+  kind: dish
+  tags:
+  - cream_sauce
+  - dill
+  - scandinavian
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:dillkott
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: veal_chunks
+    role: main
+    amount: many
+    accepts:
+    - lamb_chunks
+    - beef_chunks
+    - meat_piece
+  - item: dill
+    role: required
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: vinegar
+    role: addition
+    amount: little
+  - item: carrot
+    role: addition
+    amount: normal
+  - item: potato
+    role: addition
+    amount: many
+  name_uk: М'ясо в кроповому соусі
+- id: scandinavian_laxpudding
+  name: Swedish salmon and potato casserole
+  kind: dish
+  tags:
+  - casserole
+  - salmon
+  - scandinavian
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:laxpudding
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: salmon
+    role: main
+    amount: many
+    accepts:
+    - smoked_salmon
+    - fish
+  - item: potato
+    role: required
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: dill
+    role: required
+    amount: spice
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Шведська запіканка з лососем та картоплею
+- id: scandinavian_toast_skagen
+  name: Shrimp toast
+  kind: dish
+  tags:
+  - scandinavian
+  - shrimp
+  - swedish
+  - toast
+  missing_allowed: 2
+  source_family: scandinavian:toast_skagen
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - snack
+    - main
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: shrimp
+    role: main
+    amount: many
+    accepts:
+    - seafood
+  - item: bread
+    role: required
+    amount: normal
+  - item: mayonnaise
+    role: required
+    amount: normal
+    accepts:
+    - remoulade
+    - tartar_sauce
+  - item: dill
+    role: required
+    amount: spice
+  - item: lemon
+    role: addition
+    amount: little
+  name_uk: Тост із креветками
+- id: scandinavian_smorgastarta
+  name: Swedish snack cake
+  kind: dish
+  tags:
+  - sandwich_cake
+  - scandinavian
+  - swedish
+  missing_allowed: 4
+  source_family: scandinavian:smorgastarta
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - main
+    - snack
+    time: over_60
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: bread
+    role: main
+    amount: many
+  - item: cream_cheese
+    role: required
+    amount: normal
+    accepts:
+    - soft_creamy_cheese
+  - item: mayonnaise
+    role: required
+    amount: normal
+    accepts:
+    - remoulade
+    - tartar_sauce
+  - item: shrimp
+    role: addition
+    amount: normal
+    accepts:
+    - seafood
+  - item: smoked_salmon
+    role: addition
+    amount: normal
+    accepts:
+    - fish
+  - item: eggs
+    role: required
+    amount: normal
+  - item: cucumber
+    role: addition
+    amount: normal
+  name_uk: Шведський закусочний торт
+- id: scandinavian_pickled_herring_sweden
+  name: Pickled herring
+  kind: dish
+  tags:
+  - herring
+  - pickle
+  - scandinavian
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:pickled_herring_sweden
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - snack
+    - main
+    time: over_60
+    method:
+    - pickle
+  comment: ''
+  ingredients:
+  - item: herring
+    role: main
+    amount: many
+    accepts:
+    - salted_herring
+    - fish
+  - item: vinegar
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: allspice
+    role: spice
+    amount: spice
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  name_uk: Маринований оселедець
+- id: scandinavian_matjesill_potatoes
+  name: Herring with new potatoes
+  kind: dish
+  tags:
+  - herring
+  - potato
+  - scandinavian
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:matjesill_potatoes
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: matjes_herring
+    role: main
+    amount: normal
+    accepts:
+    - herring
+    - fish
+  - item: potato
+    role: required
+    amount: many
+  - item: sour_cream
+    role: required
+    amount: normal
+    accepts:
+    - sour_cream_like
+  - item: dill
+    role: required
+    amount: spice
+  - item: eggs
+    role: addition
+    amount: normal
+  name_uk: Оселедець з молодою картоплею
+- id: scandinavian_swedish_crayfish
+  name: Crayfish with dill
+  kind: dish
+  tags:
+  - crayfish
+  - scandinavian
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:swedish_crayfish
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - main
+    - snack
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: crayfish
+    role: main
+    amount: many
+    accepts:
+    - seafood
+  - item: dill_crown
+    role: required
+    amount: spice
+    accepts:
+    - dill
+  - item: bread
+    role: addition
+    amount: normal
+  - item: hard_cheese
+    role: addition
+    amount: normal
+    accepts:
+    - cheese
+  - item: water
+    role: required
+    amount: many
+  name_uk: Раки з кропом
+- id: scandinavian_surstromming_plate
+  name: Fermented Baltic herring with flatbread
+  kind: dish
+  tags:
+  - fermented_fish
+  - scandinavian
+  - swedish
+  missing_allowed: 4
+  source_family: scandinavian:surstromming_plate
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - main
+    - snack
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: surstromming
+    role: main
+    amount: normal
+    accepts:
+    - fermented_fish
+    - herring
+    - fish
+  - item: flatbread
+    role: required
+    amount: normal
+    accepts:
+    - bread_base
+  - item: potato
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: required
+    amount: normal
+    accepts:
+    - sour_cream_like
+  - item: onion
+    role: required
+    amount: normal
+  name_uk: Ферментований балтійський оселедець з коржом
+- id: scandinavian_ostkaka
+  name: Swedish cheese pie
+  kind: dish
+  tags:
+  - cheese_cake
+  - scandinavian
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:ostkaka
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: cottage_cheese
+    role: main
+    amount: many
+    accepts:
+    - fresh_cheese_group
+  - item: eggs
+    role: required
+    amount: many
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: almonds
+    role: required
+    amount: normal
+    accepts:
+    - nuts
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Шведський сирний пиріг
+- id: scandinavian_kanelbullar
+  name: Swedish cinnamon rolls
+  kind: dish
+  tags:
+  - cinnamon_bun
+  - scandinavian
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:kanelbullar
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - dessert
+    - bread
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+  - item: cinnamon
+    role: required
+    amount: spice
+  - item: cardamom
+    role: addition
+    amount: spice
+  name_uk: Шведські булочки з корицею
+- id: scandinavian_lussekatter
+  name: Saffron buns
+  kind: dish
+  tags:
+  - saffron_bun
+  - scandinavian
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:lussekatter
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - dessert
+    - bread
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+  - item: saffron
+    role: required
+    amount: spice
+  - item: raisins
+    role: addition
+    amount: normal
+  name_uk: Шафранові булочки
+- id: scandinavian_semla
+  name: Bun with almond filling and cream
+  kind: dish
+  tags:
+  - cream_bun
+  - scandinavian
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:semla
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: cardamom
+    role: required
+    amount: spice
+  - item: almonds
+    role: required
+    amount: normal
+    accepts:
+    - nuts
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Булочка з мигдальною начинкою та вершками
+- id: scandinavian_princess_cake
+  name: Swedish princess cake
+  kind: dish
+  tags:
+  - cake
+  - marzipan
+  - scandinavian
+  - swedish
+  missing_allowed: 4
+  source_family: scandinavian:princess_cake
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: sponge_cake
+    role: main
+    amount: many
+    accepts:
+    - flour
+    - eggs
+  - item: pastry_cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: marzipan
+    role: required
+    amount: normal
+    accepts:
+    - almonds
+    - sweetener
+  - item: jam
+    role: addition
+    amount: normal
+    accepts:
+    - fruit_preserve
+  name_uk: Шведський принцес-торт
+- id: scandinavian_kladdkaka
+  name: Sticky chocolate cake
+  kind: dish
+  tags:
+  - cake
+  - chocolate
+  - scandinavian
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:kladdkaka
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: chocolate
+    role: main
+    amount: normal
+    accepts:
+    - cocoa_powder
+  - item: flour
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Липкий шоколадний пиріг
+- id: scandinavian_pepparkakor
+  name: Swedish ginger cookies
+  kind: dish
+  tags:
+  - cookie
+  - scandinavian
+  - spice
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:pepparkakor
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+  - item: ginger
+    role: required
+    amount: spice
+  - item: cinnamon
+    role: required
+    amount: spice
+  - item: cloves
+    role: addition
+    amount: spice
+  - item: cardamom
+    role: addition
+    amount: spice
+  name_uk: Шведське імбирне печиво
+- id: scandinavian_hallongrottor
+  name: Raspberry cookies
+  kind: dish
+  tags:
+  - cookie
+  - jam
+  - scandinavian
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:hallongrottor
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+  - item: raspberry_jam
+    role: required
+    amount: normal
+    accepts:
+    - jam
+    - fruit_preserve
+  name_uk: Малинові печива
+- id: scandinavian_jordgubbstarta
+  name: Strawberry cake
+  kind: dish
+  tags:
+  - cake
+  - scandinavian
+  - strawberry
+  - swedish
+  missing_allowed: 2
+  source_family: scandinavian:jordgubbstarta
+  facets:
+    cuisine:
+    - scandinavian
+    - swedish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: strawberry
+    role: main
+    amount: many
+    accepts:
+    - berries
+  - item: sponge_cake
+    role: required
+    amount: many
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: pastry_cream
+    role: addition
+    amount: normal
+    accepts:
+    - cream_like
+  name_uk: Полуничний торт
+- id: scandinavian_smorrebrod_herring
+  name: Danish herring sandwich
+  kind: dish
+  tags:
+  - danish
+  - herring
+  - scandinavian
+  - smorrebrod
+  missing_allowed: 2
+  source_family: scandinavian:smorrebrod_herring
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - main
+    - snack
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: rye_bread
+    role: main
+    amount: normal
+    accepts:
+    - bread_base
+  - item: herring
+    role: required
+    amount: normal
+    accepts:
+    - pickled_herring
+    - fish
+  - item: onion
+    role: addition
+    amount: little
+  - item: eggs
+    role: addition
+    amount: normal
+  - item: mayonnaise
+    role: addition
+    amount: normal
+    accepts:
+    - remoulade
+    - tartar_sauce
+  name_uk: Датський бутерброд з оселедцем
+- id: scandinavian_smorrebrod_roast_beef
+  name: Smørrebrød with roast beef
+  kind: dish
+  tags:
+  - beef
+  - danish
+  - scandinavian
+  - smorrebrod
+  missing_allowed: 2
+  source_family: scandinavian:smorrebrod_roast_beef
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - main
+    - snack
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: rye_bread
+    role: main
+    amount: normal
+  - item: roast_beef
+    role: required
+    amount: normal
+    accepts:
+    - beef_chunks
+    - meat_product
+  - item: remoulade
+    role: required
+    amount: normal
+    accepts:
+    - mayonnaise
+    - tartar_sauce
+  - item: horseradish
+    role: addition
+    amount: little
+  - item: pickled_cucumber
+    role: addition
+    amount: normal
+  name_uk: Смереброд з ростбіфом
+- id: scandinavian_smorrebrod_egg_shrimp
+  name: Smørrebrød with egg and shrimp
+  kind: dish
+  tags:
+  - danish
+  - scandinavian
+  - shrimp
+  - smorrebrod
+  missing_allowed: 2
+  source_family: scandinavian:smorrebrod_egg_shrimp
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - main
+    - snack
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: rye_bread
+    role: main
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: shrimp
+    role: required
+    amount: normal
+    accepts:
+    - seafood
+  - item: mayonnaise
+    role: required
+    amount: normal
+    accepts:
+    - remoulade
+    - tartar_sauce
+  - item: dill
+    role: addition
+    amount: spice
+  - item: lemon
+    role: addition
+    amount: little
+  name_uk: Смереброд з яйцем і креветками
+- id: scandinavian_smorrebrod_leverpostej
+  name: Sandwich with liver pate
+  kind: dish
+  tags:
+  - danish
+  - pate
+  - scandinavian
+  - smorrebrod
+  missing_allowed: 2
+  source_family: scandinavian:smorrebrod_leverpostej
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - main
+    - snack
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: rye_bread
+    role: main
+    amount: normal
+  - item: liver_pate
+    role: required
+    amount: normal
+    accepts:
+    - pate
+    - meat_product
+  - item: mushroom
+    role: addition
+    amount: normal
+  - item: bacon
+    role: addition
+    amount: normal
+  - item: pickled_beet
+    role: addition
+    amount: normal
+  name_uk: Бутерброд із печінковим паштетом
+- id: scandinavian_stjerneskud
+  name: “shooting star” with fish and shrimp
+  kind: dish
+  tags:
+  - danish
+  - fish
+  - open_sandwich
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:stjerneskud
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - main
+    - snack
+    time: under_60
+    method:
+    - fry
+    - assemble
+  comment: ''
+  ingredients:
+  - item: white_bread
+    role: main
+    amount: normal
+    accepts:
+    - bread_base
+  - item: plaice
+    role: required
+    amount: many
+    accepts:
+    - white_fish
+    - fish
+  - item: shrimp
+    role: required
+    amount: normal
+    accepts:
+    - seafood
+  - item: mayonnaise
+    role: required
+    amount: normal
+    accepts:
+    - remoulade
+    - tartar_sauce
+  - item: cucumber
+    role: addition
+    amount: normal
+  - item: lemon
+    role: addition
+    amount: little
+  name_uk: «падаюча зірка» з рибою та креветками
+- id: scandinavian_stegt_flaesk
+  name: Crispy pork belly with parsley sauce
+  kind: dish
+  tags:
+  - danish
+  - national_dish
+  - pork
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:stegt_flaesk
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - boil
+  comment: ''
+  ingredients:
+  - item: pork_belly
+    role: main
+    amount: many
+  - item: potato
+    role: required
+    amount: many
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: flour
+    role: required
+    amount: little
+  - item: parsley
+    role: required
+    amount: spice
+  name_uk: Хрумка свиняча грудинка з соусом петрушки
+- id: scandinavian_frikadeller_danish
+  name: Danish meatballs
+  kind: dish
+  tags:
+  - danish
+  - meatballs
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:frikadeller_danish
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: minced_meat
+    role: main
+    amount: many
+    accepts:
+    - ground_pork
+    - ground_veal
+  - item: onion
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: flour
+    role: required
+    amount: little
+  - item: potato
+    role: addition
+    amount: many
+  - item: gravy
+    role: addition
+    amount: normal
+    accepts:
+    - brown_gravy
+  name_uk: Данські фрикадельки
+- id: scandinavian_flaeskesteg
+  name: Danish pork with crispy skin
+  kind: dish
+  tags:
+  - christmas
+  - danish
+  - pork
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:flaeskesteg
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roast
+  comment: ''
+  ingredients:
+  - item: pork_roast
+    role: main
+    amount: many
+    accepts:
+    - pork_belly
+    - pork_chunks
+  - item: red_cabbage
+    role: required
+    amount: many
+  - item: potato
+    role: required
+    amount: many
+  - item: brown_gravy
+    role: required
+    amount: normal
+    accepts:
+    - gravy
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  name_uk: Данська свинина з хрусткою кіркою
+- id: scandinavian_brunede_kartofler
+  name: Caramelized potatoes
+  kind: dish
+  tags:
+  - danish
+  - potato
+  - scandinavian
+  - side
+  missing_allowed: 2
+  source_family: scandinavian:brunede_kartofler
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - side
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Карамелізована картопля
+- id: scandinavian_rodkaal
+  name: Stewed red cabbage
+  kind: dish
+  tags:
+  - cabbage
+  - danish
+  - scandinavian
+  - side
+  missing_allowed: 2
+  source_family: scandinavian:rodkaal
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - side
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: red_cabbage
+    role: main
+    amount: many
+  - item: apple
+    role: addition
+    amount: normal
+  - item: vinegar
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  - item: allspice
+    role: spice
+    amount: spice
+  name_uk: Тушкована червона капуста
+- id: scandinavian_boller_i_karry
+  name: Meatballs in curry sauce
+  kind: dish
+  tags:
+  - curry
+  - danish
+  - meatballs
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:boller_i_karry
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: minced_meat
+    role: main
+    amount: many
+    accepts:
+    - ground_pork
+  - item: onion
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  - item: milk
+    role: addition
+    amount: normal
+    accepts:
+    - milk_like
+  - item: curry_powder
+    role: required
+    amount: spice
+  - item: rice
+    role: required
+    amount: many
+  name_uk: Фрикадельки в карри-соусе
+- id: scandinavian_tarteletter_chicken_asparagus
+  name: Tartlets with chicken and asparagus
+  kind: dish
+  tags:
+  - chicken
+  - danish
+  - scandinavian
+  - tartlet
+  missing_allowed: 2
+  source_family: scandinavian:tarteletter_chicken_asparagus
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - main
+    - snack
+    time: under_60
+    method:
+    - stew
+    - bake
+  comment: ''
+  ingredients:
+  - item: tartlet_shells
+    role: main
+    amount: many
+    accepts:
+    - puff_pastry
+    - bread_base
+  - item: chicken_fillet
+    role: required
+    amount: normal
+  - item: asparagus
+    role: required
+    amount: normal
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: flour
+    role: required
+    amount: little
+  name_uk: Тарталетки з куркою та спаржею
+- id: scandinavian_hakkebof
+  name: Chopped beefsteak with soft onions
+  kind: dish
+  tags:
+  - beef
+  - danish
+  - onion
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:hakkebof
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: ground_beef
+    role: main
+    amount: many
+    accepts:
+    - minced_meat
+  - item: onion
+    role: required
+    amount: many
+  - item: potato
+    role: required
+    amount: many
+  - item: brown_gravy
+    role: addition
+    amount: normal
+    accepts:
+    - gravy
+  name_uk: Рубаний біфштекс з м'якою цибулею
+- id: scandinavian_medisterpolse
+  name: Danish pork sausage
+  kind: dish
+  tags:
+  - danish
+  - sausage
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:medisterpolse
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: medisterpolse
+    role: main
+    amount: many
+    accepts:
+    - sausage_product
+  - item: red_cabbage
+    role: addition
+    amount: many
+  - item: potato
+    role: required
+    amount: many
+  - item: mustard
+    role: addition
+    amount: little
+  name_uk: Данська свиняча ковбаса
+- id: scandinavian_forloren_hare
+  name: Meatloaf “false hare”
+  kind: dish
+  tags:
+  - danish
+  - meatloaf
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:forloren_hare
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: minced_meat
+    role: main
+    amount: many
+    accepts:
+    - ground_pork
+    - ground_beef
+  - item: bacon
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: breadcrumbs
+    role: required
+    amount: normal
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - cream_like
+  - item: potato
+    role: addition
+    amount: many
+  name_uk: М'ясний рулет «неправдивий заєць»
+- id: scandinavian_aeggekage
+  name: Danish thick omelette
+  kind: dish
+  tags:
+  - bacon
+  - danish
+  - omelette
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:aeggekage
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - main
+    - breakfast
+    time: under_30
+    method:
+    - fry
+    - bake
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: many
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: flour
+    role: addition
+    amount: little
+  - item: bacon
+    role: required
+    amount: normal
+  - item: chives
+    role: addition
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Датський товстий омлет
+- id: scandinavian_rod_polse
+  name: Red Danish sausage with bun
+  kind: dish
+  tags:
+  - danish
+  - hotdog
+  - scandinavian
+  - street_food
+  missing_allowed: 2
+  source_family: scandinavian:rod_polse
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - main
+    - snack
+    time: under_10
+    method:
+    - boil
+    - assemble
+  comment: ''
+  ingredients:
+  - item: red_sausage
+    role: main
+    amount: normal
+    accepts:
+    - sausages
+    - sausage_product
+  - item: hotdog_bun
+    role: required
+    amount: normal
+    accepts:
+    - bread_base
+  - item: mustard
+    role: required
+    amount: little
+  - item: ketchup
+    role: addition
+    amount: little
+  - item: fried_onion
+    role: addition
+    amount: normal
+    accepts:
+    - onion
+  name_uk: Червона датська сосиска з булочкою
+- id: scandinavian_risalamande
+  name: Rice dessert with almonds and cherry sauce
+  kind: dish
+  tags:
+  - christmas
+  - danish
+  - rice
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:risalamande
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: milk
+    role: required
+    amount: many
+    accepts:
+    - milk_like
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: almonds
+    role: required
+    amount: normal
+    accepts:
+    - nuts
+  - item: cherry_sauce
+    role: required
+    amount: normal
+    accepts:
+    - cherry
+    - fruit_preserve
+  name_uk: Рисовий десерт з мигдалем та вишневим соусом
+- id: scandinavian_aebleskiver
+  name: Danish round pancake donuts
+  kind: dish
+  tags:
+  - christmas
+  - danish
+  - pancake
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:aebleskiver
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: normal
+  - item: buttermilk
+    role: addition
+    amount: normal
+    accepts:
+    - sour_cream_like
+  - item: sugar
+    role: required
+    amount: little
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Данські круглі пончики-млинці
+- id: scandinavian_rodgrod
+  name: Berry porridge with cream
+  kind: dish
+  tags:
+  - berries
+  - cream
+  - danish
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:rodgrod
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - dessert
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: berries
+    role: main
+    amount: many
+    accepts:
+    - red_currant
+    - strawberry
+    - raspberry
+  - item: sugar
+    role: required
+    amount: normal
+  - item: starch
+    role: required
+    amount: normal
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Ягідна каша з вершками
+- id: scandinavian_wienerbrod_spandauer
+  name: Danish cream puff
+  kind: dish
+  tags:
+  - custard
+  - danish
+  - pastry
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:wienerbrod_spandauer
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: puff_pastry
+    role: main
+    amount: many
+    accepts:
+    - bread_base
+  - item: pastry_cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: jam
+    role: addition
+    amount: normal
+    accepts:
+    - fruit_preserve
+  name_uk: Датська слойка з кремом
+- id: scandinavian_kanelsnegle
+  name: Danish snails with cinnamon
+  kind: dish
+  tags:
+  - cinnamon_bun
+  - danish
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:kanelsnegle
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - dessert
+    - bread
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+  - item: cinnamon
+    role: required
+    amount: spice
+  name_uk: Датські равлики з корицею
+- id: scandinavian_romkugler
+  name: Rum crumb balls
+  kind: dish
+  tags:
+  - danish
+  - no_bake
+  - rum
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:romkugler
+  facets:
+    cuisine:
+    - scandinavian
+    - danish
+    dish_type:
+    - dessert
+    time: under_30
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: cake_crumbs
+    role: main
+    amount: many
+    accepts:
+    - biscuit_crumbs
+    - bread_base
+  - item: cocoa_powder
+    role: required
+    amount: normal
+  - item: jam
+    role: required
+    amount: normal
+    accepts:
+    - fruit_preserve
+  - item: rum
+    role: addition
+    amount: little
+  - item: coconut_flakes
+    role: addition
+    amount: normal
+  name_uk: Ромові кульки з крихти
+- id: scandinavian_lohikeitto
+  name: Finnish cream soup with salmon
+  kind: dish
+  tags:
+  - cream_soup
+  - finnish
+  - salmon
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:lohikeitto
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: salmon
+    role: main
+    amount: many
+    accepts:
+    - fish
+  - item: potato
+    role: required
+    amount: many
+  - item: carrot
+    role: required
+    amount: normal
+  - item: leek
+    role: required
+    amount: normal
+    accepts:
+    - onion
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: dill
+    role: required
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Фінський вершковий суп з лососем
+- id: scandinavian_karjalanpiirakka
+  name: Karelian pie with rice porridge
+  kind: dish
+  tags:
+  - finnish
+  - karelian_pie
+  - rice
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:karjalanpiirakka
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - snack
+    - breakfast
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: rye_flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: rice
+    role: required
+    amount: many
+  - item: milk
+    role: required
+    amount: many
+    accepts:
+    - milk_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: eggs
+    role: addition
+    amount: normal
+  name_uk: Карельський пиріжок з рисовою кашею
+- id: scandinavian_munavoi
+  name: Egg-butter spread
+  kind: dish
+  tags:
+  - egg_butter
+  - finnish
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:munavoi
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - component
+    - snack
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: many
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Яєчно-олійна намазка
+- id: scandinavian_poronkaristys
+  name: Roast venison
+  kind: dish
+  tags:
+  - finnish
+  - lapland
+  - reindeer
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:poronkaristys
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: reindeer_meat
+    role: main
+    amount: many
+    accepts:
+    - venison_chunks
+    - red_meat
+  - item: onion
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: potato
+    role: required
+    amount: many
+  - item: lingonberry_jam
+    role: required
+    amount: normal
+    accepts:
+    - fruit_preserve
+  name_uk: Спекотне з оленини
+- id: scandinavian_karjalanpaisti
+  name: Karelian meat roast
+  kind: dish
+  tags:
+  - finnish
+  - karelian
+  - meat_stew
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:karjalanpaisti
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+    - bake
+  comment: ''
+  ingredients:
+  - item: beef_chunks
+    role: main
+    amount: normal
+    accepts:
+    - meat_piece
+  - item: pork_chunks
+    role: required
+    amount: normal
+    accepts:
+    - meat_piece
+  - item: lamb_chunks
+    role: addition
+    amount: normal
+    accepts:
+    - meat_piece
+  - item: onion
+    role: required
+    amount: normal
+  - item: carrot
+    role: addition
+    amount: normal
+  - item: allspice
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Карельське м'ясо жарке
+- id: scandinavian_kalakukko
+  name: Fish pie in rye bread
+  kind: dish
+  tags:
+  - finnish
+  - fish_pie
+  - rye
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:kalakukko
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: rye_flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: fish
+    role: required
+    amount: many
+    accepts:
+    - vendace
+    - white_fish
+  - item: pork_belly
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Рибний пиріг у житньому хлібі
+- id: scandinavian_makaronilaatikko
+  name: Finnish pasta casserole
+  kind: dish
+  tags:
+  - casserole
+  - finnish
+  - pasta
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:makaronilaatikko
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: macaroni
+    role: main
+    amount: many
+    accepts:
+    - pasta_noodle
+  - item: minced_meat
+    role: required
+    amount: many
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: normal
+  - item: onion
+    role: addition
+    amount: normal
+  name_uk: Фінська макаронна запіканка
+- id: scandinavian_kaalilaatikko
+  name: Cabbage casserole with meat and rice
+  kind: dish
+  tags:
+  - cabbage
+  - casserole
+  - finnish
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:kaalilaatikko
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+    - bake
+  comment: ''
+  ingredients:
+  - item: cabbage
+    role: main
+    amount: many
+  - item: minced_meat
+    role: required
+    amount: many
+  - item: rice
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: lingonberry_jam
+    role: addition
+    amount: normal
+  name_uk: Капустяна запіканка з м'ясом та рисом
+- id: scandinavian_lanttulaatikko
+  name: Rutabaga casserole
+  kind: dish
+  tags:
+  - christmas
+  - finnish
+  - rutabaga
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:lanttulaatikko
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - side
+    - main
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: rutabaga
+    role: main
+    amount: many
+    accepts:
+    - root_vegetable
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: breadcrumbs
+    role: addition
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Запіканка із брукви
+- id: scandinavian_porkkanalaatikko
+  name: Carrot rice casserole
+  kind: dish
+  tags:
+  - carrot
+  - christmas
+  - finnish
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:porkkanalaatikko
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - side
+    - main
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: carrot
+    role: main
+    amount: many
+  - item: rice
+    role: required
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: eggs
+    role: addition
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Морквяно-рисова запіканка
+- id: scandinavian_perunalaatikko
+  name: Potato casserole
+  kind: dish
+  tags:
+  - christmas
+  - finnish
+  - potato
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:perunalaatikko
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - side
+    - main
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: flour
+    role: addition
+    amount: little
+  name_uk: Картопляна запіканка
+- id: scandinavian_hernekeitto_finnish
+  name: Finnish pea soup
+  kind: dish
+  tags:
+  - finnish
+  - peas
+  - scandinavian
+  - soup
+  missing_allowed: 2
+  source_family: scandinavian:hernekeitto_finnish
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: split_peas
+    role: main
+    amount: many
+    accepts:
+    - legume
+  - item: pork_hock
+    role: addition
+    amount: normal
+    accepts:
+    - smoked_meat
+  - item: onion
+    role: required
+    amount: normal
+  - item: mustard
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Фінський гороховий суп
+- id: scandinavian_kesakeitto
+  name: Summer vegetable soup with milk
+  kind: dish
+  tags:
+  - finnish
+  - milk_soup
+  - scandinavian
+  - vegetable
+  missing_allowed: 2
+  source_family: scandinavian:kesakeitto
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: vegetable_mix
+    role: main
+    amount: many
+    accepts:
+    - carrot
+    - potato
+    - green_beans
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - cream_like
+  - item: peas
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Літній овочевий суп із молоком
+- id: scandinavian_graavilohi_finnish
+  name: Finnish gravlax
+  kind: dish
+  tags:
+  - cured
+  - finnish
+  - salmon
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:graavilohi_finnish
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - main
+    - snack
+    time: over_60
+    method:
+    - cure
+  comment: ''
+  ingredients:
+  - item: salmon
+    role: main
+    amount: many
+    accepts:
+    - fish
+  - item: dill
+    role: required
+    amount: spice
+  - item: sugar
+    role: required
+    amount: normal
+  - item: mustard
+    role: addition
+    amount: little
+  name_uk: Фінський гравлакс
+- id: scandinavian_silakkapihvit
+  name: Fried Baltic herring
+  kind: dish
+  tags:
+  - finnish
+  - fried
+  - herring
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:silakkapihvit
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: baltic_herring
+    role: main
+    amount: many
+    accepts:
+    - herring
+    - fish
+  - item: rye_flour
+    role: required
+    amount: normal
+    accepts:
+    - flour_group
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: potato
+    role: addition
+    amount: many
+  name_uk: Смажений балтійський оселедець
+- id: scandinavian_muikku_fried
+  name: Fried vendace
+  kind: dish
+  tags:
+  - finnish
+  - fish
+  - fried
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:muikku_fried
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: vendace
+    role: main
+    amount: many
+    accepts:
+    - white_fish
+    - fish
+  - item: rye_flour
+    role: required
+    amount: normal
+    accepts:
+    - flour_group
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: potato
+    role: addition
+    amount: many
+  name_uk: Смажена ряпушка
+- id: scandinavian_lihapyorykat
+  name: Finnish meatballs
+  kind: dish
+  tags:
+  - finnish
+  - meatballs
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:lihapyorykat
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: minced_meat
+    role: main
+    amount: many
+  - item: breadcrumbs
+    role: required
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - cream_like
+  name_uk: Фінські фрикадельки
+- id: scandinavian_loimulohi
+  name: Salmon by the fire
+  kind: dish
+  tags:
+  - finnish
+  - roast
+  - salmon
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:loimulohi
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - roast
+  comment: ''
+  ingredients:
+  - item: salmon
+    role: main
+    amount: many
+    accepts:
+    - fish
+  - item: lemon
+    role: addition
+    amount: little
+  - item: dill
+    role: addition
+    amount: spice
+  - item: potato
+    role: addition
+    amount: many
+  name_uk: Лосось біля вогню
+- id: scandinavian_ruisleipa
+  name: Finnish rye bread
+  kind: dish
+  tags:
+  - finnish
+  - rye_bread
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:ruisleipa
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - bread
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: rye_flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: sourdough_starter
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Фінський житній хліб
+- id: scandinavian_rieska
+  name: Finnish barley flatbread
+  kind: dish
+  tags:
+  - barley
+  - finnish
+  - flatbread
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:rieska
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - bread
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: barley_flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Фінський ячмінний коржик
+- id: scandinavian_korvapuusti
+  name: Finnish bun with cinnamon and cardamom
+  kind: dish
+  tags:
+  - cinnamon_bun
+  - finnish
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:korvapuusti
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - dessert
+    - bread
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+  - item: cinnamon
+    role: required
+    amount: spice
+  - item: cardamom
+    role: required
+    amount: spice
+  name_uk: Фінська булочка з корицею та кардамоном
+- id: scandinavian_mustikkapiirakka
+  name: Blueberry pie
+  kind: dish
+  tags:
+  - blueberry
+  - finnish
+  - pie
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:mustikkapiirakka
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: blueberries
+    role: main
+    amount: many
+    accepts:
+    - berries
+  - item: flour
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: addition
+    amount: normal
+    accepts:
+    - sour_cream_like
+  name_uk: Чорничний пиріг
+- id: scandinavian_vispipuuro
+  name: Whipped semolina porridge with berries
+  kind: dish
+  tags:
+  - berries
+  - finnish
+  - scandinavian
+  - semolina
+  missing_allowed: 2
+  source_family: scandinavian:vispipuuro
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - dessert
+    time: under_30
+    method:
+    - boil
+    - whip
+  comment: ''
+  ingredients:
+  - item: semolina
+    role: main
+    amount: normal
+  - item: berries
+    role: required
+    amount: many
+    accepts:
+    - lingonberries
+    - cranberries
+  - item: sugar
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Збита манна каша з ягодами
+- id: scandinavian_kiisseli
+  name: Finnish berry jelly
+  kind: dish
+  tags:
+  - berries
+  - finnish
+  - kissel
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:kiisseli
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - dessert
+    - drink
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: berries
+    role: main
+    amount: many
+  - item: starch
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Фінський ягідний кисіль
+- id: scandinavian_joulutorttu
+  name: Christmas puff pastry with prunes
+  kind: dish
+  tags:
+  - christmas
+  - finnish
+  - pastry
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:joulutorttu
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: puff_pastry
+    role: main
+    amount: many
+  - item: prune_jam
+    role: required
+    amount: normal
+    accepts:
+    - prunes
+    - fruit_preserve
+  name_uk: Різдвяне шарування з чорносливом
+- id: scandinavian_laskiaispulla
+  name: Scone with cream and almond butter
+  kind: dish
+  tags:
+  - cream_bun
+  - finnish
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:laskiaispulla
+  facets:
+    cuisine:
+    - scandinavian
+    - finnish
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: cardamom
+    role: required
+    amount: spice
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: almonds
+    role: addition
+    amount: normal
+    accepts:
+    - nuts
+  - item: jam
+    role: addition
+    amount: normal
+    accepts:
+    - fruit_preserve
+  name_uk: Булочка з вершками та мигдальною пастою
+- id: scandinavian_kjotsupa
+  name: Icelandic lamb soup
+  kind: dish
+  tags:
+  - icelandic
+  - lamb
+  - scandinavian
+  - soup
+  missing_allowed: 2
+  source_family: scandinavian:kjotsupa
+  facets:
+    cuisine:
+    - scandinavian
+    - icelandic
+    dish_type:
+    - soup
+    - main
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: lamb_chunks
+    role: main
+    amount: many
+  - item: rutabaga
+    role: required
+    amount: normal
+    accepts:
+    - root_vegetable
+  - item: potato
+    role: required
+    amount: normal
+  - item: carrot
+    role: required
+    amount: normal
+  - item: cabbage
+    role: addition
+    amount: normal
+  - item: barley
+    role: addition
+    amount: normal
+    accepts:
+    - grain
+  - item: water
+    role: required
+    amount: many
+  name_uk: Ісландський суп із баранини
+- id: scandinavian_plokkfiskur
+  name: Icelandic fish and potato mixture
+  kind: dish
+  tags:
+  - fish
+  - icelandic
+  - potato
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:plokkfiskur
+  facets:
+    cuisine:
+    - scandinavian
+    - icelandic
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: white_fish
+    role: main
+    amount: many
+    accepts:
+    - cod
+    - haddock
+    - fish
+  - item: potato
+    role: required
+    amount: many
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: onion
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  name_uk: Ісландська рибно-картопляна суміш
+- id: scandinavian_icelandic_fish_balls
+  name: Icelandic fish balls
+  kind: dish
+  tags:
+  - fish_cake
+  - icelandic
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:icelandic_fish_balls
+  facets:
+    cuisine:
+    - scandinavian
+    - icelandic
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: white_fish
+    role: main
+    amount: many
+    accepts:
+    - cod
+    - haddock
+    - fish
+  - item: potato_starch
+    role: required
+    amount: little
+    accepts:
+    - starch
+  - item: eggs
+    role: required
+    amount: normal
+  - item: milk
+    role: addition
+    amount: normal
+    accepts:
+    - milk_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: potato
+    role: addition
+    amount: many
+  name_uk: Ісландські рибні фрикадельки
+- id: scandinavian_hangikjot
+  name: Smoked lamb with potatoes
+  kind: dish
+  tags:
+  - christmas
+  - icelandic
+  - scandinavian
+  - smoked_lamb
+  missing_allowed: 2
+  source_family: scandinavian:hangikjot
+  facets:
+    cuisine:
+    - scandinavian
+    - icelandic
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: smoked_lamb
+    role: main
+    amount: many
+    accepts:
+    - cured_lamb
+    - meat_product
+  - item: potato
+    role: required
+    amount: many
+  - item: green_peas
+    role: addition
+    amount: normal
+    accepts:
+    - peas
+  - item: white_sauce
+    role: addition
+    amount: normal
+    accepts:
+    - bechamel
+  name_uk: Копчена баранина з картоплею
+- id: scandinavian_icelandic_lamb_roast
+  name: Icelandic baked lamb
+  kind: dish
+  tags:
+  - icelandic
+  - lamb
+  - roast
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:icelandic_lamb_roast
+  facets:
+    cuisine:
+    - scandinavian
+    - icelandic
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roast
+  comment: ''
+  ingredients:
+  - item: lamb_leg
+    role: main
+    amount: many
+    accepts:
+    - lamb_chunks
+  - item: potato
+    role: required
+    amount: many
+  - item: carrot
+    role: addition
+    amount: normal
+  - item: thyme
+    role: spice
+    amount: spice
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Ісландська запечена баранина
+- id: scandinavian_pylsa
+  name: Icelandic hot dog
+  kind: dish
+  tags:
+  - hotdog
+  - icelandic
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:pylsa
+  facets:
+    cuisine:
+    - scandinavian
+    - icelandic
+    dish_type:
+    - main
+    - snack
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: hotdog_sausage
+    role: main
+    amount: normal
+    accepts:
+    - sausages
+    - sausage_product
+  - item: hotdog_bun
+    role: required
+    amount: normal
+  - item: fried_onion
+    role: required
+    amount: normal
+    accepts:
+    - onion
+  - item: onion
+    role: addition
+    amount: normal
+    accepts:
+    - onion
+  - item: remoulade
+    role: addition
+    amount: normal
+    accepts:
+    - mayonnaise
+    - tartar_sauce
+  - item: mustard
+    role: required
+    amount: little
+  name_uk: Ісландський хот-дог
+- id: scandinavian_rugbraud
+  name: Icelandic dark rye bread
+  kind: dish
+  tags:
+  - icelandic
+  - rye_bread
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:rugbraud
+  facets:
+    cuisine:
+    - scandinavian
+    - icelandic
+    dish_type:
+    - bread
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: rye_flour
+    role: main
+    amount: many
+  - item: wheat_flour
+    role: addition
+    amount: normal
+    accepts:
+    - flour_group
+  - item: milk
+    role: addition
+    amount: normal
+    accepts:
+    - milk_like
+  - item: sugar
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Ісландський темний житній хліб
+- id: scandinavian_rugbraud_smoked_fish
+  name: Rye bread with smoked fish
+  kind: dish
+  tags:
+  - bread
+  - icelandic
+  - scandinavian
+  - smoked_fish
+  missing_allowed: 2
+  source_family: scandinavian:rugbraud_smoked_fish
+  facets:
+    cuisine:
+    - scandinavian
+    - icelandic
+    dish_type:
+    - main
+    - snack
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: rugbraud
+    role: main
+    amount: normal
+    accepts:
+    - rye_bread
+    - bread_base
+  - item: smoked_fish
+    role: required
+    amount: normal
+    accepts:
+    - smoked_salmon
+    - fish
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Житній хліб із копченою рибою
+- id: scandinavian_skyr_with_berries
+  name: Skyr with berries
+  kind: dish
+  tags:
+  - berries
+  - icelandic
+  - scandinavian
+  - skyr
+  missing_allowed: 2
+  source_family: scandinavian:skyr_with_berries
+  facets:
+    cuisine:
+    - scandinavian
+    - icelandic
+    dish_type:
+    - breakfast
+    - dessert
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: skyr
+    role: main
+    amount: many
+    accepts:
+    - yogurt
+    - sour_cream_like
+  - item: berries
+    role: required
+    amount: normal
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - cream_like
+  - item: sugar
+    role: addition
+    amount: little
+  name_uk: Скир з ягодами
+- id: scandinavian_skyr_cake
+  name: Skyr cake
+  kind: dish
+  tags:
+  - cake
+  - icelandic
+  - scandinavian
+  - skyr
+  missing_allowed: 2
+  source_family: scandinavian:skyr_cake
+  facets:
+    cuisine:
+    - scandinavian
+    - icelandic
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - mix
+    - set
+  comment: ''
+  ingredients:
+  - item: skyr
+    role: main
+    amount: many
+    accepts:
+    - yogurt
+    - sour_cream_like
+  - item: biscuit_crumbs
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - cream_like
+  - item: berries
+    role: addition
+    amount: normal
+  name_uk: Торт зі скиру
+- id: scandinavian_kleinur
+  name: North Atlantic fried curls
+  kind: dish
+  tags:
+  - faroese
+  - fried_dough
+  - icelandic
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:kleinur
+  facets:
+    cuisine:
+    - scandinavian
+    - icelandic
+    - faroese
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+  - item: cardamom
+    role: required
+    amount: spice
+  - item: fat
+    role: required
+    amount: many
+  name_uk: Північноатлантичні смажені завитки
+- id: scandinavian_ponnukokur
+  name: Icelandic thin pancakes
+  kind: dish
+  tags:
+  - icelandic
+  - pancake
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:ponnukokur
+  facets:
+    cuisine:
+    - scandinavian
+    - icelandic
+    dish_type:
+    - dessert
+    - breakfast
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: eggs
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: addition
+    amount: little
+  - item: jam
+    role: addition
+    amount: normal
+  name_uk: Ісландські тонкі млинці
+- id: scandinavian_snudur
+  name: Icelandic snail bun
+  kind: dish
+  tags:
+  - cinnamon_bun
+  - icelandic
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:snudur
+  facets:
+    cuisine:
+    - scandinavian
+    - icelandic
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+  - item: cinnamon
+    role: required
+    amount: spice
+  - item: chocolate
+    role: addition
+    amount: normal
+  name_uk: Ісландська булочка-равлик
+- id: scandinavian_faroe_raest_kjot
+  name: Faroese fermented lamb
+  kind: dish
+  tags:
+  - faroese
+  - fermented_lamb
+  - scandinavian
+  missing_allowed: 4
+  source_family: scandinavian:faroe_raest_kjot
+  facets:
+    cuisine:
+    - scandinavian
+    - faroese
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: fermented_lamb
+    role: main
+    amount: many
+    accepts:
+    - cured_lamb
+    - meat_product
+  - item: potato
+    role: required
+    amount: many
+  - item: rutabaga
+    role: addition
+    amount: normal
+    accepts:
+    - root_vegetable
+  name_uk: Фарерська ферментована баранина
+- id: scandinavian_faroe_fish_soup
+  name: Faroese fish soup
+  kind: dish
+  tags:
+  - cream_soup
+  - faroese
+  - fish
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:faroe_fish_soup
+  facets:
+    cuisine:
+    - scandinavian
+    - faroese
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: white_fish
+    role: main
+    amount: many
+    accepts:
+    - cod
+    - fish
+  - item: potato
+    role: required
+    amount: normal
+  - item: carrot
+    role: required
+    amount: normal
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: leek
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Фарерський рибний суп
+- id: scandinavian_humarsupa
+  name: Icelandic langoustine soup
+  kind: dish
+  tags:
+  - cream_soup
+  - icelandic
+  - scandinavian
+  - seafood
+  missing_allowed: 4
+  source_family: scandinavian:humarsupa
+  facets:
+    cuisine:
+    - scandinavian
+    - icelandic
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: langoustine
+    role: main
+    amount: many
+    accepts:
+    - shellfish
+    - seafood
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: tomato_paste
+    role: addition
+    amount: little
+    accepts:
+    - tomato_base
+  - item: cognac
+    role: addition
+    amount: little
+  - item: onion
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Ісландський суп із лангустинів
+- id: scandinavian_nordic_root_vegetables
+  name: Baked root vegetables
+  kind: dish
+  tags:
+  - new_nordic
+  - nordic
+  - scandinavian
+  - vegetable
+  missing_allowed: 2
+  source_family: scandinavian:nordic_root_vegetables
+  facets:
+    cuisine:
+    - scandinavian
+    - nordic
+    dish_type:
+    - main
+    - side
+    time: under_60
+    method:
+    - roast
+  comment: ''
+  ingredients:
+  - item: root_vegetable
+    role: main
+    amount: many
+    accepts:
+    - carrot
+    - rutabaga
+    - beet
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  - item: rapeseed_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: thyme
+    role: addition
+    amount: spice
+  - item: yogurt
+    role: addition
+    amount: normal
+    accepts:
+    - sour_cream_like
+  name_uk: Запечені коренеплоди
+- id: scandinavian_barley_risotto
+  name: Perlotto with mushrooms
+  kind: dish
+  tags:
+  - barley
+  - mushroom
+  - nordic
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:barley_risotto
+  facets:
+    cuisine:
+    - scandinavian
+    - nordic
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: barley
+    role: main
+    amount: many
+    accepts:
+    - grain
+  - item: mushroom
+    role: required
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: hard_cheese
+    role: addition
+    amount: normal
+    accepts:
+    - hard_cheese_group
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Перлотто з грибами
+- id: scandinavian_smoked_salmon_salad
+  name: Smoked salmon salad
+  kind: dish
+  tags:
+  - nordic
+  - salad
+  - salmon
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:smoked_salmon_salad
+  facets:
+    cuisine:
+    - scandinavian
+    - nordic
+    dish_type:
+    - main
+    - salad
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: smoked_salmon
+    role: main
+    amount: normal
+    accepts:
+    - salmon
+    - fish
+  - item: leafy_green
+    role: required
+    amount: many
+    accepts:
+    - greens
+  - item: potato
+    role: addition
+    amount: normal
+  - item: cucumber
+    role: addition
+    amount: normal
+  - item: dill
+    role: required
+    amount: spice
+  - item: sour_cream
+    role: addition
+    amount: normal
+    accepts:
+    - sour_cream_like
+  name_uk: Салат з копченим лососем
+- id: scandinavian_pickled_beet_salad
+  name: Pickled beet salad
+  kind: dish
+  tags:
+  - beet
+  - nordic
+  - salad
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:pickled_beet_salad
+  facets:
+    cuisine:
+    - scandinavian
+    - nordic
+    dish_type:
+    - salad
+    - side
+    time: under_10
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: pickled_beet
+    role: main
+    amount: many
+    accepts:
+    - beet
+    - pickled_vegetable
+  - item: apple
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: required
+    amount: normal
+    accepts:
+    - sour_cream_like
+  - item: onion
+    role: addition
+    amount: little
+  name_uk: Салат з маринованого буряка
+- id: scandinavian_agurksalat
+  name: Scandinavian cucumber salad
+  kind: dish
+  tags:
+  - cucumber
+  - danish
+  - nordic
+  - norwegian
+  - salad
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:agurksalat
+  facets:
+    cuisine:
+    - scandinavian
+    - nordic
+    - danish
+    - norwegian
+    dish_type:
+    - salad
+    - side
+    time: under_10
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: cucumber
+    role: main
+    amount: many
+  - item: vinegar
+    role: required
+    amount: little
+  - item: sugar
+    role: required
+    amount: little
+  - item: dill
+    role: addition
+    amount: spice
+  name_uk: Скандинавський огірковий салат
+- id: scandinavian_nordic_cheese_sandwich
+  name: Rye cheese sandwich
+  kind: dish
+  tags:
+  - cheese
+  - nordic
+  - rye_bread
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:nordic_cheese_sandwich
+  facets:
+    cuisine:
+    - scandinavian
+    - nordic
+    dish_type:
+    - breakfast
+    - snack
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: rye_bread
+    role: main
+    amount: normal
+  - item: hard_cheese
+    role: required
+    amount: normal
+    accepts:
+    - cheese
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  - item: cucumber
+    role: addition
+    amount: normal
+  name_uk: Житній бутерброд із сиром
+- id: scandinavian_nordic_mushroom_toast
+  name: Toast with mushrooms and cream
+  kind: dish
+  tags:
+  - mushroom
+  - nordic
+  - scandinavian
+  - toast
+  missing_allowed: 2
+  source_family: scandinavian:nordic_mushroom_toast
+  facets:
+    cuisine:
+    - scandinavian
+    - nordic
+    dish_type:
+    - main
+    - snack
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: mushroom
+    role: main
+    amount: many
+  - item: bread
+    role: required
+    amount: normal
+    accepts:
+    - rye_bread
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - cream_like
+  - item: onion
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Тост з грибами та вершками
+- id: scandinavian_berry_compote
+  name: Berry compote sauce
+  kind: dish
+  tags:
+  - berries
+  - component
+  - nordic
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:berry_compote
+  facets:
+    cuisine:
+    - scandinavian
+    - nordic
+    dish_type:
+    - dessert
+    - component
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: berries
+    role: main
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  - item: starch
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Ягідний компот-соус
+- id: scandinavian_oat_porridge
+  name: Oatmeal with berries
+  kind: dish
+  tags:
+  - breakfast
+  - nordic
+  - oats
+  - scandinavian
+  missing_allowed: 2
+  source_family: scandinavian:oat_porridge
+  facets:
+    cuisine:
+    - scandinavian
+    - nordic
+    dish_type:
+    - breakfast
+    time: under_10
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: oats
+    role: main
+    amount: many
+    accepts:
+    - grain
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - milk_like
+  - item: berries
+    role: addition
+    amount: normal
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  name_uk: Вівсяна каша з ягодами
+- id: scandinavian_seed_crispbread
+  name: Grain breads
+  kind: dish
+  tags:
+  - crispbread
+  - nordic
+  - scandinavian
+  - seed
+  missing_allowed: 2
+  source_family: scandinavian:seed_crispbread
+  facets:
+    cuisine:
+    - scandinavian
+    - nordic
+    dish_type:
+    - bread
+    - snack
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: rye_flour
+    role: main
+    amount: normal
+  - item: oats
+    role: required
+    amount: normal
+    accepts:
+    - grain
+  - item: sunflower_seeds
+    role: required
+    amount: normal
+    accepts:
+    - seed
+  - item: flax_seeds
+    role: addition
+    amount: normal
+    accepts:
+    - seed
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Зернові хлібці

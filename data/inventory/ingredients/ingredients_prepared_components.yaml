@@ -1,0 +1,40 @@
+metadata:
+  version: '0.1'
+  kind: ingredients
+  domain: prepared_components
+ingredients:
+  potato_salad:
+    name: potato salad
+    name_uk: картопляний салат
+    groups:
+    - prepared_component
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sausage_casing:
+    name: sausage casing
+    name_uk: ковбасна оболонка
+    groups:
+    - prepared_component
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - кишка для ковбаси
+    - оболонка для ковбаси
+potato_salad:
+  name: картофельный салат
+  groups:
+  - prepared_component
+  abstract: false
+  aliases: []
+  inventory:
+    track: true
+    default_amount: none
+    hide_from_template: false

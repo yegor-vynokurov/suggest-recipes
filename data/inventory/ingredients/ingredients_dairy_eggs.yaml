@@ -1,0 +1,479 @@
+metadata:
+  version: '0.1'
+  kind: ingredients
+  domain: dairy_eggs
+ingredients:
+  brunost:
+    name: brunost
+    name_uk: особливий тип норвезького сиру
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  buttermilk:
+    name: buttermilk
+    name_uk: пахта, сироватка
+    groups:
+    - milk_like
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cottage_cheese:
+    name: cottage cheese
+    name_uk: сир
+    groups:
+    - fresh_cheese_group
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cream:
+    name: cream
+    name_uk: вершки
+    groups:
+    - cream_like
+    - milk_like
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cream_cheese:
+    name: cream cheese
+    name_uk: вершковий сир
+    groups:
+    - soft_creamy_cheese
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  eggs:
+    name: eggs
+    name_uk: яйця
+    groups:
+    - egg
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  feta_cheese:
+    name: feta cheese
+    name_uk: фета / бринза
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fontina:
+    name: fontina
+    name_uk: італійський напівтвердий сир
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fresh_cheese:
+    name: fresh cheese
+    name_uk: свіжий сир / сир
+    groups:
+    - soft_creamy_cheese
+    - fresh_cheese_group
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  goat_cheese:
+    name: goat cheese
+    name_uk: козячий сир
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  gorgonzola:
+    name: gorgonzola
+    name_uk: горгонзола
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  gruyere:
+    name: gruyere
+    name_uk: сир грюєр
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  hard_cheese:
+    name: hard cheese
+    name_uk: твердий сир
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  hard_cheese_group:
+    name: hard cheese group
+    name_uk: тверді сири
+    groups:
+    - cheese
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  hermelin_cheese:
+    name: hermelin cheese
+    name_uk: гермелін / м'який сир з білою пліснявою
+    groups:
+    - fresh_cheese_group
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ice_cream:
+    name: ice cream
+    name_uk: морозиво
+    groups:
+    - milk_like
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  khoya:
+    name: khoya
+    name_uk: кхоя / уварене молоко
+    groups:
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  kunefe_cheese:
+    name: kunefe cheese
+    name_uk: сир для кюнефі
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  maroilles:
+    name: maroilles
+    name_uk: сир Марауль
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mascarpone:
+    name: mascarpone
+    name_uk: італійський вершковий сир
+    groups:
+    - soft_creamy_cheese
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  melting_cheese:
+    name: melting cheese
+    name_uk: плавлений сир (можливо, фондю)
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  milk:
+    name: milk
+    name_uk: молоко
+    groups:
+    - milk_like
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  milk_powder:
+    name: milk powder
+    name_uk: сухе молоко
+    groups:
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  montasio:
+    name: montasio
+    name_uk: італійський напівтвердий сир із коров'ячого молока
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mozzarella:
+    name: mozzarella
+    name_uk: моцарела
+    groups:
+    - cheese
+    - dairy
+    - fresh_cheese_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  paneer:
+    name: paneer
+    name_uk: панір
+    groups:
+    - fresh_cheese_group
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  parmesan:
+    name: parmesan
+    name_uk: пармезан
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pecorino:
+    name: pecorino
+    name_uk: сир із овечого молока
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  raclette_cheese:
+    name: raclette cheese
+    name_uk: сир Раклет
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  reblochon:
+    name: reblochon
+    name_uk: реблошон
+    groups:
+    - soft_creamy_cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ricotta:
+    name: ricotta
+    name_uk: Рікотта
+    groups:
+    - dairy
+    - fresh_cheese_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ricotta_salata:
+    name: ricotta salata
+    name_uk: ricotta для салату
+    groups:
+    - dairy
+    - fresh_cheese_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sheep_cheese:
+    name: sheep cheese
+    name_uk: овеча бринза
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  skyr:
+    name: skyr
+    name_uk: скир, щось середнє між сметаною та сирною масою
+    groups:
+    - sour_cream_like
+    - fermented_dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  soft_cheese:
+    name: soft cheese
+    name_uk: м'який сир
+    groups:
+    - soft_creamy_cheese
+    - dairy
+    - fresh_cheese_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sour_cream:
+    name: sour cream
+    name_uk: сметана
+    groups:
+    - sour_cream_like
+    - fermented_dairy
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tomme_cheese:
+    name: tomme cheese
+    name_uk: сир томме
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  white_cheese:
+    name: white cheese
+    name_uk: білий сир / бринза
+    groups:
+    - cheese
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  yogurt:
+    name: yogurt
+    name_uk: йогурт
+    groups:
+    - sour_cream_like
+    - cream_like
+    - fermented_dairy
+    - dairy
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false

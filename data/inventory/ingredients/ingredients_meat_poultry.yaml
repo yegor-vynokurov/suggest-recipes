@@ -1,0 +1,1313 @@
+metadata:
+  version: '0.1'
+  kind: ingredients
+  domain: meat_poultry
+ingredients:
+  andouillette:
+    name: andouillette
+    name_uk: сорт ковбаси типу зельця
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  bacon:
+    name: bacon
+    name_uk: бекон
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  beef_bones:
+    name: beef bones
+    name_uk: яловичі кістки
+    groups:
+    - red_meat
+    - meat_piece
+    - meat_on_bone
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  beef_chunks:
+    name: beef chunks
+    name_uk: яловичина шматочками
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  beef_sirloin:
+    name: beef sirloin
+    name_uk: яловича вирізка
+    groups:
+    - red_meat
+    - meat_piece
+    - cutlet_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  beef_steak:
+    name: beef steak
+    name_uk: стейк яловичий / відбивна
+    groups:
+    - red_meat
+    - cutlet_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - яловича відбивна
+  blood_sausage_base:
+    name: blood sausage base
+    name_uk: основа для кров'яної ковбаси
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - кров'янка
+    - кров'яна ковбаса
+  boiled_sausage:
+    name: boiled sausage
+    name_uk: варена ковбаса
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  bresaola:
+    name: bresaola
+    name_uk: брезаола
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chicken_drumstick:
+    name: chicken drumstick
+    name_uk: куряча гомілка
+    groups:
+    - poultry
+    - meat_piece
+    - meat_on_bone
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - куряча гомілка
+  chicken_fillet:
+    name: chicken fillet
+    name_uk: куряче філе
+    groups:
+    - poultry
+    - meat_piece
+    - cutlet_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chicken_gizzards:
+    name: chicken gizzards
+    name_uk: курячі шлунки
+    groups:
+    - poultry
+    - meat_piece
+    - offal
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chicken_liver:
+    name: chicken liver
+    name_uk: курячі потрухи
+    groups:
+    - poultry
+    - offal
+    - liver_offal
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chicken_parts:
+    name: chicken parts
+    name_uk: частини курки
+    groups:
+    - poultry
+    - broth_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chicken_pieces:
+    name: chicken pieces
+    name_uk: курка шматочками
+    groups:
+    - poultry
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chicken_thigh:
+    name: chicken thigh
+    name_uk: куряче стегно
+    groups:
+    - poultry
+    - meat_piece
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cured_lamb:
+    name: cured lamb
+    name_uk: баранячий хамон
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  debreceni_sausage:
+    name: debreceni sausage
+    name_uk: угорські сосиски
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  duck:
+    name: duck
+    name_uk: качка
+    groups:
+    - poultry
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  duck_breast:
+    name: duck breast
+    name_uk: качина грудка
+    groups:
+    - poultry
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  duck_confit:
+    name: duck confit
+    name_uk: качка або окремі її частини, приготовлені методом конфі - повільного, до 3-4 годин, томлення в качиному жирі
+    groups:
+    - poultry
+    - meat_piece
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  duck_leg:
+    name: duck leg
+    name_uk: нога качки
+    groups:
+    - poultry
+    - meat_piece
+    - meat_on_bone
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  falukorv:
+    name: falukorv
+    name_uk: ковбаса фалу з копченого м'яса
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fenalar:
+    name: fenalar
+    name_uk: феналар
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fermented_lamb:
+    name: fermented lamb
+    name_uk: ферментоване ягня
+    groups:
+    - meat_product
+    - prepared_meat
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  goose:
+    name: goose
+    name_uk: гусак
+    groups:
+    - poultry
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  goose_leg:
+    name: goose leg
+    name_uk: нога гусака
+    groups:
+    - poultry
+    - meat_piece
+    - meat_on_bone
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  goose_liver:
+    name: goose liver
+    name_uk: гусяча печінка
+    groups:
+    - poultry
+    - offal
+    - liver_offal
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ground_beef:
+    name: ground beef
+    name_uk: яловичий фарш
+    groups:
+    - red_meat
+    - minced_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ground_chicken:
+    name: ground chicken
+    name_uk: курячий фарш
+    groups:
+    - poultry
+    - minced_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ground_lamb:
+    name: ground lamb
+    name_uk: фарш із баранини
+    groups:
+    - red_meat
+    - minced_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ground_pork:
+    name: ground pork
+    name_uk: свинячий фарш
+    groups:
+    - red_meat
+    - minced_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ground_veal:
+    name: ground veal
+    name_uk: телячий фарш
+    groups:
+    - minced_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  guanciale:
+    name: guanciale
+    name_uk: копчені свинячі щіки
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ham:
+    name: ham
+    name_uk: шинка
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  hotdog_sausage:
+    name: hotdog sausage
+    name_uk: сосиска для хотдогу
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  hurka:
+    name: hurka
+    name_uk: домашня ковбаска
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  isterband:
+    name: isterband
+    name_uk: підкопчена ковбаса великого помелу
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  italian_sausage:
+    name: italian sausage
+    name_uk: італійські сосиски
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  jelito:
+    name: jelito
+    name_uk: еліто / чеська кров'яна ковбаса
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  jitrnice:
+    name: jitrnice
+    name_uk: йітрниці / чеська ліверна ковбаса
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lamb:
+    name: lamb
+    name_uk: баранина
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lamb_chunks:
+    name: lamb chunks
+    name_uk: баранина шматочками
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lamb_head_trotters:
+    name: lamb head trotters
+    name_uk: бараняча голова та ніжки
+    groups:
+    - offal
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lamb_leg:
+    name: lamb leg
+    name_uk: нога ягняти
+    groups:
+    - red_meat
+    - meat_piece
+    - meat_on_bone
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lamb_ribs:
+    name: lamb ribs
+    name_uk: ребра ягняти
+    groups:
+    - red_meat
+    - meat_piece
+    - meat_on_bone
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lamb_shank:
+    name: lamb shank
+    name_uk: бараняча гомілка
+    groups:
+    - red_meat
+    - meat_piece
+    - meat_on_bone
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  liver:
+    name: liver
+    name_uk: печінка
+    groups:
+    - offal
+    - liver_offal
+    - meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - печінка
+  liver_pate:
+    name: liver pate
+    name_uk: печінковий паштет
+    groups:
+    - offal
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  meat_bones:
+    name: meat bones
+    name_uk: м'ясні кістки
+    groups:
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  meat_leftovers:
+    name: meat leftovers
+    name_uk: м'ясні млинці-рулетики
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  meatballs:
+    name: meatballs
+    name_uk: котлети
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  medisterpolse:
+    name: medisterpolse
+    name_uk: датська товста пряна ковбаса
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mutton_chunks:
+    name: mutton chunks
+    name_uk: баранина / козлятина шматочками
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  oxtail:
+    name: oxtail
+    name_uk: яловичий хвіст
+    groups:
+    - red_meat
+    - offal
+    - meat_on_bone
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pancetta:
+    name: pancetta
+    name_uk: панчетта
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pastirma:
+    name: pastirma
+    name_uk: пастирма
+    groups:
+    - meat_product
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pate:
+    name: pate
+    name_uk: щось типу пюре з м'яса чи овочів
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pork_belly:
+    name: pork belly
+    name_uk: підчеревок
+    groups:
+    - red_meat
+    - meat_piece
+    - animal_fat
+    - fat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - підчеревок
+    - свиняча грудинка
+  pork_chop:
+    name: pork chop
+    name_uk: свиняча відбивна
+    groups:
+    - red_meat
+    - cutlet_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - свиняча відбивна
+  pork_chunks:
+    name: pork chunks
+    name_uk: свинина шматочками
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pork_cracklings:
+    name: pork cracklings
+    name_uk: шкварки
+    groups:
+    - red_meat
+    - meat_piece
+    - offal
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pork_ears:
+    name: pork ears
+    name_uk: свинячі вушка
+    groups:
+    - offal
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - свинячі вушка
+    - свинячі вуха
+  pork_hock:
+    name: pork hock
+    name_uk: свиняча гомілка / рулька
+    groups:
+    - red_meat
+    - meat_piece
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - свиняча голінка
+    - свиняча гомілка
+  pork_lardons:
+    name: pork lardons
+    name_uk: нарізане сало
+    groups:
+    - red_meat
+    - meat_piece
+    - fat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pork_liver:
+    name: pork liver
+    name_uk: свиняча печінка
+    groups:
+    - meat_piece
+    - offal
+    - liver_offal
+    - meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pork_neck:
+    name: pork neck
+    name_uk: свиняча шия
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pork_ribs:
+    name: pork ribs
+    name_uk: свинячі ребра
+    groups:
+    - red_meat
+    - meat_piece
+    - meat_on_bone
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - свинячі ребра
+  pork_roast:
+    name: pork roast
+    name_uk: свиняче жарке
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pork_shank:
+    name: pork shank
+    name_uk: свиняча рулька
+    groups:
+    - red_meat
+    - meat_piece
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - свиняча рулька
+  pork_shoulder:
+    name: pork shoulder
+    name_uk: свиняча лопатка
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pork_tail:
+    name: pork tail
+    name_uk: свинячий хвіст
+    groups:
+    - offal
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - свинячий хвіст
+  pork_tenderloin:
+    name: pork tenderloin
+    name_uk: свиняча вирізка
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pork_trotters:
+    name: pork trotters
+    name_uk: свинячі ніжки
+    groups:
+    - offal
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - свинячі ніжки
+    - свинячі ноги
+  prosciutto:
+    name: prosciutto
+    name_uk: прошутто
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  prosciutto_cotto:
+    name: prosciutto cotto
+    name_uk: нарізана прошутто
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rabbit:
+    name: rabbit
+    name_uk: кролик
+    groups:
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  red_sausage:
+    name: red sausage
+    name_uk: червона сосиска
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  reindeer_meat:
+    name: reindeer meat
+    name_uk: м'ясо північного оленя
+    groups:
+    - meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  roast_beef:
+    name: roast beef
+    name_uk: запечений у духовці великий шматок яловичого м'яса
+    groups:
+    - red_meat
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  salami:
+    name: salami
+    name_uk: салямі
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  salt_pork:
+    name: salt pork
+    name_uk: солонина зі свинини
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  salted_lamb_ribs:
+    name: salted lamb ribs
+    name_uk: солонина з баранячих ребер
+    groups:
+    - red_meat
+    - meat_piece
+    - meat_on_bone
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sausages:
+    name: sausages
+    name_uk: сосиски
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  smoked_ham:
+    name: smoked ham
+    name_uk: копчена шинка
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  smoked_lamb:
+    name: smoked lamb
+    name_uk: копчене ягня
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  smoked_meat:
+    name: smoked meat
+    name_uk: копчене м'ясо
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  smoked_pork_hock:
+    name: smoked pork hock
+    name_uk: копчені голяшки
+    groups:
+    - red_meat
+    - meat_piece
+    - meat_on_bone
+    - broth_meat
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  smoked_pork_ribs:
+    name: smoked pork ribs
+    name_uk: копчені свинячі ребра
+    groups:
+    - meat_product
+    - prepared_meat
+    - red_meat
+    - meat_on_bone
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - копчені свинячі ребра
+  smoked_sausage:
+    name: smoked sausage
+    name_uk: копчена ковбаса
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  stew:
+    name: stew
+    name_uk: тушонка
+    groups:
+    - meat_product
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sucuk:
+    name: sucuk
+    name_uk: суджук
+    groups:
+    - sausage_product
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tripe:
+    name: tripe
+    name_uk: рубець
+    groups:
+    - offal
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  veal_chunks:
+    name: veal chunks
+    name_uk: телятина шматочками
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  veal_cutlet:
+    name: veal cutlet
+    name_uk: міланська відбивна / котлета
+    groups:
+    - red_meat
+    - meat_piece
+    - cutlet_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  veal_roast:
+    name: veal roast
+    name_uk: смажена яловичина
+    groups:
+    - red_meat
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  veal_shank:
+    name: veal shank
+    name_uk: теляче м'ясо на кістці за формою як відбивна
+    groups:
+    - red_meat
+    - meat_piece
+    - meat_on_bone
+    - broth_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  venison_chunks:
+    name: venison chunks
+    name_uk: шматочки оленини
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  whole_chicken:
+    name: whole chicken
+    name_uk: ціла курка
+    groups:
+    - poultry
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  wild_boar:
+    name: wild boar
+    name_uk: дикий кабан
+    groups:
+    - red_meat
+    - meat_piece
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  zeltz:
+    name: zeltz
+    name_uk: сальтисон
+    groups:
+    - meat_product
+    - prepared_meat
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false

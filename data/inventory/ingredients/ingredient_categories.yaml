@@ -1,0 +1,548 @@
+metadata:
+  version: '0.1'
+  kind: ingredient_categories
+categories:
+  ingredient:
+    name: ingredient
+    name_uk: інгредієнт
+    parents: []
+    abstract: true
+  abstract_ingredient:
+    name: abstract ingredient
+    name_uk: абстрактна категорія-інгредієнт
+    parents:
+    - ingredient
+    abstract: true
+  technical:
+    name: technical
+    name_uk: технічні інгредієнти
+    parents:
+    - ingredient
+    abstract: true
+  protein:
+    name: protein
+    name_uk: білкові продукти
+    parents:
+    - ingredient
+    abstract: true
+  meat:
+    name: meat
+    name_uk: м'ясо
+    parents:
+    - protein
+    abstract: true
+  meat_piece:
+    name: meat piece
+    name_uk: м'ясо шматочками
+    parents:
+    - meat
+    abstract: true
+  meat_on_bone:
+    name: meat on bone
+    name_uk: м'ясо на кістки / ребра / гомілки
+    parents:
+    - meat_piece
+    abstract: true
+  cutlet_meat:
+    name: cutlet meat
+    name_uk: м'ясо для відбивних
+    parents:
+    - meat_piece
+    abstract: true
+  broth_meat:
+    name: broth meat
+    name_uk: м'ясо або кістки для бульйону
+    parents:
+    - meat
+    abstract: true
+  minced_meat:
+    name: minced meat
+    name_uk: фарш
+    parents:
+    - meat
+    abstract: true
+  poultry:
+    name: poultry
+    name_uk: птах
+    parents:
+    - meat
+    abstract: true
+  red_meat:
+    name: red meat
+    name_uk: червоне м'ясо
+    parents:
+    - meat
+    abstract: true
+  meat_product:
+    name: meat product
+    name_uk: м'ясні вироби
+    parents:
+    - meat
+    abstract: true
+  prepared_meat:
+    name: prepared meat
+    name_uk: готові м'ясні вироби
+    parents:
+    - meat_product
+    abstract: true
+  sausage_product:
+    name: sausage product
+    name_uk: ковбаси та ковбасні вироби
+    parents:
+    - meat_product
+    - prepared_meat
+    abstract: true
+  offal:
+    name: offal
+    name_uk: субпродукти
+    parents:
+    - meat
+    abstract: true
+  liver_offal:
+    name: liver offal
+    name_uk: печінка та печінкові субпродукти
+    parents:
+    - offal
+    abstract: true
+  fish:
+    name: fish
+    name_uk: риба
+    parents:
+    - protein
+    abstract: true
+  fish_product:
+    name: fish product
+    name_uk: оброблена риба та рибні вироби
+    parents:
+    - fish
+    abstract: true
+  marinated_fish:
+    name: marinated fish
+    name_uk: маринована риба
+    parents:
+    - fish_product
+    abstract: true
+  salted_fish:
+    name: salted fish
+    name_uk: солона риба
+    parents:
+    - fish_product
+    abstract: true
+  dried_fish:
+    name: dried fish
+    name_uk: сушена риба
+    parents:
+    - fish_product
+    abstract: true
+  smoked_fish:
+    name: smoked fish
+    name_uk: копчена риба
+    parents:
+    - fish_product
+    abstract: true
+  seafood:
+    name: seafood
+    name_uk: морепродукти
+    parents:
+    - protein
+    abstract: true
+  crustacean:
+    name: crustacean
+    name_uk: ракоподібні
+    parents:
+    - seafood
+    abstract: true
+  egg:
+    name: egg
+    name_uk: яйця
+    parents:
+    - protein
+    abstract: true
+  dairy:
+    name: dairy
+    name_uk: молочні продукти
+    parents:
+    - protein
+    abstract: true
+  milk_like:
+    name: milk like
+    name_uk: молоко та близькі рідкі молочні продукти
+    parents:
+    - dairy
+    abstract: true
+  cream_like:
+    name: cream like
+    name_uk: вершкова / сметанна основа
+    parents:
+    - dairy
+    abstract: true
+  fermented_dairy:
+    name: fermented dairy
+    name_uk: кисломолочні продукти
+    parents:
+    - dairy
+    abstract: true
+  sour_cream_like:
+    name: sour cream like
+    name_uk: сметанна/кисломолочна вершкова основа
+    parents:
+    - cream_like
+    - fermented_dairy
+    abstract: true
+  cheese:
+    name: cheese
+    name_uk: сир
+    parents:
+    - dairy
+    abstract: true
+  fresh_cheese_group:
+    name: fresh cheese group
+    name_uk: свіжий сир / сир
+    parents:
+    - cheese
+    abstract: true
+  soft_creamy_cheese:
+    name: soft creamy cheese
+    name_uk: м'який вершковий сир
+    parents:
+    - cheese
+    abstract: true
+  legume:
+    name: legume
+    name_uk: бобові
+    parents:
+    - protein
+    abstract: true
+  bean:
+    name: bean
+    name_uk: квасоля та квасоля
+    parents:
+    - legume
+    abstract: true
+  lentil:
+    name: lentil
+    name_uk: сочевиця і дав
+    parents:
+    - legume
+    abstract: true
+  pea_chickpea:
+    name: pea chickpea
+    name_uk: горох, нут, маш
+    parents:
+    - legume
+    abstract: true
+  plant_food:
+    name: plant food
+    name_uk: рослинні продукти
+    parents:
+    - ingredient
+    abstract: true
+  base_starch:
+    name: base starch
+    name_uk: крохмальна основа
+    parents:
+    - plant_food
+    abstract: true
+  grain:
+    name: grain
+    name_uk: крупи та зерно
+    parents:
+    - base_starch
+    abstract: true
+  rice_group:
+    name: rice group
+    name_uk: рисова основа
+    parents:
+    - grain
+    abstract: true
+  wheat_group:
+    name: wheat group
+    name_uk: пшениця та пшенична основа
+    parents:
+    - grain
+    abstract: true
+  corn_group:
+    name: corn group
+    name_uk: кукурудзяна основа
+    parents:
+    - grain
+    abstract: true
+  flour_group:
+    name: flour group
+    name_uk: борошно та борошняна основа
+    parents:
+    - base_starch
+    abstract: true
+  bread_base:
+    name: bread base
+    name_uk: хлібна основа
+    parents:
+    - base_starch
+    abstract: true
+  flatbread:
+    name: flatbread
+    name_uk: плоский хліб / коржі
+    parents:
+    - bread_base
+    abstract: true
+  pasta_noodle:
+    name: pasta noodle
+    name_uk: паста, локшина та вермішель
+    parents:
+    - base_starch
+    abstract: true
+  vegetable:
+    name: vegetable
+    name_uk: овочі
+    parents:
+    - plant_food
+    abstract: true
+  vegetable_mix:
+    name: vegetable mix
+    name_uk: суміш овочів
+    parents:
+    - vegetable
+    abstract: true
+  root_vegetable:
+    name: root vegetable
+    name_uk: коренеплоди та бульби
+    parents:
+    - vegetable
+    abstract: true
+  leafy_green:
+    name: leafy green
+    name_uk: листова зелень
+    parents:
+    - vegetable
+    abstract: true
+  nightshade_vegetable:
+    name: nightshade vegetable
+    name_uk: пасльонові овочі
+    parents:
+    - vegetable
+    abstract: true
+  cabbage_family:
+    name: cabbage family
+    name_uk: капустяні
+    parents:
+    - vegetable
+    abstract: true
+  pickled_vegetable:
+    name: pickled vegetable
+    name_uk: мариновані овочі
+    parents:
+    - vegetable
+    abstract: true
+  squash_family:
+    name: squash family
+    name_uk: гарбузові та кабачкові
+    parents:
+    - vegetable
+    abstract: true
+  mushroom:
+    name: mushroom
+    name_uk: гриби
+    parents:
+    - plant_food
+    abstract: true
+  fruit:
+    name: fruit
+    name_uk: фрукти та сухофрукти
+    parents:
+    - plant_food
+    abstract: true
+  fresh_fruit:
+    name: fresh fruit
+    name_uk: свіжі фрукти
+    parents:
+    - fruit
+    abstract: true
+  berry:
+    name: berry
+    name_uk: ягоди
+    parents:
+    - fresh_fruit
+    abstract: true
+  dried_fruit_group:
+    name: dried fruit group
+    name_uk: сухофрукти
+    parents:
+    - fruit
+    abstract: true
+  nuts:
+    name: nuts
+    name_uk: горіхи
+    parents:
+    - plant_food
+    abstract: true
+  seed:
+    name: seed
+    name_uk: насіння
+    parents:
+    - plant_food
+    abstract: true
+  fat:
+    name: fat
+    name_uk: жири
+    parents:
+    - ingredient
+    abstract: true
+  animal_fat:
+    name: animal fat
+    name_uk: тваринні жири
+    parents:
+    - fat
+    abstract: true
+  plant_oil:
+    name: plant oil
+    name_uk: рослинні олії
+    parents:
+    - fat
+    abstract: true
+  sweetener:
+    name: sweetener
+    name_uk: солодка основа
+    parents:
+    - ingredient
+    abstract: true
+  seasoning:
+    name: seasoning
+    name_uk: приправи та смакові добавки
+    parents:
+    - ingredient
+    abstract: true
+  sauce:
+    name: sauce
+    name_uk: соуси
+    parents:
+    - seasoning
+    abstract: true
+  fruit_preserve:
+    name: fruit preserve
+    name_uk: варення / повидло / джем
+    parents:
+    - sauce
+    - sweetener
+    abstract: true
+  chutney_group:
+    name: chutney group
+    name_uk: чатні
+    parents:
+    - sauce
+    abstract: true
+  tomato_base:
+    name: tomato base
+    name_uk: томатна основа
+    parents:
+    - sauce
+    - nightshade_vegetable
+    abstract: true
+  acid_souring:
+    name: acid souring
+    name_uk: кисла добавка
+    parents:
+    - seasoning
+    abstract: true
+  fermented_condiment:
+    name: fermented condiment
+    name_uk: ферментовані соуси та оцти
+    parents:
+    - seasoning
+    abstract: true
+  spice:
+    name: spice
+    name_uk: спеції
+    parents:
+    - seasoning
+    abstract: true
+  hot_spice:
+    name: hot spice
+    name_uk: гострі спеції
+    parents:
+    - spice
+    abstract: true
+  chili_spice:
+    name: chili spice
+    name_uk: чилі та червоний перець
+    parents:
+    - hot_spice
+    abstract: true
+  pungent_spice:
+    name: pungent spice
+    name_uk: різкі / пекучі спеції
+    parents:
+    - spice
+    abstract: true
+  mild_spice:
+    name: mild spice
+    name_uk: м'які спеції
+    parents:
+    - spice
+    abstract: true
+  warm_spice:
+    name: warm spice
+    name_uk: теплі солодкувато-пряні спеції
+    parents:
+    - spice
+    abstract: true
+  earthy_spice:
+    name: earthy spice
+    name_uk: землісті та фонові спеції
+    parents:
+    - spice
+    abstract: true
+  seed_spice:
+    name: seed spice
+    name_uk: насіннєві спеції
+    parents:
+    - spice
+    abstract: true
+  color_spice:
+    name: color spice
+    name_uk: колірні спеції
+    parents:
+    - spice
+    abstract: true
+  aromatic_spice:
+    name: aromatic spice
+    name_uk: ароматичні спеції
+    parents:
+    - spice
+    abstract: true
+  masala_mix:
+    name: masala mix
+    name_uk: суміші спецій/масла
+    parents:
+    - spice
+    abstract: true
+  herb:
+    name: herb
+    name_uk: трави
+    parents:
+    - seasoning
+    abstract: true
+  fresh_herb:
+    name: fresh herb
+    name_uk: свіжі трави
+    parents:
+    - herb
+    abstract: true
+  dried_herb:
+    name: dried herb
+    name_uk: сухі трави
+    parents:
+    - herb
+    abstract: true
+  aromatic_vegetable:
+    name: aromatic vegetable
+    name_uk: ароматичні овочі
+    parents:
+    - seasoning
+    - vegetable
+    abstract: true
+  prepared_component:
+    name: prepared component
+    name_uk: готові компоненти
+    parents:
+    - ingredient
+    abstract: true

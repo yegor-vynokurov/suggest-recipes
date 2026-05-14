@@ -1,0 +1,7721 @@
+metadata:
+  version: 0.1-italian-large
+  purpose: Large Italian cuisine recipe templates for pantry-based suggestion engine
+  design_rules:
+  - If a title names a key ingredient, that ingredient appears as main or required.
+  - Broad categories are used mainly in accepts, not as a replacement for named title ingredients.
+  - Water is included as a technological ingredient, but should be treated as always available by inventory logic.
+  - These are ingredient templates, not exact step-by-step recipes.
+  - 'Time buckets: under_10, under_30, under_60, over_60.'
+  cuisines:
+    italian: итальянская
+  quantity_scale:
+  - spice
+  - little
+  - normal
+  - many
+  source_notes:
+  - 'Collection follows the Italian meal structure: antipasti, primi, secondi, contorni, dolci, plus breads and sauces.'
+  - 'Primi emphasize pasta, risotto and soups: carbonara, cacio e pepe, amatriciana, pesto, ragù, lasagne, gnocchi, seafood
+    pasta, minestrone, ribollita and regional grain/bean soups.'
+  - 'Secondi emphasize meat, fish, poultry and vegetable mains: ossobuco, saltimbocca, cotoletta, cacciatore, parmigiana,
+    baccalà, sarde, calamari, frittata and stuffed vegetables.'
+  - Breads and pizza include margherita, marinara, calzone, focaccia, piadina, panzerotti, taralli and grissini.
+  - Desserts include tiramisù, panna cotta, cannoli, cassata, pastiera, sfogliatelle, zabaglione, gelato, crostata, panettone,
+    pandoro and regional nut pastries.
+recipes:
+- id: italian_bruschetta_pomodoro
+  name: Bruschetta with tomatoes
+  kind: dish
+  tags:
+  - antipasto
+  - bread
+  - italian
+  - tomato
+  missing_allowed: 2
+  source_family: italian:bruschetta_pomodoro
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: under_10
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: bread
+    role: main
+    amount: normal
+    accepts:
+    - bread_base
+  - item: tomato
+    role: main
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: basil
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Брускетта з помідорами
+- id: italian_bruschetta_funghi
+  name: Bruschetta with mushrooms
+  kind: dish
+  tags:
+  - antipasto
+  - italian
+  - mushroom
+  missing_allowed: 2
+  source_family: italian:bruschetta_funghi
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: under_30
+    method:
+    - fry
+    - assemble
+  comment: ''
+  ingredients:
+  - item: bread
+    role: main
+    amount: normal
+    accepts:
+    - bread_base
+  - item: mushroom
+    role: main
+    amount: normal
+    accepts:
+    - mushroom
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: parsley
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Брускетта з грибами
+- id: italian_caprese
+  name: Caprese
+  kind: dish
+  tags:
+  - antipasto
+  - cheese
+  - italian
+  - salad
+  missing_allowed: 2
+  source_family: italian:caprese
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - salad
+    time: under_10
+    method:
+    - raw
+    - assemble
+  comment: ''
+  ingredients:
+  - item: mozzarella
+    role: main
+    amount: normal
+    accepts:
+    - fresh_cheese_group
+    - white_cheese
+  - item: tomato
+    role: main
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: basil
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Капрезе
+- id: italian_panzanella
+  name: Bread salad with tomatoes
+  kind: dish
+  tags:
+  - bread
+  - italian
+  - salad
+  - tuscan
+  missing_allowed: 2
+  source_family: italian:panzanella
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - salad
+    time: under_30
+    method:
+    - raw
+    - mix
+  comment: ''
+  ingredients:
+  - item: bread
+    role: main
+    amount: many
+    accepts:
+    - bread_base
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: cucumber
+    role: addition
+    amount: little
+    accepts:
+    - vegetable
+  - item: onion
+    role: required
+    amount: little
+  - item: vinegar
+    role: required
+    amount: little
+    accepts:
+    - acid_souring
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: basil
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Хлібний салат із томатами
+- id: italian_crostini_toscani
+  name: Toast with chicken liver
+  kind: dish
+  tags:
+  - antipasto
+  - italian
+  - offal
+  - tuscan
+  missing_allowed: 2
+  source_family: italian:crostini_toscani
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: under_60
+    method:
+    - stew
+    - blend
+    - assemble
+  comment: ''
+  ingredients:
+  - item: bread
+    role: main
+    amount: normal
+    accepts:
+    - bread_base
+  - item: chicken_liver
+    role: main
+    amount: normal
+    accepts:
+    - liver_offal
+  - item: onion
+    role: required
+    amount: little
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: capers
+    role: addition
+    amount: little
+  - item: anchovy
+    role: addition
+    amount: little
+    accepts:
+    - fish
+  - item: white_wine
+    role: addition
+    amount: little
+  name_uk: Тости з курячою печінкою
+- id: italian_arancini_ragu
+  name: Rice balls with stew
+  kind: dish
+  tags:
+  - fried
+  - italian
+  - rice
+  - sicilian
+  missing_allowed: 2
+  source_family: italian:arancini_ragu
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: over_60
+    method:
+    - boil
+    - fill
+    - fry
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+    accepts:
+    - rice_group
+  - item: ground_meat
+    role: required
+    amount: normal
+    accepts:
+    - minced_meat
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: mozzarella
+    role: addition
+    amount: little
+    accepts:
+    - cheese
+  - item: breadcrumbs
+    role: required
+    amount: normal
+    accepts:
+    - bread_base
+  - item: eggs
+    role: required
+    amount: little
+    accepts:
+    - egg
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  name_uk: Рисові кульки з рагу
+- id: italian_suppli
+  name: Rice croquettes with mozzarella
+  kind: dish
+  tags:
+  - fried
+  - italian
+  - rice
+  - roman
+  missing_allowed: 2
+  source_family: italian:suppli
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: over_60
+    method:
+    - boil
+    - fill
+    - fry
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+    accepts:
+    - rice_group
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: mozzarella
+    role: main
+    amount: normal
+    accepts:
+    - fresh_cheese_group
+  - item: breadcrumbs
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: little
+    accepts:
+    - egg
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  name_uk: Рисові крокети з моцарелою
+- id: italian_mozzarella_in_carrozza
+  name: Fried bread with mozzarella
+  kind: dish
+  tags:
+  - cheese
+  - fried
+  - italian
+  - naples
+  missing_allowed: 2
+  source_family: italian:mozzarella_in_carrozza
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: under_30
+    method:
+    - assemble
+    - fry
+  comment: ''
+  ingredients:
+  - item: bread
+    role: main
+    amount: normal
+    accepts:
+    - bread_base
+  - item: mozzarella
+    role: main
+    amount: normal
+    accepts:
+    - fresh_cheese_group
+  - item: eggs
+    role: required
+    amount: little
+    accepts:
+    - egg
+  - item: flour
+    role: required
+    amount: little
+    accepts:
+    - flour_group
+  - item: breadcrumbs
+    role: addition
+    amount: normal
+    accepts:
+    - bread_base
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  name_uk: Смажений хліб з моцарелою
+- id: italian_olive_ascolane
+  name: Stuffed fried olives
+  kind: dish
+  tags:
+  - fried
+  - italian
+  - marche
+  - meat
+  missing_allowed: 2
+  source_family: italian:olive_ascolane
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: over_60
+    method:
+    - fill
+    - fry
+  comment: ''
+  ingredients:
+  - item: olive
+    role: main
+    amount: many
+    accepts:
+    - fermented_condiment
+  - item: ground_meat
+    role: required
+    amount: normal
+    accepts:
+    - minced_meat
+  - item: hard_cheese
+    role: addition
+    amount: little
+    accepts:
+    - cheese
+  - item: eggs
+    role: required
+    amount: little
+    accepts:
+    - egg
+  - item: breadcrumbs
+    role: required
+    amount: normal
+    accepts:
+    - bread_base
+  - item: flour
+    role: addition
+    amount: little
+    accepts:
+    - flour_group
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  name_uk: Фаршировані смажені оливки
+- id: italian_vitello_tonnato
+  name: Veal with tuna sauce
+  kind: dish
+  tags:
+  - cold
+  - italian
+  - piedmont
+  - veal
+  missing_allowed: 2
+  source_family: italian:vitello_tonnato
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: over_60
+    method:
+    - boil
+    - blend
+    - raw
+  comment: ''
+  ingredients:
+  - item: veal_roast
+    role: main
+    amount: many
+    accepts:
+    - red_meat
+    - meat_piece
+  - item: canned_tuna
+    role: required
+    amount: normal
+    accepts:
+    - fish
+  - item: mayonnaise
+    role: required
+    amount: normal
+    accepts:
+    - remoulade
+    - tartar_sauce
+  - item: capers
+    role: required
+    amount: little
+  - item: anchovy
+    role: addition
+    amount: little
+    accepts:
+    - fish
+  - item: lemon
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  name_uk: Телятина с тунцовым соусом
+- id: italian_prosciutto_melone
+  name: Prosciutto with melon
+  kind: dish
+  tags:
+  - cold
+  - fruit
+  - italian
+  - meat
+  missing_allowed: 2
+  source_family: italian:prosciutto_melone
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: under_10
+    method:
+    - raw
+    - assemble
+  comment: ''
+  ingredients:
+  - item: prosciutto
+    role: main
+    amount: normal
+    accepts:
+    - meat_product
+  - item: melon
+    role: main
+    amount: normal
+    accepts:
+    - fresh_fruit
+  name_uk: Прошутто з динею
+- id: italian_bresaola_rucola_parmigiano
+  name: Bresaola with arugula
+  kind: dish
+  tags:
+  - cold
+  - italian
+  - meat
+  - salad
+  missing_allowed: 2
+  source_family: italian:bresaola_rucola_parmigiano
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: under_10
+    method:
+    - raw
+    - assemble
+  comment: ''
+  ingredients:
+  - item: bresaola
+    role: main
+    amount: normal
+    accepts:
+    - meat_product
+  - item: arugula
+    role: required
+    amount: normal
+    accepts:
+    - leafy_green
+  - item: parmesan
+    role: required
+    amount: little
+    accepts:
+    - hard_cheese
+    - cheese
+  - item: lemon
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Брезаолу з руколою
+- id: italian_carpaccio
+  name: Beef carpaccio
+  kind: dish
+  tags:
+  - beef
+  - cold
+  - italian
+  missing_allowed: 2
+  source_family: italian:carpaccio
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: under_10
+    method:
+    - raw
+    - assemble
+  comment: ''
+  ingredients:
+  - item: beef_steak
+    role: main
+    amount: normal
+    accepts:
+    - red_meat
+    - cutlet_meat
+  - item: arugula
+    role: addition
+    amount: normal
+    accepts:
+    - leafy_green
+  - item: parmesan
+    role: addition
+    amount: little
+    accepts:
+    - hard_cheese
+  - item: lemon
+    role: required
+    amount: little
+    accepts:
+    - acid_souring
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Карпаччо з яловичини
+- id: italian_fiori_zucca_ripieni
+  name: Stuffed zucchini flowers
+  kind: dish
+  tags:
+  - cheese
+  - fried
+  - italian
+  - vegetable
+  missing_allowed: 2
+  source_family: italian:fiori_zucca_ripieni
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: under_60
+    method:
+    - fill
+    - fry
+  comment: ''
+  ingredients:
+  - item: zucchini_flowers
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: ricotta
+    role: required
+    amount: normal
+    accepts:
+    - fresh_cheese_group
+    - cottage_cheese
+  - item: mozzarella
+    role: addition
+    amount: little
+    accepts:
+    - cheese
+  - item: flour
+    role: required
+    amount: normal
+    accepts:
+    - flour_group
+  - item: eggs
+    role: addition
+    amount: little
+    accepts:
+    - egg
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  name_uk: Фаршировані квітки кабачка
+- id: italian_caponata
+  name: Sicilian caponata
+  kind: dish
+  tags:
+  - italian
+  - sicilian
+  - sweet_sour
+  - vegetable
+  missing_allowed: 2
+  source_family: italian:caponata
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: eggplant
+    role: main
+    amount: many
+    accepts:
+    - nightshade_vegetable
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: celery
+    role: required
+    amount: little
+    accepts:
+    - aromatic_vegetable
+  - item: onion
+    role: required
+    amount: little
+  - item: olive
+    role: required
+    amount: little
+    accepts:
+    - fermented_condiment
+  - item: capers
+    role: required
+    amount: little
+  - item: vinegar
+    role: required
+    amount: little
+    accepts:
+    - acid_souring
+  - item: sugar
+    role: addition
+    amount: little
+    accepts:
+    - sweetener
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  name_uk: Сицилійська капоната
+- id: italian_bagna_cauda
+  name: Hot sauce with anchovies and vegetables
+  kind: dish
+  tags:
+  - italian
+  - piedmont
+  - sauce
+  - vegetable
+  missing_allowed: 2
+  source_family: italian:bagna_cauda
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: under_60
+    method:
+    - stew
+    - mix
+  comment: ''
+  ingredients:
+  - item: anchovy
+    role: main
+    amount: normal
+    accepts:
+    - fish
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: vegetable_mix
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  name_uk: Гарячий соус з анчоусами та овочами
+- id: italian_insalata_mare
+  name: Seafood salad
+  kind: dish
+  tags:
+  - cold
+  - italian
+  - seafood
+  missing_allowed: 2
+  source_family: italian:insalata_mare
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - salad
+    time: under_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: seafood
+    role: main
+    amount: many
+  - item: shrimp
+    role: required
+    amount: normal
+    accepts:
+    - seafood
+  - item: squid
+    role: required
+    amount: normal
+    accepts:
+    - seafood
+  - item: mussels
+    role: addition
+    amount: normal
+    accepts:
+    - seafood
+  - item: lemon
+    role: required
+    amount: little
+    accepts:
+    - acid_souring
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: parsley
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Салат із морепродуктів
+- id: italian_carciofi_giudia
+  name: Fried artichokes
+  kind: dish
+  tags:
+  - fried
+  - italian
+  - roman
+  - vegetable
+  missing_allowed: 2
+  source_family: italian:carciofi_giudia
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: artichoke
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: lemon
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  name_uk: Смажені артишоки
+- id: italian_carciofi_romana
+  name: Artichokes with herbs
+  kind: dish
+  tags:
+  - italian
+  - roman
+  - vegetable
+  missing_allowed: 2
+  source_family: italian:carciofi_romana
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - side
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: artichoke
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: parsley
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: mint
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: lemon
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  name_uk: Артишоки з травами
+- id: italian_panelle
+  name: Sicilian flatbread made from chickpea flour
+  kind: dish
+  tags:
+  - fried
+  - italian
+  - legume
+  - sicilian
+  missing_allowed: 2
+  source_family: italian:panelle
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: under_60
+    method:
+    - boil
+    - fry
+  comment: ''
+  ingredients:
+  - item: chickpea_flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+    - legume
+  - item: water
+    role: required
+    amount: many
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: parsley
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Сицилійські коржі з нутового борошна
+- id: italian_farinata
+  name: Ligurian flatbread made from chickpea flour
+  kind: dish
+  tags:
+  - bread
+  - italian
+  - legume
+  - ligurian
+  missing_allowed: 2
+  source_family: italian:farinata
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - bread
+    time: over_60
+    method:
+    - mix
+    - bake
+  comment: ''
+  ingredients:
+  - item: chickpea_flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+    - legume
+  - item: water
+    role: required
+    amount: many
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: rosemary
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Лігурійський коржик з нутового борошна
+- id: italian_polenta_fritta
+  name: Fried polenta
+  kind: dish
+  tags:
+  - corn
+  - fried
+  - italian
+  missing_allowed: 2
+  source_family: italian:polenta_fritta
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: under_60
+    method:
+    - boil
+    - fry
+  comment: ''
+  ingredients:
+  - item: corn_grits
+    role: main
+    amount: many
+    accepts:
+    - corn_group
+    - grain
+  - item: water
+    role: required
+    amount: many
+  - item: parmesan
+    role: addition
+    amount: little
+    accepts:
+    - hard_cheese
+    - cheese
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  name_uk: Смажена полента
+- id: italian_ricotta_crostini
+  name: Crostini with ricotta and honey
+  kind: dish
+  tags:
+  - cheese
+  - italian
+  - sweet_savory
+  missing_allowed: 2
+  source_family: italian:ricotta_crostini
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: under_10
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: bread
+    role: main
+    amount: normal
+    accepts:
+    - bread_base
+  - item: ricotta
+    role: main
+    amount: normal
+    accepts:
+    - fresh_cheese_group
+    - cottage_cheese
+  - item: honey
+    role: addition
+    amount: little
+    accepts:
+    - sweetener
+  - item: walnuts
+    role: addition
+    amount: little
+    accepts:
+    - nuts
+  name_uk: Кростіні з рикоттою та медом
+- id: italian_giardiniera
+  name: Pickled vegetables
+  kind: dish
+  tags:
+  - italian
+  - pickle
+  - vegetable
+  missing_allowed: 2
+  source_family: italian:giardiniera
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: over_60
+    method:
+    - boil
+    - marinate
+  comment: ''
+  ingredients:
+  - item: vegetable_mix
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: vinegar
+    role: required
+    amount: normal
+    accepts:
+    - acid_souring
+  - item: sugar
+    role: addition
+    amount: little
+    accepts:
+    - sweetener
+  - item: olive_oil
+    role: addition
+    amount: little
+    accepts:
+    - plant_oil
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  name_uk: Мариновані овочі
+- id: italian_melanzane_grigliate
+  name: Marinated grilled eggplants
+  kind: dish
+  tags:
+  - grill
+  - italian
+  - vegetable
+  missing_allowed: 2
+  source_family: italian:melanzane_grigliate
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: under_60
+    method:
+    - grill
+    - marinate
+  comment: ''
+  ingredients:
+  - item: eggplant
+    role: main
+    amount: many
+    accepts:
+    - nightshade_vegetable
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: vinegar
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: parsley
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Мариновані баклажани гриль
+- id: italian_spaghetti_carbonara
+  name: Carbonara
+  kind: dish
+  tags:
+  - egg
+  - italian
+  - pasta
+  - roman
+  missing_allowed: 2
+  source_family: italian:spaghetti_carbonara
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: spaghetti
+    role: main
+    amount: many
+    accepts:
+    - pasta
+  - item: guanciale
+    role: required
+    amount: normal
+    accepts:
+    - pancetta
+    - bacon
+    - meat_product
+  - item: eggs
+    role: required
+    amount: normal
+    accepts:
+    - egg
+  - item: pecorino
+    role: required
+    amount: little
+    accepts:
+    - parmesan
+    - hard_cheese
+    - cheese
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Карбонару
+- id: italian_spaghetti_cacio_pepe
+  name: Cacio e pepe pasta
+  kind: dish
+  tags:
+  - cheese
+  - italian
+  - pasta
+  - roman
+  missing_allowed: 2
+  source_family: italian:spaghetti_cacio_pepe
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: spaghetti
+    role: main
+    amount: many
+    accepts:
+    - pasta
+  - item: pecorino
+    role: required
+    amount: normal
+    accepts:
+    - parmesan
+    - hard_cheese
+    - cheese
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  name_uk: Паста качо е пепе
+- id: italian_bucatini_amatriciana
+  name: Amateur
+  kind: dish
+  tags:
+  - italian
+  - pasta
+  - pork
+  - roman
+  missing_allowed: 2
+  source_family: italian:bucatini_amatriciana
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: bucatini
+    role: main
+    amount: many
+    accepts:
+    - pasta
+  - item: guanciale
+    role: required
+    amount: normal
+    accepts:
+    - pancetta
+    - bacon
+    - meat_product
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: pecorino
+    role: required
+    amount: little
+    accepts:
+    - hard_cheese
+    - cheese
+  - item: red_pepper_flakes
+    role: spice
+    amount: spice
+    accepts:
+    - chili_spice
+  name_uk: Аматорський
+- id: italian_rigatoni_gricia
+  name: Grit
+  kind: dish
+  tags:
+  - italian
+  - pasta
+  - pork
+  - roman
+  missing_allowed: 2
+  source_family: italian:rigatoni_gricia
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: rigatoni
+    role: main
+    amount: many
+    accepts:
+    - pasta
+  - item: guanciale
+    role: required
+    amount: normal
+    accepts:
+    - pancetta
+    - bacon
+    - meat_product
+  - item: pecorino
+    role: required
+    amount: normal
+    accepts:
+    - hard_cheese
+    - cheese
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Піщинка
+- id: italian_penne_arrabbiata
+  name: Penne arrabbiata
+  kind: dish
+  tags:
+  - italian
+  - pasta
+  - roman
+  - spicy
+  missing_allowed: 2
+  source_family: italian:penne_arrabbiata
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: penne
+    role: main
+    amount: many
+    accepts:
+    - pasta
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: red_pepper_flakes
+    role: spice
+    amount: spice
+    accepts:
+    - chili_spice
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: parsley
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Пенне арраб'ята
+- id: italian_spaghetti_aglio_olio
+  name: Pasta with garlic and oil
+  kind: dish
+  tags:
+  - fast
+  - italian
+  - pasta
+  - spicy
+  missing_allowed: 2
+  source_family: italian:spaghetti_aglio_olio
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+    - fry
+    - mix
+  comment: ''
+  ingredients:
+  - item: spaghetti
+    role: main
+    amount: many
+    accepts:
+    - pasta
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: red_pepper_flakes
+    role: spice
+    amount: spice
+    accepts:
+    - chili_spice
+  - item: parsley
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Паста з часником та олією
+- id: italian_spaghetti_puttanesca
+  name: Puttaneska
+  kind: dish
+  tags:
+  - anchovy
+  - italian
+  - pasta
+  - tomato
+  missing_allowed: 2
+  source_family: italian:spaghetti_puttanesca
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: spaghetti
+    role: main
+    amount: many
+    accepts:
+    - pasta
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: olive
+    role: required
+    amount: little
+    accepts:
+    - fermented_condiment
+  - item: capers
+    role: required
+    amount: little
+  - item: anchovy
+    role: addition
+    amount: little
+    accepts:
+    - fish
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Puttaneska
+- id: italian_pasta_norma
+  name: Pasta with eggplant
+  kind: dish
+  tags:
+  - eggplant
+  - italian
+  - pasta
+  - sicilian
+  missing_allowed: 2
+  source_family: italian:pasta_norma
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: pasta
+    role: main
+    amount: many
+    accepts:
+    - pasta_noodle
+  - item: eggplant
+    role: main
+    amount: normal
+    accepts:
+    - nightshade_vegetable
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: ricotta_salata
+    role: required
+    amount: little
+    accepts:
+    - hard_cheese
+    - cheese
+  - item: basil
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  name_uk: Паста з баклажанами
+- id: italian_trofie_pesto
+  name: Pasta with pesto
+  kind: dish
+  tags:
+  - italian
+  - ligurian
+  - pasta
+  - pesto
+  missing_allowed: 2
+  source_family: italian:trofie_pesto
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+    - blend
+    - mix
+  comment: ''
+  ingredients:
+  - item: trofie
+    role: main
+    amount: many
+    accepts:
+    - pasta
+  - item: basil
+    role: main
+    amount: normal
+    accepts:
+    - fresh_herb
+  - item: pine_nuts
+    role: required
+    amount: little
+    accepts:
+    - nuts
+  - item: parmesan
+    role: required
+    amount: little
+    accepts:
+    - hard_cheese
+    - cheese
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  name_uk: Паста з песто
+- id: italian_pasta_pomodoro
+  name: Pasta with tomato sauce
+  kind: dish
+  tags:
+  - italian
+  - pasta
+  - simple
+  - tomato
+  missing_allowed: 2
+  source_family: italian:pasta_pomodoro
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: pasta
+    role: main
+    amount: many
+    accepts:
+    - pasta_noodle
+  - item: tomato_sauce
+    role: main
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: basil
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Паста з томатним соусом
+- id: italian_tagliatelle_ragu
+  name: Tagliatelle with meat ragout
+  kind: dish
+  tags:
+  - bolognese
+  - italian
+  - meat
+  - pasta
+  missing_allowed: 2
+  source_family: italian:tagliatelle_ragu
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+    - boil
+  comment: ''
+  ingredients:
+  - item: tagliatelle
+    role: main
+    amount: many
+    accepts:
+    - pasta
+  - item: ground_beef
+    role: required
+    amount: normal
+    accepts:
+    - ground_meat
+    - minced_meat
+  - item: ground_pork
+    role: addition
+    amount: normal
+    accepts:
+    - ground_meat
+    - minced_meat
+  - item: tomato_paste
+    role: required
+    amount: little
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: required
+    amount: little
+  - item: celery
+    role: required
+    amount: little
+    accepts:
+    - aromatic_vegetable
+  - item: red_wine
+    role: addition
+    amount: little
+  - item: milk
+    role: addition
+    amount: little
+    accepts:
+    - cream
+    - milk_like
+  - item: parmesan
+    role: addition
+    amount: little
+    accepts:
+    - hard_cheese
+  name_uk: Тальятелле з м'ясним рагу
+- id: italian_lasagne_bolognese
+  name: Lasagna bolognese
+  kind: dish
+  tags:
+  - baked
+  - bolognese
+  - italian
+  - pasta
+  missing_allowed: 2
+  source_family: italian:lasagne_bolognese
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+    - bake
+  comment: ''
+  ingredients:
+  - item: lasagna_sheets
+    role: main
+    amount: many
+    accepts:
+    - pasta
+  - item: ground_meat
+    role: required
+    amount: many
+    accepts:
+    - minced_meat
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - cream
+    - milk_like
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: flour
+    role: required
+    amount: little
+    accepts:
+    - flour_group
+  - item: parmesan
+    role: required
+    amount: normal
+    accepts:
+    - hard_cheese
+    - cheese
+  - item: mozzarella
+    role: addition
+    amount: normal
+    accepts:
+    - cheese
+  name_uk: Лазіння болоньєзе
+- id: italian_gnocchi_sorrentina
+  name: Gnocchi with tomato and mozzarella
+  kind: dish
+  tags:
+  - baked
+  - campania
+  - cheese
+  - italian
+  missing_allowed: 2
+  source_family: italian:gnocchi_sorrentina
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - bake
+  comment: ''
+  ingredients:
+  - item: gnocchi
+    role: main
+    amount: many
+    accepts:
+    - pasta
+    - potato
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: mozzarella
+    role: required
+    amount: normal
+    accepts:
+    - fresh_cheese_group
+  - item: parmesan
+    role: addition
+    amount: little
+    accepts:
+    - hard_cheese
+  - item: basil
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Ньоккі з помідорами та моцарелою
+- id: italian_ravioli_burro_salvia
+  name: Ravioli with butter and sage
+  kind: dish
+  tags:
+  - cheese
+  - italian
+  - stuffed_pasta
+  missing_allowed: 2
+  source_family: italian:ravioli_burro_salvia
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: ravioli
+    role: main
+    amount: many
+    accepts:
+    - pasta
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sage
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+    - dried_herb
+  - item: parmesan
+    role: addition
+    amount: little
+    accepts:
+    - hard_cheese
+  name_uk: Равіолі з олією та шавлією
+- id: italian_tortellini_brodo
+  name: Tortellini in broth
+  kind: dish
+  tags:
+  - broth
+  - emilia_romagna
+  - italian
+  - pasta
+  missing_allowed: 2
+  source_family: italian:tortellini_brodo
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: tortellini
+    role: main
+    amount: many
+    accepts:
+    - pasta
+  - item: meat_broth
+    role: required
+    amount: many
+    accepts:
+    - broth_meat
+    - water
+  - item: parmesan
+    role: addition
+    amount: little
+    accepts:
+    - hard_cheese
+  name_uk: Тортелліні в бульйоні
+- id: italian_cannelloni_ricotta_spinaci
+  name: Cannelloni with ricotta and spinach
+  kind: dish
+  tags:
+  - baked
+  - italian
+  - pasta
+  - vegetarian
+  missing_allowed: 2
+  source_family: italian:cannelloni_ricotta_spinaci
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - fill
+    - bake
+  comment: ''
+  ingredients:
+  - item: cannelloni_tubes
+    role: main
+    amount: many
+    accepts:
+    - pasta
+  - item: ricotta
+    role: main
+    amount: normal
+    accepts:
+    - fresh_cheese_group
+    - cottage_cheese
+  - item: spinach
+    role: required
+    amount: normal
+    accepts:
+    - leafy_green
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: parmesan
+    role: required
+    amount: little
+    accepts:
+    - hard_cheese
+  - item: eggs
+    role: addition
+    amount: little
+    accepts:
+    - egg
+  name_uk: Каннелоні з рикоттою та шпинатом
+- id: italian_orecchiette_cime_rapa
+  name: Orecchiette with rapini
+  kind: dish
+  tags:
+  - greens
+  - italian
+  - pasta
+  - puglia
+  missing_allowed: 2
+  source_family: italian:orecchiette_cime_rapa
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - fry
+  comment: ''
+  ingredients:
+  - item: orecchiette
+    role: main
+    amount: many
+    accepts:
+    - pasta
+  - item: broccoli_rabe
+    role: main
+    amount: normal
+    accepts:
+    - leafy_green
+    - vegetable
+  - item: anchovy
+    role: addition
+    amount: little
+    accepts:
+    - fish
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: red_pepper_flakes
+    role: spice
+    amount: spice
+    accepts:
+    - chili_spice
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Орек'єтте з рапіні
+- id: italian_pasta_fagioli
+  name: Pasta with beans
+  kind: dish
+  tags:
+  - italian
+  - legume
+  - pasta
+  - soup
+  missing_allowed: 2
+  source_family: italian:pasta_fagioli
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: pasta
+    role: main
+    amount: normal
+    accepts:
+    - pasta_noodle
+  - item: beans
+    role: main
+    amount: normal
+    accepts:
+    - legume
+    - bean
+  - item: tomato_paste
+    role: addition
+    amount: little
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: addition
+    amount: little
+  - item: celery
+    role: addition
+    amount: little
+    accepts:
+    - aromatic_vegetable
+  - item: water
+    role: required
+    amount: many
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: rosemary
+    role: spice
+    amount: spice
+    accepts:
+    - herb
+  name_uk: Паста з квасолею
+- id: italian_pasta_ceci
+  name: Pasta with nutmeg
+  kind: dish
+  tags:
+  - italian
+  - legume
+  - soup
+  missing_allowed: 2
+  source_family: italian:pasta_ceci
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: pasta
+    role: main
+    amount: normal
+    accepts:
+    - pasta_noodle
+  - item: chickpea
+    role: main
+    amount: normal
+    accepts:
+    - legume
+  - item: tomato_paste
+    role: addition
+    amount: little
+    accepts:
+    - tomato_base
+  - item: rosemary
+    role: spice
+    amount: spice
+    accepts:
+    - herb
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: water
+    role: required
+    amount: many
+  name_uk: Паста з мускатним горіхом
+- id: italian_spaghetti_vongole
+  name: Spaghetti with clams
+  kind: dish
+  tags:
+  - coastal
+  - italian
+  - pasta
+  - seafood
+  missing_allowed: 2
+  source_family: italian:spaghetti_vongole
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: spaghetti
+    role: main
+    amount: many
+    accepts:
+    - pasta
+  - item: clams
+    role: main
+    amount: normal
+    accepts:
+    - seafood
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: white_wine
+    role: addition
+    amount: little
+  - item: parsley
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Спагетті з молюсками
+- id: italian_spaghetti_scoglio
+  name: Pasta with seafood
+  kind: dish
+  tags:
+  - italian
+  - pasta
+  - seafood
+  missing_allowed: 2
+  source_family: italian:spaghetti_scoglio
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: spaghetti
+    role: main
+    amount: many
+    accepts:
+    - pasta
+  - item: seafood
+    role: main
+    amount: many
+  - item: mussels
+    role: required
+    amount: normal
+    accepts:
+    - seafood
+  - item: shrimp
+    role: required
+    amount: normal
+    accepts:
+    - seafood
+  - item: squid
+    role: addition
+    amount: normal
+    accepts:
+    - seafood
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: white_wine
+    role: addition
+    amount: little
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Паста з морепродуктами
+- id: italian_fettuccine_funghi
+  name: Fettuccine with mushrooms
+  kind: dish
+  tags:
+  - italian
+  - mushroom
+  - pasta
+  missing_allowed: 2
+  source_family: italian:fettuccine_funghi
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - fry
+    - mix
+  comment: ''
+  ingredients:
+  - item: fettuccine
+    role: main
+    amount: many
+    accepts:
+    - pasta
+  - item: mushroom
+    role: main
+    amount: normal
+    accepts:
+    - mushroom
+  - item: dried_porcini
+    role: addition
+    amount: little
+    accepts:
+    - mushroom
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - sour_cream
+    - yogurt
+    - mascarpone
+    - soft_creamy_cheese
+    - cream_like
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: parmesan
+    role: addition
+    amount: little
+    accepts:
+    - hard_cheese
+  name_uk: Фетучіні з грибами
+- id: italian_pappardelle_cinghiale
+  name: Pappardelle with meat ragout
+  kind: dish
+  tags:
+  - italian
+  - meat
+  - pasta
+  - tuscan
+  missing_allowed: 2
+  source_family: italian:pappardelle_cinghiale
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+    - boil
+  comment: ''
+  ingredients:
+  - item: pappardelle
+    role: main
+    amount: many
+    accepts:
+    - pasta
+  - item: wild_boar
+    role: main
+    amount: normal
+    accepts:
+    - red_meat
+    - meat_piece
+  - item: tomato_paste
+    role: required
+    amount: little
+    accepts:
+    - tomato_base
+  - item: red_wine
+    role: required
+    amount: little
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: required
+    amount: little
+  - item: celery
+    role: required
+    amount: little
+    accepts:
+    - aromatic_vegetable
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  name_uk: Паппарделле з м'ясним рагу
+- id: italian_pesto_trapanese
+  name: Pasta with almond-tomato pesto
+  kind: dish
+  tags:
+  - italian
+  - pasta
+  - pesto
+  - sicilian
+  missing_allowed: 2
+  source_family: italian:pesto_trapanese
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+    - blend
+    - mix
+  comment: ''
+  ingredients:
+  - item: pasta
+    role: main
+    amount: many
+    accepts:
+    - pasta_noodle
+  - item: tomato
+    role: main
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: almonds
+    role: required
+    amount: little
+    accepts:
+    - nuts
+  - item: basil
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: pecorino
+    role: addition
+    amount: little
+    accepts:
+    - hard_cheese
+  name_uk: Паста з мигдально-томатним песто
+- id: italian_risi_bisi
+  name: Rice with green peas
+  kind: dish
+  tags:
+  - italian
+  - peas
+  - rice
+  - veneto
+  missing_allowed: 2
+  source_family: italian:risi_bisi
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+    accepts:
+    - rice_group
+  - item: peas
+    role: main
+    amount: normal
+    accepts:
+    - canned_peas
+    - legume
+  - item: onion
+    role: required
+    amount: little
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: parmesan
+    role: addition
+    amount: little
+    accepts:
+    - hard_cheese
+  - item: water
+    role: required
+    amount: many
+  name_uk: Рис із зеленим горошком
+- id: italian_risotto_milanese
+  name: Risotto with saffron
+  kind: dish
+  tags:
+  - italian
+  - milan
+  - rice
+  - saffron
+  missing_allowed: 2
+  source_family: italian:risotto_milanese
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: arborio_rice
+    role: main
+    amount: many
+    accepts:
+    - rice
+    - rice_group
+  - item: saffron
+    role: spice
+    amount: spice
+    accepts:
+    - color_spice
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: onion
+    role: required
+    amount: little
+  - item: meat_broth
+    role: required
+    amount: many
+    accepts:
+    - broth_meat
+    - water
+  - item: parmesan
+    role: required
+    amount: normal
+    accepts:
+    - hard_cheese
+    - cheese
+  name_uk: Різотто з шафраном
+- id: italian_risotto_funghi
+  name: Risotto with mushrooms
+  kind: dish
+  tags:
+  - italian
+  - mushroom
+  - rice
+  missing_allowed: 2
+  source_family: italian:risotto_funghi
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+    - fry
+  comment: ''
+  ingredients:
+  - item: arborio_rice
+    role: main
+    amount: many
+    accepts:
+    - rice
+    - rice_group
+  - item: mushroom
+    role: main
+    amount: normal
+    accepts:
+    - mushroom
+  - item: dried_porcini
+    role: addition
+    amount: little
+    accepts:
+    - mushroom
+  - item: onion
+    role: required
+    amount: little
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: meat_broth
+    role: required
+    amount: many
+    accepts:
+    - water
+  - item: parmesan
+    role: required
+    amount: little
+    accepts:
+    - hard_cheese
+  name_uk: Різотто з грибами
+- id: italian_risotto_seafood
+  name: Seafood risotto
+  kind: dish
+  tags:
+  - italian
+  - rice
+  - seafood
+  missing_allowed: 2
+  source_family: italian:risotto_seafood
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: arborio_rice
+    role: main
+    amount: many
+    accepts:
+    - rice
+    - rice_group
+  - item: seafood
+    role: main
+    amount: many
+  - item: shrimp
+    role: required
+    amount: normal
+    accepts:
+    - seafood
+  - item: mussels
+    role: addition
+    amount: normal
+    accepts:
+    - seafood
+  - item: white_wine
+    role: addition
+    amount: little
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: fish_broth
+    role: required
+    amount: many
+    accepts:
+    - water
+    - fish
+  name_uk: Різотто з морепродуктами
+- id: italian_risotto_zucca
+  name: Risotto with pumpkin
+  kind: dish
+  tags:
+  - italian
+  - pumpkin
+  - rice
+  missing_allowed: 2
+  source_family: italian:risotto_zucca
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: arborio_rice
+    role: main
+    amount: many
+    accepts:
+    - rice
+    - rice_group
+  - item: pumpkin
+    role: main
+    amount: normal
+    accepts:
+    - squash_family
+  - item: onion
+    role: required
+    amount: little
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: parmesan
+    role: required
+    amount: little
+    accepts:
+    - hard_cheese
+  - item: water
+    role: required
+    amount: many
+  - item: sage
+    role: spice
+    amount: spice
+    accepts:
+    - herb
+  name_uk: Різотто з гарбузом
+- id: italian_risotto_radichio
+  name: Risotto with radicchio
+  kind: dish
+  tags:
+  - italian
+  - rice
+  - veneto
+  missing_allowed: 2
+  source_family: italian:risotto_radichio
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: arborio_rice
+    role: main
+    amount: many
+    accepts:
+    - rice
+    - rice_group
+  - item: radicchio
+    role: main
+    amount: normal
+    accepts:
+    - leafy_green
+  - item: onion
+    role: required
+    amount: little
+  - item: red_wine
+    role: addition
+    amount: little
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: parmesan
+    role: required
+    amount: little
+    accepts:
+    - hard_cheese
+  - item: water
+    role: required
+    amount: many
+  name_uk: Різотто з радіккіо
+- id: italian_risotto_gorgonzola_noci
+  name: Risotto with gorgonzola and nuts
+  kind: dish
+  tags:
+  - cheese
+  - italian
+  - rice
+  missing_allowed: 2
+  source_family: italian:risotto_gorgonzola_noci
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: arborio_rice
+    role: main
+    amount: many
+    accepts:
+    - rice
+    - rice_group
+  - item: gorgonzola
+    role: main
+    amount: normal
+    accepts:
+    - cheese
+  - item: walnuts
+    role: addition
+    amount: little
+    accepts:
+    - nuts
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  name_uk: Різотто з горгонзолою та горіхами
+- id: italian_minestrone
+  name: Vegetable soup
+  kind: dish
+  tags:
+  - italian
+  - legume
+  - soup
+  - vegetable
+  missing_allowed: 2
+  source_family: italian:minestrone
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: vegetable_mix
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: beans
+    role: required
+    amount: normal
+    accepts:
+    - legume
+  - item: pasta
+    role: addition
+    amount: little
+    accepts:
+    - pasta_noodle
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: required
+    amount: little
+  - item: celery
+    role: required
+    amount: little
+    accepts:
+    - aromatic_vegetable
+  - item: water
+    role: required
+    amount: many
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Овочевий суп
+- id: italian_ribollita
+  name: Tuscan bread soup
+  kind: dish
+  tags:
+  - bread
+  - italian
+  - soup
+  - tuscan
+  missing_allowed: 2
+  source_family: italian:ribollita
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: beans
+    role: main
+    amount: normal
+    accepts:
+    - legume
+  - item: cabbage
+    role: required
+    amount: normal
+    accepts:
+    - cabbage_family
+  - item: bread
+    role: required
+    amount: many
+    accepts:
+    - bread_base
+  - item: carrot
+    role: required
+    amount: little
+  - item: onion
+    role: required
+    amount: little
+  - item: celery
+    role: required
+    amount: little
+    accepts:
+    - aromatic_vegetable
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: water
+    role: required
+    amount: many
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Тосканський хлібний суп
+- id: italian_pappa_pomodoro
+  name: Tomato bread soup
+  kind: dish
+  tags:
+  - bread
+  - italian
+  - tomato
+  - tuscan
+  missing_allowed: 2
+  source_family: italian:pappa_pomodoro
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: bread
+    role: main
+    amount: many
+    accepts:
+    - bread_base
+  - item: tomato
+    role: main
+    amount: many
+    accepts:
+    - tomato_base
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: basil
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Томатний хлібний суп
+- id: italian_acquacotta
+  name: Tuscan peasant soup
+  kind: dish
+  tags:
+  - egg
+  - italian
+  - soup
+  - tuscan
+  missing_allowed: 2
+  source_family: italian:acquacotta
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - stew
+    - boil
+  comment: ''
+  ingredients:
+  - item: water
+    role: required
+    amount: many
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: leafy_green
+    role: addition
+    amount: normal
+    accepts:
+    - greens
+    - vegetable
+  - item: bread
+    role: main
+    amount: normal
+    accepts:
+    - bread_base
+  - item: eggs
+    role: addition
+    amount: little
+    accepts:
+    - egg
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Тосканський селянський суп
+- id: italian_stracciatella_soup
+  name: Egg soup with cheese
+  kind: dish
+  tags:
+  - egg
+  - italian
+  - roman
+  - soup
+  missing_allowed: 2
+  source_family: italian:stracciatella_soup
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: normal
+    accepts:
+    - egg
+  - item: meat_broth
+    role: required
+    amount: many
+    accepts:
+    - water
+    - broth_meat
+  - item: parmesan
+    role: required
+    amount: little
+    accepts:
+    - hard_cheese
+  - item: semolina
+    role: addition
+    amount: little
+    accepts:
+    - grain
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Яєчний суп із сиром
+- id: italian_zuppa_ceci
+  name: Chickpea soup
+  kind: dish
+  tags:
+  - italian
+  - legume
+  - soup
+  missing_allowed: 2
+  source_family: italian:zuppa_ceci
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: chickpea
+    role: main
+    amount: many
+    accepts:
+    - legume
+  - item: tomato_paste
+    role: addition
+    amount: little
+    accepts:
+    - tomato_base
+  - item: rosemary
+    role: spice
+    amount: spice
+    accepts:
+    - herb
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: water
+    role: required
+    amount: many
+  name_uk: Суп із нуту
+- id: italian_zuppa_lenticchie
+  name: Lentil soup
+  kind: dish
+  tags:
+  - italian
+  - legume
+  - soup
+  missing_allowed: 2
+  source_family: italian:zuppa_lenticchie
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: red_lentils
+    role: main
+    amount: many
+    accepts:
+    - lentil
+    - legume
+  - item: carrot
+    role: required
+    amount: little
+  - item: onion
+    role: required
+    amount: little
+  - item: celery
+    role: addition
+    amount: little
+    accepts:
+    - aromatic_vegetable
+  - item: tomato_paste
+    role: addition
+    amount: little
+    accepts:
+    - tomato_base
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Суп із сочевиці
+- id: italian_zuppa_farrok
+  name: Spelled soup
+  kind: dish
+  tags:
+  - grain
+  - italian
+  - soup
+  - tuscan
+  missing_allowed: 2
+  source_family: italian:zuppa_farrok
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: farro
+    role: main
+    amount: many
+    accepts:
+    - wheat_group
+    - grain
+  - item: beans
+    role: required
+    amount: normal
+    accepts:
+    - legume
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: carrot
+    role: required
+    amount: little
+  - item: onion
+    role: required
+    amount: little
+  - item: celery
+    role: required
+    amount: little
+    accepts:
+    - aromatic_vegetable
+  - item: water
+    role: required
+    amount: many
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Суп із полби
+- id: italian_pasta_patate
+  name: Pasta with potatoes
+  kind: dish
+  tags:
+  - italian
+  - naples
+  - pasta
+  - potato
+  missing_allowed: 2
+  source_family: italian:pasta_patate
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: pasta
+    role: main
+    amount: normal
+    accepts:
+    - pasta_noodle
+  - item: potato
+    role: main
+    amount: normal
+    accepts:
+    - root_vegetable
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: addition
+    amount: little
+  - item: tomato_paste
+    role: addition
+    amount: little
+    accepts:
+    - tomato_base
+  - item: parmesan
+    role: addition
+    amount: little
+    accepts:
+    - hard_cheese
+  - item: water
+    role: required
+    amount: many
+  name_uk: Паста з картоплею
+- id: italian_passatelli_brodo
+  name: Bread and cheese dumplings in broth
+  kind: dish
+  tags:
+  - bread
+  - emilia_romagna
+  - italian
+  - soup
+  missing_allowed: 2
+  source_family: italian:passatelli_brodo
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - mix
+    - boil
+  comment: ''
+  ingredients:
+  - item: breadcrumbs
+    role: main
+    amount: many
+    accepts:
+    - bread_base
+  - item: parmesan
+    role: main
+    amount: normal
+    accepts:
+    - hard_cheese
+  - item: eggs
+    role: required
+    amount: normal
+    accepts:
+    - egg
+  - item: meat_broth
+    role: required
+    amount: many
+    accepts:
+    - water
+    - broth_meat
+  - item: lemon
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  name_uk: Хлібно-сирні галушки в бульйоні
+- id: italian_maccu_fava
+  name: Sicilian bean soup
+  kind: dish
+  tags:
+  - italian
+  - legume
+  - sicilian
+  - soup
+  missing_allowed: 2
+  source_family: italian:maccu_fava
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: fava_beans
+    role: main
+    amount: many
+    accepts:
+    - beans
+    - legume
+  - item: fennel
+    role: required
+    amount: little
+    accepts:
+    - vegetable
+    - herb
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: water
+    role: required
+    amount: many
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Сицилійський суп-пюре із бобів
+- id: italian_buridda
+  name: Ligurian fish soup
+  kind: dish
+  tags:
+  - fish
+  - italian
+  - ligurian
+  - soup
+  missing_allowed: 2
+  source_family: italian:buridda
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: generic_fish
+    role: main
+    amount: many
+    accepts:
+    - fish
+  - item: seafood
+    role: addition
+    amount: normal
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: little
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: white_wine
+    role: addition
+    amount: little
+  - item: parsley
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Лігурійська рибна юшка
+- id: italian_brodetto_adriatico
+  name: Adriatic fish soup
+  kind: dish
+  tags:
+  - adriatic
+  - fish
+  - italian
+  - soup
+  missing_allowed: 2
+  source_family: italian:brodetto_adriatico
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: generic_fish
+    role: main
+    amount: many
+    accepts:
+    - fish
+  - item: mussels
+    role: addition
+    amount: normal
+    accepts:
+    - seafood
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: vinegar
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  - item: onion
+    role: required
+    amount: little
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Рибний суп Адріатики
+- id: italian_gnudi_ricotta_spinach
+  name: Noodles with ricotta and spinach
+  kind: dish
+  tags:
+  - cheese
+  - italian
+  - tuscan
+  missing_allowed: 2
+  source_family: italian:gnudi_ricotta_spinach
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - mix
+    - boil
+  comment: ''
+  ingredients:
+  - item: ricotta
+    role: main
+    amount: many
+    accepts:
+    - fresh_cheese_group
+    - cottage_cheese
+  - item: spinach
+    role: required
+    amount: normal
+    accepts:
+    - leafy_green
+  - item: eggs
+    role: required
+    amount: little
+    accepts:
+    - egg
+  - item: flour
+    role: required
+    amount: little
+    accepts:
+    - flour_group
+  - item: parmesan
+    role: addition
+    amount: little
+    accepts:
+    - hard_cheese
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: sage
+    role: spice
+    amount: spice
+    accepts:
+    - herb
+  name_uk: Ньюди с рикоттой и шпинатом
+- id: italian_pizzoccheri
+  name: Buckwheat pasta with cabbage and cheese
+  kind: dish
+  tags:
+  - cheese
+  - italian
+  - lombardy
+  - pasta
+  missing_allowed: 2
+  source_family: italian:pizzoccheri
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: buckwheat_pasta
+    role: main
+    amount: many
+    accepts:
+    - pasta
+    - buckwheat
+  - item: potato
+    role: required
+    amount: normal
+  - item: cabbage
+    role: required
+    amount: normal
+    accepts:
+    - cabbage_family
+  - item: fontina
+    role: required
+    amount: normal
+    accepts:
+    - cheese
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  name_uk: Гречана паста з капустою та сиром
+- id: italian_polenta_concia
+  name: Polenta with cheese and butter
+  kind: dish
+  tags:
+  - cheese
+  - italian
+  - north_italy
+  - polenta
+  missing_allowed: 2
+  source_family: italian:polenta_concia
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: corn_grits
+    role: main
+    amount: many
+    accepts:
+    - corn_group
+    - grain
+  - item: fontina
+    role: required
+    amount: normal
+    accepts:
+    - cheese
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  name_uk: Полента з сиром та олією
+- id: italian_pollo_cacciatora
+  name: Chicken cacciatore
+  kind: dish
+  tags:
+  - chicken
+  - italian
+  - stew
+  missing_allowed: 2
+  source_family: italian:pollo_cacciatora
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: chicken_pieces
+    role: main
+    amount: many
+    accepts:
+    - poultry
+    - meat_piece
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: addition
+    amount: little
+  - item: bell_pepper
+    role: addition
+    amount: normal
+    accepts:
+    - nightshade_vegetable
+  - item: olive
+    role: addition
+    amount: little
+    accepts:
+    - fermented_condiment
+  - item: white_wine
+    role: addition
+    amount: little
+  - item: rosemary
+    role: spice
+    amount: spice
+    accepts:
+    - herb
+  name_uk: Курка каччіаторе
+- id: italian_ossobuco_milanese
+  name: Ossobuko
+  kind: dish
+  tags:
+  - braise
+  - italian
+  - milan
+  - veal
+  missing_allowed: 2
+  source_family: italian:ossobuco_milanese
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: veal_shank
+    role: main
+    amount: many
+    accepts:
+    - red_meat
+    - meat_piece
+    - broth_meat
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: required
+    amount: little
+  - item: celery
+    role: required
+    amount: little
+    accepts:
+    - aromatic_vegetable
+  - item: white_wine
+    role: required
+    amount: little
+  - item: meat_broth
+    role: required
+    amount: many
+    accepts:
+    - water
+  - item: lemon
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  - item: parsley
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Оссобуко
+- id: italian_saltimbocca_romana
+  name: Veal with sage and prosciutto
+  kind: dish
+  tags:
+  - italian
+  - quick
+  - roman
+  - veal
+  missing_allowed: 2
+  source_family: italian:saltimbocca_romana
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: veal_cutlet
+    role: main
+    amount: normal
+    accepts:
+    - cutlet_meat
+    - red_meat
+  - item: prosciutto
+    role: required
+    amount: little
+    accepts:
+    - meat_product
+  - item: sage
+    role: spice
+    amount: spice
+    accepts:
+    - herb
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: white_wine
+    role: addition
+    amount: little
+  name_uk: Телятина з шавлією та прошутто
+- id: italian_cotoletta_milanese
+  name: Milanese chop
+  kind: dish
+  tags:
+  - cutlet
+  - fried
+  - italian
+  - milan
+  missing_allowed: 2
+  source_family: italian:cotoletta_milanese
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: veal_cutlet
+    role: main
+    amount: normal
+    accepts:
+    - cutlet_meat
+    - red_meat
+  - item: eggs
+    role: required
+    amount: little
+    accepts:
+    - egg
+  - item: breadcrumbs
+    role: required
+    amount: normal
+    accepts:
+    - bread_base
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: lemon
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  name_uk: Міланська відбивна
+- id: italian_bistecca_fiorentina
+  name: Florentine steak
+  kind: dish
+  tags:
+  - beef
+  - grill
+  - italian
+  - tuscan
+  missing_allowed: 2
+  source_family: italian:bistecca_fiorentina
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - grill
+  comment: ''
+  ingredients:
+  - item: beef_steak
+    role: main
+    amount: many
+    accepts:
+    - cutlet_meat
+    - red_meat
+  - item: olive_oil
+    role: addition
+    amount: little
+    accepts:
+    - plant_oil
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: rosemary
+    role: spice
+    amount: spice
+    accepts:
+    - herb
+  name_uk: Флорентійський стейк
+- id: italian_brasato_vino
+  name: Beef stewed in wine
+  kind: dish
+  tags:
+  - beef
+  - braise
+  - italian
+  - piedmont
+  missing_allowed: 2
+  source_family: italian:brasato_vino
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: beef_chunks
+    role: main
+    amount: many
+    accepts:
+    - red_meat
+    - meat_piece
+  - item: red_wine
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: required
+    amount: little
+  - item: celery
+    role: required
+    amount: little
+    accepts:
+    - aromatic_vegetable
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  name_uk: Яловичина, тушкована у вині
+- id: italian_polpette_sugo
+  name: Meatballs in tomato
+  kind: dish
+  tags:
+  - italian
+  - meatballs
+  - tomato
+  missing_allowed: 2
+  source_family: italian:polpette_sugo
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - mix
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: ground_meat
+    role: main
+    amount: many
+    accepts:
+    - minced_meat
+  - item: breadcrumbs
+    role: required
+    amount: normal
+    accepts:
+    - bread_base
+  - item: eggs
+    role: required
+    amount: little
+    accepts:
+    - egg
+  - item: parmesan
+    role: addition
+    amount: little
+    accepts:
+    - hard_cheese
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: М'ясні фрикадельки у томаті
+- id: italian_involtini_manzo
+  name: Beef rolls
+  kind: dish
+  tags:
+  - beef
+  - italian
+  - stuffed
+  missing_allowed: 2
+  source_family: italian:involtini_manzo
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fill
+    - stew
+  comment: ''
+  ingredients:
+  - item: beef_steak
+    role: main
+    amount: many
+    accepts:
+    - cutlet_meat
+    - red_meat
+  - item: prosciutto
+    role: addition
+    amount: little
+    accepts:
+    - meat_product
+  - item: hard_cheese
+    role: addition
+    amount: little
+    accepts:
+    - cheese
+  - item: breadcrumbs
+    role: addition
+    amount: little
+    accepts:
+    - bread_base
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Говяжьи рулетики
+- id: italian_coniglio_ischitana
+  name: Rabbit in Iskitan style
+  kind: dish
+  tags:
+  - campania
+  - italian
+  - rabbit
+  - stew
+  missing_allowed: 2
+  source_family: italian:coniglio_ischitana
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: rabbit
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: white_wine
+    role: required
+    amount: little
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: rosemary
+    role: spice
+    amount: spice
+    accepts:
+    - herb
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Кролик по-іскитанськи
+- id: italian_arista_latte
+  name: Pork stewed in milk
+  kind: dish
+  tags:
+  - italian
+  - milk
+  - pork
+  - roast
+  missing_allowed: 2
+  source_family: italian:arista_latte
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: pork_roast
+    role: main
+    amount: many
+    accepts:
+    - pork_chunks
+    - red_meat
+    - meat_piece
+  - item: milk
+    role: required
+    amount: many
+    accepts:
+    - cream
+    - milk_like
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  - item: rosemary
+    role: spice
+    amount: spice
+    accepts:
+    - herb
+  - item: sage
+    role: spice
+    amount: spice
+    accepts:
+    - herb
+  name_uk: Свинина, тушкована в молоці
+- id: italian_porchetta_template
+  name: Pork roulette with herbs
+  kind: dish
+  tags:
+  - italian
+  - pork
+  - roast
+  missing_allowed: 2
+  source_family: italian:porchetta_template
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roast
+  comment: ''
+  ingredients:
+  - item: pork_belly
+    role: main
+    amount: many
+    accepts:
+    - pork_chunks
+    - red_meat
+  - item: fennel_seeds
+    role: spice
+    amount: spice
+    accepts:
+    - seed_spice
+  - item: rosemary
+    role: spice
+    amount: spice
+    accepts:
+    - herb
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: olive_oil
+    role: addition
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Свиняча рулетка з травами
+- id: italian_salsiccia_peperoni
+  name: Italian sausage with peppers
+  kind: dish
+  tags:
+  - italian
+  - pepper
+  - sausage
+  missing_allowed: 2
+  source_family: italian:salsiccia_peperoni
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: italian_sausage
+    role: main
+    amount: many
+    accepts:
+    - sausage_product
+  - item: bell_pepper
+    role: main
+    amount: normal
+    accepts:
+    - nightshade_vegetable
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Італійські ковбаски з перцем
+- id: italian_trippa_romana
+  name: Roman tripe
+  kind: dish
+  tags:
+  - italian
+  - offal
+  - roman
+  missing_allowed: 2
+  source_family: italian:trippa_romana
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: tripe
+    role: main
+    amount: many
+    accepts:
+    - offal
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: addition
+    amount: little
+  - item: celery
+    role: addition
+    amount: little
+    accepts:
+    - aromatic_vegetable
+  - item: pecorino
+    role: addition
+    amount: little
+    accepts:
+    - hard_cheese
+  - item: mint
+    role: spice
+    amount: spice
+    accepts:
+    - herb
+  name_uk: Рубець по-римськи
+- id: italian_coda_vaccinara
+  name: Roman oxtail
+  kind: dish
+  tags:
+  - braise
+  - italian
+  - offal
+  - roman
+  missing_allowed: 2
+  source_family: italian:coda_vaccinara
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: oxtail
+    role: main
+    amount: many
+    accepts:
+    - red_meat
+    - broth_meat
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: celery
+    role: required
+    amount: normal
+    accepts:
+    - aromatic_vegetable
+  - item: onion
+    role: required
+    amount: little
+  - item: red_wine
+    role: addition
+    amount: little
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  name_uk: Бичачий хвіст по-римськи
+- id: italian_scaloppine_limone
+  name: Thin chops with lemon
+  kind: dish
+  tags:
+  - cutlet
+  - italian
+  - quick
+  missing_allowed: 2
+  source_family: italian:scaloppine_limone
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: veal_cutlet
+    role: main
+    amount: normal
+    accepts:
+    - cutlet_meat
+    - chicken_fillet
+  - item: flour
+    role: required
+    amount: little
+    accepts:
+    - flour_group
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: lemon
+    role: required
+    amount: little
+    accepts:
+    - acid_souring
+  name_uk: Тонкі відбивні з лимоном
+- id: italian_scaloppine_marsala
+  name: Chops with marsala
+  kind: dish
+  tags:
+  - cutlet
+  - italian
+  - quick
+  - wine
+  missing_allowed: 2
+  source_family: italian:scaloppine_marsala
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: veal_cutlet
+    role: main
+    amount: normal
+    accepts:
+    - cutlet_meat
+    - chicken_fillet
+  - item: flour
+    role: required
+    amount: little
+    accepts:
+    - flour_group
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: marsala_wine
+    role: required
+    amount: little
+  - item: mushroom
+    role: addition
+    amount: normal
+    accepts:
+    - mushroom
+  name_uk: Відбивні з марсалою
+- id: italian_vitello_pizzaiola
+  name: Veal in tomato sauce
+  kind: dish
+  tags:
+  - italian
+  - tomato
+  - veal
+  missing_allowed: 2
+  source_family: italian:vitello_pizzaiola
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: veal_cutlet
+    role: main
+    amount: normal
+    accepts:
+    - cutlet_meat
+    - red_meat
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: oregano
+    role: spice
+    amount: spice
+    accepts:
+    - dried_herb
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Телятина в томатном соусе
+- id: italian_straccetti_rucola
+  name: Beef with arugula
+  kind: dish
+  tags:
+  - beef
+  - italian
+  - quick
+  missing_allowed: 2
+  source_family: italian:straccetti_rucola
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+    - assemble
+  comment: ''
+  ingredients:
+  - item: beef_steak
+    role: main
+    amount: normal
+    accepts:
+    - cutlet_meat
+    - red_meat
+  - item: arugula
+    role: main
+    amount: normal
+    accepts:
+    - leafy_green
+  - item: parmesan
+    role: addition
+    amount: little
+    accepts:
+    - hard_cheese
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: lemon
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  name_uk: Яловичина з руколою
+- id: italian_melanzane_parmigiana
+  name: Eggplant parmigiana
+  kind: dish
+  tags:
+  - baked
+  - eggplant
+  - italian
+  - vegetarian
+  missing_allowed: 2
+  source_family: italian:melanzane_parmigiana
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - fry
+    - bake
+  comment: ''
+  ingredients:
+  - item: eggplant
+    role: main
+    amount: many
+    accepts:
+    - nightshade_vegetable
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: mozzarella
+    role: required
+    amount: normal
+    accepts:
+    - fresh_cheese_group
+  - item: parmesan
+    role: required
+    amount: normal
+    accepts:
+    - hard_cheese
+  - item: basil
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  name_uk: Баклажани парміджану
+- id: italian_frico
+  name: Potato pancake with cheese
+  kind: dish
+  tags:
+  - cheese
+  - friuli
+  - italian
+  - potato
+  missing_allowed: 2
+  source_family: italian:frico
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+    accepts:
+    - root_vegetable
+  - item: montasio
+    role: main
+    amount: normal
+    accepts:
+    - cheese
+  - item: onion
+    role: addition
+    amount: little
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  name_uk: Картопляний коржик з сиром
+- id: italian_frittata_zucchine
+  name: Zucchini frittata
+  kind: dish
+  tags:
+  - egg
+  - italian
+  - quick
+  - vegetarian
+  missing_allowed: 2
+  source_family: italian:frittata_zucchine
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: many
+    accepts:
+    - egg
+  - item: zucchini
+    role: main
+    amount: normal
+    accepts:
+    - squash_family
+  - item: parmesan
+    role: addition
+    amount: little
+    accepts:
+    - hard_cheese
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Фріттату з кабачками
+- id: italian_frittata_cipolle
+  name: Frittata with onions
+  kind: dish
+  tags:
+  - egg
+  - italian
+  - quick
+  missing_allowed: 2
+  source_family: italian:frittata_cipolle
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: many
+    accepts:
+    - egg
+  - item: onion
+    role: main
+    amount: normal
+  - item: parmesan
+    role: addition
+    amount: little
+    accepts:
+    - hard_cheese
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Фрітата з цибулею
+- id: italian_peperoni_ripieni
+  name: Italian stuffed peppers
+  kind: dish
+  tags:
+  - italian
+  - meat
+  - stuffed
+  - vegetable
+  missing_allowed: 2
+  source_family: italian:peperoni_ripieni
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - fill
+    - bake
+  comment: ''
+  ingredients:
+  - item: bell_pepper
+    role: main
+    amount: many
+    accepts:
+    - nightshade_vegetable
+  - item: ground_meat
+    role: required
+    amount: normal
+    accepts:
+    - minced_meat
+  - item: rice
+    role: addition
+    amount: normal
+    accepts:
+    - grain
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: parmesan
+    role: addition
+    amount: little
+    accepts:
+    - hard_cheese
+  name_uk: Фарширований перець італійською
+- id: italian_zucchine_ripiene
+  name: Stuffed zucchini
+  kind: dish
+  tags:
+  - italian
+  - stuffed
+  - vegetable
+  missing_allowed: 2
+  source_family: italian:zucchine_ripiene
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fill
+    - bake
+  comment: ''
+  ingredients:
+  - item: zucchini
+    role: main
+    amount: many
+    accepts:
+    - squash_family
+  - item: ground_meat
+    role: required
+    amount: normal
+    accepts:
+    - minced_meat
+  - item: breadcrumbs
+    role: addition
+    amount: little
+    accepts:
+    - bread_base
+  - item: parmesan
+    role: addition
+    amount: little
+    accepts:
+    - hard_cheese
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  name_uk: Фаршировані кабачки
+- id: italian_baccala_vicentina
+  name: Vicenza style salted cod
+  kind: dish
+  tags:
+  - fish
+  - italian
+  - milk
+  - veneto
+  missing_allowed: 2
+  source_family: italian:baccala_vicentina
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - soak
+    - stew
+  comment: ''
+  ingredients:
+  - item: baccala
+    role: main
+    amount: many
+    accepts:
+    - generic_fish
+    - fish
+  - item: onion
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - cream
+    - milk_like
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: anchovy
+    role: addition
+    amount: little
+    accepts:
+    - fish
+  - item: parmesan
+    role: addition
+    amount: little
+    accepts:
+    - hard_cheese
+  name_uk: Солона тріска по-віченцьки
+- id: italian_baccala_livornese
+  name: Salted cod in tomato
+  kind: dish
+  tags:
+  - fish
+  - italian
+  - tomato
+  missing_allowed: 2
+  source_family: italian:baccala_livornese
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: baccala
+    role: main
+    amount: many
+    accepts:
+    - generic_fish
+    - fish
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: olive
+    role: addition
+    amount: little
+    accepts:
+    - fermented_condiment
+  - item: capers
+    role: addition
+    amount: little
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Солона тріска в томаті
+- id: italian_sarde_beccafico
+  name: Sardines with breadcrumbs and raisins
+  kind: dish
+  tags:
+  - baked
+  - fish
+  - italian
+  - sicilian
+  missing_allowed: 2
+  source_family: italian:sarde_beccafico
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fill
+    - bake
+  comment: ''
+  ingredients:
+  - item: sardines
+    role: main
+    amount: many
+    accepts:
+    - fish
+  - item: breadcrumbs
+    role: required
+    amount: normal
+    accepts:
+    - bread_base
+  - item: raisins
+    role: addition
+    amount: little
+    accepts:
+    - dried_fruit_group
+  - item: pine_nuts
+    role: addition
+    amount: little
+    accepts:
+    - nuts
+  - item: lemon
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Сардини з сухарями та родзинками
+- id: italian_pesce_acqua_pazza
+  name: Fish in light tomato broth
+  kind: dish
+  tags:
+  - coastal
+  - fish
+  - italian
+  missing_allowed: 2
+  source_family: italian:pesce_acqua_pazza
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: generic_fish
+    role: main
+    amount: many
+    accepts:
+    - fish
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: white_wine
+    role: addition
+    amount: little
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: parsley
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Риба у легкому томатному бульйоні
+- id: italian_branzino_forno
+  name: Baked white fish
+  kind: dish
+  tags:
+  - baked
+  - fish
+  - italian
+  missing_allowed: 2
+  source_family: italian:branzino_forno
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: white_fish
+    role: main
+    amount: many
+    accepts:
+    - generic_fish
+    - fish
+  - item: potato
+    role: addition
+    amount: normal
+  - item: lemon
+    role: required
+    amount: little
+    accepts:
+    - acid_souring
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: rosemary
+    role: spice
+    amount: spice
+    accepts:
+    - herb
+  name_uk: Запечена біла риба
+- id: italian_calamari_ripieni
+  name: Stuffed squid
+  kind: dish
+  tags:
+  - italian
+  - seafood
+  - stuffed
+  missing_allowed: 2
+  source_family: italian:calamari_ripieni
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fill
+    - stew
+  comment: ''
+  ingredients:
+  - item: squid
+    role: main
+    amount: many
+    accepts:
+    - seafood
+  - item: breadcrumbs
+    role: required
+    amount: normal
+    accepts:
+    - bread_base
+  - item: eggs
+    role: addition
+    amount: little
+    accepts:
+    - egg
+  - item: parmesan
+    role: addition
+    amount: little
+    accepts:
+    - hard_cheese
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Фаршировані кальмари
+- id: italian_cozze_pomodoro
+  name: Mussels in tomato
+  kind: dish
+  tags:
+  - italian
+  - quick
+  - seafood
+  missing_allowed: 2
+  source_family: italian:cozze_pomodoro
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: mussels
+    role: main
+    amount: many
+    accepts:
+    - seafood
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: white_wine
+    role: addition
+    amount: little
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: parsley
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Мідії у томаті
+- id: italian_gamberi_aglio
+  name: Shrimp with garlic
+  kind: dish
+  tags:
+  - italian
+  - quick
+  - seafood
+  missing_allowed: 2
+  source_family: italian:gamberi_aglio
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: shrimp
+    role: main
+    amount: many
+    accepts:
+    - seafood
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: lemon
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  - item: parsley
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Креветки з часником
+- id: italian_seppie_piselli
+  name: Cuttlefish with peas
+  kind: dish
+  tags:
+  - italian
+  - peas
+  - seafood
+  missing_allowed: 2
+  source_family: italian:seppie_piselli
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: squid
+    role: main
+    amount: many
+    accepts:
+    - seafood
+  - item: peas
+    role: required
+    amount: normal
+    accepts:
+    - canned_peas
+    - legume
+  - item: tomato_sauce
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: little
+  - item: white_wine
+    role: addition
+    amount: little
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Каракатиця з горошком
+- id: italian_fegato_veneziana
+  name: Venetian-style liver
+  kind: dish
+  tags:
+  - italian
+  - offal
+  - quick
+  - veneto
+  missing_allowed: 2
+  source_family: italian:fegato_veneziana
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: liver
+    role: main
+    amount: many
+    accepts:
+    - liver_offal
+  - item: onion
+    role: main
+    amount: normal
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: olive_oil
+    role: addition
+    amount: little
+    accepts:
+    - plant_oil
+  - item: white_wine
+    role: addition
+    amount: little
+  name_uk: Печінка по-венеціанськи
+- id: italian_agnello_rosmarino
+  name: Lamb with rosemary
+  kind: dish
+  tags:
+  - italian
+  - lamb
+  - roast
+  missing_allowed: 2
+  source_family: italian:agnello_rosmarino
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roast
+    - stew
+  comment: ''
+  ingredients:
+  - item: lamb_chunks
+    role: main
+    amount: many
+    accepts:
+    - lamb
+    - red_meat
+  - item: potato
+    role: addition
+    amount: normal
+  - item: rosemary
+    role: spice
+    amount: spice
+    accepts:
+    - herb
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: white_wine
+    role: addition
+    amount: little
+  name_uk: Баранина з розмарином
+- id: italian_patate_forno
+  name: Italian style potatoes
+  kind: dish
+  tags:
+  - italian
+  - potato
+  - side
+  missing_allowed: 2
+  source_family: italian:patate_forno
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - side
+    time: under_60
+    method:
+    - roast
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: rosemary
+    role: spice
+    amount: spice
+    accepts:
+    - herb
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  name_uk: Картопля по-італійськи
+- id: italian_spinaci_saltati
+  name: Spinach with garlic
+  kind: dish
+  tags:
+  - greens
+  - italian
+  - side
+  missing_allowed: 2
+  source_family: italian:spinaci_saltati
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - side
+    time: under_10
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: spinach
+    role: main
+    amount: many
+    accepts:
+    - leafy_green
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: lemon
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  name_uk: Шпинат із часником
+- id: italian_fagiolini_aglio
+  name: Green beans with garlic
+  kind: dish
+  tags:
+  - italian
+  - side
+  - vegetable
+  missing_allowed: 2
+  source_family: italian:fagiolini_aglio
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - side
+    time: under_30
+    method:
+    - boil
+    - fry
+  comment: ''
+  ingredients:
+  - item: green_beans
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: lemon
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  name_uk: Зелена квасоля з часником
+- id: italian_peperonata
+  name: Stewed sweet pepper
+  kind: dish
+  tags:
+  - italian
+  - side
+  - vegetable
+  missing_allowed: 2
+  source_family: italian:peperonata
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - side
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: bell_pepper
+    role: main
+    amount: many
+    accepts:
+    - nightshade_vegetable
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: little
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Тушкований солодкий перець
+- id: italian_zucchine_trifolate
+  name: Zucchini with garlic and herbs
+  kind: dish
+  tags:
+  - italian
+  - side
+  - vegetable
+  missing_allowed: 2
+  source_family: italian:zucchine_trifolate
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - side
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: zucchini
+    role: main
+    amount: many
+    accepts:
+    - squash_family
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: parsley
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Кабачки з часником та зеленню
+- id: italian_funghi_trifolati
+  name: Italian fried mushrooms
+  kind: dish
+  tags:
+  - italian
+  - mushroom
+  - side
+  missing_allowed: 2
+  source_family: italian:funghi_trifolati
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - side
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: mushroom
+    role: main
+    amount: many
+    accepts:
+    - mushroom
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: parsley
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Смажені гриби по-італійськи
+- id: italian_fagioli_uccelletto
+  name: Beans in tomato with sage
+  kind: dish
+  tags:
+  - italian
+  - legume
+  - side
+  - tuscan
+  missing_allowed: 2
+  source_family: italian:fagioli_uccelletto
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - side
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: beans
+    role: main
+    amount: many
+    accepts:
+    - legume
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: sage
+    role: spice
+    amount: spice
+    accepts:
+    - herb
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Квасоля в томаті з шавлією
+- id: italian_finocchi_arance
+  name: Salad with fennel and orange
+  kind: dish
+  tags:
+  - italian
+  - salad
+  - sicilian
+  - side
+  missing_allowed: 2
+  source_family: italian:finocchi_arance
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - salad
+    time: under_10
+    method:
+    - raw
+    - mix
+  comment: ''
+  ingredients:
+  - item: fennel
+    role: main
+    amount: normal
+    accepts:
+    - vegetable
+  - item: orange
+    role: main
+    amount: normal
+    accepts:
+    - fresh_fruit
+  - item: olive
+    role: addition
+    amount: little
+    accepts:
+    - fermented_condiment
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Салат з фенхелем та апельсином
+- id: italian_rucola_parmigiano
+  name: Arugula with parmesan
+  kind: dish
+  tags:
+  - italian
+  - salad
+  - side
+  missing_allowed: 2
+  source_family: italian:rucola_parmigiano
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - salad
+    time: under_10
+    method:
+    - raw
+    - assemble
+  comment: ''
+  ingredients:
+  - item: arugula
+    role: main
+    amount: normal
+    accepts:
+    - leafy_green
+  - item: parmesan
+    role: required
+    amount: little
+    accepts:
+    - hard_cheese
+  - item: lemon
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Рукола з пармезаном
+- id: italian_broccoli_strascinati
+  name: Broccoli with garlic and pepper
+  kind: dish
+  tags:
+  - italian
+  - side
+  - vegetable
+  missing_allowed: 2
+  source_family: italian:broccoli_strascinati
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - side
+    time: under_30
+    method:
+    - boil
+    - fry
+  comment: ''
+  ingredients:
+  - item: broccoli
+    role: main
+    amount: many
+    accepts:
+    - cabbage_family
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: red_pepper_flakes
+    role: spice
+    amount: spice
+    accepts:
+    - chili_spice
+  name_uk: Брокколі з часником та перцем
+- id: italian_cicoria_ripassata
+  name: Chicory with garlic
+  kind: dish
+  tags:
+  - greens
+  - italian
+  - side
+  missing_allowed: 2
+  source_family: italian:cicoria_ripassata
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - side
+    time: under_30
+    method:
+    - boil
+    - fry
+  comment: ''
+  ingredients:
+  - item: leafy_green
+    role: main
+    amount: many
+    accepts:
+    - greens
+    - vegetable
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: red_pepper_flakes
+    role: spice
+    amount: spice
+    accepts:
+    - chili_spice
+  name_uk: Цикорій із часником
+- id: italian_salsa_pesto
+  name: Pesto sauce
+  kind: dish
+  tags:
+  - italian
+  - ligurian
+  - sauce
+  missing_allowed: 2
+  source_family: italian:salsa_pesto
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - sauce
+    time: under_10
+    method:
+    - blend
+  comment: ''
+  ingredients:
+  - item: basil
+    role: main
+    amount: many
+    accepts:
+    - fresh_herb
+  - item: pine_nuts
+    role: required
+    amount: little
+    accepts:
+    - nuts
+  - item: parmesan
+    role: required
+    amount: little
+    accepts:
+    - hard_cheese
+  - item: pecorino
+    role: addition
+    amount: little
+    accepts:
+    - hard_cheese
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  name_uk: Соус песто
+- id: italian_salsa_marinara
+  name: Tomato marinara sauce
+  kind: dish
+  tags:
+  - italian
+  - sauce
+  - tomato
+  missing_allowed: 2
+  source_family: italian:salsa_marinara
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - sauce
+    time: under_30
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: tomato_sauce
+    role: main
+    amount: many
+    accepts:
+    - tomato_base
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: oregano
+    role: spice
+    amount: spice
+    accepts:
+    - dried_herb
+  - item: basil
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  name_uk: Томатний соус маринару
+- id: italian_besciamella
+  name: Bechamel
+  kind: dish
+  tags:
+  - dairy
+  - italian
+  - sauce
+  missing_allowed: 2
+  source_family: italian:besciamella
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - sauce
+    time: under_30
+    method:
+    - stew
+    - mix
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+    accepts:
+    - cream
+    - milk_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: flour
+    role: required
+    amount: normal
+    accepts:
+    - flour_group
+  - item: nutmeg
+    role: spice
+    amount: spice
+    accepts:
+    - warm_spice
+  name_uk: Бешамель
+- id: italian_pizza_margherita
+  name: Pizza margherita
+  kind: dish
+  tags:
+  - italian
+  - naples
+  - pizza
+  missing_allowed: 2
+  source_family: italian:pizza_margherita
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - knead
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: yeast
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: mozzarella
+    role: required
+    amount: normal
+    accepts:
+    - fresh_cheese_group
+  - item: basil
+    role: spice
+    amount: spice
+    accepts:
+    - fresh_herb
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Піца маргарита
+- id: italian_pizza_marinara
+  name: Pizza marinara
+  kind: dish
+  tags:
+  - italian
+  - pizza
+  - vegan
+  missing_allowed: 2
+  source_family: italian:pizza_marinara
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - knead
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: yeast
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: tomato_sauce
+    role: main
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: oregano
+    role: spice
+    amount: spice
+    accepts:
+    - dried_herb
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  name_uk: Піца маринара
+- id: italian_pizza_quattro_formaggi
+  name: Four cheese pizza
+  kind: dish
+  tags:
+  - cheese
+  - italian
+  - pizza
+  missing_allowed: 2
+  source_family: italian:pizza_quattro_formaggi
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - knead
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: yeast
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: mozzarella
+    role: required
+    amount: normal
+    accepts:
+    - cheese
+  - item: gorgonzola
+    role: required
+    amount: normal
+    accepts:
+    - cheese
+  - item: parmesan
+    role: required
+    amount: little
+    accepts:
+    - hard_cheese
+  - item: fontina
+    role: required
+    amount: normal
+    accepts:
+    - cheese
+  name_uk: Піца чотири сири
+- id: italian_pizza_diavola
+  name: Spicy pizza with salami
+  kind: dish
+  tags:
+  - italian
+  - pizza
+  - sausage
+  - spicy
+  missing_allowed: 2
+  source_family: italian:pizza_diavola
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - knead
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: yeast
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: mozzarella
+    role: required
+    amount: normal
+    accepts:
+    - cheese
+  - item: salami
+    role: main
+    amount: normal
+    accepts:
+    - sausage_product
+  - item: red_pepper_flakes
+    role: spice
+    amount: spice
+    accepts:
+    - chili_spice
+  name_uk: Гостра піца з салямі
+- id: italian_pizza_prosciutto_funghi
+  name: Pizza with ham and mushrooms
+  kind: dish
+  tags:
+  - italian
+  - meat
+  - mushroom
+  - pizza
+  missing_allowed: 2
+  source_family: italian:pizza_prosciutto_funghi
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - knead
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: yeast
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: mozzarella
+    role: required
+    amount: normal
+    accepts:
+    - cheese
+  - item: prosciutto_cotto
+    role: main
+    amount: normal
+    accepts:
+    - boiled_sausage
+    - meat_product
+  - item: mushroom
+    role: main
+    amount: normal
+    accepts:
+    - mushroom
+  name_uk: Піца з шинкою та грибами
+- id: italian_calzone
+  name: Closed pizza
+  kind: dish
+  tags:
+  - cheese
+  - folded
+  - italian
+  - pizza
+  missing_allowed: 2
+  source_family: italian:calzone
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - knead
+    - fill
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: yeast
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: mozzarella
+    role: main
+    amount: normal
+    accepts:
+    - cheese
+  - item: ricotta
+    role: addition
+    amount: normal
+    accepts:
+    - fresh_cheese_group
+  - item: salami
+    role: addition
+    amount: normal
+    accepts:
+    - sausage_product
+  - item: tomato_sauce
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  name_uk: Закрита піца
+- id: italian_focaccia_genovese
+  name: Focaccia
+  kind: dish
+  tags:
+  - bread
+  - italian
+  - ligurian
+  missing_allowed: 2
+  source_family: italian:focaccia_genovese
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - bread
+    time: over_60
+    method:
+    - knead
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: yeast
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: rosemary
+    role: spice
+    amount: spice
+    accepts:
+    - herb
+  name_uk: Фокачча
+- id: italian_focaccia_barese
+  name: Focaccia with tomatoes
+  kind: dish
+  tags:
+  - bread
+  - italian
+  - puglia
+  missing_allowed: 2
+  source_family: italian:focaccia_barese
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - bread
+    time: over_60
+    method:
+    - knead
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: yeast
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: olive
+    role: addition
+    amount: little
+    accepts:
+    - fermented_condiment
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: oregano
+    role: spice
+    amount: spice
+    accepts:
+    - dried_herb
+  name_uk: Фокачча с томатами
+- id: italian_focaccia_recco
+  name: Thin focaccia with cheese
+  kind: dish
+  tags:
+  - bread
+  - cheese
+  - italian
+  - ligurian
+  missing_allowed: 2
+  source_family: italian:focaccia_recco
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - bread
+    time: over_60
+    method:
+    - knead
+    - fill
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: water
+    role: required
+    amount: normal
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: fresh_cheese
+    role: main
+    amount: normal
+    accepts:
+    - fresh_cheese_group
+    - ricotta
+  name_uk: Тонка фокачча із сиром
+- id: italian_piadina
+  name: Thin cake
+  kind: dish
+  tags:
+  - bread
+  - italian
+  - romagna
+  missing_allowed: 2
+  source_family: italian:piadina
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - bread
+    time: under_60
+    method:
+    - knead
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: smalec
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Тонкий корж
+- id: italian_piadina_prosciutto
+  name: Piadina with ham and cheese
+  kind: dish
+  tags:
+  - bread
+  - italian
+  - sandwich
+  missing_allowed: 2
+  source_family: italian:piadina_prosciutto
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: under_30
+    method:
+    - assemble
+    - fry
+  comment: ''
+  ingredients:
+  - item: flatbread
+    role: main
+    amount: normal
+    accepts:
+    - piadina
+    - bread_base
+  - item: prosciutto
+    role: main
+    amount: normal
+    accepts:
+    - meat_product
+  - item: soft_cheese
+    role: required
+    amount: normal
+    accepts:
+    - fresh_cheese_group
+    - cheese
+  - item: arugula
+    role: addition
+    amount: normal
+    accepts:
+    - leafy_green
+  name_uk: П'ядина з шинкою та сиром
+- id: italian_panzerotti
+  name: Fried pies with mozzarella
+  kind: dish
+  tags:
+  - bread
+  - fried
+  - italian
+  - puglia
+  missing_allowed: 2
+  source_family: italian:panzerotti
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: over_60
+    method:
+    - knead
+    - fill
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: yeast
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: tomato_sauce
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: mozzarella
+    role: main
+    amount: normal
+    accepts:
+    - cheese
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  name_uk: Смажені пиріжки з моцарелою
+- id: italian_taralli
+  name: Italian dry bagels
+  kind: dish
+  tags:
+  - bread
+  - italian
+  - puglia
+  - snack
+  missing_allowed: 2
+  source_family: italian:taralli
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - snack
+    time: over_60
+    method:
+    - knead
+    - boil
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  - item: white_wine
+    role: required
+    amount: little
+  - item: fennel_seeds
+    role: spice
+    amount: spice
+    accepts:
+    - seed_spice
+  name_uk: Італійські сухі бублики
+- id: italian_grissini
+  name: Breadsticks
+  kind: dish
+  tags:
+  - bread
+  - italian
+  - piedmont
+  missing_allowed: 2
+  source_family: italian:grissini
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - bread
+    time: over_60
+    method:
+    - knead
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: yeast
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: sesame
+    role: addition
+    amount: little
+    accepts:
+    - seed
+  name_uk: Хлібні палички
+- id: italian_tiramisu
+  name: Tiramisu
+  kind: dish
+  tags:
+  - coffee
+  - dessert
+  - italian
+  - no_bake
+  missing_allowed: 2
+  source_family: italian:tiramisu
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - mix
+    - set
+  comment: ''
+  ingredients:
+  - item: ladyfingers
+    role: main
+    amount: many
+    accepts:
+    - bread_base
+  - item: mascarpone
+    role: main
+    amount: normal
+    accepts:
+    - soft_cheese
+    - fresh_cheese
+    - ricotta
+    - soft_creamy_cheese
+  - item: eggs
+    role: required
+    amount: normal
+    accepts:
+    - egg
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: coffee
+    role: required
+    amount: normal
+  - item: cocoa
+    role: spice
+    amount: spice
+  name_uk: Тірамісу
+- id: italian_panna_cotta
+  name: Panna cotta
+  kind: dish
+  tags:
+  - cream
+  - dessert
+  - italian
+  missing_allowed: 2
+  source_family: italian:panna_cotta
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - stew
+    - set
+  comment: ''
+  ingredients:
+  - item: cream
+    role: main
+    amount: many
+    accepts:
+    - sour_cream
+    - yogurt
+    - mascarpone
+    - soft_creamy_cheese
+    - cream_like
+  - item: milk
+    role: addition
+    amount: normal
+    accepts:
+    - cream
+    - milk_like
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: gelatin
+    role: required
+    amount: little
+  - item: berries
+    role: addition
+    amount: normal
+    accepts:
+    - fresh_fruit
+  name_uk: Панна-котта
+- id: italian_cannoli
+  name: Sicilian cannoli
+  kind: dish
+  tags:
+  - cheese
+  - dessert
+  - italian
+  - sicilian
+  missing_allowed: 2
+  source_family: italian:cannoli
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - knead
+    - fry
+    - fill
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: ricotta
+    role: main
+    amount: many
+    accepts:
+    - fresh_cheese_group
+    - cottage_cheese
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: cocoa
+    role: addition
+    amount: spice
+  - item: pistachios
+    role: addition
+    amount: little
+    accepts:
+    - nuts
+  - item: candied_orange
+    role: addition
+    amount: little
+    accepts:
+    - dried_fruit_group
+  name_uk: Сицилійські каннолі
+- id: italian_cassata
+  name: Cash register
+  kind: dish
+  tags:
+  - cake
+  - dessert
+  - italian
+  - sicilian
+  missing_allowed: 2
+  source_family: italian:cassata
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - assemble
+    - set
+  comment: ''
+  ingredients:
+  - item: ricotta
+    role: main
+    amount: many
+    accepts:
+    - fresh_cheese_group
+    - cottage_cheese
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: sponge_cake
+    role: required
+    amount: many
+    accepts:
+    - bread_base
+  - item: marzipan
+    role: addition
+    amount: normal
+    accepts:
+    - almonds
+    - sweetener
+  - item: candied_fruit
+    role: addition
+    amount: normal
+    accepts:
+    - dried_fruit_group
+  name_uk: Касовий апарат
+- id: italian_pastiera
+  name: Neapolitan Easter tart
+  kind: dish
+  tags:
+  - cake
+  - dessert
+  - italian
+  - naples
+  missing_allowed: 2
+  source_family: italian:pastiera
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: required
+    amount: many
+    accepts:
+    - flour_group
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: eggs
+    role: required
+    amount: normal
+    accepts:
+    - egg
+  - item: ricotta
+    role: main
+    amount: normal
+    accepts:
+    - fresh_cheese_group
+  - item: wheat_berries
+    role: main
+    amount: normal
+    accepts:
+    - grain
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: orange
+    role: addition
+    amount: little
+    accepts:
+    - fresh_fruit
+  name_uk: Неаполітанська великодня тарта
+- id: italian_sfogliatelle
+  name: Puff shells with ricotta
+  kind: dish
+  tags:
+  - dessert
+  - italian
+  - naples
+  - pastry
+  missing_allowed: 2
+  source_family: italian:sfogliatelle
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - knead
+    - fill
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: smalec
+    role: required
+    amount: normal
+  - item: ricotta
+    role: main
+    amount: normal
+    accepts:
+    - fresh_cheese_group
+  - item: semolina
+    role: required
+    amount: normal
+    accepts:
+    - grain
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: candied_orange
+    role: addition
+    amount: little
+    accepts:
+    - dried_fruit_group
+  name_uk: Листкові черепашки з рикоттою
+- id: italian_zabaglione
+  name: Sabayon
+  kind: dish
+  tags:
+  - dessert
+  - egg
+  - italian
+  - wine
+  missing_allowed: 2
+  source_family: italian:zabaglione
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: under_30
+    method:
+    - mix
+    - stew
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: normal
+    accepts:
+    - egg
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: marsala_wine
+    role: required
+    amount: little
+  name_uk: Sabayon
+- id: italian_gelato_vanilla
+  name: Creamy gelato
+  kind: dish
+  tags:
+  - dessert
+  - frozen
+  - italian
+  missing_allowed: 2
+  source_family: italian:gelato_vanilla
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - stew
+    - freeze
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+    accepts:
+    - cream
+    - milk_like
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - sour_cream
+    - yogurt
+    - mascarpone
+    - soft_creamy_cheese
+    - cream_like
+  - item: eggs
+    role: required
+    amount: normal
+    accepts:
+    - egg
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  name_uk: Вершкове джелато
+- id: italian_semifreddo_nocciola
+  name: Semifreddo with hazelnuts
+  kind: dish
+  tags:
+  - dessert
+  - frozen
+  - italian
+  - nuts
+  missing_allowed: 2
+  source_family: italian:semifreddo_nocciola
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - mix
+    - freeze
+  comment: ''
+  ingredients:
+  - item: cream
+    role: main
+    amount: many
+    accepts:
+    - sour_cream
+    - yogurt
+    - mascarpone
+    - soft_creamy_cheese
+    - cream_like
+  - item: eggs
+    role: required
+    amount: normal
+    accepts:
+    - egg
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: hazelnuts
+    role: main
+    amount: normal
+    accepts:
+    - nuts
+  name_uk: Семіфреддо з лісовими горіхами
+- id: italian_crostata_marmellata
+  name: Shortbread pie with jam
+  kind: dish
+  tags:
+  - cake
+  - dessert
+  - italian
+  missing_allowed: 2
+  source_family: italian:crostata_marmellata
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: eggs
+    role: required
+    amount: little
+    accepts:
+    - egg
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: jam
+    role: main
+    amount: normal
+    accepts:
+    - fruit
+    - sweetener
+  name_uk: Пісочний пиріг з джемом
+- id: italian_cantucci
+  name: Macaroons
+  kind: dish
+  tags:
+  - cookies
+  - italian
+  - nuts
+  - tuscan
+  missing_allowed: 2
+  source_family: italian:cantucci
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: almonds
+    role: main
+    amount: normal
+    accepts:
+    - nuts
+  - item: eggs
+    role: required
+    amount: normal
+    accepts:
+    - egg
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  name_uk: Мигдальне печиво
+- id: italian_panettone_template
+  name: Christmas cake
+  kind: dish
+  tags:
+  - bread
+  - christmas
+  - italian
+  - milan
+  missing_allowed: 2
+  source_family: italian:panettone_template
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - knead
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: yeast
+    role: required
+    amount: little
+  - item: eggs
+    role: required
+    amount: normal
+    accepts:
+    - egg
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: raisins
+    role: addition
+    amount: normal
+    accepts:
+    - dried_fruit_group
+  - item: candied_orange
+    role: addition
+    amount: normal
+    accepts:
+    - dried_fruit_group
+  name_uk: Різдвяна паска
+- id: italian_pandoro_template
+  name: Verona Christmas bread
+  kind: dish
+  tags:
+  - bread
+  - christmas
+  - italian
+  - verona
+  missing_allowed: 2
+  source_family: italian:pandoro_template
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - knead
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: yeast
+    role: required
+    amount: little
+  - item: eggs
+    role: required
+    amount: normal
+    accepts:
+    - egg
+  - item: butter
+    role: required
+    amount: many
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  name_uk: Віронський різдвяний хліб
+- id: italian_torta_caprese
+  name: Chocolate almond cake
+  kind: dish
+  tags:
+  - cake
+  - capri
+  - italian
+  - nuts
+  missing_allowed: 2
+  source_family: italian:torta_caprese
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: almonds
+    role: main
+    amount: many
+    accepts:
+    - nuts
+  - item: cocoa
+    role: main
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+    accepts:
+    - egg
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  name_uk: Шоколадно-мигдальний торт
+- id: italian_torta_nonna
+  name: Quiche with pine nuts
+  kind: dish
+  tags:
+  - cake
+  - custard
+  - italian
+  missing_allowed: 2
+  source_family: italian:torta_nonna
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - set
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: eggs
+    role: required
+    amount: normal
+    accepts:
+    - egg
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - cream
+    - milk_like
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: pine_nuts
+    role: addition
+    amount: little
+    accepts:
+    - nuts
+  name_uk: Пиріг із заварним кремом та кедровими горіхами
+- id: italian_struffoli
+  name: Small balls in honey
+  kind: dish
+  tags:
+  - christmas
+  - fried
+  - italian
+  - naples
+  missing_allowed: 2
+  source_family: italian:struffoli
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - knead
+    - fry
+    - mix
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: eggs
+    role: required
+    amount: normal
+    accepts:
+    - egg
+  - item: honey
+    role: main
+    amount: normal
+    accepts:
+    - sweetener
+  - item: sugar
+    role: addition
+    amount: normal
+    accepts:
+    - sweetener
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  name_uk: Маленькі кульки у меді
+- id: italian_zeppole
+  name: Fried donuts
+  kind: dish
+  tags:
+  - dessert
+  - fried
+  - italian
+  missing_allowed: 2
+  source_family: italian:zeppole
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - knead
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: eggs
+    role: required
+    amount: normal
+    accepts:
+    - egg
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - sour_cream
+    - yogurt
+    - mascarpone
+    - soft_creamy_cheese
+    - cream_like
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  name_uk: Смажені пончики
+- id: italian_bomboloni
+  name: Italian donuts
+  kind: dish
+  tags:
+  - dessert
+  - fried
+  - italian
+  missing_allowed: 2
+  source_family: italian:bomboloni
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - knead
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+    accepts:
+    - cream
+    - milk_like
+  - item: eggs
+    role: required
+    amount: normal
+    accepts:
+    - egg
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: jam
+    role: addition
+    amount: normal
+    accepts:
+    - sweetener
+    - fruit
+  - item: olive_oil
+    role: required
+    amount: normal
+    accepts:
+    - plant_oil
+  name_uk: Італійські пончики
+- id: italian_granita_limone
+  name: Lemon granita
+  kind: dish
+  tags:
+  - drink
+  - frozen
+  - italian
+  - sicilian
+  missing_allowed: 2
+  source_family: italian:granita_limone
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - mix
+    - freeze
+  comment: ''
+  ingredients:
+  - item: lemon
+    role: main
+    amount: normal
+    accepts:
+    - acid_souring
+    - fresh_fruit
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: water
+    role: required
+    amount: many
+  name_uk: Лимонна граніту
+- id: italian_affogato
+  name: Ice cream with coffee
+  kind: dish
+  tags:
+  - coffee
+  - dessert
+  - italian
+  - quick
+  missing_allowed: 2
+  source_family: italian:affogato
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: ice_cream
+    role: main
+    amount: normal
+  - item: coffee
+    role: required
+    amount: little
+  name_uk: Морозиво з кавою
+- id: italian_castagnaccio
+  name: Chestnut pie
+  kind: dish
+  tags:
+  - cake
+  - italian
+  - nuts
+  - tuscan
+  missing_allowed: 2
+  source_family: italian:castagnaccio
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - mix
+    - bake
+  comment: ''
+  ingredients:
+  - item: chestnut_flour
+    role: main
+    amount: many
+    accepts:
+    - flour_group
+  - item: water
+    role: required
+    amount: many
+  - item: olive_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: raisins
+    role: addition
+    amount: little
+    accepts:
+    - dried_fruit_group
+  - item: pine_nuts
+    role: addition
+    amount: little
+    accepts:
+    - nuts
+  - item: rosemary
+    role: spice
+    amount: spice
+    accepts:
+    - herb
+  name_uk: Каштановий пиріг
+- id: italian_panforte
+  name: Spiced pecan pie
+  kind: dish
+  tags:
+  - dessert
+  - italian
+  - nuts
+  - siena
+  missing_allowed: 2
+  source_family: italian:panforte
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - mix
+    - bake
+  comment: ''
+  ingredients:
+  - item: almonds
+    role: main
+    amount: normal
+    accepts:
+    - nuts
+  - item: hazelnuts
+    role: addition
+    amount: normal
+    accepts:
+    - nuts
+  - item: honey
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: flour
+    role: required
+    amount: little
+    accepts:
+    - flour_group
+  - item: cocoa
+    role: addition
+    amount: spice
+  - item: cinnamon
+    role: spice
+    amount: spice
+    accepts:
+    - warm_spice
+  name_uk: Пряний горіховий пиріг
+- id: italian_ricciarelli
+  name: Macaroons from Siena
+  kind: dish
+  tags:
+  - cookies
+  - italian
+  - nuts
+  - siena
+  missing_allowed: 2
+  source_family: italian:ricciarelli
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - mix
+    - bake
+  comment: ''
+  ingredients:
+  - item: almonds
+    role: main
+    amount: many
+    accepts:
+    - nuts
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: eggs
+    role: required
+    amount: little
+    accepts:
+    - egg
+  - item: orange
+    role: addition
+    amount: little
+    accepts:
+    - fresh_fruit
+  name_uk: Мигдальне печиво із Сієни
+- id: italian_baci_dama
+  name: Nut cookies with chocolate
+  kind: dish
+  tags:
+  - cookies
+  - italian
+  - nuts
+  - piedmont
+  missing_allowed: 2
+  source_family: italian:baci_dama
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - assemble
+  comment: ''
+  ingredients:
+  - item: hazelnuts
+    role: main
+    amount: normal
+    accepts:
+    - nuts
+  - item: flour
+    role: required
+    amount: normal
+    accepts:
+    - flour_group
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: cocoa
+    role: addition
+    amount: normal
+  name_uk: Горіхове печиво з шоколадом
+- id: italian_amaretti
+  name: Macaroons
+  kind: dish
+  tags:
+  - cookies
+  - italian
+  - nuts
+  missing_allowed: 2
+  source_family: italian:amaretti
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - mix
+    - bake
+  comment: ''
+  ingredients:
+  - item: almonds
+    role: main
+    amount: many
+    accepts:
+    - nuts
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: eggs
+    role: required
+    amount: little
+    accepts:
+    - egg
+  name_uk: Мигдальне печиво
+- id: italian_budino_cioccolato
+  name: Chocolate pudding
+  kind: dish
+  tags:
+  - dessert
+  - italian
+  - pudding
+  missing_allowed: 2
+  source_family: italian:budino_cioccolato
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - stew
+    - set
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+    accepts:
+    - cream
+    - milk_like
+  - item: cocoa
+    role: main
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: starch
+    role: required
+    amount: little
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  name_uk: Шоколадний пудинг
+- id: italian_macedonia
+  name: Fruit salad
+  kind: dish
+  tags:
+  - fruit
+  - italian
+  - quick
+  missing_allowed: 2
+  source_family: italian:macedonia
+  facets:
+    cuisine:
+    - italian
+    dish_type:
+    - dessert
+    time: under_10
+    method:
+    - raw
+    - mix
+  comment: ''
+  ingredients:
+  - item: fruit
+    role: main
+    amount: many
+  - item: lemon
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  - item: sugar
+    role: addition
+    amount: little
+    accepts:
+    - sweetener
+  name_uk: Фруктовий салат

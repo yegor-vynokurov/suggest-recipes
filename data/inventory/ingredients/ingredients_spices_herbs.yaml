@@ -1,0 +1,627 @@
+metadata:
+  version: '0.1'
+  kind: ingredients
+  domain: spices_herbs
+ingredients:
+  allspice:
+    name: allspice
+    name_uk: запашний перець
+    groups:
+    - warm_spice
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  arugula:
+    name: arugula
+    name_uk: рукола
+    groups:
+    - dried_herb
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  basil:
+    name: basil
+    name_uk: базилік
+    groups:
+    - dried_herb
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  bay_leaf:
+    name: bay leaf
+    name_uk: лавровий лист
+    groups:
+    - dried_herb
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  biryani_masala:
+    name: biryani masala
+    name_uk: бір'яни масалу
+    groups:
+    - masala_mix
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  black_pepper:
+    name: black pepper
+    name_uk: чорний перець
+    groups:
+    - hot_spice
+    - pungent_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  bouquet_garni:
+    name: bouquet garni
+    name_uk: букет запашних трав
+    groups:
+    - aromatic_spice
+    - herb
+    - fresh_herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cardamom:
+    name: cardamom
+    name_uk: кардамон
+    groups:
+    - warm_spice
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  celery_stalk:
+    name: celery stalk
+    name_uk: стебло селери
+    groups:
+    - aromatic_spice
+    - herb
+    - fresh_herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chana_masala_spice:
+    name: chana masala spice
+    name_uk: чана масалу спеції
+    groups:
+    - masala_mix
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chocolate:
+    name: chocolate
+    name_uk: шоколад
+    groups:
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cinnamon:
+    name: cinnamon
+    name_uk: кориця
+    groups:
+    - warm_spice
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cloves:
+    name: cloves
+    name_uk: гвоздика
+    groups:
+    - warm_spice
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cocoa:
+    name: cocoa
+    name_uk: какао
+    groups:
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cocoa_powder:
+    name: cocoa powder
+    name_uk: какао-порошок
+    groups:
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    aliases_uk:
+    - какао
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  coffee:
+    name: coffee
+    name_uk: кава
+    groups:
+    - warm_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cumin:
+    name: cumin
+    name_uk: кумін / зіра
+    groups:
+    - seed_spice
+    - aromatic_spice
+    - earthy_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  curry_leaves:
+    name: curry leaves
+    name_uk: листя каррі
+    groups:
+    - fresh_herb
+    - herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  curry_powder:
+    name: curry powder
+    name_uk: порошок каррі
+    groups:
+    - masala_mix
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  dill:
+    name: dill
+    name_uk: кріп
+    groups:
+    - dried_herb
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  dill_crown:
+    name: dill crown
+    name_uk: головки кропу
+    groups:
+    - dried_herb
+    - aromatic_spice
+    - fresh_herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  dried_mint:
+    name: dried mint
+    name_uk: суха м'ята
+    groups:
+    - dried_herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  dry_garlic:
+    name: dry garlic
+    name_uk: сухий часник
+    groups:
+    - aromatic_vegetable
+    - seasoning
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fennel:
+    name: fennel
+    name_uk: фенхель
+    groups:
+    - seed_spice
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fine_herbs:
+    name: fine herbs
+    name_uk: дрібні трави
+    groups:
+    - aromatic_spice
+    - herb
+    - fresh_herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  garam_masala:
+    name: garam masala
+    name_uk: гарам масалу
+    groups:
+    - masala_mix
+    - warm_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ginger:
+    name: ginger
+    name_uk: імбир
+    groups:
+    - pungent_spice
+    - aromatic_vegetable
+    - seasoning
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  horseradish:
+    name: horseradish
+    name_uk: хрін
+    groups:
+    - pungent_spice
+    - seasoning
+    - root_vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - хрін
+  hot_paprika:
+    name: hot paprika
+    name_uk: копчена паприка
+    groups:
+    - color_spice
+    - mild_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  juniper:
+    name: juniper
+    name_uk: ялівець
+    groups:
+    - warm_spice
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  kashmiri_chili:
+    name: kashmiri chili
+    name_uk: кашмірський чилі
+    groups:
+    - chili_spice
+    - hot_spice
+    - color_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  marjoram:
+    name: marjoram
+    name_uk: майоран
+    groups:
+    - herb
+    - dried_herb
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mint:
+    name: mint
+    name_uk: м'ята
+    groups:
+    - dried_herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mustard_seeds:
+    name: mustard seeds
+    name_uk: насіння гірчиці
+    groups:
+    - seed_spice
+    - pungent_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  nihari_masala:
+    name: nihari masala
+    name_uk: німарі масалу
+    groups:
+    - masala_mix
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  nutmeg:
+    name: nutmeg
+    name_uk: мускатний горіх
+    groups:
+    - warm_spice
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  oregano:
+    name: oregano
+    name_uk: орегано
+    groups:
+    - dried_herb
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  paprika:
+    name: paprika
+    name_uk: паприка
+    groups:
+    - color_spice
+    - mild_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  parsley:
+    name: parsley
+    name_uk: петрушка
+    groups:
+    - dried_herb
+    - aromatic_spice
+    - fresh_herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pav_bhaji_masala:
+    name: pav bhaji masala
+    name_uk: упав бхаджі масалу
+    groups:
+    - masala_mix
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  piment_espelette:
+    name: piment espelette
+    name_uk: еспелетський перець
+    groups:
+    - hot_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rasam_powder:
+    name: rasam powder
+    name_uk: расам масалу
+    groups:
+    - masala_mix
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  red_pepper_flakes:
+    name: red pepper flakes
+    name_uk: пластівці червоного перцю
+    groups:
+    - chili_spice
+    - hot_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rosemary:
+    name: rosemary
+    name_uk: розмарин
+    groups:
+    - dried_herb
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  saffron:
+    name: saffron
+    name_uk: шафран
+    groups:
+    - dried_herb
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sage:
+    name: sage
+    name_uk: спеція
+    groups:
+    - fresh_herb
+    - dried_herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sambar_powder:
+    name: sambar powder
+    name_uk: самбар масалу
+    groups:
+    - masala_mix
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tandoori_masala:
+    name: tandoori masala
+    name_uk: тандурі масалу
+    groups:
+    - masala_mix
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tarragon:
+    name: tarragon
+    name_uk: естрагон
+    groups:
+    - dried_herb
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  thyme:
+    name: thyme
+    name_uk: чебрець, чебрець
+    groups:
+    - dried_herb
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  turmeric:
+    name: turmeric
+    name_uk: куркума
+    groups:
+    - color_spice
+    - earthy_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  vanilla:
+    name: vanilla
+    name_uk: ваніль
+    groups:
+    - aromatic_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false

@@ -1,0 +1,6268 @@
+metadata:
+  version: 0.6-indian-large
+  purpose: Large Indian cuisine recipe templates for pantry-based suggestion engine
+  design_rules:
+  - If a title names a key ingredient, that ingredient appears as main or required.
+  - Broad categories are used mainly in accepts, not as a replacement for named title ingredients.
+  - Water is included as a technological ingredient, but should be treated as always available by inventory logic.
+  - These are ingredient templates, not exact step-by-step recipes.
+  - 'Time buckets: under_10, under_30, under_60, over_60.'
+  cuisines:
+    indian: индийская
+  quantity_scale:
+  - spice
+  - little
+  - normal
+  - many
+  source_notes:
+  - First-course block includes dal, sambar, rasam, shorba, kadhi and kootu-like dishes.
+  - Main block emphasizes curries, paneer dishes, vegetable sabzi, biryani/pulao, rice breakfasts, dosa/idli/appam family,
+    and tandoor-style dishes.
+  - Bread/snack block includes roti, chapati, naan, paratha, poori, bhatura, samosa, pakora, vada and chaat-style street foods.
+  - Dessert block includes kheer/payasam, gulab jamun, jalebi, rasgulla/rasmalai, halwa, ladoo, barfi, kulfi and festival
+    sweets.
+recipes:
+- id: indian_dal_tadka
+  name: Spicy fried lentils
+  kind: dish
+  tags:
+  - dal
+  - indian
+  - lentil
+  - north_indian
+  missing_allowed: 2
+  source_family: indian:dal_tadka
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    - main
+    time: under_60
+    method:
+    - boil
+    - temper
+  comment: ''
+  ingredients:
+  - item: yellow_lentils
+    role: main
+    amount: many
+    accepts:
+    - red_lentils
+    - legume
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_paste
+    - tomato_base
+  - item: ghee
+    role: required
+    amount: little
+    accepts:
+    - butter
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: turmeric
+    role: spice
+    amount: spice
+  - item: garam_masala
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Сочевиця з пряною засмажкою
+- id: indian_dal_fry
+  name: Thick dal with onion and tomato
+  kind: dish
+  tags:
+  - dal
+  - indian
+  - lentil
+  missing_allowed: 2
+  source_family: indian:dal_fry
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    - main
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: yellow_lentils
+    role: main
+    amount: many
+    accepts:
+    - red_lentils
+    - legume
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: ghee
+    role: required
+    amount: little
+    accepts:
+    - butter
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: turmeric
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Густий дав із цибулею та томатом
+- id: indian_masoor_dal
+  name: Red lentil dal soup
+  kind: dish
+  tags:
+  - dal
+  - indian
+  - quick
+  - red_lentils
+  missing_allowed: 2
+  source_family: indian:masoor_dal
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    - main
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: red_lentils
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: ghee
+    role: required
+    amount: little
+    accepts:
+    - butter
+  - item: turmeric
+    role: spice
+    amount: spice
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Суп-дав із червоної сочевиці
+- id: indian_moong_dal
+  name: Dal from mung bean
+  kind: dish
+  tags:
+  - dal
+  - indian
+  - mung
+  missing_allowed: 2
+  source_family: indian:moong_dal
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    - main
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: mung_beans
+    role: main
+    amount: many
+    accepts:
+    - legume
+  - item: onion
+    role: addition
+    amount: little
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: ghee
+    role: required
+    amount: little
+    accepts:
+    - butter
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: turmeric
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Дав із машу
+- id: indian_chana_dal
+  name: Dal made from chopped chickpeas
+  kind: dish
+  tags:
+  - chickpea
+  - dal
+  - indian
+  missing_allowed: 3
+  source_family: indian:chana_dal
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    - main
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: chana_dal
+    role: main
+    amount: many
+    accepts:
+    - chickpea
+    - legume
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: ghee
+    role: required
+    amount: little
+    accepts:
+    - butter
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: turmeric
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Дав із колотого нуту
+- id: indian_dal_palak
+  name: Lentils with spinach
+  kind: dish
+  tags:
+  - dal
+  - indian
+  - spinach
+  missing_allowed: 2
+  source_family: indian:dal_palak
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    - main
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: red_lentils
+    role: main
+    amount: many
+    accepts:
+    - yellow_lentils
+    - legume
+  - item: spinach
+    role: required
+    amount: many
+    accepts:
+    - greens
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: ghee
+    role: required
+    amount: little
+    accepts:
+    - butter
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: turmeric
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Сочевиця зі шпинатом
+- id: indian_dal_makhani
+  name: Creamy black lentil dal
+  kind: dish
+  tags:
+  - cream
+  - dal
+  - indian
+  - north_indian
+  missing_allowed: 3
+  source_family: indian:dal_makhani
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    - main
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: black_lentils
+    role: main
+    amount: many
+    accepts:
+    - legume
+  - item: beans
+    role: addition
+    amount: normal
+    accepts:
+    - kidney_beans
+    - legume
+  - item: tomato_paste
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - sour_cream
+    - yogurt
+    - mascarpone
+    - soft_creamy_cheese
+    - cream_like
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: garam_masala
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Вершковий дав із чорної сочевиці
+- id: indian_sambar
+  name: South Indian Lentil and Vegetable Soup
+  kind: dish
+  tags:
+  - dal
+  - indian
+  - south_indian
+  - vegetable
+  missing_allowed: 2
+  source_family: indian:sambar
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    - main
+    time: under_60
+    method:
+    - boil
+    - temper
+  comment: ''
+  ingredients:
+  - item: toor_dal
+    role: main
+    amount: many
+    accepts:
+    - yellow_lentils
+    - red_lentils
+  - item: vegetable_mix
+    role: required
+    amount: many
+    accepts:
+    - vegetable
+  - item: tamarind
+    role: required
+    amount: little
+  - item: sambar_powder
+    role: required
+    amount: spice
+  - item: curry_leaves
+    role: spice
+    amount: spice
+  - item: mustard_seeds
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Південноіндійський суп з сочевицею та овочами
+- id: indian_arachuvitta_sambar
+  name: Sambar with coconut masala
+  kind: dish
+  tags:
+  - coconut
+  - indian
+  - sambar
+  - south_indian
+  missing_allowed: 3
+  source_family: indian:arachuvitta_sambar
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    - main
+    time: under_60
+    method:
+    - boil
+    - temper
+  comment: ''
+  ingredients:
+  - item: toor_dal
+    role: main
+    amount: many
+    accepts:
+    - yellow_lentils
+  - item: vegetable_mix
+    role: required
+    amount: many
+    accepts:
+    - vegetable
+  - item: coconut
+    role: required
+    amount: normal
+  - item: tamarind
+    role: required
+    amount: little
+  - item: sambar_powder
+    role: required
+    amount: spice
+  - item: curry_leaves
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Самбар з кокосовою масалою
+- id: indian_drumstick_sambar
+  name: Sambar s moringoi
+  kind: dish
+  tags:
+  - indian
+  - sambar
+  - south_indian
+  missing_allowed: 3
+  source_family: indian:drumstick_sambar
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    - main
+    time: under_60
+    method:
+    - boil
+    - temper
+  comment: ''
+  ingredients:
+  - item: toor_dal
+    role: main
+    amount: many
+    accepts:
+    - yellow_lentils
+  - item: drumstick_pods
+    role: required
+    amount: many
+    accepts:
+    - vegetable
+  - item: tamarind
+    role: required
+    amount: little
+  - item: sambar_powder
+    role: required
+    amount: spice
+  - item: curry_leaves
+    role: spice
+    amount: spice
+  - item: mustard_seeds
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Sambar s moringoi
+- id: indian_tomato_rasam
+  name: Tomato rasam
+  kind: dish
+  tags:
+  - indian
+  - rasam
+  - south_indian
+  - tomato
+  missing_allowed: 2
+  source_family: indian:tomato_rasam
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+    - temper
+  comment: ''
+  ingredients:
+  - item: tomato
+    role: main
+    amount: many
+    accepts:
+    - tomato_base
+  - item: tamarind
+    role: required
+    amount: little
+  - item: rasam_powder
+    role: required
+    amount: spice
+  - item: dry_garlic
+    role: addition
+    amount: spice
+  - item: curry_leaves
+    role: spice
+    amount: spice
+  - item: mustard_seeds
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Томатний расам
+- id: indian_pepper_rasam
+  name: Pepper rasam
+  kind: dish
+  tags:
+  - indian
+  - pepper
+  - rasam
+  - south_indian
+  missing_allowed: 2
+  source_family: indian:pepper_rasam
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+    - temper
+  comment: ''
+  ingredients:
+  - item: black_pepper
+    role: main
+    amount: spice
+  - item: tamarind
+    role: required
+    amount: little
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: dry_garlic
+    role: addition
+    amount: spice
+  - item: curry_leaves
+    role: spice
+    amount: spice
+  - item: mustard_seeds
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Перцевий расам
+- id: indian_lemon_rasam
+  name: Lemon rasam
+  kind: dish
+  tags:
+  - indian
+  - lemon
+  - rasam
+  - south_indian
+  missing_allowed: 2
+  source_family: indian:lemon_rasam
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+    - temper
+  comment: ''
+  ingredients:
+  - item: lemon
+    role: main
+    amount: normal
+  - item: yellow_lentils
+    role: addition
+    amount: little
+    accepts:
+    - red_lentils
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: curry_leaves
+    role: spice
+    amount: spice
+  - item: mustard_seeds
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Лимонний расам
+- id: indian_mulligatawny
+  name: Anglo-Indian lentil and chicken soup
+  kind: dish
+  tags:
+  - anglo_indian
+  - chicken
+  - indian
+  - soup
+  missing_allowed: 3
+  source_family: indian:mulligatawny
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: red_lentils
+    role: main
+    amount: many
+  - item: chicken_fillet
+    role: required
+    amount: normal
+    accepts:
+    - chicken_parts
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: addition
+    amount: little
+  - item: curry_powder
+    role: required
+    amount: spice
+  - item: coconut_milk
+    role: addition
+    amount: normal
+    accepts:
+    - milk
+  - item: water
+    role: required
+    amount: many
+  name_uk: Англо-індійський суп з сочевицею та куркою
+- id: indian_tomato_shorba
+  name: Spicy tomato shorba
+  kind: dish
+  tags:
+  - indian
+  - shorba
+  - tomato
+  missing_allowed: 2
+  source_family: indian:tomato_shorba
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: tomato
+    role: main
+    amount: many
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: little
+  - item: ghee
+    role: required
+    amount: little
+    accepts:
+    - butter
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: garam_masala
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Пряний томатний шорба
+- id: indian_chicken_shorba
+  name: Chicken shorba
+  kind: dish
+  tags:
+  - chicken
+  - indian
+  - shorba
+  missing_allowed: 3
+  source_family: indian:chicken_shorba
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: chicken_parts
+    role: main
+    amount: many
+    accepts:
+    - chicken_fillet
+    - broth_meat
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: ginger
+    role: spice
+    amount: spice
+  - item: garam_masala
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Курячий шорба
+- id: indian_mutton_shorba
+  name: Meat shorba
+  kind: dish
+  tags:
+  - indian
+  - mutton
+  - shorba
+  missing_allowed: 3
+  source_family: indian:mutton_shorba
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: mutton_chunks
+    role: main
+    amount: many
+    accepts:
+    - lamb_chunks
+    - meat_piece
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: ginger
+    role: spice
+    amount: spice
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: garam_masala
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: М'ясний шорба
+- id: indian_palak_shorba
+  name: Spinach shorba
+  kind: dish
+  tags:
+  - indian
+  - shorba
+  - spinach
+  missing_allowed: 2
+  source_family: indian:palak_shorba
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: spinach
+    role: main
+    amount: many
+    accepts:
+    - greens
+  - item: onion
+    role: required
+    amount: little
+  - item: milk
+    role: addition
+    amount: normal
+    accepts:
+    - cream
+  - item: ghee
+    role: required
+    amount: little
+    accepts:
+    - butter
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Шпинатний шорба
+- id: indian_sweet_corn_soup_indian
+  name: Indian style corn soup
+  kind: dish
+  tags:
+  - corn
+  - indian
+  - indo_chinese
+  - soup
+  missing_allowed: 2
+  source_family: indian:sweet_corn_soup_indian
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: corn
+    role: main
+    amount: many
+  - item: carrot
+    role: addition
+    amount: little
+  - item: cabbage
+    role: addition
+    amount: little
+    accepts:
+    - young_cabbage
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: starch
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Кукурудзяний суп в індійському стилі
+- id: indian_hot_sour_soup_indian
+  name: Hot and sour soup
+  kind: dish
+  tags:
+  - indian
+  - indo_chinese
+  - soup
+  missing_allowed: 2
+  source_family: indian:hot_sour_soup_indian
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: cabbage
+    role: main
+    amount: normal
+    accepts:
+    - young_cabbage
+  - item: carrot
+    role: required
+    amount: little
+  - item: mushroom
+    role: addition
+    amount: normal
+  - item: soy_sauce
+    role: required
+    amount: little
+  - item: vinegar
+    role: required
+    amount: little
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: starch
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Гостро-кислий суп
+- id: indian_kadhi_pakora
+  name: Yogurt soup with pakoras
+  kind: dish
+  tags:
+  - indian
+  - kadhi
+  - pakora
+  - yogurt
+  missing_allowed: 3
+  source_family: indian:kadhi_pakora
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    - main
+    time: under_60
+    method:
+    - boil
+    - fry
+  comment: ''
+  ingredients:
+  - item: yogurt
+    role: main
+    amount: many
+  - item: chickpea_flour
+    role: required
+    amount: normal
+  - item: onion
+    role: addition
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  - item: turmeric
+    role: spice
+    amount: spice
+  - item: mustard_seeds
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Йогуртовий суп з скорботами
+- id: indian_gujarati_kadhi
+  name: Sweet and sour yogurt soup
+  kind: dish
+  tags:
+  - gujarati
+  - indian
+  - kadhi
+  - yogurt
+  missing_allowed: 2
+  source_family: indian:gujarati_kadhi
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+    - temper
+  comment: ''
+  ingredients:
+  - item: yogurt
+    role: main
+    amount: many
+  - item: chickpea_flour
+    role: required
+    amount: little
+  - item: sugar
+    role: addition
+    amount: little
+  - item: ginger
+    role: spice
+    amount: spice
+  - item: mustard_seeds
+    role: spice
+    amount: spice
+  - item: curry_leaves
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Солодкувато-кислий йогуртовий суп
+- id: indian_sol_kadhi
+  name: Kokum with coconut milk
+  kind: dish
+  tags:
+  - coconut
+  - indian
+  - kadhi
+  - kokum
+  missing_allowed: 2
+  source_family: indian:sol_kadhi
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    - drink
+    time: under_10
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: kokum
+    role: main
+    amount: normal
+  - item: coconut_milk
+    role: required
+    amount: many
+  - item: dry_garlic
+    role: addition
+    amount: spice
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Кокум з кокосовим молоком
+- id: indian_avial
+  name: Vegetables in coconut-yogurt sauce
+  kind: dish
+  tags:
+  - coconut
+  - indian
+  - kerala
+  - vegetable
+  missing_allowed: 3
+  source_family: indian:avial
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: vegetable_mix
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: coconut
+    role: required
+    amount: normal
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: curry_leaves
+    role: spice
+    amount: spice
+  - item: coconut_oil
+    role: required
+    amount: little
+    accepts:
+    - plant_oil
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Овочі в кокосово-йогуртовому соусі
+- id: indian_kootu
+  name: Vegetables with lentils and coconut
+  kind: dish
+  tags:
+  - dal
+  - indian
+  - south_indian
+  - vegetable
+  missing_allowed: 3
+  source_family: indian:kootu
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    - main
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: vegetable_mix
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: yellow_lentils
+    role: required
+    amount: normal
+    accepts:
+    - red_lentils
+  - item: coconut
+    role: required
+    amount: normal
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: curry_leaves
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Овочі з сочевицею та кокосом
+- id: indian_poricha_kuzhambu
+  name: Vegetable dish with lentils and coconut
+  kind: dish
+  tags:
+  - indian
+  - kuzhambu
+  - south_indian
+  missing_allowed: 3
+  source_family: indian:poricha_kuzhambu
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    - main
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: vegetable_mix
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: mung_beans
+    role: required
+    amount: normal
+    accepts:
+    - legume
+  - item: coconut
+    role: required
+    amount: normal
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Овочеве блюдо з сочевицею та кокосом
+- id: indian_mor_kuzhambu
+  name: Yoghurt curry soup with vegetables
+  kind: dish
+  tags:
+  - indian
+  - kuzhambu
+  - south_indian
+  - yogurt
+  missing_allowed: 3
+  source_family: indian:mor_kuzhambu
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    - main
+    time: under_60
+    method:
+    - boil
+    - temper
+  comment: ''
+  ingredients:
+  - item: yogurt
+    role: main
+    amount: many
+  - item: vegetable_mix
+    role: required
+    amount: normal
+    accepts:
+    - vegetable
+  - item: coconut
+    role: addition
+    amount: normal
+  - item: chickpea_flour
+    role: addition
+    amount: little
+  - item: curry_leaves
+    role: spice
+    amount: spice
+  - item: mustard_seeds
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Йогуртовий каррі-суп з овочами
+- id: indian_fish_moilee_soup
+  name: Fish in coconut sauce
+  kind: dish
+  tags:
+  - coconut
+  - fish
+  - indian
+  - kerala
+  missing_allowed: 3
+  source_family: indian:fish_moilee_soup
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: fish
+    role: main
+    amount: many
+    accepts:
+    - frozen_hake
+    - generic_fish
+  - item: coconut_milk
+    role: required
+    amount: many
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: curry_leaves
+    role: spice
+    amount: spice
+  - item: water
+    role: addition
+    amount: normal
+  name_uk: Риба в кокосовому соусі
+- id: indian_yakhni_soup
+  name: Kashmiri meat broth with yogurt
+  kind: dish
+  tags:
+  - broth
+  - indian
+  - kashmiri
+  - mutton
+  missing_allowed: 3
+  source_family: indian:yakhni_soup
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    - main
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: mutton_chunks
+    role: main
+    amount: many
+    accepts:
+    - lamb_chunks
+    - meat_piece
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: fennel
+    role: spice
+    amount: spice
+  - item: ginger
+    role: spice
+    amount: spice
+  - item: garam_masala
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Кашмірський м'ясний бульйон з йогуртом
+- id: indian_nihari_shorba
+  name: Rich meat stew soup
+  kind: dish
+  tags:
+  - indian
+  - mughlai
+  - mutton
+  - slow
+  missing_allowed: 3
+  source_family: indian:nihari_shorba
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: mutton_chunks
+    role: main
+    amount: many
+    accepts:
+    - beef_chunks
+    - meat_piece
+  - item: onion
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  - item: ghee
+    role: required
+    amount: normal
+    accepts:
+    - butter
+  - item: nihari_masala
+    role: required
+    amount: spice
+  - item: ginger
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Наваристе м'ясне рагу-суп
+- id: indian_haleem
+  name: Meat, wheat and lentils, long simmering
+  kind: dish
+  tags:
+  - grain
+  - hyderabadi
+  - indian
+  - mutton
+  missing_allowed: 3
+  source_family: indian:haleem
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - soup
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: mutton_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: wheat_berries
+    role: required
+    amount: many
+    accepts:
+    - grain
+  - item: yellow_lentils
+    role: required
+    amount: normal
+    accepts:
+    - red_lentils
+    - legume
+  - item: ghee
+    role: required
+    amount: normal
+    accepts:
+    - butter
+  - item: onion
+    role: required
+    amount: normal
+  - item: garam_masala
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: М'ясо, пшениця та сочевиця, довга томля
+- id: indian_butter_chicken
+  name: Butter chicken
+  kind: dish
+  tags:
+  - chicken
+  - indian
+  - makhani
+  - north_indian
+  missing_allowed: 3
+  source_family: indian:butter_chicken
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: chicken_fillet
+    role: main
+    amount: many
+  - item: tomato_paste
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - sour_cream
+    - yogurt
+    - mascarpone
+    - soft_creamy_cheese
+    - cream_like
+  - item: yogurt
+    role: addition
+    amount: normal
+  - item: ginger
+    role: spice
+    amount: spice
+  - item: garam_masala
+    role: spice
+    amount: spice
+  name_uk: Вершкове куряче філе
+- id: indian_chicken_tikka_masala
+  name: Chicken tikka masala
+  kind: dish
+  tags:
+  - chicken
+  - indian
+  - masala
+  missing_allowed: 3
+  source_family: indian:chicken_tikka_masala
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - grill
+    - stew
+  comment: ''
+  ingredients:
+  - item: chicken_fillet
+    role: main
+    amount: many
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: tomato_paste
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - sour_cream
+    - yogurt
+    - mascarpone
+    - soft_creamy_cheese
+    - cream_like
+  - item: onion
+    role: required
+    amount: normal
+  - item: garam_masala
+    role: spice
+    amount: spice
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Курка тикка масалу
+- id: indian_chicken_curry
+  name: Homemade chicken curry
+  kind: dish
+  tags:
+  - chicken
+  - curry
+  - indian
+  missing_allowed: 2
+  source_family: indian:chicken_curry
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: chicken_fillet
+    role: main
+    amount: many
+    accepts:
+    - chicken_parts
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: little
+  - item: garam_masala
+    role: spice
+    amount: spice
+  - item: ginger
+    role: spice
+    amount: spice
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  name_uk: Домашнє куряче каррі
+- id: indian_chicken_korma
+  name: Mild creamy nut curry
+  kind: dish
+  tags:
+  - chicken
+  - indian
+  - korma
+  - mild
+  missing_allowed: 3
+  source_family: indian:chicken_korma
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: chicken_fillet
+    role: main
+    amount: many
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - sour_cream
+    - yogurt
+    - mascarpone
+    - soft_creamy_cheese
+    - cream_like
+  - item: nuts
+    role: required
+    amount: normal
+    accepts:
+    - cashews
+    - almonds
+  - item: onion
+    role: required
+    amount: normal
+  - item: ghee
+    role: required
+    amount: little
+    accepts:
+    - butter
+  - item: garam_masala
+    role: spice
+    amount: spice
+  name_uk: М'яке вершково-горіхове каррі
+- id: indian_chicken_vindaloo
+  name: Hot and sour chicken curry
+  kind: dish
+  tags:
+  - chicken
+  - goan
+  - indian
+  - spicy
+  missing_allowed: 3
+  source_family: indian:chicken_vindaloo
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: chicken_fillet
+    role: main
+    amount: many
+  - item: vinegar
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: red_pepper_flakes
+    role: required
+    amount: spice
+  - item: fat
+    role: required
+    amount: little
+  name_uk: Гостро-кисле куряче каррі
+- id: indian_chicken_chettinad
+  name: Spicy south indian chicken curry
+  kind: dish
+  tags:
+  - chicken
+  - indian
+  - south_indian
+  - spicy
+  missing_allowed: 3
+  source_family: indian:chicken_chettinad
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: chicken_fillet
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: coconut
+    role: addition
+    amount: normal
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: curry_leaves
+    role: spice
+    amount: spice
+  - item: fat
+    role: required
+    amount: little
+  name_uk: Пряне південноіндійське куряче каррі
+- id: indian_tandoori_chicken
+  name: Chicken in yogurt marinade
+  kind: dish
+  tags:
+  - chicken
+  - grill
+  - indian
+  - tandoor
+  missing_allowed: 3
+  source_family: indian:tandoori_chicken
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - grill
+    - bake
+  comment: ''
+  ingredients:
+  - item: chicken_parts
+    role: main
+    amount: many
+    accepts:
+    - chicken_fillet
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: lemon
+    role: required
+    amount: little
+  - item: ginger
+    role: spice
+    amount: spice
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: tandoori_masala
+    role: required
+    amount: spice
+  - item: fat
+    role: addition
+    amount: little
+  name_uk: Курка в йогуртовому маринаді
+- id: indian_chicken_tikka
+  name: Chicken pieces in marinade
+  kind: dish
+  tags:
+  - chicken
+  - grill
+  - indian
+  - tandoor
+  missing_allowed: 2
+  source_family: indian:chicken_tikka
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - grill
+    - bake
+  comment: ''
+  ingredients:
+  - item: chicken_fillet
+    role: main
+    amount: many
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: lemon
+    role: required
+    amount: little
+  - item: tandoori_masala
+    role: required
+    amount: spice
+  - item: ginger
+    role: spice
+    amount: spice
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: fat
+    role: addition
+    amount: little
+  name_uk: Шматочки курки у маринаді
+- id: indian_rogan_josh
+  name: Kashmiri meat curry
+  kind: dish
+  tags:
+  - curry
+  - indian
+  - kashmiri
+  - mutton
+  missing_allowed: 3
+  source_family: indian:rogan_josh
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: mutton_chunks
+    role: main
+    amount: many
+    accepts:
+    - lamb_chunks
+    - meat_piece
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: onion
+    role: addition
+    amount: normal
+  - item: ghee
+    role: required
+    amount: normal
+    accepts:
+    - butter
+  - item: kashmiri_chili
+    role: spice
+    amount: spice
+  - item: fennel
+    role: spice
+    amount: spice
+  - item: garam_masala
+    role: spice
+    amount: spice
+  name_uk: Кашмірське м'ясне каррі
+- id: indian_mutton_curry
+  name: Meat curry
+  kind: dish
+  tags:
+  - curry
+  - indian
+  - mutton
+  missing_allowed: 3
+  source_family: indian:mutton_curry
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: mutton_chunks
+    role: main
+    amount: many
+    accepts:
+    - lamb_chunks
+    - beef_chunks
+    - meat_piece
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: little
+  - item: garam_masala
+    role: spice
+    amount: spice
+  - item: ginger
+    role: spice
+    amount: spice
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  name_uk: М'ясне карі
+- id: indian_keema_matar
+  name: Minced meat with green peas
+  kind: dish
+  tags:
+  - indian
+  - minced_meat
+  - peas
+  missing_allowed: 2
+  source_family: indian:keema_matar
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: minced_meat
+    role: main
+    amount: many
+    accepts:
+    - ground_meat
+  - item: canned_peas
+    role: required
+    amount: normal
+    accepts:
+    - peas
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: little
+  - item: garam_masala
+    role: spice
+    amount: spice
+  name_uk: Фарш із зеленим горошком
+- id: indian_lamb_saag
+  name: Meat with spinach
+  kind: dish
+  tags:
+  - indian
+  - mutton
+  - spinach
+  missing_allowed: 3
+  source_family: indian:lamb_saag
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: lamb_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: spinach
+    role: required
+    amount: many
+    accepts:
+    - greens
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: ghee
+    role: required
+    amount: little
+    accepts:
+    - butter
+  - item: garam_masala
+    role: spice
+    amount: spice
+  name_uk: М'ясо зі шпинатом
+- id: indian_fish_curry_goan
+  name: Fish in coconut-sour sauce
+  kind: dish
+  tags:
+  - coconut
+  - fish
+  - goan
+  - indian
+  missing_allowed: 3
+  source_family: indian:fish_curry_goan
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: fish
+    role: main
+    amount: many
+    accepts:
+    - frozen_hake
+    - generic_fish
+  - item: coconut_milk
+    role: required
+    amount: many
+  - item: tamarind
+    role: required
+    amount: little
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: curry_leaves
+    role: spice
+    amount: spice
+  - item: fat
+    role: required
+    amount: little
+  name_uk: Риба в кокосово-кислому соусі
+- id: indian_fish_fry_masala
+  name: Fish in spices in a frying pan
+  kind: dish
+  tags:
+  - fish
+  - fried
+  - indian
+  missing_allowed: 2
+  source_family: indian:fish_fry_masala
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: fish
+    role: main
+    amount: many
+    accepts:
+    - frozen_hake
+    - generic_fish
+  - item: lemon
+    role: required
+    amount: little
+  - item: turmeric
+    role: spice
+    amount: spice
+  - item: red_pepper_flakes
+    role: spice
+    amount: spice
+  - item: rice_flour
+    role: addition
+    amount: little
+    accepts:
+    - flour
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Риба у спеціях на сковороді
+- id: indian_prawn_masala
+  name: Shrimp in masala
+  kind: dish
+  tags:
+  - indian
+  - masala
+  - seafood
+  missing_allowed: 3
+  source_family: indian:prawn_masala
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: shrimp
+    role: main
+    amount: many
+    accepts:
+    - seafood
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: coconut
+    role: addition
+    amount: normal
+  - item: fat
+    role: required
+    amount: little
+  - item: garam_masala
+    role: spice
+    amount: spice
+  - item: ginger
+    role: spice
+    amount: spice
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  name_uk: Креветки в масалі
+- id: indian_egg_curry
+  name: Eggs in tomato and onion sauce
+  kind: dish
+  tags:
+  - curry
+  - egg
+  - indian
+  missing_allowed: 2
+  source_family: indian:egg_curry
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: little
+  - item: garam_masala
+    role: spice
+    amount: spice
+  - item: ginger
+    role: spice
+    amount: spice
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  name_uk: Яйця в томатно-цибулевій підливі
+- id: indian_egg_bhurji
+  name: Indian scrambled eggs
+  kind: dish
+  tags:
+  - breakfast
+  - egg
+  - indian
+  missing_allowed: 1
+  source_family: indian:egg_bhurji
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - breakfast
+    - main
+    time: under_10
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: eggs
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: bell_pepper
+    role: addition
+    amount: normal
+    accepts:
+    - vegetable
+  - item: fat
+    role: required
+    amount: little
+  - item: turmeric
+    role: spice
+    amount: spice
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Індійська яєчня-бовтання
+- id: indian_paneer_butter_masala
+  name: Paneer in creamy tomato sauce
+  kind: dish
+  tags:
+  - indian
+  - makhani
+  - paneer
+  missing_allowed: 3
+  source_family: indian:paneer_butter_masala
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: paneer
+    role: main
+    amount: many
+    accepts:
+    - white_cheese
+    - hard_cheese
+  - item: tomato_paste
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - sour_cream
+    - yogurt
+    - mascarpone
+    - soft_creamy_cheese
+    - cream_like
+  - item: onion
+    role: addition
+    amount: normal
+  - item: garam_masala
+    role: spice
+    amount: spice
+  name_uk: Панір у вершково-томатній підливі
+- id: indian_palak_paneer
+  name: Paneer with spinach
+  kind: dish
+  tags:
+  - indian
+  - paneer
+  - spinach
+  missing_allowed: 3
+  source_family: indian:palak_paneer
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+    - blend
+  comment: ''
+  ingredients:
+  - item: paneer
+    role: main
+    amount: many
+    accepts:
+    - white_cheese
+    - hard_cheese
+  - item: spinach
+    role: required
+    amount: many
+    accepts:
+    - greens
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: cream
+    role: addition
+    amount: normal
+    accepts:
+    - sour_cream
+    - yogurt
+    - mascarpone
+    - soft_creamy_cheese
+    - cream_like
+  - item: ghee
+    role: required
+    amount: little
+    accepts:
+    - butter
+  - item: garam_masala
+    role: spice
+    amount: spice
+  name_uk: Панір зі шпинатом
+- id: indian_matar_paneer
+  name: Paneer with green peas
+  kind: dish
+  tags:
+  - indian
+  - paneer
+  - peas
+  missing_allowed: 2
+  source_family: indian:matar_paneer
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: paneer
+    role: main
+    amount: many
+    accepts:
+    - white_cheese
+  - item: canned_peas
+    role: required
+    amount: many
+    accepts:
+    - peas
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: little
+  - item: garam_masala
+    role: spice
+    amount: spice
+  name_uk: Панір із зеленим горошком
+- id: indian_shahi_paneer
+  name: Paneer in walnut cream sauce
+  kind: dish
+  tags:
+  - cream
+  - indian
+  - mughlai
+  - paneer
+  missing_allowed: 3
+  source_family: indian:shahi_paneer
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+    - blend
+  comment: ''
+  ingredients:
+  - item: paneer
+    role: main
+    amount: many
+    accepts:
+    - white_cheese
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - sour_cream
+    - yogurt
+    - mascarpone
+    - soft_creamy_cheese
+    - cream_like
+  - item: nuts
+    role: required
+    amount: normal
+    accepts:
+    - cashews
+    - almonds
+  - item: onion
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: garam_masala
+    role: spice
+    amount: spice
+  name_uk: Панір у горіхово-вершковій підливі
+- id: indian_paneer_tikka
+  name: Paneer in yogurt marinade
+  kind: dish
+  tags:
+  - indian
+  - paneer
+  - tandoor
+  missing_allowed: 2
+  source_family: indian:paneer_tikka
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - grill
+    - bake
+  comment: ''
+  ingredients:
+  - item: paneer
+    role: main
+    amount: many
+    accepts:
+    - white_cheese
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: bell_pepper
+    role: addition
+    amount: normal
+    accepts:
+    - vegetable
+  - item: onion
+    role: addition
+    amount: normal
+  - item: tandoori_masala
+    role: required
+    amount: spice
+  - item: fat
+    role: addition
+    amount: little
+  name_uk: Панір у йогуртовому маринаді
+- id: indian_chana_masala
+  name: Chickpeas in tomato masala
+  kind: dish
+  tags:
+  - chickpea
+  - indian
+  - masala
+  missing_allowed: 2
+  source_family: indian:chana_masala
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: chickpea
+    role: main
+    amount: many
+    accepts:
+    - canned_beans
+    - legume
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: chana_masala_spice
+    role: required
+    amount: spice
+  - item: fat
+    role: required
+    amount: little
+  - item: garam_masala
+    role: spice
+    amount: spice
+  - item: ginger
+    role: spice
+    amount: spice
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  name_uk: Нут у томатному масалі
+- id: indian_rajma
+  name: Red beans in thick gravy
+  kind: dish
+  tags:
+  - beans
+  - indian
+  - north_indian
+  missing_allowed: 3
+  source_family: indian:rajma
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: kidney_beans
+    role: main
+    amount: many
+    accepts:
+    - beans
+    - canned_beans
+    - legume
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: little
+  - item: garam_masala
+    role: spice
+    amount: spice
+  - item: ginger
+    role: spice
+    amount: spice
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  name_uk: Червона квасоля в густій ​​підливі
+- id: indian_lobia_masala
+  name: Cowpea beans or regular beans in masala
+  kind: dish
+  tags:
+  - beans
+  - indian
+  - masala
+  missing_allowed: 3
+  source_family: indian:lobia_masala
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: black_eyed_peas
+    role: main
+    amount: many
+    accepts:
+    - beans
+    - legume
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: little
+  - item: garam_masala
+    role: spice
+    amount: spice
+  - item: ginger
+    role: spice
+    amount: spice
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  name_uk: Квасоля вигна або звичайна квасоля в масалі
+- id: indian_aloo_gobi
+  name: Potatoes with cauliflower
+  kind: dish
+  tags:
+  - cauliflower
+  - indian
+  - potato
+  - vegetable
+  missing_allowed: 2
+  source_family: indian:aloo_gobi
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: cauliflower
+    role: required
+    amount: many
+    accepts:
+    - vegetable
+  - item: onion
+    role: addition
+    amount: little
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: little
+  - item: turmeric
+    role: spice
+    amount: spice
+  - item: cumin
+    role: spice
+    amount: spice
+  name_uk: Картопля з цвітною капустою
+- id: indian_aloo_matar
+  name: Potatoes with green peas
+  kind: dish
+  tags:
+  - indian
+  - peas
+  - potato
+  - vegetable
+  missing_allowed: 2
+  source_family: indian:aloo_matar
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: canned_peas
+    role: required
+    amount: many
+    accepts:
+    - peas
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: little
+  - item: garam_masala
+    role: spice
+    amount: spice
+  name_uk: Картопля із зеленим горошком
+- id: indian_aloo_palak
+  name: Potatoes with spinach
+  kind: dish
+  tags:
+  - indian
+  - potato
+  - spinach
+  - vegetable
+  missing_allowed: 2
+  source_family: indian:aloo_palak
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: spinach
+    role: required
+    amount: many
+    accepts:
+    - greens
+  - item: onion
+    role: required
+    amount: little
+  - item: fat
+    role: required
+    amount: little
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: turmeric
+    role: spice
+    amount: spice
+  name_uk: Картопля зі шпинатом
+- id: indian_dum_aloo
+  name: Potatoes in thick spicy gravy
+  kind: dish
+  tags:
+  - indian
+  - kashmiri
+  - potato
+  missing_allowed: 3
+  source_family: indian:dum_aloo
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: tomato_paste
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: onion
+    role: addition
+    amount: normal
+  - item: ghee
+    role: required
+    amount: little
+    accepts:
+    - butter
+  - item: garam_masala
+    role: spice
+    amount: spice
+  name_uk: Картопля в густій ​​пряній підливі
+- id: indian_baingan_bharta
+  name: Baked eggplant with onions and tomatoes
+  kind: dish
+  tags:
+  - eggplant
+  - indian
+  - vegetable
+  missing_allowed: 2
+  source_family: indian:baingan_bharta
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - roast
+    - stew
+  comment: ''
+  ingredients:
+  - item: eggplant
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: little
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  name_uk: Печений баклажан з цибулею та томатами
+- id: indian_bhindi_masala
+  name: Okra with onions and spices
+  kind: dish
+  tags:
+  - indian
+  - okra
+  - vegetable
+  missing_allowed: 2
+  source_family: indian:bhindi_masala
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: okra
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: little
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: turmeric
+    role: spice
+    amount: spice
+  name_uk: Окра з цибулею та спеціями
+- id: indian_cabbage_poriyal
+  name: Cabbage with coconut
+  kind: dish
+  tags:
+  - coconut
+  - indian
+  - south_indian
+  - vegetable
+  missing_allowed: 2
+  source_family: indian:cabbage_poriyal
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+    - temper
+  comment: ''
+  ingredients:
+  - item: cabbage
+    role: main
+    amount: many
+    accepts:
+    - young_cabbage
+  - item: coconut
+    role: required
+    amount: normal
+  - item: mustard_seeds
+    role: spice
+    amount: spice
+  - item: curry_leaves
+    role: spice
+    amount: spice
+  - item: fat
+    role: required
+    amount: little
+  name_uk: Капуста з кокосом
+- id: indian_beans_poriyal
+  name: Green beans with coconut
+  kind: dish
+  tags:
+  - coconut
+  - indian
+  - south_indian
+  - vegetable
+  missing_allowed: 2
+  source_family: indian:beans_poriyal
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+    - temper
+  comment: ''
+  ingredients:
+  - item: green_beans
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: coconut
+    role: required
+    amount: normal
+  - item: mustard_seeds
+    role: spice
+    amount: spice
+  - item: curry_leaves
+    role: spice
+    amount: spice
+  - item: fat
+    role: required
+    amount: little
+  name_uk: Стручкова квасоля з кокосом
+- id: indian_vegetable_jalfrezi
+  name: Vegetables in spicy sauce
+  kind: dish
+  tags:
+  - indian
+  - jalfrezi
+  - vegetable
+  missing_allowed: 2
+  source_family: indian:vegetable_jalfrezi
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: vegetable_mix
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: bell_pepper
+    role: required
+    amount: normal
+    accepts:
+    - vegetable
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: little
+  - item: garam_masala
+    role: spice
+    amount: spice
+  name_uk: Овочі в пряній підливі
+- id: indian_malai_kofta
+  name: Vegetable and cheese balls in creamy sauce
+  kind: dish
+  tags:
+  - cream
+  - indian
+  - paneer
+  - vegetable
+  missing_allowed: 3
+  source_family: indian:malai_kofta
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: paneer
+    role: required
+    amount: normal
+    accepts:
+    - white_cheese
+    - hard_cheese
+  - item: flour
+    role: required
+    amount: little
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - sour_cream
+    - yogurt
+    - mascarpone
+    - soft_creamy_cheese
+    - cream_like
+  - item: tomato_paste
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: normal
+  - item: garam_masala
+    role: spice
+    amount: spice
+  name_uk: Овочево-сирні кульки у вершковій підливі
+- id: indian_gatte_ki_sabzi
+  name: Chickpea dumplings in yoghurt sauce
+  kind: dish
+  tags:
+  - chickpea_flour
+  - indian
+  - rajasthani
+  - yogurt
+  missing_allowed: 3
+  source_family: indian:gatte_ki_sabzi
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: chickpea_flour
+    role: main
+    amount: many
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: onion
+    role: addition
+    amount: normal
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: ghee
+    role: required
+    amount: little
+    accepts:
+    - butter
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Нутові галушки в йогуртовому соусі
+- id: indian_veg_korma
+  name: Vegetables in creamy nut sauce
+  kind: dish
+  tags:
+  - indian
+  - korma
+  - vegetable
+  missing_allowed: 3
+  source_family: indian:veg_korma
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+    - blend
+  comment: ''
+  ingredients:
+  - item: vegetable_mix
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: cream
+    role: required
+    amount: normal
+    accepts:
+    - sour_cream
+    - yogurt
+    - mascarpone
+    - soft_creamy_cheese
+    - cream_like
+  - item: nuts
+    role: required
+    amount: normal
+    accepts:
+    - cashews
+    - almonds
+  - item: onion
+    role: required
+    amount: normal
+  - item: ghee
+    role: required
+    amount: little
+    accepts:
+    - butter
+  - item: garam_masala
+    role: spice
+    amount: spice
+  name_uk: Овочі у вершково-горіховій підливі
+- id: indian_biryani_chicken
+  name: Chicken biryani
+  kind: dish
+  tags:
+  - biryani
+  - chicken
+  - indian
+  - rice
+  missing_allowed: 3
+  source_family: indian:biryani_chicken
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+    - steam
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: chicken_fillet
+    role: required
+    amount: many
+    accepts:
+    - chicken_parts
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: biryani_masala
+    role: required
+    amount: spice
+  - item: ghee
+    role: required
+    amount: normal
+    accepts:
+    - butter
+  - item: water
+    role: required
+    amount: many
+  name_uk: Бір'яни з куркою
+- id: indian_biryani_mutton
+  name: Biryani with meat
+  kind: dish
+  tags:
+  - biryani
+  - indian
+  - mutton
+  - rice
+  missing_allowed: 3
+  source_family: indian:biryani_mutton
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+    - steam
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: mutton_chunks
+    role: required
+    amount: many
+    accepts:
+    - lamb_chunks
+    - meat_piece
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: biryani_masala
+    role: required
+    amount: spice
+  - item: ghee
+    role: required
+    amount: normal
+    accepts:
+    - butter
+  - item: water
+    role: required
+    amount: many
+  name_uk: Бір'яни з м'ясом
+- id: indian_veg_biryani
+  name: Vegetable biryani
+  kind: dish
+  tags:
+  - biryani
+  - indian
+  - rice
+  - vegetable
+  missing_allowed: 3
+  source_family: indian:veg_biryani
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+    - steam
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: vegetable_mix
+    role: required
+    amount: many
+    accepts:
+    - vegetable
+  - item: yogurt
+    role: addition
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: biryani_masala
+    role: required
+    amount: spice
+  - item: ghee
+    role: required
+    amount: normal
+    accepts:
+    - butter
+  - item: water
+    role: required
+    amount: many
+  name_uk: Овочевий бір'яні
+- id: indian_pulao_veg
+  name: Rice with vegetables
+  kind: dish
+  tags:
+  - indian
+  - pulao
+  - rice
+  - vegetable
+  missing_allowed: 2
+  source_family: indian:pulao_veg
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: vegetable_mix
+    role: required
+    amount: normal
+    accepts:
+    - vegetable
+  - item: onion
+    role: required
+    amount: little
+  - item: ghee
+    role: required
+    amount: little
+    accepts:
+    - butter
+  - item: garam_masala
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Рис з овочами
+- id: indian_jeera_rice
+  name: Rice with cumin
+  kind: dish
+  tags:
+  - indian
+  - rice
+  - side
+  missing_allowed: 1
+  source_family: indian:jeera_rice
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    - side
+    time: under_30
+    method:
+    - boil
+    - temper
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: cumin
+    role: required
+    amount: spice
+  - item: ghee
+    role: required
+    amount: little
+    accepts:
+    - butter
+  - item: water
+    role: required
+    amount: many
+  name_uk: Рис з куміном
+- id: indian_lemon_rice
+  name: Lemon rice
+  kind: dish
+  tags:
+  - indian
+  - lemon
+  - rice
+  - south_indian
+  missing_allowed: 2
+  source_family: indian:lemon_rice
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    - side
+    time: under_30
+    method:
+    - boil
+    - temper
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: lemon
+    role: required
+    amount: normal
+  - item: mustard_seeds
+    role: spice
+    amount: spice
+  - item: curry_leaves
+    role: spice
+    amount: spice
+  - item: nuts
+    role: addition
+    amount: little
+    accepts:
+    - peanuts
+  - item: fat
+    role: required
+    amount: little
+  name_uk: Лимонний рис
+- id: indian_curd_rice
+  name: Rice with yogurt
+  kind: dish
+  tags:
+  - indian
+  - rice
+  - south_indian
+  - yogurt
+  missing_allowed: 1
+  source_family: indian:curd_rice
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    - side
+    time: under_10
+    method:
+    - mix
+    - temper
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: yogurt
+    role: required
+    amount: many
+  - item: mustard_seeds
+    role: spice
+    amount: spice
+  - item: curry_leaves
+    role: spice
+    amount: spice
+  - item: cucumber
+    role: addition
+    amount: little
+  - item: fat
+    role: addition
+    amount: little
+  name_uk: Рис з йогуртом
+- id: indian_tomato_rice
+  name: Rice with tomato masala
+  kind: dish
+  tags:
+  - indian
+  - rice
+  - south_indian
+  - tomato
+  missing_allowed: 2
+  source_family: indian:tomato_rice
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    - side
+    time: under_30
+    method:
+    - fry
+    - mix
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: tomato
+    role: required
+    amount: many
+    accepts:
+    - tomato_base
+  - item: onion
+    role: required
+    amount: little
+  - item: mustard_seeds
+    role: spice
+    amount: spice
+  - item: curry_leaves
+    role: spice
+    amount: spice
+  - item: fat
+    role: required
+    amount: little
+  name_uk: Рис з томатною масалою
+- id: indian_khichdi
+  name: Rice with lentils
+  kind: dish
+  tags:
+  - comfort_food
+  - indian
+  - lentil
+  - rice
+  missing_allowed: 2
+  source_family: indian:khichdi
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: red_lentils
+    role: required
+    amount: normal
+    accepts:
+    - yellow_lentils
+    - legume
+  - item: ghee
+    role: required
+    amount: little
+    accepts:
+    - butter
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: turmeric
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Рис із сочевицею
+- id: indian_ven_pongal
+  name: Rice-lentil porridge with pepper
+  kind: dish
+  tags:
+  - breakfast
+  - indian
+  - rice
+  - south_indian
+  missing_allowed: 2
+  source_family: indian:ven_pongal
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - breakfast
+    - main
+    time: under_60
+    method:
+    - boil
+    - temper
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: mung_beans
+    role: required
+    amount: normal
+    accepts:
+    - yellow_lentils
+  - item: ghee
+    role: required
+    amount: normal
+    accepts:
+    - butter
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: curry_leaves
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Рисово-чечевична каша з перцем
+- id: indian_poha
+  name: Breakfast of flattened rice
+  kind: dish
+  tags:
+  - breakfast
+  - indian
+  - rice
+  missing_allowed: 2
+  source_family: indian:poha
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - breakfast
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flattened_rice
+    role: main
+    amount: many
+    accepts:
+    - rice
+  - item: onion
+    role: required
+    amount: little
+  - item: potato
+    role: addition
+    amount: normal
+  - item: canned_peas
+    role: addition
+    amount: normal
+    accepts:
+    - peas
+  - item: mustard_seeds
+    role: spice
+    amount: spice
+  - item: turmeric
+    role: spice
+    amount: spice
+  - item: fat
+    role: required
+    amount: little
+  name_uk: Сніданок із плющеного рису
+- id: indian_upma
+  name: Semolina spiced porridge
+  kind: dish
+  tags:
+  - breakfast
+  - indian
+  - semolina
+  - south_indian
+  missing_allowed: 2
+  source_family: indian:upma
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - breakfast
+    - main
+    time: under_30
+    method:
+    - fry
+    - boil
+  comment: ''
+  ingredients:
+  - item: semolina
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: addition
+    amount: little
+  - item: canned_peas
+    role: addition
+    amount: little
+    accepts:
+    - peas
+  - item: mustard_seeds
+    role: spice
+    amount: spice
+  - item: curry_leaves
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  - item: fat
+    role: required
+    amount: little
+  name_uk: Манна пряна каша
+- id: indian_idli
+  name: Steamed rice-lentil cakes
+  kind: dish
+  tags:
+  - breakfast
+  - fermented
+  - indian
+  - south_indian
+  missing_allowed: 2
+  source_family: indian:idli
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - breakfast
+    - main
+    time: over_60
+    method:
+    - ferment
+    - steam
+  comment: ''
+  ingredients:
+  - item: idli_rice
+    role: main
+    amount: many
+    accepts:
+    - rice
+  - item: urad_dal
+    role: required
+    amount: normal
+    accepts:
+    - black_lentils
+    - legume
+  - item: water
+    role: required
+    amount: many
+  - item: fat
+    role: addition
+    amount: little
+  name_uk: Парові рисово-чечевичні коржі
+- id: indian_dosa
+  name: Thin fermented pancake
+  kind: dish
+  tags:
+  - breakfast
+  - fermented
+  - indian
+  - south_indian
+  missing_allowed: 2
+  source_family: indian:dosa
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - breakfast
+    - main
+    time: over_60
+    method:
+    - ferment
+    - fry
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: urad_dal
+    role: required
+    amount: normal
+    accepts:
+    - black_lentils
+    - legume
+  - item: water
+    role: required
+    amount: many
+  - item: fat
+    role: required
+    amount: little
+  name_uk: Тонкий ферментований млинець
+- id: indian_masala_dosa
+  name: Dosa with potato filling
+  kind: dish
+  tags:
+  - breakfast
+  - dosa
+  - indian
+  - potato
+  - south_indian
+  missing_allowed: 3
+  source_family: indian:masala_dosa
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - breakfast
+    - main
+    time: over_60
+    method:
+    - ferment
+    - fry
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: urad_dal
+    role: required
+    amount: normal
+    accepts:
+    - black_lentils
+    - legume
+  - item: potato
+    role: required
+    amount: many
+  - item: onion
+    role: required
+    amount: little
+  - item: mustard_seeds
+    role: spice
+    amount: spice
+  - item: turmeric
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  - item: fat
+    role: required
+    amount: little
+  name_uk: Доса з картопляною начинкою
+- id: indian_uttapam
+  name: Thick rice-lentil pancake with vegetables
+  kind: dish
+  tags:
+  - breakfast
+  - dosa
+  - indian
+  - south_indian
+  missing_allowed: 3
+  source_family: indian:uttapam
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - breakfast
+    - main
+    time: over_60
+    method:
+    - ferment
+    - fry
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: urad_dal
+    role: required
+    amount: normal
+    accepts:
+    - black_lentils
+    - legume
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: bell_pepper
+    role: addition
+    amount: normal
+    accepts:
+    - vegetable
+  - item: water
+    role: required
+    amount: many
+  - item: fat
+    role: required
+    amount: little
+  name_uk: Товстий рисово-чечевичний млинець з овочами
+- id: indian_pesarattu
+  name: Mung bean pancake
+  kind: dish
+  tags:
+  - breakfast
+  - indian
+  - mung
+  - south_indian
+  missing_allowed: 2
+  source_family: indian:pesarattu
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - breakfast
+    - main
+    time: over_60
+    method:
+    - soak
+    - fry
+  comment: ''
+  ingredients:
+  - item: mung_beans
+    role: main
+    amount: many
+    accepts:
+    - legume
+  - item: rice
+    role: addition
+    amount: little
+  - item: onion
+    role: addition
+    amount: little
+  - item: ginger
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: little
+  name_uk: Млинець з машу
+- id: indian_appam
+  name: Rice lace pancakes
+  kind: dish
+  tags:
+  - breakfast
+  - indian
+  - kerala
+  - rice
+  missing_allowed: 2
+  source_family: indian:appam
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - breakfast
+    - main
+    time: over_60
+    method:
+    - ferment
+    - fry
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: coconut_milk
+    role: required
+    amount: normal
+    accepts:
+    - coconut
+  - item: yeast
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: fat
+    role: addition
+    amount: little
+  name_uk: Рисові мереживні млинці
+- id: indian_chapati
+  name: Simple wheat flatbread
+  kind: dish
+  tags:
+  - bread
+  - flatbread
+  - indian
+  missing_allowed: 1
+  source_family: indian:chapati
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - bread
+    - component
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: water
+    role: required
+    amount: normal
+  - item: fat
+    role: addition
+    amount: little
+  name_uk: Простий пшеничний коржик
+- id: indian_roti
+  name: Indian flatbread
+  kind: dish
+  tags:
+  - bread
+  - flatbread
+  - indian
+  missing_allowed: 1
+  source_family: indian:roti
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - bread
+    - component
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: water
+    role: required
+    amount: normal
+  - item: fat
+    role: addition
+    amount: little
+  name_uk: Індійська коржик
+- id: indian_naan
+  name: Soft tandoor bread, homemade template
+  kind: dish
+  tags:
+  - bread
+  - indian
+  - tandoor
+  missing_allowed: 2
+  source_family: indian:naan
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - bread
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: yeast
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: М'який хліб з тандир, домашній шаблон
+- id: indian_garlic_naan
+  name: Naan with garlic butter
+  kind: dish
+  tags:
+  - bread
+  - garlic
+  - indian
+  - tandoor
+  missing_allowed: 2
+  source_family: indian:garlic_naan
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - bread
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: yeast
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: dry_garlic
+    role: required
+    amount: spice
+  name_uk: Наан з часниковим маслом
+- id: indian_paratha_plain
+  name: Puff pastry
+  kind: dish
+  tags:
+  - bread
+  - indian
+  - paratha
+  missing_allowed: 1
+  source_family: indian:paratha_plain
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - bread
+    - breakfast
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: water
+    role: required
+    amount: normal
+  - item: ghee
+    role: required
+    amount: normal
+    accepts:
+    - butter
+  name_uk: Листкове тісто
+- id: indian_aloo_paratha
+  name: Flatbread with potatoes
+  kind: dish
+  tags:
+  - bread
+  - indian
+  - paratha
+  - potato
+  missing_allowed: 2
+  source_family: indian:aloo_paratha
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - bread
+    - breakfast
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: potato
+    role: required
+    amount: many
+  - item: onion
+    role: addition
+    amount: little
+  - item: ghee
+    role: required
+    amount: normal
+    accepts:
+    - butter
+  - item: water
+    role: required
+    amount: normal
+  - item: cumin
+    role: spice
+    amount: spice
+  name_uk: Коржик з картоплею
+- id: indian_gobi_paratha
+  name: Flatbread with cauliflower
+  kind: dish
+  tags:
+  - bread
+  - cauliflower
+  - indian
+  - paratha
+  missing_allowed: 2
+  source_family: indian:gobi_paratha
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - bread
+    - breakfast
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: cauliflower
+    role: required
+    amount: many
+    accepts:
+    - vegetable
+  - item: ghee
+    role: required
+    amount: normal
+    accepts:
+    - butter
+  - item: water
+    role: required
+    amount: normal
+  - item: cumin
+    role: spice
+    amount: spice
+  name_uk: Коржик з цвітною капустою
+- id: indian_paneer_paratha
+  name: Bread with paneer
+  kind: dish
+  tags:
+  - bread
+  - indian
+  - paneer
+  - paratha
+  missing_allowed: 2
+  source_family: indian:paneer_paratha
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - bread
+    - breakfast
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: paneer
+    role: required
+    amount: many
+    accepts:
+    - white_cheese
+    - hard_cheese
+  - item: greens
+    role: addition
+    amount: little
+  - item: ghee
+    role: required
+    amount: normal
+    accepts:
+    - butter
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Хліб з паніром
+- id: indian_poori
+  name: Fried fluffy flatbread
+  kind: dish
+  tags:
+  - bread
+  - fried
+  - indian
+  missing_allowed: 1
+  source_family: indian:poori
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - bread
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: water
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: many
+  name_uk: Смажений пишний коржик
+- id: indian_bhatura
+  name: Large fried flatbread for chole
+  kind: dish
+  tags:
+  - bread
+  - fried
+  - indian
+  missing_allowed: 2
+  source_family: indian:bhatura
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - bread
+    time: over_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yogurt
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: many
+  name_uk: Великий смажений коржик до чолі
+- id: indian_kulcha
+  name: Soft flatbread with or without filling
+  kind: dish
+  tags:
+  - bread
+  - indian
+  missing_allowed: 2
+  source_family: indian:kulcha
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - bread
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yogurt
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  - item: fat
+    role: addition
+    amount: normal
+  name_uk: М'яка коржик з начинкою або без
+- id: indian_missi_roti
+  name: Flatbread with chickpea flour
+  kind: dish
+  tags:
+  - bread
+  - chickpea_flour
+  - indian
+  missing_allowed: 2
+  source_family: indian:missi_roti
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - bread
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: chickpea_flour
+    role: required
+    amount: normal
+  - item: onion
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  - item: fat
+    role: addition
+    amount: little
+  - item: cumin
+    role: spice
+    amount: spice
+  name_uk: Коржик з нутовим борошном
+- id: indian_makki_roti
+  name: Corn cake
+  kind: dish
+  tags:
+  - bread
+  - corn
+  - indian
+  missing_allowed: 1
+  source_family: indian:makki_roti
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - bread
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: cornmeal
+    role: main
+    amount: many
+    accepts:
+    - corn_grits
+  - item: water
+    role: required
+    amount: normal
+  - item: fat
+    role: addition
+    amount: little
+  name_uk: Кукурудзяна макуха
+- id: indian_dosa_batter_component
+  name: Basic dosa batter
+  kind: dish
+  tags:
+  - component
+  - fermented
+  - indian
+  missing_allowed: 1
+  source_family: indian:dosa_batter_component
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - component
+    time: over_60
+    method:
+    - soak
+    - ferment
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: urad_dal
+    role: required
+    amount: normal
+    accepts:
+    - black_lentils
+    - legume
+  - item: water
+    role: required
+    amount: many
+  name_uk: Базове тісто для дошки
+- id: indian_idli_batter_component
+  name: Basic idli dough
+  kind: dish
+  tags:
+  - component
+  - fermented
+  - indian
+  missing_allowed: 1
+  source_family: indian:idli_batter_component
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - component
+    time: over_60
+    method:
+    - soak
+    - ferment
+  comment: ''
+  ingredients:
+  - item: idli_rice
+    role: main
+    amount: many
+    accepts:
+    - rice
+  - item: urad_dal
+    role: required
+    amount: normal
+    accepts:
+    - black_lentils
+    - legume
+  - item: water
+    role: required
+    amount: many
+  name_uk: Базове тісто для ішли
+- id: indian_samosa_potato
+  name: Samosa with potatoes and peas
+  kind: dish
+  tags:
+  - fried
+  - indian
+  - potato
+  - snack
+  missing_allowed: 3
+  source_family: indian:samosa_potato
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - snack
+    time: over_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: potato
+    role: required
+    amount: many
+  - item: canned_peas
+    role: addition
+    amount: normal
+    accepts:
+    - peas
+  - item: fat
+    role: required
+    amount: many
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: garam_masala
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Самоса з картоплею та горошком
+- id: indian_pakora_onion
+  name: Onion dips
+  kind: dish
+  tags:
+  - chickpea_flour
+  - fried
+  - indian
+  - snack
+  missing_allowed: 2
+  source_family: indian:pakora_onion
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - snack
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: onion
+    role: main
+    amount: many
+  - item: chickpea_flour
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: many
+  - item: turmeric
+    role: spice
+    amount: spice
+  - item: red_pepper_flakes
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: little
+  name_uk: Соуси з цибулі
+- id: indian_pakora_vegetable
+  name: Vegetables in chickpea batter
+  kind: dish
+  tags:
+  - fried
+  - indian
+  - snack
+  - vegetable
+  missing_allowed: 2
+  source_family: indian:pakora_vegetable
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - snack
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: vegetable_mix
+    role: main
+    amount: many
+    accepts:
+    - vegetable
+  - item: chickpea_flour
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: many
+  - item: turmeric
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: little
+  name_uk: Овочі в нутовому клярі
+- id: indian_paneer_pakora
+  name: Paneer in chickpea batter
+  kind: dish
+  tags:
+  - fried
+  - indian
+  - paneer
+  - snack
+  missing_allowed: 2
+  source_family: indian:paneer_pakora
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - snack
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: paneer
+    role: main
+    amount: many
+    accepts:
+    - white_cheese
+    - hard_cheese
+  - item: chickpea_flour
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: many
+  - item: turmeric
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: little
+  name_uk: Панір у нутовому клярі
+- id: indian_medu_vada
+  name: Fried urad dal donuts
+  kind: dish
+  tags:
+  - fried
+  - indian
+  - snack
+  - south_indian
+  missing_allowed: 2
+  source_family: indian:medu_vada
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - snack
+    - breakfast
+    time: over_60
+    method:
+    - soak
+    - fry
+  comment: ''
+  ingredients:
+  - item: urad_dal
+    role: main
+    amount: many
+    accepts:
+    - black_lentils
+    - legume
+  - item: onion
+    role: addition
+    amount: little
+  - item: curry_leaves
+    role: spice
+    amount: spice
+  - item: fat
+    role: required
+    amount: many
+  - item: water
+    role: required
+    amount: little
+  name_uk: Смажені пончики з урад-дала
+- id: indian_vada_pav
+  name: Potato cutlet in a bun
+  kind: dish
+  tags:
+  - indian
+  - potato
+  - street_food
+  missing_allowed: 2
+  source_family: indian:vada_pav
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - snack
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: bread
+    role: required
+    amount: normal
+    accepts:
+    - bread_base
+  - item: chickpea_flour
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: many
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  name_uk: Картопляна котлета у булочці
+- id: indian_pav_bhaji
+  name: Vegetable mass with bun
+  kind: dish
+  tags:
+  - indian
+  - street_food
+  - vegetable
+  missing_allowed: 3
+  source_family: indian:pav_bhaji
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - snack
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: vegetable_mix
+    role: required
+    amount: many
+    accepts:
+    - vegetable
+  - item: tomato
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: bread
+    role: required
+    amount: normal
+    accepts:
+    - bread_base
+  - item: pav_bhaji_masala
+    role: required
+    amount: spice
+  name_uk: Овочева маса з булочкою
+- id: indian_dhokla
+  name: Chickpea flour steam cake
+  kind: dish
+  tags:
+  - gujarati
+  - indian
+  - snack
+  - steam
+  missing_allowed: 2
+  source_family: indian:dhokla
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - snack
+    time: under_60
+    method:
+    - steam
+    - temper
+  comment: ''
+  ingredients:
+  - item: chickpea_flour
+    role: main
+    amount: many
+  - item: yogurt
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  - item: mustard_seeds
+    role: spice
+    amount: spice
+  - item: curry_leaves
+    role: spice
+    amount: spice
+  - item: fat
+    role: addition
+    amount: little
+  name_uk: Паровий пиріг з нутового борошна
+- id: indian_khandvi
+  name: Chickpea flour and yoghurt rolls
+  kind: dish
+  tags:
+  - gujarati
+  - indian
+  - snack
+  missing_allowed: 2
+  source_family: indian:khandvi
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - snack
+    time: under_60
+    method:
+    - boil
+    - roll
+  comment: ''
+  ingredients:
+  - item: chickpea_flour
+    role: main
+    amount: many
+  - item: yogurt
+    role: required
+    amount: many
+  - item: water
+    role: required
+    amount: normal
+  - item: mustard_seeds
+    role: spice
+    amount: spice
+  - item: coconut
+    role: addition
+    amount: little
+  name_uk: Рулетики з нутового борошна та йогурту
+- id: indian_bhel_puri
+  name: Crispy snack with vegetables and chutney
+  kind: dish
+  tags:
+  - indian
+  - snack
+  - street_food
+  missing_allowed: 2
+  source_family: indian:bhel_puri
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - snack
+    time: under_10
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: puffed_rice
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: potato
+    role: addition
+    amount: normal
+  - item: chutney
+    role: required
+    amount: little
+    accepts:
+    - chutney_group
+  - item: greens
+    role: addition
+    amount: little
+  name_uk: Хрумка закуска з овочами та чатні
+- id: indian_pani_puri
+  name: Crispy balls with filling and spicy water
+  kind: dish
+  tags:
+  - indian
+  - snack
+  - street_food
+  missing_allowed: 3
+  source_family: indian:pani_puri
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - snack
+    time: under_60
+    method:
+    - fill
+  comment: ''
+  ingredients:
+  - item: puri_shells
+    role: main
+    amount: many
+  - item: potato
+    role: required
+    amount: normal
+  - item: chickpea
+    role: addition
+    amount: normal
+    accepts:
+    - legume
+  - item: tamarind
+    role: required
+    amount: little
+  - item: mint_chutney
+    role: required
+    amount: little
+    accepts:
+    - chutney
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Хрусткі кульки з начинкою та пряною водою
+- id: indian_sev_puri
+  name: Crispy snack with potatoes, chutney and sev
+  kind: dish
+  tags:
+  - indian
+  - snack
+  - street_food
+  missing_allowed: 2
+  source_family: indian:sev_puri
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - snack
+    time: under_30
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: puri_shells
+    role: main
+    amount: many
+  - item: potato
+    role: required
+    amount: normal
+  - item: onion
+    role: addition
+    amount: little
+  - item: chutney
+    role: required
+    amount: little
+    accepts:
+    - chutney_group
+  - item: sev
+    role: required
+    amount: normal
+  - item: greens
+    role: addition
+    amount: little
+  name_uk: Хрумка закуска з картоплею, чатні і сівбою
+- id: indian_aloo_tikki
+  name: Potato cutlets
+  kind: dish
+  tags:
+  - indian
+  - potato
+  - street_food
+  missing_allowed: 2
+  source_family: indian:aloo_tikki
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - snack
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: chickpea_flour
+    role: addition
+    amount: little
+    accepts:
+    - flour
+  - item: canned_peas
+    role: addition
+    amount: normal
+    accepts:
+    - peas
+  - item: fat
+    role: required
+    amount: normal
+  - item: cumin
+    role: spice
+    amount: spice
+  - item: garam_masala
+    role: spice
+    amount: spice
+  name_uk: Картопляні котлетки
+- id: indian_kathi_roll
+  name: Indian roll in flatbread
+  kind: dish
+  tags:
+  - indian
+  - roll
+  - street_food
+  missing_allowed: 3
+  source_family: indian:kathi_roll
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - snack
+    - main
+    time: under_60
+    method:
+    - fry
+    - assemble
+  comment: ''
+  ingredients:
+  - item: flatbread
+    role: main
+    amount: normal
+    accepts:
+    - chapati
+    - bread_base
+  - item: chicken_fillet
+    role: required
+    amount: normal
+    accepts:
+    - paneer
+    - minced_meat
+  - item: onion
+    role: addition
+    amount: little
+  - item: chutney
+    role: required
+    amount: little
+    accepts:
+    - chutney_group
+  - item: yogurt
+    role: addition
+    amount: normal
+  name_uk: Індійський рол у коржі
+- id: indian_kheer
+  name: Rice milk pudding
+  kind: dish
+  tags:
+  - dessert
+  - indian
+  - milk
+  - rice
+  missing_allowed: 2
+  source_family: indian:kheer
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+  - item: rice
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: nuts
+    role: addition
+    amount: little
+    accepts:
+    - almonds
+    - cashews
+  - item: cardamom
+    role: spice
+    amount: spice
+  name_uk: Рисовий молочний пудинг
+- id: indian_phirni
+  name: Rice milk pudding
+  kind: dish
+  tags:
+  - dessert
+  - indian
+  - milk
+  - rice
+  missing_allowed: 2
+  source_family: indian:phirni
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+  - item: rice_flour
+    role: required
+    amount: normal
+    accepts:
+    - rice
+  - item: sugar
+    role: required
+    amount: normal
+  - item: nuts
+    role: addition
+    amount: little
+  - item: cardamom
+    role: spice
+    amount: spice
+  name_uk: Молочний пудинг із меленого рису
+- id: indian_seviyan_kheer
+  name: Dairy dessert with vermicelli
+  kind: dish
+  tags:
+  - dessert
+  - indian
+  - milk
+  - vermicelli
+  missing_allowed: 2
+  source_family: indian:seviyan_kheer
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+  - item: vermicelli
+    role: required
+    amount: normal
+    accepts:
+    - pasta
+  - item: sugar
+    role: required
+    amount: normal
+  - item: ghee
+    role: addition
+    amount: little
+    accepts:
+    - butter
+  - item: nuts
+    role: addition
+    amount: little
+  - item: cardamom
+    role: spice
+    amount: spice
+  name_uk: Молочний десерт з вермішеллю
+- id: indian_payasam_rice
+  name: South Indian milk rice dessert
+  kind: dish
+  tags:
+  - dessert
+  - indian
+  - milk
+  - south_indian
+  missing_allowed: 2
+  source_family: indian:payasam_rice
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+  - item: rice
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: ghee
+    role: addition
+    amount: little
+    accepts:
+    - butter
+  - item: nuts
+    role: addition
+    amount: little
+  - item: cardamom
+    role: spice
+    amount: spice
+  name_uk: Південноіндійський молочний рисовий десерт
+- id: indian_payasam_moong
+  name: Moong dal and coconut dessert
+  kind: dish
+  tags:
+  - coconut
+  - dessert
+  - indian
+  - south_indian
+  missing_allowed: 3
+  source_family: indian:payasam_moong
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: mung_beans
+    role: main
+    amount: many
+    accepts:
+    - legume
+  - item: coconut_milk
+    role: required
+    amount: many
+  - item: jaggery
+    role: required
+    amount: normal
+    accepts:
+    - sugar
+  - item: ghee
+    role: addition
+    amount: little
+    accepts:
+    - butter
+  - item: cardamom
+    role: spice
+    amount: spice
+  name_uk: Десерт з мунг-дала та кокосу
+- id: indian_gulab_jamun
+  name: Milk balls in syrup
+  kind: dish
+  tags:
+  - dessert
+  - fried
+  - indian
+  - syrup
+  missing_allowed: 3
+  source_family: indian:gulab_jamun
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - fry
+    - soak
+  comment: ''
+  ingredients:
+  - item: milk_powder
+    role: main
+    amount: many
+    accepts:
+    - khoya
+  - item: flour
+    role: required
+    amount: little
+  - item: sugar
+    role: required
+    amount: many
+  - item: water
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: many
+  - item: cardamom
+    role: spice
+    amount: spice
+  name_uk: Молочні кульки в сиропі
+- id: indian_jalebi
+  name: Crispy spirals in syrup
+  kind: dish
+  tags:
+  - dessert
+  - fried
+  - indian
+  - syrup
+  missing_allowed: 3
+  source_family: indian:jalebi
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - ferment
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yogurt
+    role: addition
+    amount: normal
+  - item: sugar
+    role: required
+    amount: many
+  - item: water
+    role: required
+    amount: many
+  - item: fat
+    role: required
+    amount: many
+  name_uk: Хрусткі спіралі в сиропі
+- id: indian_imarti
+  name: Sweet urad dal spirals
+  kind: dish
+  tags:
+  - dessert
+  - fried
+  - indian
+  - syrup
+  missing_allowed: 3
+  source_family: indian:imarti
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - soak
+    - fry
+  comment: ''
+  ingredients:
+  - item: urad_dal
+    role: main
+    amount: many
+    accepts:
+    - black_lentils
+  - item: sugar
+    role: required
+    amount: many
+  - item: water
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: many
+  - item: cardamom
+    role: spice
+    amount: spice
+  name_uk: Солодкі спіралі з урад-дала
+- id: indian_rasgulla
+  name: Cream cheese balls in syrup
+  kind: dish
+  tags:
+  - dessert
+  - indian
+  - milk
+  - syrup
+  missing_allowed: 2
+  source_family: indian:rasgulla
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: fresh_cheese
+    role: main
+    amount: many
+    accepts:
+    - cottage_cheese
+    - paneer
+  - item: sugar
+    role: required
+    amount: many
+  - item: water
+    role: required
+    amount: many
+  name_uk: Кульки із сирного сиру в сиропі
+- id: indian_rasmalai
+  name: Curd balls in sweet milk
+  kind: dish
+  tags:
+  - dessert
+  - indian
+  - milk
+  missing_allowed: 3
+  source_family: indian:rasmalai
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - boil
+    - soak
+  comment: ''
+  ingredients:
+  - item: fresh_cheese
+    role: main
+    amount: many
+    accepts:
+    - cottage_cheese
+    - paneer
+  - item: milk
+    role: required
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  - item: nuts
+    role: addition
+    amount: little
+  - item: cardamom
+    role: spice
+    amount: spice
+  name_uk: Сирні кульки в солодкому молоці
+- id: indian_sandesh
+  name: Bengali curd sweet
+  kind: dish
+  tags:
+  - bengali
+  - dessert
+  - indian
+  - milk
+  missing_allowed: 2
+  source_family: indian:sandesh
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - mix
+    - set
+  comment: ''
+  ingredients:
+  - item: fresh_cheese
+    role: main
+    amount: many
+    accepts:
+    - cottage_cheese
+    - paneer
+  - item: sugar
+    role: required
+    amount: normal
+  - item: cardamom
+    role: spice
+    amount: spice
+  name_uk: Бенгальська сирна насолода
+- id: indian_mishti_doi
+  name: Sweet yogurt
+  kind: dish
+  tags:
+  - bengali
+  - dessert
+  - indian
+  - yogurt
+  missing_allowed: 2
+  source_family: indian:mishti_doi
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - ferment
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+  - item: yogurt
+    role: required
+    amount: little
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Солодкий йогурт
+- id: indian_gajar_halwa
+  name: Carrot halva
+  kind: dish
+  tags:
+  - carrot
+  - dessert
+  - halwa
+  - indian
+  missing_allowed: 2
+  source_family: indian:gajar_halwa
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: carrot
+    role: main
+    amount: many
+  - item: milk
+    role: required
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  - item: ghee
+    role: required
+    amount: normal
+    accepts:
+    - butter
+  - item: nuts
+    role: addition
+    amount: little
+  name_uk: Морквяна халва
+- id: indian_suji_halwa
+  name: Semolina halva
+  kind: dish
+  tags:
+  - dessert
+  - halwa
+  - indian
+  - semolina
+  missing_allowed: 2
+  source_family: indian:suji_halwa
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: under_30
+    method:
+    - fry
+    - boil
+  comment: ''
+  ingredients:
+  - item: semolina
+    role: main
+    amount: many
+  - item: ghee
+    role: required
+    amount: normal
+    accepts:
+    - butter
+  - item: sugar
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  - item: nuts
+    role: addition
+    amount: little
+  name_uk: Манної халви
+- id: indian_atta_halwa
+  name: Flour halva
+  kind: dish
+  tags:
+  - dessert
+  - flour
+  - halwa
+  - indian
+  missing_allowed: 2
+  source_family: indian:atta_halwa
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: under_30
+    method:
+    - fry
+    - boil
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: ghee
+    role: required
+    amount: normal
+    accepts:
+    - butter
+  - item: sugar
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  - item: nuts
+    role: addition
+    amount: little
+  name_uk: Борошняна халва
+- id: indian_moong_dal_halwa
+  name: Moong dal halwa
+  kind: dish
+  tags:
+  - dessert
+  - halwa
+  - indian
+  - mung
+  missing_allowed: 3
+  source_family: indian:moong_dal_halwa
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - soak
+    - fry
+  comment: ''
+  ingredients:
+  - item: mung_beans
+    role: main
+    amount: many
+    accepts:
+    - legume
+  - item: ghee
+    role: required
+    amount: many
+    accepts:
+    - butter
+  - item: sugar
+    role: required
+    amount: normal
+  - item: milk
+    role: addition
+    amount: normal
+  - item: nuts
+    role: addition
+    amount: little
+  name_uk: Халва з мунг-дала
+- id: indian_besan_ladoo
+  name: Chickpea flour balls
+  kind: dish
+  tags:
+  - chickpea_flour
+  - dessert
+  - indian
+  - ladoo
+  missing_allowed: 2
+  source_family: indian:besan_ladoo
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - fry
+    - mix
+  comment: ''
+  ingredients:
+  - item: chickpea_flour
+    role: main
+    amount: many
+  - item: ghee
+    role: required
+    amount: normal
+    accepts:
+    - butter
+  - item: sugar
+    role: required
+    amount: normal
+  - item: nuts
+    role: addition
+    amount: little
+  - item: cardamom
+    role: spice
+    amount: spice
+  name_uk: Кульки з нутового борошна
+- id: indian_coconut_ladoo
+  name: Coconut balls
+  kind: dish
+  tags:
+  - coconut
+  - dessert
+  - indian
+  - ladoo
+  missing_allowed: 2
+  source_family: indian:coconut_ladoo
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: under_30
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: coconut
+    role: main
+    amount: many
+  - item: milk
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: cardamom
+    role: spice
+    amount: spice
+  name_uk: Кокосові кульки
+- id: indian_rava_ladoo
+  name: Semolina balls
+  kind: dish
+  tags:
+  - dessert
+  - indian
+  - ladoo
+  - semolina
+  missing_allowed: 2
+  source_family: indian:rava_ladoo
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - fry
+    - mix
+  comment: ''
+  ingredients:
+  - item: semolina
+    role: main
+    amount: many
+  - item: ghee
+    role: required
+    amount: normal
+    accepts:
+    - butter
+  - item: sugar
+    role: required
+    amount: normal
+  - item: nuts
+    role: addition
+    amount: little
+  - item: cardamom
+    role: spice
+    amount: spice
+  name_uk: Кульки з манки
+- id: indian_kaju_katli
+  name: Delicate cashew sweetness
+  kind: dish
+  tags:
+  - cashew
+  - confection
+  - dessert
+  - indian
+  missing_allowed: 2
+  source_family: indian:kaju_katli
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - boil
+    - set
+  comment: ''
+  ingredients:
+  - item: cashews
+    role: main
+    amount: many
+    accepts:
+    - nuts
+  - item: sugar
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: little
+  - item: ghee
+    role: addition
+    amount: little
+    accepts:
+    - butter
+  name_uk: Тонка насолода з кеш'ю
+- id: indian_barfi_milk
+  name: Milk burfi
+  kind: dish
+  tags:
+  - barfi
+  - dessert
+  - indian
+  - milk
+  missing_allowed: 2
+  source_family: indian:barfi_milk
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - boil
+    - set
+  comment: ''
+  ingredients:
+  - item: milk_powder
+    role: main
+    amount: many
+    accepts:
+    - khoya
+  - item: milk
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: ghee
+    role: required
+    amount: little
+    accepts:
+    - butter
+  - item: nuts
+    role: addition
+    amount: little
+  name_uk: Молочна бурфі
+- id: indian_coconut_barfi
+  name: Coconut burfi
+  kind: dish
+  tags:
+  - barfi
+  - coconut
+  - dessert
+  - indian
+  missing_allowed: 2
+  source_family: indian:coconut_barfi
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - boil
+    - set
+  comment: ''
+  ingredients:
+  - item: coconut
+    role: main
+    amount: many
+  - item: milk
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: ghee
+    role: addition
+    amount: little
+    accepts:
+    - butter
+  name_uk: Кокосова бурфі
+- id: indian_mysore_pak
+  name: Sweet made from chickpea flour and ghee
+  kind: dish
+  tags:
+  - chickpea_flour
+  - dessert
+  - indian
+  - south_indian
+  missing_allowed: 3
+  source_family: indian:mysore_pak
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - boil
+    - set
+  comment: ''
+  ingredients:
+  - item: chickpea_flour
+    role: main
+    amount: many
+  - item: ghee
+    role: required
+    amount: many
+    accepts:
+    - butter
+  - item: sugar
+    role: required
+    amount: many
+  - item: water
+    role: required
+    amount: little
+  name_uk: Солодощі з нутового борошна та гхи
+- id: indian_puran_poli
+  name: Sweet flatbread stuffed with dal
+  kind: dish
+  tags:
+  - bread
+  - dessert
+  - indian
+  - maharashtrian
+  missing_allowed: 3
+  source_family: indian:puran_poli
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    - bread
+    time: over_60
+    method:
+    - boil
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: chana_dal
+    role: required
+    amount: many
+    accepts:
+    - chickpea
+    - legume
+  - item: jaggery
+    role: required
+    amount: normal
+    accepts:
+    - sugar
+  - item: ghee
+    role: required
+    amount: normal
+    accepts:
+    - butter
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Солодкий коржик з начинкою з дала
+- id: indian_modak
+  name: Sweet rice dumplings with coconut
+  kind: dish
+  tags:
+  - coconut
+  - dessert
+  - indian
+  - rice
+  missing_allowed: 3
+  source_family: indian:modak
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - steam
+  comment: ''
+  ingredients:
+  - item: rice_flour
+    role: main
+    amount: many
+    accepts:
+    - rice
+  - item: coconut
+    role: required
+    amount: normal
+  - item: jaggery
+    role: required
+    amount: normal
+    accepts:
+    - sugar
+  - item: water
+    role: required
+    amount: normal
+  - item: ghee
+    role: addition
+    amount: little
+    accepts:
+    - butter
+  name_uk: Рисові солодкі галушки з кокосом
+- id: indian_gujiya
+  name: Sweet pies with milk filling
+  kind: dish
+  tags:
+  - dessert
+  - festival
+  - fried
+  - indian
+  missing_allowed: 3
+  source_family: indian:gujiya
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: khoya
+    role: required
+    amount: normal
+    accepts:
+    - milk_powder
+  - item: sugar
+    role: required
+    amount: normal
+  - item: nuts
+    role: addition
+    amount: little
+  - item: fat
+    role: required
+    amount: many
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Солодкі пиріжки з молочною начинкою
+- id: indian_malpua
+  name: Sweet fried pancakes
+  kind: dish
+  tags:
+  - dessert
+  - fried
+  - indian
+  - pancake
+  missing_allowed: 3
+  source_family: indian:malpua
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - fry
+    - soak
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: milk
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: many
+  - item: fat
+    role: required
+    amount: many
+  - item: water
+    role: required
+    amount: normal
+  - item: cardamom
+    role: spice
+    amount: spice
+  name_uk: Солодкі смажені млинці
+- id: indian_rabri
+  name: Boiled sweet milk
+  kind: dish
+  tags:
+  - dessert
+  - indian
+  - milk
+  missing_allowed: 2
+  source_family: indian:rabri
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  - item: nuts
+    role: addition
+    amount: little
+  - item: cardamom
+    role: spice
+    amount: spice
+  name_uk: Уварене солодке молоко
+- id: indian_shrikhand
+  name: Sweet thick yogurt
+  kind: dish
+  tags:
+  - dessert
+  - indian
+  - yogurt
+  missing_allowed: 2
+  source_family: indian:shrikhand
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: under_30
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: yogurt
+    role: main
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  - item: nuts
+    role: addition
+    amount: little
+  - item: cardamom
+    role: spice
+    amount: spice
+  name_uk: Солодкий густий йогурт
+- id: indian_kulfi
+  name: Indian milk ice cream
+  kind: dish
+  tags:
+  - dessert
+  - ice_cream
+  - indian
+  - milk
+  missing_allowed: 2
+  source_family: indian:kulfi
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - boil
+    - freeze
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+  - item: sugar
+    role: required
+    amount: normal
+  - item: nuts
+    role: addition
+    amount: little
+  - item: cardamom
+    role: spice
+    amount: spice
+  name_uk: Індійське молочне морозиво
+- id: indian_falooda
+  name: Milk dessert drink with vermicelli
+  kind: dish
+  tags:
+  - dessert
+  - drink
+  - indian
+  - milk
+  missing_allowed: 3
+  source_family: indian:falooda
+  facets:
+    cuisine:
+    - indian
+    dish_type:
+    - dessert
+    - drink
+    time: under_30
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+  - item: vermicelli
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: ice_cream
+    role: addition
+    amount: normal
+    accepts:
+    - cream
+  - item: nuts
+    role: addition
+    amount: little
+  name_uk: Молочний десерт-напій з вермішеллю

@@ -1,0 +1,5510 @@
+metadata:
+  version: 0.6-ukrainian-large
+  purpose: Large Ukrainian cuisine recipe templates for pantry-based suggestion engine
+  design_rules:
+  - If a title names a key ingredient, that ingredient appears as main or required.
+  - Broad categories are used mainly in accepts, not as a replacement for named title ingredients.
+  - Water is included as a technological ingredient, but should be treated as always available by inventory logic.
+  - Pork ears, tails, hocks, pork belly and salo are explicit ingredients, not hidden behind generic meat.
+  - These are ingredient templates, not exact step-by-step recipes.
+  - 'Time buckets: under_10, under_30, under_60, over_60.'
+  cuisines:
+    ukrainian: украинская
+  quantity_scale:
+  - spice
+  - little
+  - normal
+  - many
+  source_notes:
+  - First-course block emphasizes borscht variants, kapusniak, yushka, kulesh, green borscht and grain/bean soups.
+  - Main block emphasizes varenyky, pelmeni, holubtsi, deruny, banosh, buckwheat dishes, pork offal, kholodets, salo and home-style
+    roasts.
+  - Dessert block emphasizes syrnyky, kutia, uzvar, pampushky, medivnyk, poppy-seed pastries, nalysnyky, kissel and cottage-cheese
+    dishes.
+recipes:
+- id: ukrainian_red_borscht_pork
+  name: Red borscht with pork
+  kind: dish
+  tags:
+  - beet
+  - borscht
+  - pork
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:red_borscht_pork
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: beet
+    role: main
+    amount: many
+  - item: cabbage
+    role: required
+    amount: many
+    accepts:
+    - young_cabbage
+  - item: potato
+    role: required
+    amount: normal
+  - item: pork_chunks
+    role: required
+    amount: normal
+    accepts:
+    - pork_ribs
+    - meat_piece
+  - item: carrot
+    role: required
+    amount: little
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato_paste
+    role: required
+    amount: little
+    accepts:
+    - tomato_base
+  - item: salo
+    role: addition
+    amount: little
+    accepts:
+    - smalec
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Червоний борщ зі свининою
+- id: ukrainian_red_borscht_beef
+  name: Red borscht with beef
+  kind: dish
+  tags:
+  - beef
+  - beet
+  - borscht
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:red_borscht_beef
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: beet
+    role: main
+    amount: many
+  - item: cabbage
+    role: required
+    amount: many
+    accepts:
+    - young_cabbage
+  - item: potato
+    role: required
+    amount: normal
+  - item: beef_chunks
+    role: required
+    amount: normal
+    accepts:
+    - meat_piece
+  - item: carrot
+    role: required
+    amount: little
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato_paste
+    role: required
+    amount: little
+    accepts:
+    - tomato_base
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Червоний борщ з яловичиною
+- id: ukrainian_red_borscht_beans
+  name: Lean borscht with beans
+  kind: dish
+  tags:
+  - beans
+  - beet
+  - borscht
+  - ukrainian
+  - vegetarian
+  missing_allowed: 3
+  source_family: ukrainian:red_borscht_beans
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: beet
+    role: main
+    amount: many
+  - item: beans
+    role: required
+    amount: normal
+    accepts:
+    - canned_beans
+    - legume
+  - item: cabbage
+    role: required
+    amount: many
+    accepts:
+    - young_cabbage
+  - item: potato
+    role: required
+    amount: normal
+  - item: carrot
+    role: required
+    amount: little
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato_paste
+    role: required
+    amount: little
+    accepts:
+    - tomato_base
+  - item: plant_oil
+    role: required
+    amount: little
+    accepts:
+    - olive_oil
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Пісний борщ з квасолею
+- id: ukrainian_poltava_borscht_galushky
+  name: Poltava borscht with dumplings
+  kind: dish
+  tags:
+  - borscht
+  - galushky
+  - poltava
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:poltava_borscht_galushky
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: beet
+    role: main
+    amount: many
+  - item: cabbage
+    role: required
+    amount: many
+    accepts:
+    - young_cabbage
+  - item: potato
+    role: required
+    amount: normal
+  - item: pork_chunks
+    role: required
+    amount: normal
+    accepts:
+    - meat_piece
+  - item: flour
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  - item: carrot
+    role: required
+    amount: little
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato_paste
+    role: required
+    amount: little
+    accepts:
+    - tomato_base
+  - item: water
+    role: required
+    amount: many
+  name_uk: Полтавський борщ з галушками
+- id: ukrainian_green_borscht_sorrel
+  name: Green borscht with sorrel
+  kind: dish
+  tags:
+  - borscht
+  - green_borscht
+  - sorrel
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:green_borscht_sorrel
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: sorrel
+    role: main
+    amount: many
+    accepts:
+    - greens
+  - item: potato
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: addition
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: pork_chunks
+    role: addition
+    amount: normal
+    accepts:
+    - chicken_parts
+    - meat_piece
+  - item: water
+    role: required
+    amount: many
+  name_uk: Зелений борщ зі щавлем
+- id: ukrainian_green_borscht_nettle
+  name: Green borscht with nettles
+  kind: dish
+  tags:
+  - green_borscht
+  - greens
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:green_borscht_nettle
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: nettle
+    role: main
+    amount: many
+    accepts:
+    - greens
+  - item: sorrel
+    role: addition
+    amount: normal
+    accepts:
+    - greens
+  - item: potato
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Зелений борщ з кропивою
+- id: ukrainian_cold_borscht_kholodnyk
+  name: Cold beetroot borscht
+  kind: dish
+  tags:
+  - borscht
+  - cold
+  - summer
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:cold_borscht_kholodnyk
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: beet
+    role: main
+    amount: many
+  - item: cucumber
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: greens
+    role: required
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: lemon
+    role: addition
+    amount: little
+    accepts:
+    - vinegar
+    - acid_souring
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Холодник
+- id: ukrainian_kapusniak_pork
+  name: Cabbage with pork
+  kind: dish
+  tags:
+  - kapusniak
+  - pork
+  - sauerkraut
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:kapusniak_pork
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: sauerkraut
+    role: main
+    amount: many
+    accepts:
+    - cabbage
+  - item: pork_chunks
+    role: required
+    amount: normal
+    accepts:
+    - pork_ribs
+    - meat_piece
+  - item: potato
+    role: required
+    amount: normal
+  - item: millet
+    role: addition
+    amount: normal
+    accepts:
+    - grain
+  - item: carrot
+    role: required
+    amount: little
+  - item: onion
+    role: required
+    amount: little
+  - item: salo
+    role: addition
+    amount: little
+    accepts:
+    - smalec
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Капусняк зі свининою
+- id: ukrainian_kapusniak_mushroom
+  name: Lean cabbage with mushrooms
+  kind: dish
+  tags:
+  - kapusniak
+  - mushroom
+  - ukrainian
+  - vegetarian
+  missing_allowed: 3
+  source_family: ukrainian:kapusniak_mushroom
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: sauerkraut
+    role: main
+    amount: many
+    accepts:
+    - cabbage
+  - item: mushroom
+    role: required
+    amount: many
+    accepts:
+    - dried_porcini
+  - item: potato
+    role: required
+    amount: normal
+  - item: millet
+    role: addition
+    amount: normal
+    accepts:
+    - grain
+  - item: carrot
+    role: required
+    amount: little
+  - item: onion
+    role: required
+    amount: little
+  - item: plant_oil
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Пісний капусняк з грибами
+- id: ukrainian_yushka_mushroom
+  name: Mushroom soup
+  kind: dish
+  tags:
+  - mushroom
+  - ukrainian
+  - yushka
+  missing_allowed: 2
+  source_family: ukrainian:yushka_mushroom
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: mushroom
+    role: main
+    amount: many
+    accepts:
+    - dried_porcini
+  - item: potato
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: addition
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Грибна юшка
+- id: ukrainian_yushka_fish
+  name: Fish soup
+  kind: dish
+  tags:
+  - fish
+  - ukrainian
+  - yushka
+  missing_allowed: 2
+  source_family: ukrainian:yushka_fish
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: fish
+    role: main
+    amount: many
+    accepts:
+    - frozen_hake
+    - generic_fish
+  - item: potato
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: required
+    amount: little
+  - item: greens
+    role: addition
+    amount: little
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Рибна юшка
+- id: ukrainian_kulesh_millet_salo
+  name: Kulesh with millet and lard
+  kind: dish
+  tags:
+  - kulesh
+  - millet
+  - salo
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:kulesh_millet_salo
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    - main
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: millet
+    role: main
+    amount: many
+    accepts:
+    - grain
+  - item: salo
+    role: required
+    amount: normal
+    accepts:
+    - smalec
+  - item: potato
+    role: addition
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Куліш з пшоном і салом
+- id: ukrainian_kulesh_chicken
+  name: Kulesh with chicken
+  kind: dish
+  tags:
+  - chicken
+  - kulesh
+  - millet
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:kulesh_chicken
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    - main
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: millet
+    role: main
+    amount: many
+    accepts:
+    - grain
+  - item: chicken_parts
+    role: required
+    amount: normal
+    accepts:
+    - chicken_fillet
+  - item: potato
+    role: addition
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Куліш з куркою
+- id: ukrainian_rosilnyk
+  name: Pickle with pearl barley and cucumbers
+  kind: dish
+  tags:
+  - barley
+  - pickled_cucumber
+  - soup
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:rosilnyk
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: pickled_cucumber
+    role: main
+    amount: normal
+  - item: barley
+    role: required
+    amount: normal
+    accepts:
+    - grain
+  - item: potato
+    role: required
+    amount: normal
+  - item: pork_chunks
+    role: addition
+    amount: normal
+    accepts:
+    - meat_piece
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: required
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Росільник
+- id: ukrainian_pea_soup_smoked_ribs
+  name: Pea soup with smoked ribs
+  kind: dish
+  tags:
+  - peas
+  - smoked_pork
+  - soup
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:pea_soup_smoked_ribs
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: split_peas
+    role: main
+    amount: many
+    accepts:
+    - peas
+    - legume
+  - item: smoked_pork_ribs
+    role: required
+    amount: normal
+    accepts:
+    - pork_ribs
+    - meat_product
+  - item: potato
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: required
+    amount: little
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Гороховий суп з копченими ребрами
+- id: ukrainian_bean_soup_pork
+  name: Bean soup with pork
+  kind: dish
+  tags:
+  - beans
+  - pork
+  - soup
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:bean_soup_pork
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: beans
+    role: main
+    amount: many
+    accepts:
+    - canned_beans
+    - legume
+  - item: pork_chunks
+    role: required
+    amount: normal
+    accepts:
+    - meat_piece
+  - item: potato
+    role: addition
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: required
+    amount: little
+  - item: tomato_paste
+    role: addition
+    amount: little
+    accepts:
+    - tomato_base
+  - item: water
+    role: required
+    amount: many
+  name_uk: Квасоляний суп зі свининою
+- id: ukrainian_buckwheat_soup_chicken
+  name: Buckwheat soup with chicken
+  kind: dish
+  tags:
+  - buckwheat
+  - chicken
+  - soup
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:buckwheat_soup_chicken
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: buckwheat
+    role: main
+    amount: normal
+  - item: chicken_parts
+    role: required
+    amount: normal
+    accepts:
+    - chicken_fillet
+  - item: potato
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  name_uk: Гречаний суп з куркою
+- id: ukrainian_noodle_soup_chicken
+  name: Chicken soup with noodles
+  kind: dish
+  tags:
+  - chicken
+  - noodle
+  - soup
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:noodle_soup_chicken
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: chicken_parts
+    role: main
+    amount: many
+    accepts:
+    - chicken_fillet
+  - item: noodle
+    role: required
+    amount: normal
+    accepts:
+    - vermicelli
+    - pasta
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: addition
+    amount: little
+  - item: greens
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Куряча юшка з локшиною
+- id: ukrainian_milk_soup_noodles
+  name: Milk noodle soup
+  kind: dish
+  tags:
+  - milk
+  - noodle
+  - soup
+  - ukrainian
+  missing_allowed: 1
+  source_family: ukrainian:milk_soup_noodles
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+  - item: noodle
+    role: required
+    amount: normal
+    accepts:
+    - vermicelli
+    - pasta
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  - item: sugar
+    role: optional
+    amount: little
+  - item: water
+    role: addition
+    amount: normal
+  name_uk: Молочний суп з локшиною
+- id: ukrainian_dumpling_soup
+  name: Soup with dumplings
+  kind: dish
+  tags:
+  - galushky
+  - soup
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:dumpling_soup
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: eggs
+    role: required
+    amount: little
+  - item: chicken_parts
+    role: addition
+    amount: normal
+    accepts:
+    - broth_meat
+  - item: potato
+    role: addition
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Суп з галушками
+- id: ukrainian_borscht_sorrel_beans
+  name: Green borscht with beans
+  kind: dish
+  tags:
+  - beans
+  - green_borscht
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:borscht_sorrel_beans
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: sorrel
+    role: main
+    amount: many
+    accepts:
+    - greens
+  - item: beans
+    role: required
+    amount: normal
+    accepts:
+    - canned_beans
+    - legume
+  - item: potato
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: normal
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Зелений борщ з квасолею
+- id: ukrainian_sour_cabbage_borscht
+  name: Borscht with sauerkraut
+  kind: dish
+  tags:
+  - borscht
+  - sauerkraut
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:sour_cabbage_borscht
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: beet
+    role: main
+    amount: many
+  - item: sauerkraut
+    role: required
+    amount: many
+    accepts:
+    - cabbage
+  - item: pork_chunks
+    role: required
+    amount: normal
+    accepts:
+    - meat_piece
+  - item: potato
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: required
+    amount: little
+  - item: tomato_paste
+    role: required
+    amount: little
+    accepts:
+    - tomato_base
+  - item: water
+    role: required
+    amount: many
+  name_uk: Борщ з квашеною капустою
+- id: ukrainian_borscht_mushroom_prune
+  name: Borscht with mushrooms and prunes
+  kind: dish
+  tags:
+  - borscht
+  - mushroom
+  - ukrainian
+  - vegetarian
+  missing_allowed: 3
+  source_family: ukrainian:borscht_mushroom_prune
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: beet
+    role: main
+    amount: many
+  - item: mushroom
+    role: required
+    amount: normal
+    accepts:
+    - dried_porcini
+  - item: cabbage
+    role: required
+    amount: many
+  - item: potato
+    role: required
+    amount: normal
+  - item: prunes
+    role: addition
+    amount: little
+    accepts:
+    - dried_fruit
+  - item: tomato_paste
+    role: required
+    amount: little
+    accepts:
+    - tomato_base
+  - item: plant_oil
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Пісний борщ з грибами і чорносливом
+- id: ukrainian_beet_top_soup
+  name: Soup with beet tops
+  kind: dish
+  tags:
+  - borscht
+  - greens
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:beet_top_soup
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: beet_greens
+    role: main
+    amount: many
+    accepts:
+    - greens
+  - item: beet
+    role: addition
+    amount: normal
+  - item: potato
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: normal
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Борщ з бурячинням
+- id: ukrainian_pumpkin_soup_ukrainian
+  name: Pumpkin soup
+  kind: dish
+  tags:
+  - pumpkin
+  - soup
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:pumpkin_soup_ukrainian
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: under_60
+    method:
+    - boil
+    - blend
+  comment: ''
+  ingredients:
+  - item: pumpkin
+    role: main
+    amount: many
+  - item: potato
+    role: addition
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: milk
+    role: addition
+    amount: normal
+  - item: butter
+    role: required
+    amount: little
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: many
+  name_uk: Гарбузова юшка
+- id: ukrainian_borscht_salo_pounded_garlic
+  name: Borscht with lard and garlic
+  kind: dish
+  tags:
+  - borscht
+  - garlic
+  - salo
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:borscht_salo_pounded_garlic
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - soup
+    time: over_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: beet
+    role: main
+    amount: many
+  - item: cabbage
+    role: required
+    amount: many
+    accepts:
+    - young_cabbage
+  - item: potato
+    role: required
+    amount: normal
+  - item: salo
+    role: required
+    amount: normal
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: pork_chunks
+    role: addition
+    amount: normal
+    accepts:
+    - meat_piece
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: required
+    amount: little
+  - item: tomato_paste
+    role: required
+    amount: little
+    accepts:
+    - tomato_base
+  - item: water
+    role: required
+    amount: many
+  name_uk: Борщ із салом, товченим з часником
+- id: ukrainian_kholodets_pork_rich
+  name: Jellied meat with pork legs, ears and tails
+  kind: dish
+  tags:
+  - aspic
+  - ears
+  - kholodets
+  - pork
+  - tail
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:kholodets_pork_rich
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    - snack
+    time: over_60
+    method:
+    - boil
+    - set
+  comment: Gelatin-rich pork cuts are essential for this dish; water is a system ingredient, but it should stay in the recipe.
+  ingredients:
+  - item: pork_trotters
+    role: main
+    amount: many
+    accepts:
+    - broth_meat
+  - item: pork_ears
+    role: required
+    amount: normal
+    accepts:
+    - offal
+  - item: pork_tail
+    role: required
+    amount: normal
+    accepts:
+    - broth_meat
+    - offal
+  - item: pork_shank
+    role: required
+    amount: normal
+    accepts:
+    - pork_hock
+    - broth_meat
+  - item: carrot
+    role: addition
+    amount: little
+  - item: onion
+    role: required
+    amount: little
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Холодець зі свинячими ніжками, вухами і хвостами
+  comment_uk: Желатинові частини свинини є ключовими для цієї страви; вода системна, але має залишатися в рецепті.
+- id: ukrainian_kholodets_chicken_pork
+  name: Jellied meat with pork and chicken
+  kind: dish
+  tags:
+  - chicken
+  - kholodets
+  - pork
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:kholodets_chicken_pork
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    - snack
+    time: over_60
+    method:
+    - boil
+    - set
+  comment: ''
+  ingredients:
+  - item: pork_trotters
+    role: main
+    amount: many
+    accepts:
+    - broth_meat
+  - item: chicken_parts
+    role: required
+    amount: normal
+  - item: pork_shank
+    role: addition
+    amount: normal
+    accepts:
+    - pork_hock
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: addition
+    amount: little
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Холодець зі свининою і куркою
+- id: ukrainian_pork_ears_garlic
+  name: Pork ears with garlic
+  kind: dish
+  tags:
+  - ears
+  - pork
+  - snack
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:pork_ears_garlic
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    - snack
+    time: over_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: pork_ears
+    role: main
+    amount: many
+    accepts:
+    - offal
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: vinegar
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Свинячі вушка з часником
+- id: ukrainian_pork_ears_pickled
+  name: Marinated pork ears
+  kind: dish
+  tags:
+  - ears
+  - marinated
+  - pork
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:pork_ears_pickled
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    - snack
+    time: over_60
+    method:
+    - boil
+    - marinate
+  comment: ''
+  ingredients:
+  - item: pork_ears
+    role: main
+    amount: many
+    accepts:
+    - offal
+  - item: vinegar
+    role: required
+    amount: normal
+    accepts:
+    - acid_souring
+  - item: onion
+    role: addition
+    amount: little
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Мариновані свинячі вушка
+- id: ukrainian_pork_tail_stew
+  name: Braised pork tails
+  kind: dish
+  tags:
+  - pork
+  - stew
+  - tail
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:pork_tail_stew
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: pork_tail
+    role: main
+    amount: many
+    accepts:
+    - broth_meat
+    - offal
+  - item: onion
+    role: required
+    amount: normal
+  - item: carrot
+    role: required
+    amount: little
+  - item: tomato_paste
+    role: addition
+    amount: little
+    accepts:
+    - tomato_base
+  - item: dry_garlic
+    role: spice
+    amount: spice
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Тушковані свинячі хвости
+- id: ukrainian_pork_shank_baked
+  name: Baked pork knuckle
+  kind: dish
+  tags:
+  - baked
+  - pork
+  - shank
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:pork_shank_baked
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - bake
+    - roast
+  comment: ''
+  ingredients:
+  - item: pork_shank
+    role: main
+    amount: many
+    accepts:
+    - pork_hock
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: mustard
+    role: addition
+    amount: normal
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  name_uk: Запечена свиняча рулька
+- id: ukrainian_pork_hock_boiled
+  name: Boiled pork shank
+  kind: dish
+  tags:
+  - boiled
+  - hock
+  - pork
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:pork_hock_boiled
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: pork_hock
+    role: main
+    amount: many
+    accepts:
+    - pork_shank
+    - broth_meat
+  - item: onion
+    role: required
+    amount: little
+  - item: carrot
+    role: addition
+    amount: little
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: water
+    role: required
+    amount: many
+  name_uk: Варена свиняча голінка
+- id: ukrainian_pork_belly_baked
+  name: Baked undercut
+  kind: dish
+  tags:
+  - baked
+  - pork
+  - pork_belly
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:pork_belly_baked
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - bake
+    - roast
+  comment: ''
+  ingredients:
+  - item: pork_belly
+    role: main
+    amount: many
+    accepts:
+    - salo
+    - meat_product
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: mustard
+    role: addition
+    amount: little
+  name_uk: Підчеревок запечений
+- id: ukrainian_pork_belly_roll
+  name: Undercherveka roll
+  kind: dish
+  tags:
+  - pork
+  - pork_belly
+  - roll
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:pork_belly_roll
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roll
+    - bake
+  comment: ''
+  ingredients:
+  - item: pork_belly
+    role: main
+    amount: many
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: paprika
+    role: spice
+    amount: spice
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  name_uk: Рулет з підчеревка
+- id: ukrainian_salo_garlic
+  name: Lard with garlic
+  kind: dish
+  tags:
+  - salo
+  - snack
+  - ukrainian
+  missing_allowed: 1
+  source_family: ukrainian:salo_garlic
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - snack
+    - main
+    time: under_10
+    method:
+    - raw
+    - mix
+  comment: ''
+  ingredients:
+  - item: salo
+    role: main
+    amount: many
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: bread
+    role: addition
+    amount: normal
+    accepts:
+    - bread_base
+  name_uk: Сало з часником
+- id: ukrainian_salo_salted
+  name: Salted lard
+  kind: dish
+  tags:
+  - salo
+  - salted
+  - ukrainian
+  missing_allowed: 1
+  source_family: ukrainian:salo_salted
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - snack
+    time: over_60
+    method:
+    - salt
+  comment: ''
+  ingredients:
+  - item: salo
+    role: main
+    amount: many
+  - item: dry_garlic
+    role: addition
+    amount: spice
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: bay_leaf
+    role: spice
+    amount: spice
+  name_uk: Солоне сало
+- id: ukrainian_shkvarky_onion
+  name: Cracklings with onions
+  kind: dish
+  tags:
+  - component
+  - salo
+  - shkvarky
+  - ukrainian
+  missing_allowed: 1
+  source_family: ukrainian:shkvarky_onion
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - snack
+    - component
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: salo
+    role: main
+    amount: many
+    accepts:
+    - pork_belly
+  - item: onion
+    role: required
+    amount: normal
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Шкварки з цибулею
+- id: ukrainian_varenyky_potato
+  name: Dumplings with potatoes
+  kind: dish
+  tags:
+  - potato
+  - ukrainian
+  - varenyky
+  missing_allowed: 2
+  source_family: ukrainian:varenyky_potato
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: potato
+    role: required
+    amount: many
+  - item: onion
+    role: addition
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  - item: sour_cream
+    role: addition
+    amount: normal
+  name_uk: Вареники з картоплею
+- id: ukrainian_varenyky_potato_mushroom
+  name: Dumplings with potatoes and mushrooms
+  kind: dish
+  tags:
+  - mushroom
+  - potato
+  - ukrainian
+  - varenyky
+  missing_allowed: 3
+  source_family: ukrainian:varenyky_potato_mushroom
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: potato
+    role: required
+    amount: many
+  - item: mushroom
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  - item: sour_cream
+    role: addition
+    amount: normal
+  name_uk: Вареники з картоплею і грибами
+- id: ukrainian_varenyky_cabbage
+  name: Dumplings with cabbage
+  kind: dish
+  tags:
+  - cabbage
+  - ukrainian
+  - varenyky
+  missing_allowed: 2
+  source_family: ukrainian:varenyky_cabbage
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: cabbage
+    role: required
+    amount: many
+    accepts:
+    - sauerkraut
+    - young_cabbage
+  - item: onion
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Вареники з капустою
+- id: ukrainian_varenyky_cottage_cheese
+  name: Dumplings with cottage cheese
+  kind: dish
+  tags:
+  - cottage_cheese
+  - ukrainian
+  - varenyky
+  missing_allowed: 2
+  source_family: ukrainian:varenyky_cottage_cheese
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: cottage_cheese
+    role: required
+    amount: many
+  - item: eggs
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: sugar
+    role: optional
+    amount: little
+  name_uk: Вареники з сиром
+- id: ukrainian_varenyky_meat
+  name: Dumplings with meat
+  kind: dish
+  tags:
+  - meat
+  - ukrainian
+  - varenyky
+  missing_allowed: 3
+  source_family: ukrainian:varenyky_meat
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: minced_meat
+    role: required
+    amount: many
+    accepts:
+    - ground_meat
+  - item: onion
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Вареники з м'ясом
+- id: ukrainian_varenyky_cherry
+  name: Dumplings with cherries
+  kind: dish
+  tags:
+  - cherry
+  - dessert
+  - ukrainian
+  - varenyky
+  missing_allowed: 3
+  source_family: ukrainian:varenyky_cherry
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    - dessert
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: cherry
+    role: required
+    amount: many
+    accepts:
+    - fruit
+  - item: sugar
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: addition
+    amount: normal
+  name_uk: Вареники з вишнями
+- id: ukrainian_pelmeni_pork_beef
+  name: Homemade dumplings
+  kind: dish
+  tags:
+  - dumpling
+  - meat
+  - pelmeni
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:pelmeni_pork_beef
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: minced_meat
+    role: required
+    amount: many
+    accepts:
+    - ground_meat
+  - item: pork_chunks
+    role: addition
+    amount: normal
+    accepts:
+    - ground_pork
+  - item: beef_chunks
+    role: addition
+    amount: normal
+    accepts:
+    - ground_beef
+  - item: onion
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: addition
+    amount: normal
+  name_uk: Домашні пельмені зі свининою і яловичиною
+- id: ukrainian_galushky_poltava
+  name: Poltava dumplings
+  kind: dish
+  tags:
+  - galushky
+  - poltava
+  - ukrainian
+  missing_allowed: 1
+  source_family: ukrainian:galushky_poltava
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Полтавські галушки
+- id: ukrainian_galushky_meat_gravy
+  name: Dumplings with meat sauce
+  kind: dish
+  tags:
+  - galushky
+  - meat
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:galushky_meat_gravy
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - boil
+    - stew
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: little
+  - item: meat_piece
+    role: required
+    amount: normal
+    accepts:
+    - pork_chunks
+    - chicken_fillet
+  - item: onion
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Галушки з м'ясною підливою
+- id: ukrainian_holubtsi_meat_rice
+  name: Cabbage rolls with meat and rice
+  kind: dish
+  tags:
+  - cabbage
+  - holubtsi
+  - meat
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:holubtsi_meat_rice
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: cabbage
+    role: main
+    amount: many
+  - item: minced_meat
+    role: required
+    amount: many
+    accepts:
+    - ground_meat
+  - item: rice
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: carrot
+    role: addition
+    amount: little
+  - item: tomato_paste
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Голубці з м'ясом і рисом
+- id: ukrainian_holubtsi_mushroom_buckwheat
+  name: Cabbage rolls with buckwheat and mushrooms
+  kind: dish
+  tags:
+  - buckwheat
+  - holubtsi
+  - mushroom
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:holubtsi_mushroom_buckwheat
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: cabbage
+    role: main
+    amount: many
+  - item: buckwheat
+    role: required
+    amount: many
+  - item: mushroom
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: tomato_paste
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Голубці з гречкою і грибами
+- id: ukrainian_lazy_holubtsi
+  name: Lazy cabbage rolls
+  kind: dish
+  tags:
+  - holubtsi
+  - lazy
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:lazy_holubtsi
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: cabbage
+    role: main
+    amount: many
+  - item: minced_meat
+    role: required
+    amount: normal
+    accepts:
+    - ground_meat
+  - item: rice
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: tomato_paste
+    role: required
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Ліниві голубці
+- id: ukrainian_deruny
+  name: Potato pancakes
+  kind: dish
+  tags:
+  - deruny
+  - potato
+  - ukrainian
+  missing_allowed: 1
+  source_family: ukrainian:deruny
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: onion
+    role: required
+    amount: little
+  - item: eggs
+    role: required
+    amount: little
+  - item: flour
+    role: required
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Деруни
+- id: ukrainian_deruny_mushrooms
+  name: Potato pancakes with mushrooms
+  kind: dish
+  tags:
+  - deruny
+  - mushroom
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:deruny_mushrooms
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: mushroom
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: little
+  - item: flour
+    role: required
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Деруни з грибами
+- id: ukrainian_deruny_meat
+  name: Potato pancakes with meat
+  kind: dish
+  tags:
+  - deruny
+  - meat
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:deruny_meat
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: minced_meat
+    role: required
+    amount: normal
+    accepts:
+    - ground_meat
+  - item: onion
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: little
+  - item: flour
+    role: required
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Деруни з м'ясом
+- id: ukrainian_banosh_brynza_shkvarky
+  name: Banosh with cheese and cracklings
+  kind: dish
+  tags:
+  - banosh
+  - corn
+  - hutsul
+  - salo
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:banosh_brynza_shkvarky
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: corn_grits
+    role: main
+    amount: many
+  - item: sour_cream
+    role: required
+    amount: many
+  - item: white_cheese
+    role: required
+    amount: normal
+    accepts:
+    - feta_cheese
+    - hard_cheese
+  - item: salo
+    role: required
+    amount: normal
+    accepts:
+    - pork_belly
+  - item: mushroom
+    role: addition
+    amount: normal
+  - item: water
+    role: addition
+    amount: normal
+  name_uk: Банош з бринзою і шкварками
+- id: ukrainian_mamalyga_cheese
+  name: Mamalyga with cheese
+  kind: dish
+  tags:
+  - corn
+  - hutsul
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:mamalyga_cheese
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: corn_grits
+    role: main
+    amount: many
+  - item: white_cheese
+    role: required
+    amount: normal
+    accepts:
+    - feta_cheese
+    - hard_cheese
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Мамалига з бринзою
+- id: ukrainian_buckwheat_kasha_shkvarky
+  name: Buckwheat with cracklings
+  kind: dish
+  tags:
+  - buckwheat
+  - salo
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:buckwheat_kasha_shkvarky
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - boil
+    - fry
+  comment: ''
+  ingredients:
+  - item: buckwheat
+    role: main
+    amount: many
+  - item: salo
+    role: required
+    amount: normal
+    accepts:
+    - pork_belly
+  - item: onion
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Гречка зі шкварками
+- id: ukrainian_hretchanyky
+  name: Buckwheat with meat
+  kind: dish
+  tags:
+  - buckwheat
+  - cutlet
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:hretchanyky
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: buckwheat
+    role: main
+    amount: many
+  - item: minced_meat
+    role: required
+    amount: normal
+    accepts:
+    - ground_meat
+  - item: onion
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: little
+  - item: tomato_paste
+    role: addition
+    amount: normal
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Гречаники
+- id: ukrainian_hretchanyky_mushroom
+  name: Lenten buckwheat with mushrooms
+  kind: dish
+  tags:
+  - buckwheat
+  - mushroom
+  - ukrainian
+  - vegetarian
+  missing_allowed: 2
+  source_family: ukrainian:hretchanyky_mushroom
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: buckwheat
+    role: main
+    amount: many
+  - item: mushroom
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Пісні гречаники з грибами
+- id: ukrainian_zrazy_potato_mushroom
+  name: Potato zrazy with mushrooms
+  kind: dish
+  tags:
+  - mushroom
+  - potato
+  - ukrainian
+  - zrazy
+  missing_allowed: 2
+  source_family: ukrainian:zrazy_potato_mushroom
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: mushroom
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  - item: flour
+    role: required
+    amount: little
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Картопляні зрази з грибами
+- id: ukrainian_zrazy_meat
+  name: Meat zrazy
+  kind: dish
+  tags:
+  - meat
+  - ukrainian
+  - zrazy
+  missing_allowed: 3
+  source_family: ukrainian:zrazy_meat
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - stew
+  comment: ''
+  ingredients:
+  - item: minced_meat
+    role: main
+    amount: many
+    accepts:
+    - ground_meat
+  - item: eggs
+    role: required
+    amount: little
+  - item: breadcrumbs
+    role: required
+    amount: little
+    accepts:
+    - bread
+    - flour
+  - item: onion
+    role: required
+    amount: normal
+  - item: mushroom
+    role: addition
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: М'ясні зрази
+- id: ukrainian_kruchenyky_mushroom
+  name: Krucheniki with mushrooms
+  kind: dish
+  tags:
+  - kruchenyky
+  - meat
+  - mushroom
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:kruchenyky_mushroom
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roll
+    - stew
+  comment: ''
+  ingredients:
+  - item: pork_chop
+    role: main
+    amount: many
+    accepts:
+    - cutlet_meat
+    - beef_steak
+  - item: mushroom
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: fat
+    role: required
+    amount: little
+  - item: water
+    role: addition
+    amount: normal
+  name_uk: Крученики з грибами
+- id: ukrainian_kruchenyky_salo_garlic
+  name: Krucheniki with lard and garlic
+  kind: dish
+  tags:
+  - kruchenyky
+  - salo
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:kruchenyky_salo_garlic
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - roll
+    - stew
+  comment: ''
+  ingredients:
+  - item: pork_chop
+    role: main
+    amount: many
+    accepts:
+    - cutlet_meat
+  - item: salo
+    role: required
+    amount: normal
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: onion
+    role: addition
+    amount: normal
+  - item: fat
+    role: required
+    amount: little
+  name_uk: Крученики з салом і часником
+- id: ukrainian_sichenyky_meat
+  name: Minced meat cutlets
+  kind: dish
+  tags:
+  - cutlet
+  - meat
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:sichenyky_meat
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: minced_meat
+    role: main
+    amount: many
+    accepts:
+    - ground_meat
+  - item: onion
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: little
+  - item: breadcrumbs
+    role: required
+    amount: little
+    accepts:
+    - bread
+    - flour
+  - item: fat
+    role: required
+    amount: normal
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Січеники м'ясні
+- id: ukrainian_kotleta_kyiv
+  name: Cutlets more Kiev
+  kind: dish
+  tags:
+  - chicken
+  - cutlet
+  - kyiv
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:kotleta_kyiv
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: chicken_fillet
+    role: main
+    amount: many
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: eggs
+    role: required
+    amount: normal
+  - item: breadcrumbs
+    role: required
+    amount: normal
+    accepts:
+    - bread
+  - item: flour
+    role: required
+    amount: little
+  - item: greens
+    role: addition
+    amount: little
+  - item: fat
+    role: required
+    amount: many
+  name_uk: Котлета по-київськи
+- id: ukrainian_chicken_cutlets
+  name: Chicken cutlets
+  kind: dish
+  tags:
+  - chicken
+  - cutlet
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:chicken_cutlets
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: ground_chicken
+    role: main
+    amount: many
+    accepts:
+    - chicken_fillet
+    - minced_meat
+  - item: onion
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: little
+  - item: breadcrumbs
+    role: addition
+    amount: little
+    accepts:
+    - bread
+    - flour
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Курячі котлети
+- id: ukrainian_pork_chops
+  name: Pork chops
+  kind: dish
+  tags:
+  - cutlet
+  - pork
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:pork_chops
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: pork_chop
+    role: main
+    amount: many
+    accepts:
+    - cutlet_meat
+  - item: eggs
+    role: required
+    amount: little
+  - item: flour
+    role: required
+    amount: little
+  - item: breadcrumbs
+    role: addition
+    amount: little
+    accepts:
+    - bread
+  - item: fat
+    role: required
+    amount: normal
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Свинячі відбивні
+- id: ukrainian_pechenya_pork_potatoes
+  name: Roast pork and potatoes
+  kind: dish
+  tags:
+  - pork
+  - potato
+  - roast
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:pechenya_pork_potatoes
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - stew
+    - bake
+  comment: ''
+  ingredients:
+  - item: pork_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: potato
+    role: required
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: carrot
+    role: addition
+    amount: little
+  - item: mushroom
+    role: addition
+    amount: normal
+  - item: tomato_paste
+    role: addition
+    amount: little
+    accepts:
+    - tomato_base
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Печеня зі свининою і картоплею
+- id: ukrainian_pechenya_chicken
+  name: Roast chicken
+  kind: dish
+  tags:
+  - chicken
+  - potato
+  - roast
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:pechenya_chicken
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+    - bake
+  comment: ''
+  ingredients:
+  - item: chicken_parts
+    role: main
+    amount: many
+    accepts:
+    - chicken_fillet
+  - item: potato
+    role: required
+    amount: many
+  - item: onion
+    role: required
+    amount: normal
+  - item: carrot
+    role: addition
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Печеня з куркою
+- id: ukrainian_stewed_cabbage_pork
+  name: Stewed cabbage with pork
+  kind: dish
+  tags:
+  - cabbage
+  - pork
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:stewed_cabbage_pork
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: cabbage
+    role: main
+    amount: many
+    accepts:
+    - young_cabbage
+    - sauerkraut
+  - item: pork_chunks
+    role: required
+    amount: normal
+    accepts:
+    - meat_piece
+  - item: onion
+    role: required
+    amount: normal
+  - item: carrot
+    role: addition
+    amount: little
+  - item: tomato_paste
+    role: addition
+    amount: little
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: little
+  name_uk: Тушкована капуста зі свининою
+- id: ukrainian_stewed_cabbage_mushrooms
+  name: Stewed cabbage with mushrooms
+  kind: dish
+  tags:
+  - cabbage
+  - mushroom
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:stewed_cabbage_mushrooms
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: cabbage
+    role: main
+    amount: many
+    accepts:
+    - young_cabbage
+    - sauerkraut
+  - item: mushroom
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: carrot
+    role: addition
+    amount: little
+  - item: tomato_paste
+    role: addition
+    amount: little
+    accepts:
+    - tomato_base
+  - item: fat
+    role: required
+    amount: little
+  name_uk: Тушкована капуста з грибами
+- id: ukrainian_kartoplia_salo_onion
+  name: Fried potatoes with lard and onions
+  kind: dish
+  tags:
+  - fried
+  - potato
+  - salo
+  - ukrainian
+  missing_allowed: 1
+  source_family: ukrainian:kartoplia_salo_onion
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: salo
+    role: required
+    amount: normal
+    accepts:
+    - pork_belly
+  - item: onion
+    role: required
+    amount: normal
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Смажена картопля з салом і цибулею
+- id: ukrainian_kartoplia_mushrooms
+  name: Fried potatoes with mushrooms
+  kind: dish
+  tags:
+  - fried
+  - mushroom
+  - potato
+  - ukrainian
+  missing_allowed: 1
+  source_family: ukrainian:kartoplia_mushrooms
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: mushroom
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Смажена картопля з грибами
+- id: ukrainian_nalysnyky_meat
+  name: Flatbreads with meat
+  kind: dish
+  tags:
+  - meat
+  - nalysnyky
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:nalysnyky_meat
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - roll
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: minced_meat
+    role: required
+    amount: normal
+    accepts:
+    - ground_meat
+  - item: onion
+    role: required
+    amount: little
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Налисники з м'ясом
+- id: ukrainian_nalysnyky_mushroom
+  name: Leaflets with mushrooms
+  kind: dish
+  tags:
+  - mushroom
+  - nalysnyky
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:nalysnyky_mushroom
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - fry
+    - roll
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: mushroom
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  name_uk: Налисники з грибами
+- id: ukrainian_nalysnyky_cottage_cheese
+  name: Pancakes with cottage cheese
+  kind: dish
+  tags:
+  - cottage_cheese
+  - nalysnyky
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:nalysnyky_cottage_cheese
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    - dessert
+    time: under_60
+    method:
+    - fry
+    - roll
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: cottage_cheese
+    role: required
+    amount: many
+  - item: sugar
+    role: addition
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  name_uk: Налисники з сиром
+- id: ukrainian_machanka_pork
+  name: Machanka with pork
+  kind: dish
+  tags:
+  - gravy
+  - pork
+  - sour_cream
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:machanka_pork
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: pork_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: little
+  - item: onion
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: little
+  - item: water
+    role: addition
+    amount: normal
+  name_uk: Мачанка зі свининою
+- id: ukrainian_machanka_mushroom
+  name: Mushroom machanka
+  kind: dish
+  tags:
+  - gravy
+  - mushroom
+  - sour_cream
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:machanka_mushroom
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - stew
+  comment: ''
+  ingredients:
+  - item: mushroom
+    role: main
+    amount: many
+  - item: sour_cream
+    role: required
+    amount: normal
+  - item: flour
+    role: required
+    amount: little
+  - item: onion
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: little
+  - item: water
+    role: addition
+    amount: normal
+  name_uk: Грибна мачанка
+- id: ukrainian_fried_liver_onion
+  name: Fried liver with onions
+  kind: dish
+  tags:
+  - liver
+  - offal
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:fried_liver_onion
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: liver
+    role: main
+    amount: many
+    accepts:
+    - liver_offal
+  - item: onion
+    role: required
+    amount: normal
+  - item: flour
+    role: addition
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Печінка смажена з цибулею
+- id: ukrainian_blood_sausage_krovyanka
+  name: Black pudding
+  kind: dish
+  tags:
+  - buckwheat
+  - pork
+  - sausage
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:blood_sausage_krovyanka
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - bake
+    - boil
+  comment: ''
+  ingredients:
+  - item: blood_sausage_base
+    role: main
+    amount: many
+    accepts:
+    - sausage_product
+  - item: buckwheat
+    role: required
+    amount: normal
+  - item: salo
+    role: required
+    amount: normal
+  - item: onion
+    role: addition
+    amount: normal
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Кров'янка
+- id: ukrainian_homemade_sausage
+  name: Homemade sausage
+  kind: dish
+  tags:
+  - pork
+  - sausage
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:homemade_sausage
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - bake
+    - fry
+  comment: ''
+  ingredients:
+  - item: pork_chunks
+    role: main
+    amount: many
+    accepts:
+    - meat_piece
+  - item: salo
+    role: required
+    amount: normal
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: black_pepper
+    role: spice
+    amount: spice
+  - item: sausage_casing
+    role: required
+    amount: normal
+  name_uk: Домашня ковбаса
+- id: ukrainian_baked_chicken_drumsticks
+  name: Baked chicken drumsticks
+  kind: dish
+  tags:
+  - chicken
+  - drumstick
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:baked_chicken_drumsticks
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: chicken_drumstick
+    role: main
+    amount: many
+    accepts:
+    - chicken_parts
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: mustard
+    role: addition
+    amount: little
+  - item: paprika
+    role: spice
+    amount: spice
+  name_uk: Запечені курячі гомілки
+- id: ukrainian_potato_babka
+  name: Potato babka
+  kind: dish
+  tags:
+  - babka
+  - potato
+  - salo
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:potato_babka
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: potato
+    role: main
+    amount: many
+  - item: salo
+    role: required
+    amount: normal
+    accepts:
+    - pork_belly
+  - item: onion
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: little
+  - item: flour
+    role: addition
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  name_uk: Картопляна бабка
+- id: ukrainian_millet_porridge_pumpkin
+  name: Millet porridge with pumpkin
+  kind: dish
+  tags:
+  - millet
+  - porridge
+  - pumpkin
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:millet_porridge_pumpkin
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    - breakfast
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: millet
+    role: main
+    amount: many
+    accepts:
+    - grain
+  - item: pumpkin
+    role: required
+    amount: many
+  - item: milk
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: optional
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Пшоняна каша з гарбузом
+- id: ukrainian_barley_kasha_mushrooms
+  name: Pearl barley with mushrooms
+  kind: dish
+  tags:
+  - barley
+  - mushroom
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:barley_kasha_mushrooms
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    time: over_60
+    method:
+    - boil
+    - fry
+  comment: ''
+  ingredients:
+  - item: barley
+    role: main
+    amount: many
+    accepts:
+    - grain
+  - item: mushroom
+    role: required
+    amount: normal
+  - item: onion
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  name_uk: Перлова каша з грибами
+- id: ukrainian_buckwheat_milk
+  name: Buckwheat with milk
+  kind: dish
+  tags:
+  - buckwheat
+  - milk
+  - ukrainian
+  missing_allowed: 1
+  source_family: ukrainian:buckwheat_milk
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - main
+    - breakfast
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: buckwheat
+    role: main
+    amount: many
+  - item: milk
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Гречка з молоком
+- id: ukrainian_pampushky_garlic
+  name: Garlic dumplings
+  kind: dish
+  tags:
+  - bread
+  - garlic
+  - pampushky
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:pampushky_garlic
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - bread
+    - snack
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: plant_oil
+    role: required
+    amount: normal
+  - item: sugar
+    role: addition
+    amount: little
+  name_uk: Пампушки з часником до борщу
+- id: ukrainian_palianytsia
+  name: Ukrainian bread
+  kind: dish
+  tags:
+  - bread
+  - ukrainian
+  missing_allowed: 1
+  source_family: ukrainian:palianytsia
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - bread
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: many
+  - item: fat
+    role: addition
+    amount: little
+  name_uk: Паляниця
+- id: ukrainian_korovai
+  name: Holiday bread
+  kind: dish
+  tags:
+  - bread
+  - festive
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:korovai
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - bread
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Коровай
+- id: ukrainian_perepichka
+  name: Fried yeast flatbread
+  kind: dish
+  tags:
+  - bread
+  - fried_dough
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:perepichka
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - bread
+    - snack
+    time: over_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: water
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: many
+  - item: sugar
+    role: addition
+    amount: little
+  name_uk: Перепічка
+- id: ukrainian_pirozhky_potato
+  name: Pies with potatoes
+  kind: dish
+  tags:
+  - pirozhky
+  - potato
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:pirozhky_potato
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - snack
+    - main
+    time: over_60
+    method:
+    - bake
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: potato
+    role: required
+    amount: many
+  - item: onion
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Пиріжки з картоплею
+- id: ukrainian_pirozhky_cabbage
+  name: Pies with cabbage
+  kind: dish
+  tags:
+  - cabbage
+  - pirozhky
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:pirozhky_cabbage
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - snack
+    - main
+    time: over_60
+    method:
+    - bake
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: cabbage
+    role: required
+    amount: many
+    accepts:
+    - sauerkraut
+  - item: onion
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Пиріжки з капустою
+- id: ukrainian_pirozhky_meat
+  name: Meat pies
+  kind: dish
+  tags:
+  - meat
+  - pirozhky
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:pirozhky_meat
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - snack
+    - main
+    time: over_60
+    method:
+    - bake
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: minced_meat
+    role: required
+    amount: many
+    accepts:
+    - ground_meat
+  - item: onion
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Пиріжки з м'ясом
+- id: ukrainian_benderiki_meat
+  name: Benderiki with meat
+  kind: dish
+  tags:
+  - meat
+  - pancake
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:benderiki_meat
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - snack
+    - main
+    time: under_60
+    method:
+    - fry
+    - roll
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: minced_meat
+    role: required
+    amount: normal
+    accepts:
+    - ground_meat
+  - item: onion
+    role: required
+    amount: little
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Бендерики з м'ясом
+- id: ukrainian_mlyntsi_plain
+  name: Thin pancakes
+  kind: dish
+  tags:
+  - pancake
+  - ukrainian
+  missing_allowed: 1
+  source_family: ukrainian:mlyntsi_plain
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - breakfast
+    - snack
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  - item: sugar
+    role: optional
+    amount: little
+  name_uk: Млинці
+- id: ukrainian_salo_on_rye_bread
+  name: Lard on rye bread
+  kind: dish
+  tags:
+  - salo
+  - snack
+  - ukrainian
+  missing_allowed: 1
+  source_family: ukrainian:salo_on_rye_bread
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - snack
+    time: under_10
+    method:
+    - raw
+  comment: ''
+  ingredients:
+  - item: salo
+    role: main
+    amount: normal
+  - item: rye_bread
+    role: required
+    amount: normal
+    accepts:
+    - bread
+  - item: dry_garlic
+    role: addition
+    amount: spice
+  - item: onion
+    role: addition
+    amount: little
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Сало на житньому хлібі
+- id: ukrainian_kanapky_herring
+  name: Sandwiches with herring
+  kind: dish
+  tags:
+  - herring
+  - sandwich
+  - ukrainian
+  missing_allowed: 1
+  source_family: ukrainian:kanapky_herring
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - snack
+    time: under_10
+    method:
+    - assemble
+  comment: ''
+  ingredients:
+  - item: salted_herring
+    role: main
+    amount: normal
+    accepts:
+    - fish
+  - item: bread
+    role: required
+    amount: normal
+    accepts:
+    - rye_bread
+  - item: butter
+    role: addition
+    amount: little
+    accepts:
+    - ghee
+  - item: onion
+    role: addition
+    amount: little
+  name_uk: Канапки з оселедцем
+- id: ukrainian_forshmak_ukrainian
+  name: Herring mincemeat
+  kind: dish
+  tags:
+  - herring
+  - spread
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:forshmak_ukrainian
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - snack
+    time: under_30
+    method:
+    - mix
+    - blend
+  comment: ''
+  ingredients:
+  - item: salted_herring
+    role: main
+    amount: many
+    accepts:
+    - fish
+  - item: eggs
+    role: required
+    amount: normal
+  - item: apple
+    role: addition
+    amount: little
+  - item: onion
+    role: required
+    amount: little
+  - item: bread
+    role: addition
+    amount: little
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Форшмак з оселедця
+- id: ukrainian_beet_salad_horseradish
+  name: Beets with horseradish
+  kind: dish
+  tags:
+  - beet
+  - salad
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:beet_salad_horseradish
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - salad
+    - snack
+    time: under_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: beet
+    role: main
+    amount: many
+  - item: horseradish
+    role: required
+    amount: little
+    accepts:
+    - pungent_spice
+  - item: vinegar
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  - item: sugar
+    role: addition
+    amount: little
+  name_uk: Буряк з хроном
+- id: ukrainian_salad_vinaigrette
+  name: Vinaigrette
+  kind: dish
+  tags:
+  - beet
+  - salad
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:salad_vinaigrette
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - salad
+    time: under_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: beet
+    role: main
+    amount: normal
+  - item: potato
+    role: required
+    amount: normal
+  - item: carrot
+    role: required
+    amount: little
+  - item: pickled_cucumber
+    role: required
+    amount: normal
+  - item: cabbage
+    role: addition
+    amount: normal
+    accepts:
+    - sauerkraut
+  - item: canned_peas
+    role: addition
+    amount: normal
+  - item: plant_oil
+    role: addition
+    amount: little
+  name_uk: Вінегрет
+- id: ukrainian_salad_shuba
+  name: Herring under a fur coat
+  kind: dish
+  tags:
+  - beet
+  - herring
+  - salad
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:salad_shuba
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - salad
+    time: over_60
+    method:
+    - boil
+    - assemble
+  comment: ''
+  ingredients:
+  - item: salted_herring
+    role: main
+    amount: many
+    accepts:
+    - fish
+  - item: beet
+    role: required
+    amount: many
+  - item: potato
+    role: required
+    amount: normal
+  - item: carrot
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: mayonnaise
+    role: required
+    amount: normal
+    accepts:
+    - remoulade
+    - tartar_sauce
+  - item: onion
+    role: addition
+    amount: little
+  name_uk: Оселедець під шубою
+- id: ukrainian_salad_cabbage_peas_sourcream
+  name: Young cabbage, peas, and sour cream salad
+  kind: dish
+  tags:
+  - cabbage
+  - peas
+  - salad
+  - ukrainian
+  missing_allowed: 1
+  source_family: ukrainian:salad_cabbage_peas_sourcream
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - salad
+    time: under_10
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: young_cabbage
+    role: main
+    amount: many
+    accepts:
+    - cabbage
+  - item: canned_peas
+    role: required
+    amount: normal
+  - item: greens
+    role: addition
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Салат з молодої капусти, горошку і сметани
+- id: ukrainian_cabbage_carrot_salad
+  name: Cabbage and carrot salad
+  kind: dish
+  tags:
+  - cabbage
+  - salad
+  - ukrainian
+  missing_allowed: 1
+  source_family: ukrainian:cabbage_carrot_salad
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - salad
+    time: under_10
+    method:
+    - raw
+    - mix
+  comment: ''
+  ingredients:
+  - item: cabbage
+    role: main
+    amount: many
+    accepts:
+    - young_cabbage
+  - item: carrot
+    role: required
+    amount: little
+  - item: plant_oil
+    role: addition
+    amount: little
+  - item: vinegar
+    role: addition
+    amount: little
+    accepts:
+    - acid_souring
+  - item: sugar
+    role: addition
+    amount: little
+  name_uk: Салат з капусти і моркви
+- id: ukrainian_cucumber_sourcream_salad
+  name: Cucumbers with sour cream
+  kind: dish
+  tags:
+  - cucumber
+  - salad
+  - sour_cream
+  - ukrainian
+  missing_allowed: 1
+  source_family: ukrainian:cucumber_sourcream_salad
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - salad
+    time: under_10
+    method:
+    - raw
+    - mix
+  comment: ''
+  ingredients:
+  - item: cucumber
+    role: main
+    amount: many
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: greens
+    role: addition
+    amount: little
+  - item: black_pepper
+    role: spice
+    amount: spice
+  name_uk: Огірки зі сметаною
+- id: ukrainian_tomato_cucumber_salad
+  name: Tomato and cucumber salad
+  kind: dish
+  tags:
+  - fresh
+  - salad
+  - ukrainian
+  missing_allowed: 1
+  source_family: ukrainian:tomato_cucumber_salad
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - salad
+    time: under_10
+    method:
+    - raw
+    - mix
+  comment: ''
+  ingredients:
+  - item: tomato
+    role: main
+    amount: many
+  - item: cucumber
+    role: required
+    amount: normal
+  - item: onion
+    role: addition
+    amount: little
+  - item: plant_oil
+    role: addition
+    amount: little
+  - item: greens
+    role: addition
+    amount: little
+  name_uk: Салат з помідорів і огірків
+- id: ukrainian_egg_salo_spread
+  name: Lard, egg and garlic spread
+  kind: dish
+  tags:
+  - salo
+  - spread
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:egg_salo_spread
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - snack
+    time: under_30
+    method:
+    - mix
+  comment: ''
+  ingredients:
+  - item: salo
+    role: main
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: dry_garlic
+    role: required
+    amount: spice
+  - item: greens
+    role: addition
+    amount: little
+  - item: bread
+    role: addition
+    amount: normal
+    accepts:
+    - bread_base
+  name_uk: Намазка з сала, яйця і часнику
+- id: ukrainian_syrnyky
+  name: Syrniki
+  kind: dish
+  tags:
+  - cottage_cheese
+  - syrnyky
+  - ukrainian
+  missing_allowed: 1
+  source_family: ukrainian:syrnyky
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    - breakfast
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: cottage_cheese
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: little
+  - item: flour
+    role: required
+    amount: little
+  - item: sugar
+    role: required
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Сирники
+- id: ukrainian_syrnyky_raisins
+  name: Cheesecakes with raisins
+  kind: dish
+  tags:
+  - raisins
+  - syrnyky
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:syrnyky_raisins
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    - breakfast
+    time: under_30
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: cottage_cheese
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: little
+  - item: flour
+    role: required
+    amount: little
+  - item: sugar
+    role: required
+    amount: little
+  - item: raisins
+    role: required
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: fat
+    role: required
+    amount: normal
+  name_uk: Сирники з родзинками
+- id: ukrainian_lazy_varenyky
+  name: Lazy dumplings
+  kind: dish
+  tags:
+  - cottage_cheese
+  - lazy_varenyky
+  - ukrainian
+  missing_allowed: 1
+  source_family: ukrainian:lazy_varenyky
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    - breakfast
+    - main
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: cottage_cheese
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: little
+  - item: flour
+    role: required
+    amount: normal
+  - item: sugar
+    role: addition
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Ліниві вареники
+- id: ukrainian_kutia_wheat
+  name: Wheat kutia
+  kind: dish
+  tags:
+  - christmas
+  - kutia
+  - ukrainian
+  - wheat
+  missing_allowed: 3
+  source_family: ukrainian:kutia_wheat
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: wheat_berries
+    role: main
+    amount: many
+  - item: poppy_seed
+    role: required
+    amount: normal
+    accepts:
+    - seed
+  - item: honey
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: nuts
+    role: addition
+    amount: normal
+  - item: raisins
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Кутя з пшениці
+- id: ukrainian_kutia_rice
+  name: Rice kutia
+  kind: dish
+  tags:
+  - kutia
+  - rice
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:kutia_rice
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - boil
+    - mix
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: poppy_seed
+    role: required
+    amount: normal
+    accepts:
+    - seed
+  - item: honey
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: nuts
+    role: addition
+    amount: normal
+  - item: raisins
+    role: addition
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Рисова кутя
+- id: ukrainian_uzvar
+  name: Dried fruit compote
+  kind: dish
+  tags:
+  - dried_fruit
+  - drink
+  - ukrainian
+  - uzvar
+  missing_allowed: 1
+  source_family: ukrainian:uzvar
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - drink
+    - dessert
+    time: under_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: dried_fruit
+    role: main
+    amount: many
+  - item: honey
+    role: addition
+    amount: normal
+    accepts:
+    - sugar
+    - sweetener
+  - item: water
+    role: required
+    amount: many
+  name_uk: Узвар
+- id: ukrainian_pampushky_sweet
+  name: Sweet donuts
+  kind: dish
+  tags:
+  - dessert
+  - fried
+  - pampushky
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:pampushky_sweet
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: milk
+    role: addition
+    amount: normal
+  - item: eggs
+    role: addition
+    amount: little
+  - item: sugar
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: many
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Солодкі пампушки
+- id: ukrainian_verhuny
+  name: Crispy verguns
+  kind: dish
+  tags:
+  - fried
+  - ukrainian
+  - verhuny
+  missing_allowed: 2
+  source_family: ukrainian:verhuny
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: many
+  name_uk: Вергуни
+- id: ukrainian_hrustyky
+  name: Brushwood
+  kind: dish
+  tags:
+  - cookie
+  - fried
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:hrustyky
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - fry
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: fat
+    role: required
+    amount: many
+  name_uk: Хрусти
+- id: ukrainian_medivnyk
+  name: Medovik more Ukrainian
+  kind: dish
+  tags:
+  - cake
+  - honey
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:medivnyk
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: honey
+    role: required
+    amount: normal
+    accepts:
+    - sweetener
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sour_cream
+    role: addition
+    amount: normal
+  name_uk: Медівник
+- id: ukrainian_plyatsok_poppy
+  name: Poppy dance
+  kind: dish
+  tags:
+  - cake
+  - poppy_seed
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:plyatsok_poppy
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: poppy_seed
+    role: required
+    amount: many
+    accepts:
+    - seed
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: milk
+    role: addition
+    amount: normal
+  name_uk: Пляцок з маком
+- id: ukrainian_poppy_seed_roll
+  name: Roll with poppy seeds
+  kind: dish
+  tags:
+  - poppy_seed
+  - roll
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:poppy_seed_roll
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+    - roll
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: yeast
+    role: required
+    amount: little
+  - item: poppy_seed
+    role: required
+    amount: many
+    accepts:
+    - seed
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Маківник
+- id: ukrainian_nalysnyky_cherry
+  name: Leaves with cherries
+  kind: dish
+  tags:
+  - cherry
+  - nalysnyky
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:nalysnyky_cherry
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - fry
+    - roll
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: cherry
+    role: required
+    amount: many
+    accepts:
+    - fruit
+  - item: sugar
+    role: required
+    amount: little
+  - item: sour_cream
+    role: addition
+    amount: normal
+  name_uk: Налисники з вишнями
+- id: ukrainian_apple_nalysnyky
+  name: Leaflets with apples
+  kind: dish
+  tags:
+  - apple
+  - nalysnyky
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:apple_nalysnyky
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - fry
+    - roll
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: normal
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: apple
+    role: required
+    amount: many
+  - item: sugar
+    role: required
+    amount: little
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Налисники з яблуками
+- id: ukrainian_apple_pie_ukrainian
+  name: Apple pie
+  kind: dish
+  tags:
+  - apple
+  - pie
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:apple_pie_ukrainian
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: apple
+    role: required
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: required
+    amount: normal
+    accepts:
+    - ghee
+  - item: sour_cream
+    role: addition
+    amount: normal
+  name_uk: Яблучний пиріг
+- id: ukrainian_charlotte_apple
+  name: Charlotte with apples
+  kind: dish
+  tags:
+  - apple
+  - cake
+  - ukrainian
+  missing_allowed: 1
+  source_family: ukrainian:charlotte_apple
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: apple
+    role: main
+    amount: many
+  - item: flour
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Шарлотка з яблуками
+- id: ukrainian_pumpkin_babka_sweet
+  name: Sweet pumpkin babka
+  kind: dish
+  tags:
+  - babka
+  - pumpkin
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:pumpkin_babka_sweet
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: pumpkin
+    role: main
+    amount: many
+  - item: semolina
+    role: required
+    amount: normal
+  - item: milk
+    role: addition
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Солодка гарбузова бабка
+- id: ukrainian_rice_babka_raisins
+  name: Rice babka with raisins
+  kind: dish
+  tags:
+  - babka
+  - raisins
+  - rice
+  - ukrainian
+  missing_allowed: 3
+  source_family: ukrainian:rice_babka_raisins
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    time: over_60
+    method:
+    - boil
+    - bake
+  comment: ''
+  ingredients:
+  - item: rice
+    role: main
+    amount: many
+  - item: milk
+    role: required
+    amount: normal
+  - item: eggs
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: raisins
+    role: required
+    amount: little
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  - item: water
+    role: required
+    amount: normal
+  name_uk: Рисова бабка з родзинками
+- id: ukrainian_poppy_milk
+  name: Poppy milk
+  kind: dish
+  tags:
+  - drink
+  - poppy_seed
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:poppy_milk
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    - drink
+    time: under_60
+    method:
+    - soak
+    - blend
+  comment: ''
+  ingredients:
+  - item: poppy_seed
+    role: main
+    amount: many
+    accepts:
+    - seed
+  - item: honey
+    role: required
+    amount: normal
+    accepts:
+    - sugar
+    - sweetener
+  - item: water
+    role: required
+    amount: many
+  name_uk: Макове молоко
+- id: ukrainian_kissel_berry
+  name: Berry jelly
+  kind: dish
+  tags:
+  - berries
+  - kissel
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:kissel_berry
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    - drink
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: berries
+    role: main
+    amount: many
+    accepts:
+    - fruit
+  - item: starch
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: water
+    role: required
+    amount: many
+  name_uk: Кисіль ягідний
+- id: ukrainian_milk_kissel
+  name: Milk jelly
+  kind: dish
+  tags:
+  - kissel
+  - milk
+  - ukrainian
+  missing_allowed: 1
+  source_family: ukrainian:milk_kissel
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    - drink
+    time: under_30
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+  - item: starch
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  name_uk: Молочний кисіль
+- id: ukrainian_varenyky_poppy
+  name: Dumplings with poppy seeds
+  kind: dish
+  tags:
+  - poppy_seed
+  - ukrainian
+  - varenyky
+  missing_allowed: 3
+  source_family: ukrainian:varenyky_poppy
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    - main
+    time: over_60
+    method:
+    - boil
+  comment: ''
+  ingredients:
+  - item: flour
+    role: main
+    amount: many
+  - item: poppy_seed
+    role: required
+    amount: many
+    accepts:
+    - seed
+  - item: honey
+    role: addition
+    amount: normal
+    accepts:
+    - sugar
+    - sweetener
+  - item: water
+    role: required
+    amount: normal
+  - item: butter
+    role: addition
+    amount: normal
+    accepts:
+    - ghee
+  name_uk: Вареники з маком
+- id: ukrainian_varenets
+  name: Baked fermented milk
+  kind: dish
+  tags:
+  - fermented
+  - milk
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:varenets
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    - drink
+    time: over_60
+    method:
+    - bake
+    - ferment
+  comment: ''
+  ingredients:
+  - item: milk
+    role: main
+    amount: many
+  - item: sour_cream
+    role: required
+    amount: little
+    accepts:
+    - fermented_dairy
+  name_uk: Варенець
+- id: ukrainian_baked_apples_honey
+  name: Baked apples with honey
+  kind: dish
+  tags:
+  - apple
+  - honey
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:baked_apples_honey
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: apple
+    role: main
+    amount: many
+  - item: honey
+    role: required
+    amount: normal
+    accepts:
+    - sugar
+    - sweetener
+  - item: nuts
+    role: addition
+    amount: little
+  name_uk: Печені яблука з медом
+- id: ukrainian_cottage_cheese_casserole
+  name: Cottage cheese casserole
+  kind: dish
+  tags:
+  - casserole
+  - cottage_cheese
+  - ukrainian
+  missing_allowed: 2
+  source_family: ukrainian:cottage_cheese_casserole
+  facets:
+    cuisine:
+    - ukrainian
+    dish_type:
+    - dessert
+    - breakfast
+    time: under_60
+    method:
+    - bake
+  comment: ''
+  ingredients:
+  - item: cottage_cheese
+    role: main
+    amount: many
+  - item: eggs
+    role: required
+    amount: normal
+  - item: semolina
+    role: required
+    amount: normal
+  - item: sugar
+    role: required
+    amount: normal
+  - item: sour_cream
+    role: addition
+    amount: normal
+  - item: raisins
+    role: addition
+    amount: little
+  name_uk: Сирна запіканка

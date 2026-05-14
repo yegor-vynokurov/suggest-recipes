@@ -1,0 +1,404 @@
+metadata:
+  version: '0.1'
+  kind: ingredients
+  domain: sauces_condiments
+ingredients:
+  apricot_jam:
+    name: apricot jam
+    name_uk: абрикосове варення
+    groups:
+    - sweetener
+    - sauce
+    - fruit_preserve
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  bechamel:
+    name: bechamel
+    name_uk: соус бешамель
+    groups:
+    - sauce
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  calvados:
+    name: calvados
+    name_uk: кальвадос
+    groups:
+    - acid_souring
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cherry_sauce:
+    name: cherry sauce
+    name_uk: вишневий соус
+    groups:
+    - sauce
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chutney:
+    name: chutney
+    name_uk: чатні
+    groups:
+    - chutney_group
+    - sauce
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  coconut_milk:
+    name: coconut milk
+    name_uk: кокосове молоко
+    groups:
+    - sauce
+    - plant_food
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cognac:
+    name: cognac
+    name_uk: коньяк
+    groups:
+    - acid_souring
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cranberry_jam:
+    name: cranberry jam
+    name_uk: журавлинний джем
+    groups:
+    - sweetener
+    - sauce
+    - fruit_preserve
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fish_sauce_base:
+    name: fish sauce base
+    name_uk: рибний соус
+    groups:
+    - fish_product
+    - sauce
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fruit_preserve:
+    name: fruit preserve
+    name_uk: фруктове варення / повидло
+    groups:
+    - sweetener
+    - sauce
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  jam:
+    name: jam
+    name_uk: джем
+    groups:
+    - sweetener
+    - sauce
+    - fruit_preserve
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ketchup:
+    name: ketchup
+    name_uk: кетчуп
+    groups:
+    - sauce
+    - tomato_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lingonberry_jam:
+    name: lingonberry jam
+    name_uk: брусничний джем
+    groups:
+    - sweetener
+    - sauce
+    - fruit_preserve
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  marsala_wine:
+    name: marsala wine
+    name_uk: вино марсала
+    groups:
+    - acid_souring
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mayonnaise:
+    name: mayonnaise
+    name_uk: майонез
+    groups:
+    - sauce
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mint_chutney:
+    name: mint chutney
+    name_uk: м'ятне чатні
+    groups:
+    - chutney_group
+    - sauce
+    - fresh_herb
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  mustard:
+    name: mustard
+    name_uk: гірчиця
+    groups:
+    - sauce
+    - pungent_spice
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - гірчиця
+  orange_liqueur:
+    name: orange liqueur
+    name_uk: помаранчевий лікер
+    groups:
+    - acid_souring
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pear_jam:
+    name: pear jam
+    name_uk: грушеве повидло
+    groups:
+    - sweetener
+    - sauce
+    - fruit_preserve
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  plum_jam:
+    name: plum jam
+    name_uk: сливове повидло
+    groups:
+    - sweetener
+    - sauce
+    - fruit_preserve
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  prune_jam:
+    name: prune jam
+    name_uk: сливовий джем
+    groups:
+    - sweetener
+    - sauce
+    - fruit_preserve
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  raspberry_jam:
+    name: raspberry jam
+    name_uk: малиновий джем
+    groups:
+    - sweetener
+    - sauce
+    - fruit_preserve
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  red_wine:
+    name: red wine
+    name_uk: червоне вино
+    groups:
+    - acid_souring
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  remoulade:
+    name: remoulade
+    name_uk: До складу соусу традиційно входять мариновані огірки, каперси, петрушка, зелена цибуля, часник, оливкова олія,
+      пряний оцет, гірчиця та анчоуси. Якщо з ремуладу виключити анчоуси, то вийде соус тартар
+    groups:
+    - sauce
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rum:
+    name: rum
+    name_uk: ром
+    groups:
+    - acid_souring
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  soy_sauce:
+    name: soy sauce
+    name_uk: соєвий соус
+    groups:
+    - fermented_condiment
+    - sauce
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tamarind:
+    name: tamarind
+    name_uk: тамаринд
+    groups:
+    - acid_souring
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tartar_sauce:
+    name: tartar sauce
+    name_uk: тартар
+    groups:
+    - sauce
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tomato_paste:
+    name: tomato paste
+    name_uk: томатна паста
+    groups:
+    - tomato_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tomato_sauce:
+    name: tomato sauce
+    name_uk: томатний соус
+    groups:
+    - tomato_base
+    - sauce
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  vinegar:
+    name: vinegar
+    name_uk: оцет
+    groups:
+    - acid_souring
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  white_sauce:
+    name: white sauce
+    name_uk: білий соус
+    groups:
+    - sauce
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  white_wine:
+    name: white wine
+    name_uk: біле вино
+    groups:
+    - acid_souring
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false

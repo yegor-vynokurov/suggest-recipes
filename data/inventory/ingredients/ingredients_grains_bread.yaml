@@ -1,0 +1,998 @@
+metadata:
+  version: '0.1'
+  kind: ingredients
+  domain: grains_bread
+ingredients:
+  arborio_rice:
+    name: arborio rice
+    name_uk: рис арборіо
+    groups:
+    - rice_group
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  baguette:
+    name: baguette
+    name_uk: багет
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  barley:
+    name: barley
+    name_uk: перловка
+    groups:
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - перлова крупа
+  barley_flour:
+    name: barley flour
+    name_uk: ячмінне борошно
+    groups:
+    - corn_group
+    - flour_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  biscuit_crumbs:
+    name: biscuit crumbs
+    name_uk: бісквітні крихти
+    groups:
+    - bread_base
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  bread:
+    name: bread
+    name_uk: хліб
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  bread_dough:
+    name: bread dough
+    name_uk: тісто
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  bread_dumpling:
+    name: bread dumpling
+    name_uk: кнедліки
+    groups:
+    - bread_base
+    - prepared_component
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  bread_roll:
+    name: bread roll
+    name_uk: булка
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  breadcrumbs:
+    name: breadcrumbs
+    name_uk: панірувальні сухарі
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  bucatini:
+    name: bucatini
+    name_uk: товсті макарони
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  buckwheat:
+    name: buckwheat
+    name_uk: гречка
+    groups:
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  buckwheat_flour:
+    name: buckwheat flour
+    name_uk: гречане борошно
+    groups:
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  buckwheat_pasta:
+    name: buckwheat pasta
+    name_uk: плоскі стрічкоподібні макарони
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  bulgur:
+    name: bulgur
+    name_uk: булгур
+    groups:
+    - wheat_group
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cake_crumbs:
+    name: cake crumbs
+    name_uk: крихти пирога
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cannelloni_tubes:
+    name: cannelloni tubes
+    name_uk: макарони для фарширування, товсті труби
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  caraway:
+    name: caraway
+    name_uk: коровай
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chapati:
+    name: chapati
+    name_uk: чапаті
+    groups:
+    - bread_base
+    - flatbread
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  chestnut_flour:
+    name: chestnut flour
+    name_uk: каштанове борошно
+    groups:
+    - flour_group
+    - nuts
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  corn:
+    name: corn
+    name_uk: кукурудза
+    groups:
+    - corn_group
+    - grain
+    - vegetable
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  corn_grits:
+    name: corn grits
+    name_uk: кукурудзяна крупа
+    groups:
+    - corn_group
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  cornmeal:
+    name: cornmeal
+    name_uk: кукурудзяне борошно
+    groups:
+    - corn_group
+    - flour_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  csipetke:
+    name: csipetke
+    name_uk: угорські галушки, приготовані з яєць та борошна, без додавання води
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  dumplings:
+    name: dumplings
+    name_uk: галушки
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  farro:
+    name: farro
+    name_uk: вид пшеничних зерен з горіховим ароматом
+    groups:
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  fettuccine:
+    name: fettuccine
+    name_uk: тонкі плоскі смужки тіста
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  filo_dough:
+    name: filo dough
+    name_uk: тісто філо
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  flatbread:
+    name: flatbread
+    name_uk: коржик
+    groups:
+    - bread_base
+    - flatbread
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  flattened_rice:
+    name: flattened rice
+    name_uk: плющений рис/поха
+    groups:
+    - rice_group
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  flour:
+    name: flour
+    name_uk: борошно
+    groups:
+    - flour_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  gingerbread:
+    name: gingerbread
+    name_uk: пряник
+    groups:
+    - bread_base
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  gingerbread_spice:
+    name: gingerbread spice
+    name_uk: пряникова спеція
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  gnocchi:
+    name: gnocchi
+    name_uk: ньоккі
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  gullac_sheets:
+    name: gullac sheets
+    name_uk: листи гюлач
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  hotdog_bun:
+    name: hotdog bun
+    name_uk: булочка для хотдогів
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  idli_rice:
+    name: idli rice
+    name_uk: рис для ішли
+    groups:
+    - rice_group
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  kadayif:
+    name: kadayif
+    name_uk: кадаїф
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  kifli:
+    name: kifli
+    name_uk: рогалик з повидлом
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ladyfingers:
+    name: ladyfingers
+    name_uk: бісквітне печиво витягнутої плоскої форми, зверху покрите крупинками цукру
+    groups:
+    - bread_base
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lasagna_sheets:
+    name: lasagna sheets
+    name_uk: листи лазаньї
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lavash:
+    name: lavash
+    name_uk: лаваш
+    groups:
+    - bread_base
+    - flatbread
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  lefse:
+    name: lefse
+    name_uk: тонкі млинці
+    groups:
+    - bread_base
+    - flatbread
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  macaroni:
+    name: macaroni
+    name_uk: макарони
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  manti:
+    name: manti
+    name_uk: манти / маленькі пельмені
+    groups:
+    - pasta_noodle
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  millet:
+    name: millet
+    name_uk: пшоно
+    groups:
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - пшоно
+  nokedli:
+    name: nokedli
+    name_uk: шпецле, маленькі галушки
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  noodle:
+    name: noodle
+    name_uk: локшина
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  oats:
+    name: oats
+    name_uk: овес
+    groups:
+    - grain
+    - rice_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  orecchiette:
+    name: orecchiette
+    name_uk: паста типу черепашок
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pappardelle:
+    name: pappardelle
+    name_uk: великі, дуже широкі, плоскі макаронні вироби
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pasta:
+    name: pasta
+    name_uk: паста
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  pelmeni:
+    name: pelmeni
+    name_uk: пельмені
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  penne:
+    name: penne
+    name_uk: скошені трубочки
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  piadina:
+    name: piadina
+    name_uk: тонкий італійський коржик
+    groups:
+    - bread_base
+    - flatbread
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  potato_dumpling:
+    name: potato dumpling
+    name_uk: картопляні галушки
+    groups:
+    - bread_base
+    - prepared_component
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  potato_starch:
+    name: potato starch
+    name_uk: картопляний крохмаль
+    groups:
+    - flour_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  puff_pastry:
+    name: puff pastry
+    name_uk: листкове тісто
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  puffed_rice:
+    name: puffed rice
+    name_uk: повітряний рис
+    groups:
+    - rice_group
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  puri_shells:
+    name: puri shells
+    name_uk: пурі-кульки
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  ravioli:
+    name: ravioli
+    name_uk: равіолі
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rice:
+    name: rice
+    name_uk: рис
+    groups:
+    - rice_group
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rice_flour:
+    name: rice flour
+    name_uk: рисове борошно
+    groups:
+    - flour_group
+    - rice_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rigatoni:
+    name: rigatoni
+    name_uk: макарони-трубочки
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rugbraud:
+    name: rugbraud
+    name_uk: ісландський житній хліб
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  rye_bread:
+    name: rye bread
+    name_uk: житній хліб
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+    aliases_uk:
+    - житній хліб
+  rye_flour:
+    name: rye flour
+    name_uk: житнє борошно
+    groups:
+    - flour_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  salep:
+    name: salep
+    name_uk: саліп
+    groups:
+    - flour_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  semolina:
+    name: semolina
+    name_uk: манка/семоліна
+    groups:
+    - wheat_group
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  shortcrust_pastry:
+    name: shortcrust pastry
+    name_uk: пісочне тісто
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  spaghetti:
+    name: spaghetti
+    name_uk: спагетті
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  sponge_cake:
+    name: sponge cake
+    name_uk: бісквіт
+    groups:
+    - bread_base
+    - sweetener
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  starch:
+    name: starch
+    name_uk: крохмаль
+    groups:
+    - flour_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  strudel_dough:
+    name: strudel dough
+    name_uk: тісто для штруделю
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tagliatelle:
+    name: tagliatelle
+    name_uk: щось типу локшини
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tarhana:
+    name: tarhana
+    name_uk: тархана
+    groups:
+    - grain
+    - fermented_condiment
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tarhonya:
+    name: tarhonya
+    name_uk: макаронки-дрібні-кульки
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tartlet_shells:
+    name: tartlet shells
+    name_uk: чашки для тарталеток
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  tortellini:
+    name: tortellini
+    name_uk: пельмені з сиром, м'ясом чи овочами
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  trofie:
+    name: trofie
+    name_uk: веретеноподібні макаронки
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  vareniki:
+    name: vareniki
+    name_uk: вареники
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  vermicelli:
+    name: vermicelli
+    name_uk: вермішель
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  wheat_berries:
+    name: wheat berries
+    name_uk: пшеничне зерно
+    groups:
+    - wheat_group
+    - grain
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  wheat_flour:
+    name: wheat flour
+    name_uk: пшеничне борошно
+    groups:
+    - corn_group
+    - flour_group
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  white_bread:
+    name: white bread
+    name_uk: білий хліб
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  wide_noodles:
+    name: wide noodles
+    name_uk: широка локшина
+    groups:
+    - pasta_noodle
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false
+  yufka:
+    name: yufka
+    name_uk: юфка
+    groups:
+    - bread_base
+    abstract: false
+    aliases: []
+    inventory:
+      track: true
+      default_amount: none
+      hide_from_template: false

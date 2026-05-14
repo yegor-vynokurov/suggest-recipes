@@ -1,0 +1,269 @@
+metadata:
+  version: '0.1'
+  kind: ingredients
+  domain: abstract
+ingredients:
+  bread_base:
+    name: bread base
+    name_uk: хлібна основа
+    groups:
+    - abstract_ingredient
+    - bread_base
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  broth_meat:
+    name: broth meat
+    name_uk: м'ясо або кістки для бульйону
+    groups:
+    - abstract_ingredient
+    - broth_meat
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  cutlet_meat:
+    name: cutlet meat
+    name_uk: м'ясо для відбивних
+    groups:
+    - abstract_ingredient
+    - cutlet_meat
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  dairy:
+    name: dairy
+    name_uk: молочні продукти
+    groups:
+    - abstract_ingredient
+    - dairy
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  fat:
+    name: fat
+    name_uk: жир
+    groups:
+    - abstract_ingredient
+    - fat
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  fish:
+    name: fish
+    name_uk: риба
+    groups:
+    - abstract_ingredient
+    - fish
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  fruit:
+    name: fruit
+    name_uk: фрукти
+    groups:
+    - abstract_ingredient
+    - fruit
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  generic_fish:
+    name: generic fish
+    name_uk: будь-яка риба
+    groups:
+    - abstract_ingredient
+    - fish
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  grain:
+    name: grain
+    name_uk: крупа / зернова основа
+    groups:
+    - abstract_ingredient
+    - grain
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  ground_meat:
+    name: ground meat
+    name_uk: фарш будь-який
+    groups:
+    - abstract_ingredient
+    - minced_meat
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  legume:
+    name: legume
+    name_uk: бобові
+    groups:
+    - abstract_ingredient
+    - legume
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  meat:
+    name: meat
+    name_uk: м'ясо
+    groups:
+    - abstract_ingredient
+    - meat
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  meat_piece:
+    name: meat piece
+    name_uk: м'ясо шматочками
+    groups:
+    - abstract_ingredient
+    - meat_piece
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  meat_product:
+    name: meat product
+    name_uk: м'ясні вироби
+    groups:
+    - abstract_ingredient
+    - meat_product
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  minced_meat:
+    name: minced meat
+    name_uk: фарш
+    groups:
+    - abstract_ingredient
+    - minced_meat
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  nuts:
+    name: nuts
+    name_uk: горіхи
+    groups:
+    - abstract_ingredient
+    - nuts
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  sauce:
+    name: sauce
+    name_uk: соус
+    groups:
+    - abstract_ingredient
+    - sauce
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  sausage_product:
+    name: sausage product
+    name_uk: ковбаси та ковбасні вироби
+    groups:
+    - abstract_ingredient
+    - sausage_product
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  seafood:
+    name: seafood
+    name_uk: морепродукти
+    groups:
+    - abstract_ingredient
+    - seafood
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  tomato_base:
+    name: tomato base
+    name_uk: томатна основа
+    groups:
+    - abstract_ingredient
+    - tomato_base
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  vegetable:
+    name: vegetable
+    name_uk: овочі
+    groups:
+    - abstract_ingredient
+    - vegetable
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
+  vegetable_mix:
+    name: vegetable mix
+    name_uk: суміш овочів
+    groups:
+    - abstract_ingredient
+    - vegetable_mix
+    abstract: true
+    aliases: []
+    inventory:
+      track: false
+      default_amount: none
+      hide_from_template: true
