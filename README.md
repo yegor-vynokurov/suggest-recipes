@@ -251,6 +251,12 @@ python main.py merge-ingredient-drafts
   - англійський: `current_inventory.en.xlsx`
   - український: `current_inventory.uk.xlsx`
 
+--filters soup, salad; under_10, under_30, under_60
+
+python main.py suggest --inventory-mode csv --lang uk --filters main under_30 --randomize --random-strength 0.10
+
+python main.py suggest --inventory-mode csv --lang uk --prefer-category cottage-cheese --filters main under_60 --randomize --random-strength 0.10
+
 ### Швидкий старт
 
 1. Подивитися доступні кухні:
