@@ -1,5 +1,9 @@
 # Recipe Picker
 
+## Example of google colab notebook with organized commands and steps and descriptions: 
+
+[text](https://colab.research.google.com/drive/1LoCLntcqNIFT29XeNUPqciTwSdpu22ZY?usp=sharing)
+
 ## English
 
 ### What this project does
